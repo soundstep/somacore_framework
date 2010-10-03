@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<project name="somacore_framework" basedir="." default="2. Run Tests">
+	
+	<property file="user.properties"/>
+	<property file="build.properties"/>
+	<taskdef resource="flexUnitTasks.tasks" classpath="${dir.libs}/flexUnitTasks-4.0.0.jar"/>
+	
+	<condition property="mxmlc" value="${FLEX_HOME}/bin/mxmlc.exe">
+		<os family="windows" />
+	</condition>
+	<condition property="mxmlc" value="${FLEX_HOME}/bin/mxmlc">
+		<os name="Mac OS X"/>
+	</condition>
+	
+	<target name="1. Initialize project directories">
+		<echo message="Create required project directories"/>
+		<mkdir dir="bin"/>
+		<eclipse.refreshLocal resource="${project.name}" />
+	</target>
+	
+	<target name="2. Run Tests" depends="1. Initialize project directories">
+		<echo message="Run SomaCore Tests"/>
+		<echo message="${FLEX_HOME}"/>
+		<exec executable="${mxmlc}">
+			<arg value="-o"/>
+			<arg value="${dir.bin}/FlexUnitRunner.swf"/>
+			<arg value="-library-path"/>
+			<arg value="${dir.libs}"/>
+			<arg value="-sp"/>
+			<arg value="${dir.src.main}"/>
+			<arg value="-default-size"/>
+			<arg value="1000"/>
+			<arg value="600"/>
+			<arg value="-default-frame-rate"/>
+			<arg value="40"/>
+			<arg value="-default-background-color"/>
+			<arg value="0xFCFCFC"/>
+			<arg value="-library-path"/>
+			<arg value="${FLEX_HOME}/frameworks/locale/en_US"/>
+			<arg value="-target-player"/>
+			<arg value="10.0.0"/>
+			<arg value="-debug=true"/>
+			<arg value="--"/>
+			<arg value="${dir.src.test}/FlexUnitRunner.mxml"/>
+		</exec>
+		<fdt.extSWFViewer.startSWF file="${dir.bin}/FlexUnitRunner.swf" width="1000" height="600"/>
+		<eclipse.refreshLocal resource="${project.name}" />
+	</target>
+	
+	<!--
+  <target name="usage">
+    <echo message=""/>
+    <echo message="Robotlegs Build Usage"/>
+    <echo message=""/>
+    <echo message="Available targets are:"/>
+    <echo message=""/>
+    <echo message="test          -&gt; Build Robotlegs SWC and run unit tests"/>
+    <echo message="asdoc         -&gt; Build Robotlegs SWC, test, and generate asdocs"/>
+    <echo message="package       -&gt; Build Robotlegs SWC, test, and create release zip"/>
+    <echo message="compile       -&gt; Build Robotlegs SWC"/>
+    <echo message="clean         -&gt; Remove all folders created by build script"/>
+    <echo message="init          -&gt; Clean and create build folders"/>
+    <echo message=""/>
+  </target>
+  -->
+	
+</project>
