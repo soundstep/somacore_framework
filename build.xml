@@ -59,7 +59,7 @@
 		<echo message="Create SomaCore SWC"/>
 		<exec executable="${compc}">
 			<arg line="-o"/>
-			<arg line="${dir.release}/SomaCore.swc"/>
+			<arg line="${dir.release}/SomaCore-${somacore.version}.swc"/>
 			<arg line="-include-sources"/>
 			<arg line="${dir.src.main}"/>
 			<arg line="-sp"/>
