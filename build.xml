@@ -12,6 +12,13 @@
 		<os name="Mac OS X"/>
 	</condition>
 	
+	<condition property="compc" value="${FLEX_HOME}/bin/compc.exe">
+		<os family="windows" />
+	</condition>
+	<condition property="compc" value="${FLEX_HOME}/bin/compc">
+		<os name="Mac OS X"/>
+	</condition>
+	
 	<target name="1. Initialize project directories">
 		<echo message="Create required project directories"/>
 		<mkdir dir="bin"/>
@@ -20,7 +27,6 @@
 	
 	<target name="2. Run Tests" depends="1. Initialize project directories">
 		<echo message="Run SomaCore Tests"/>
-		<echo message="${FLEX_HOME}"/>
 		<exec executable="${mxmlc}">
 			<arg value="-o"/>
 			<arg value="${dir.bin}/FlexUnitRunner.swf"/>
@@ -45,6 +51,18 @@
 		</exec>
 		<fdt.extSWFViewer.startSWF file="${dir.bin}/FlexUnitRunner.swf" width="1000" height="600"/>
 		<eclipse.refreshLocal resource="${project.name}" />
+	</target>
+	
+	<target name="3. Release">
+		<echo message="Release SomaCore SWC"/>
+		<exec executable="${compc}">
+			<arg line="-o"/>
+			<arg line="${dir.release}/SomaCore.swc"/>
+			<arg line="-include-sources"/>
+			<arg line="${dir.src.main}"/>
+			<arg line="-sp"/>
+			<arg line="${dir.src.main}"/>
+		</exec>
 	</target>
 	
 	<!--
