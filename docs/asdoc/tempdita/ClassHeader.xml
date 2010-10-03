@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allClasses>
+   <apiPackage id="com.soma.core.controller">
+      <apiName>com.soma.core.controller</apiName>
+      <apiDetail/>
+      <apiClassifier id="com.soma.core.controller:Command">
+         <apiName>Command</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="Command,com.soma.core.controller.Command,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerInstance,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencerWithEvent,stopSequencerWithEvent,stopSequencer,stopSequencer,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>flash.events:IEventDispatcher</apiBaseInterface>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id="Object"/>
+               </Inheritance>
+               <Implements>
+                  <Implement id="flash.events:IEventDispatcher"/>
+               </Implements>
+               <Subclasses>
+                  <class id="com.soma.core.controller:SequenceCommand"/>
+                  <class id="com.soma.core.controller:ParallelCommand"/>
+               </Subclasses>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.controller:SequenceCommand">
+         <apiName>SequenceCommand</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="SequenceCommand,com.soma.core.controller.SequenceCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerInstance,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencerWithEvent,stopSequencerWithEvent,stopSequencer,stopSequencer,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ISequenceCommand</apiBaseInterface>
+               <apiBaseClassifier>com.soma.core.controller:Command</apiBaseClassifier>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id="com.soma.core.controller:Command"/>
+                  <Inherit id="Object"/>
+               </Inheritance>
+               <Implements>
+                  <Implement id="com.soma.core.interfaces:ISequenceCommand"/>
+               </Implements>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.controller:SomaController">
+         <apiName>SomaController</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="SomaController,com.soma.core.controller.SomaController,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerInstance,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencerWithEvent,stopSequencerWithEvent,stopSequencer,stopSequencer,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id="Object"/>
+               </Inheritance>
+               <Implements/>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.controller:ParallelCommand">
+         <apiName>ParallelCommand</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="ParallelCommand,com.soma.core.controller.ParallelCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerInstance,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencerWithEvent,stopSequencerWithEvent,stopSequencer,stopSequencer,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:IParallelCommand</apiBaseInterface>
+               <apiBaseClassifier>com.soma.core.controller:Command</apiBaseClassifier>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id="com.soma.core.controller:Command"/>
+                  <Inherit id="Object"/>
+               </Inheritance>
+               <Implements>
+                  <Implement id="com.soma.core.interfaces:IParallelCommand"/>
+               </Implements>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.soma.core.interfaces">
+      <apiName>com.soma.core.interfaces</apiName>
+      <apiDetail/>
+      <apiClassifier id="com.soma.core.interfaces:ISequenceCommand">
+         <apiName>ISequenceCommand</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="ISequenceCommand,com.soma.core.interfaces.ISequenceCommand,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,name,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface>
+                  <Interface id="com.soma.core.interfaces:ICommand"/>
+               </BaseInterface>
+               <Inheritance>
+                  <Inherit id=""/>
+               </Inheritance>
+               <Implements>
+                  <Implement id="com.soma.core.interfaces:ICommand"/>
+               </Implements>
+               <Subclasses/>
+               <Implementors>
+                  <Implementor id="com.soma.core.controller:SequenceCommand"/>
+               </Implementors>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ISoma">
+         <apiName>ISoma</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="ISoma,com.soma.core.interfaces.ISoma,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,name,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id=""/>
+               </Inheritance>
+               <Implements/>
+               <Subclasses/>
+               <Implementors>
+                  <Implementor id="com.soma.core:Soma"/>
+               </Implementors>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ISomaPluginVO">
+         <apiName>ISomaPluginVO</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords" content="ISomaPluginVO,com.soma.core.interfaces.ISomaPluginVO"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id=""/>
+               </Inheritance>
+               <Implements/>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ICommand">
+         <apiName>ICommand</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="ICommand,com.soma.core.interfaces.ICommand,addCommand,addEventListener,addModel,addView,addWire,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id=""/>
+               </Inheritance>
+               <Implements/>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:IModel">
+         <apiName>IModel</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="IModel,com.soma.core.interfaces.IModel,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,name,stage,views,wires"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id=""/>
+               </Inheritance>
+               <Implements/>
+               <Subclasses/>
+               <Implementors>
+                  <Implementor id="com.soma.core.model:Model"/>
+               </Implementors>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:IResponder">
+         <apiName>IResponder</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="IResponder,com.soma.core.interfaces.IResponder,addCommand,addEventListener,addModel,addView,addWire,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id=""/>
+               </Inheritance>
+               <Implements/>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:IParallelCommand">
+         <apiName>IParallelCommand</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="IParallelCommand,com.soma.core.interfaces.IParallelCommand,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,name,stage,views,wires"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface>
+                  <Interface id="com.soma.core.interfaces:ICommand"/>
+               </BaseInterface>
+               <Inheritance>
+                  <Inherit id=""/>
+               </Inheritance>
+               <Implements>
+                  <Implement id="com.soma.core.interfaces:ICommand"/>
+               </Implements>
+               <Subclasses/>
+               <Implementors>
+                  <Implementor id="com.soma.core.controller:ParallelCommand"/>
+               </Implementors>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ICommandASync">
+         <apiName>ICommandASync</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords" content="ICommandASync,com.soma.core.interfaces.ICommandASync"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
+               <apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface>
+                  <Interface id="com.soma.core.interfaces:ICommand"/>
+                  <Interface id="com.soma.core.interfaces:IResponder"/>
+               </BaseInterface>
+               <Inheritance>
+                  <Inherit id=""/>
+               </Inheritance>
+               <Implements>
+                  <Implement id="com.soma.core.interfaces:ICommand"/>
+                  <Implement id="com.soma.core.interfaces:IResponder"/>
+               </Implements>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:IWire">
+         <apiName>IWire</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="IWire,com.soma.core.interfaces.IWire,addCommand,addEventListener,addModel,addView,addWire,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id=""/>
+               </Inheritance>
+               <Implements/>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ISomaPlugin">
+         <apiName>ISomaPlugin</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="ISomaPlugin,com.soma.core.interfaces.ISomaPlugin,addCommand,addEventListener,addModel,addView,addWire,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id=""/>
+               </Inheritance>
+               <Implements/>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.soma.core.model">
+      <apiName>com.soma.core.model</apiName>
+      <apiDetail/>
+      <apiClassifier id="com.soma.core.model:Model">
+         <apiName>Model</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="Model,com.soma.core.model.Model,NAME,_data,_name,data,dispatcher,models,name,addEventListener,addModel,dispatchEvent,dispose,dispose,getModel,getModels,hasEventListener,hasModel,initialize,registerDispatcher,removeEventListener,removeModel,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:IModel</apiBaseInterface>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id="Object"/>
+               </Inheritance>
+               <Implements>
+                  <Implement id="com.soma.core.interfaces:IModel"/>
+               </Implements>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.model:SomaModels">
+         <apiName>SomaModels</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="SomaModels,com.soma.core.model.SomaModels,NAME,_data,_name,data,dispatcher,models,name,addEventListener,addModel,dispatchEvent,dispose,dispose,getModel,getModels,hasEventListener,hasModel,initialize,registerDispatcher,removeEventListener,removeModel,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id="Object"/>
+               </Inheritance>
+               <Implements/>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.soma.core.view">
+      <apiName>com.soma.core.view</apiName>
+      <apiDetail/>
+      <apiClassifier id="com.soma.core.view:SomaViews">
+         <apiName>SomaViews</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="SomaViews,com.soma.core.view.SomaViews,views,addView,dispose,getViews,getView,hasView,removeView"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id="Object"/>
+               </Inheritance>
+               <Implements/>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.soma.core.wire">
+      <apiName>com.soma.core.wire</apiName>
+      <apiDetail/>
+      <apiClassifier id="com.soma.core.wire:Wire">
+         <apiName>Wire</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="Wire,com.soma.core.wire.Wire,NAME,_name,instance,stage,wires,addCommand,addEventListener,addModel,addView,addWire,addWire,dispatchEvent,dispose,dispose,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWire,getWires,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,hasWire,initialize,isPartOfASequence,registerInstance,removeCommand,removeEventListener,removeModel,removeView,removeWire,removeWire,setName,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>flash.events:IEventDispatcher</apiBaseInterface>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id="Object"/>
+               </Inheritance>
+               <Implements>
+                  <Implement id="flash.events:IEventDispatcher"/>
+               </Implements>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.wire:SomaWires">
+         <apiName>SomaWires</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="SomaWires,com.soma.core.wire.SomaWires,NAME,_name,instance,stage,wires,addCommand,addEventListener,addModel,addView,addWire,addWire,dispatchEvent,dispose,dispose,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWire,getWires,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,hasWire,initialize,isPartOfASequence,registerInstance,removeCommand,removeEventListener,removeModel,removeView,removeWire,removeWire,setName,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id="Object"/>
+               </Inheritance>
+               <Implements/>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.soma.core">
+      <apiName>com.soma.core</apiName>
+      <apiDetail/>
+      <apiClassifier id="com.soma.core:Soma">
+         <apiName>Soma</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 Usage:
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords"
+               content="Soma,com.soma.core.Soma,controller,models,stage,views,wires,addCommand,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispose,getCommand,getCommands,getLastSequencer,getModel,getModels,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasModel,hasView,hasWire,isPartOfASequence,registerCommands,registerModels,registerPlugins,registerViews,registerWires,removeCommand,removeModel,removeView,removeWire,stopAllSequencers,stopSequencerWithEvent,stopSequencer"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ISoma</apiBaseInterface>
+               <apiBaseClassifier>flash.events:EventDispatcher</apiBaseClassifier>
+            </apiClassifierDef>
+            <apiDesc>
+	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+	              <b>Class version:</b> v1.0.0
+	 <b>Actionscript version:</b> 3.0
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+	 
+	 <b>Usage:</b>
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface/>
+               <Inheritance>
+                  <Inherit id="flash.events:EventDispatcher"/>
+               </Inheritance>
+               <Implements>
+                  <Implement id="com.soma.core.interfaces:ISoma"/>
+               </Implements>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+   </apiPackage>
+</allClasses>

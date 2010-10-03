@@ -1,3 +1,27 @@
+/**
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ * 
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ * See the License for the specific language governing rights and
+ * limitations under the License.
+ * 
+ * The Original Code is SomaCore.
+ * 
+ * The Initial Developer of the Original Code is Romuald Quantin.
+ * romu@soundstep.com (www.soundstep.com).
+ * 
+ * Portions created by
+ * 
+ * Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ * All Rights Reserved.
+ * 
+ */
+
 package com.soma.core.controller {
 	import com.soma.core.interfaces.IModel;
 	import com.soma.core.interfaces.ISequenceCommand;
@@ -10,14 +34,18 @@ package com.soma.core.controller {
 	import flash.utils.Dictionary;
 
 	/**
-	 * <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />* <b>Class version:</b> 1.0<br />
+	 * <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 * <b>Class version:</b> v1.0.0<br />
 	 * <b>Actionscript version:</b> 3.0<br />
-	 * <b>Copyright:</b> 
+	 * <b>Copyright:</b>
+	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 * You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
 	 * <br />
-	 * <b>Date:</b> Sep 24, 2009<br />
-	 * <b>Usage:</b>
+	 * <b>Usage:</b><br />
 	 * @example
-	 * <listing version="3.0"></listing>
+	 * <listing version="3.0">
+	 * </listing>
 	 */
 	
 	public class Command implements IEventDispatcher {
@@ -61,166 +89,166 @@ package com.soma.core.controller {
 		}
 		
 		public final function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void {
-			soma.addEventListener(type, listener, useCapture, priority, useWeakReference);
+			_instance.addEventListener(type, listener, useCapture, priority, useWeakReference);
 		}
 
 		public final function dispatchEvent(event:Event):Boolean {
-			return soma.dispatchEvent(event);
+			return _instance.dispatchEvent(event);
 		}
 		
 		public final function hasEventListener(type:String):Boolean {
-			return soma.hasEventListener(type);
+			return _instance.hasEventListener(type);
 		}
 		
 		public final function removeEventListener(type:String, listener:Function, useCapture:Boolean = false):void {
-			soma.removeEventListener(type, listener, useCapture);
+			_instance.removeEventListener(type, listener, useCapture);
 		}
 
 		public final function willTrigger(type:String):Boolean {
-			return soma.willTrigger(type);
+			return _instance.willTrigger(type);
 		}
 		
-		public final function get soma():ISoma {
+		public final function get instance():ISoma {
 			return _instance;
 		}
 		
 		public final function get stage():Stage {
-			return soma.stage;
+			return _instance.stage;
 		}
 		
 		public final function hasCommand(commandName:String):Boolean {
-			if (!soma.controller) return false;
-			return soma.controller.hasCommand(commandName);
+			if (!_instance.controller) return false;
+			return _instance.controller.hasCommand(commandName);
 		}
 		
 		public final function addCommand(commandName:String, command:Class):void {
-			if (!soma.controller) return;
-			soma.controller.addCommand(commandName, command);
+			if (!_instance.controller) return;
+			_instance.controller.addCommand(commandName, command);
 		}
 		
 		public final function removeCommand(commandName:String):void {
-			if (!soma.controller) return;
-			soma.controller.removeCommand(commandName);
+			if (!_instance.controller) return;
+			_instance.controller.removeCommand(commandName);
 		}
 		
 		public final function getCommand(commandName:String):Class {
-			if (!soma.controller) return null;
-			return soma.controller.getCommand(commandName);
+			if (!_instance.controller) return null;
+			return _instance.controller.getCommand(commandName);
 		}
 		
 		public final function getCommands():Array {
-			if (!soma.controller) return null;
-			return soma.controller.getCommands();
+			if (!_instance.controller) return null;
+			return _instance.controller.getCommands();
 		}
 		
 		public final function getSequencer(event:Event):ISequenceCommand {
-			if (!soma.controller) return null;
-			return soma.controller.getSequencer(event);
+			if (!_instance.controller) return null;
+			return _instance.controller.getSequencer(event);
 		}
 		
 		public final function stopSequencerWithEvent(event:Event):Boolean {
-			if (!soma.controller) return false;
-			return soma.controller.stopSequencerWithEvent(event);
+			if (!_instance.controller) return false;
+			return _instance.controller.stopSequencerWithEvent(event);
 		}
 		
 		public final function stopSequencer(sequencer:ISequenceCommand):Boolean {
-			if (!soma.controller) return false;
-			return soma.controller.stopSequencer(sequencer);
+			if (!_instance.controller) return false;
+			return _instance.controller.stopSequencer(sequencer);
 		}
 		
 		public final function getRunningSequencers():Array {
-			if (!soma.controller) return null;
-			return soma.controller.getRunningSequencers();
+			if (!_instance.controller) return null;
+			return _instance.controller.getRunningSequencers();
 		}
 		
 		public final function stopAllSequencers():void {
-			if (!soma.controller) return;
-			soma.controller.stopAllSequencers();
+			if (!_instance.controller) return;
+			_instance.controller.stopAllSequencers();
 		}
 		
 		public final function isPartOfASequence(event:Event):Boolean {
-			if (!soma.controller) return false;
-			return soma.controller.isPartOfASequence(event);
+			if (!_instance.controller) return false;
+			return _instance.controller.isPartOfASequence(event);
 		}
 		
 		public final function getLastSequencer():ISequenceCommand {
-			if (!soma.controller) return null;
-			return soma.controller.getLastSequencer();
+			if (!_instance.controller) return null;
+			return _instance.controller.getLastSequencer();
 		}
 		
 		public final function hasModel(modelName:String):Boolean {
-			if (!soma.models) return false;
-			return soma.models.hasModel(modelName);
+			if (!_instance.models) return false;
+			return _instance.models.hasModel(modelName);
 		}
 		
 		public final function addModel(modelName:String, model:IModel):IModel {
-			if (!soma.models) return null;
-			return soma.models.addModel(modelName, model);
+			if (!_instance.models) return null;
+			return _instance.models.addModel(modelName, model);
 		}
 		
 		public final function removeModel(modelName:String):void {
-			if (!soma.models) return;
-			soma.models.removeModel(modelName);
+			if (!_instance.models) return;
+			_instance.models.removeModel(modelName);
 		}
 		
 		public final function getModel(modelName:String):IModel {
-			if (!soma.models) return null;
-			return soma.models.getModel(modelName);
+			if (!_instance.models) return null;
+			return _instance.models.getModel(modelName);
 		}
 		
 		public final function getModels():Dictionary {
-			if (!soma.models) return null;
-			return soma.models.getModels();
+			if (!_instance.models) return null;
+			return _instance.models.getModels();
 		}
 		
 		public final function hasView(viewName:String):Boolean {
-			if (!soma.views) return false;
-			return soma.views.hasView(viewName);
+			if (!_instance.views) return false;
+			return _instance.views.hasView(viewName);
 		}
 		
 		public final function addView(viewName:String, view:Object):Object {
-			if (!soma.views) return null;
-			return soma.views.addView(viewName, view);
+			if (!_instance.views) return null;
+			return _instance.views.addView(viewName, view);
 		}
 		
 		public final function removeView(viewName:String):void {
-			if (!soma.views) return;
-			soma.views.removeView(viewName);
+			if (!_instance.views) return;
+			_instance.views.removeView(viewName);
 		}
 		
 		public final function getView(viewName:String):Object {
-			if (!soma.views) return null;
-			return soma.views.getView(viewName);
+			if (!_instance.views) return null;
+			return _instance.views.getView(viewName);
 		}
 		
 		public final function getViews():Dictionary {
-			if (!soma.views) return null;
-			return soma.views.getViews();
+			if (!_instance.views) return null;
+			return _instance.views.getViews();
 		}
 		
 		public final function hasWire(wireName:String):Boolean {
-			if (!soma.wires) return false;
-			return soma.wires.hasWire(wireName);
+			if (!_instance.wires) return false;
+			return _instance.wires.hasWire(wireName);
 		}
 		
 		public final function addWire(wireName:String, wire:IWire):IWire {
-			if (!soma.wires) return null;
-			return soma.wires.addWire(wireName, wire);
+			if (!_instance.wires) return null;
+			return _instance.wires.addWire(wireName, wire);
 		}
 		
 		public final function removeWire(wireName:String):void {
-			if (!soma.wires) return;
-			soma.wires.removeWire(wireName);
+			if (!_instance.wires) return;
+			_instance.wires.removeWire(wireName);
 		}
 		
 		public final function getWire(wireName:String):IWire {
-			if (!soma.wires) return null;
-			return soma.wires.getWire(wireName);
+			if (!_instance.wires) return null;
+			return _instance.wires.getWire(wireName);
 		}
 		
 		public final function getWires():Dictionary {
-			if (!soma.wires) return null;
-			return soma.wires.getWires();
+			if (!_instance.wires) return null;
+			return _instance.wires.getWires();
 		}
 		
 	}

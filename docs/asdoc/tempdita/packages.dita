@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><apiMap><apiItemRef href="com.soma.core.xml"><apiItemRef href="com.soma.core.view.xml"/><apiItemRef href="com.soma.core.wire.xml"/><apiItemRef href="com.soma.core.model.xml"/><apiItemRef href="com.soma.core.controller.xml"/><apiItemRef href="com.soma.core.interfaces.xml"/></apiItemRef></apiMap>

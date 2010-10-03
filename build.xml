@@ -22,6 +22,7 @@
 	<target name="1. Initialize project directories">
 		<echo message="Create required project directories"/>
 		<mkdir dir="bin"/>
+		<echo message="Success"/>
 		<eclipse.refreshLocal resource="${project.name}" />
 	</target>
 	
@@ -50,11 +51,12 @@
 			<arg value="${dir.src.test}/FlexUnitRunner.mxml"/>
 		</exec>
 		<fdt.extSWFViewer.startSWF file="${dir.bin}/FlexUnitRunner.swf" width="1000" height="600"/>
+		<echo message="Success"/>
 		<eclipse.refreshLocal resource="${project.name}" />
 	</target>
 	
-	<target name="3. Release">
-		<echo message="Release SomaCore SWC"/>
+	<target name="3. Create Release">
+		<echo message="Create SomaCore SWC"/>
 		<exec executable="${compc}">
 			<arg line="-o"/>
 			<arg line="${dir.release}/SomaCore.swc"/>
@@ -63,6 +65,34 @@
 			<arg line="-sp"/>
 			<arg line="${dir.src.main}"/>
 		</exec>
+		<echo message="Success"/>
+		<eclipse.refreshLocal resource="${project.name}" />
+	</target>
+	
+	<target name="4. Create ASDOC">
+		<echo message="Create SomaCore ASDOC"/>
+		<delete includeemptydirs="true" failonerror="false">
+			<fileset dir="${dir.docs.asdoc}" defaultexcludes="false">
+				<include name="**/*"/>
+			</fileset>
+		</delete>
+		<tstamp>
+			<format property="docgen.time" pattern="MM/dd/yyyy hh:mm aa" unit="hour"/>
+	    </tstamp>
+	    <java jar="${FLEX_HOME}/lib/asdoc.jar" dir="${FLEX_HOME}/frameworks" fork="true" failonerror="true">
+	      <arg line="-doc-sources ${dir.src.main}"/>
+	      <arg line="-source-path ${dir.src.main}"/>
+	      <arg line="-output ${dir.docs.asdoc}"/>
+	      <arg value="-keep-xml=true"/>
+	      <arg value="-lenient=true"/>
+	      <arg line="-window-title 'SomaCore ${somacore.version}'"/>
+	      <arg line="-main-title 'SomaCore ${somacore.version}'"/>
+	      <arg line="-footer 'SomaCore ${somacore.version} | Documentation generated at: ${docgen.time}'"/>
+	      <!-- <arg line="-package com.soma.core.controllers 'Commands and Events"/> -->
+	    </java>
+		<echo message="Success"/>
+		<eclipse.refreshLocal resource="${project.name}" />
+		<fdt.browse location="${dir.docs.asdoc}/index.html"/>
 	</target>
 	
 	<!--

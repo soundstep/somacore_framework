@@ -1,0 +1,1405 @@
+<asdoc>
+
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='IModel' fullname='com.soma.core.interfaces:IModel' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IModel.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</interfaceRec>
+<method name='data' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:data/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='dispatcher' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:dispatcher/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.events:IEventDispatcher'>
+</method>
+<method name='name' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:name/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='data' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:data/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='name' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:name/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='ISomaPlugin' fullname='com.soma.core.interfaces:ISomaPlugin' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISomaPlugin.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</interfaceRec>
+<method name='initialize' fullname='com.soma.core.interfaces:ISomaPlugin/com.soma.core.interfaces:ISomaPlugin:initialize' isStatic='false' isFinal='false' isOverride='false'  param_names='pluginVO' param_types='com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined' result_type='void'>
+</method>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='IResponder' fullname='com.soma.core.interfaces:IResponder' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IResponder.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</interfaceRec>
+<method name='fault' fullname='com.soma.core.interfaces:IResponder/com.soma.core.interfaces:IResponder:fault' isStatic='false' isFinal='false' isOverride='false'  param_names='info' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='result' fullname='com.soma.core.interfaces:IResponder/com.soma.core.interfaces:IResponder:result' isStatic='false' isFinal='false' isOverride='false'  param_names='data' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='ISomaPluginVO' fullname='com.soma.core.interfaces:ISomaPluginVO' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISomaPluginVO.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</interfaceRec>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='IWire' fullname='com.soma.core.interfaces:IWire' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IWire.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</interfaceRec>
+<method name='getName' fullname='com.soma.core.interfaces:IWire/com.soma.core.interfaces:IWire:getName' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='setName' fullname='com.soma.core.interfaces:IWire/com.soma.core.interfaces:IWire:setName' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='ICommand' fullname='com.soma.core.interfaces:ICommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ICommand.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</interfaceRec>
+<method name='execute' fullname='com.soma.core.interfaces:ICommand/com.soma.core.interfaces:ICommand:execute' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+</method>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='ICommandASync' fullname='com.soma.core.interfaces:ICommandASync' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ICommandASync.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:ICommand;com.soma.core.interfaces:IResponder' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</interfaceRec>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='ISequenceCommand' fullname='com.soma.core.interfaces:ISequenceCommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISequenceCommand.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:ICommand' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</interfaceRec>
+<method name='executeNextCommand' fullname='com.soma.core.interfaces:ISequenceCommand/com.soma.core.interfaces:ISequenceCommand:executeNextCommand' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='stop' fullname='com.soma.core.interfaces:ISequenceCommand/com.soma.core.interfaces:ISequenceCommand:stop' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='commands' fullname='com.soma.core.interfaces:ISequenceCommand/com.soma.core.interfaces:ISequenceCommand:commands/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='currentCommand' fullname='com.soma.core.interfaces:ISequenceCommand/com.soma.core.interfaces:ISequenceCommand:currentCommand/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.events:Event'>
+</method>
+<method name='length' fullname='com.soma.core.interfaces:ISequenceCommand/com.soma.core.interfaces:ISequenceCommand:length/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='IParallelCommand' fullname='com.soma.core.interfaces:IParallelCommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IParallelCommand.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:ICommand' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</interfaceRec>
+<method name='commands' fullname='com.soma.core.interfaces:IParallelCommand/com.soma.core.interfaces:IParallelCommand:commands/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='length' fullname='com.soma.core.interfaces:IParallelCommand/com.soma.core.interfaces:IParallelCommand:length/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='ISoma' fullname='com.soma.core.interfaces:ISoma' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISoma.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</interfaceRec>
+<method name='addCommand' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:addCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName;command' param_types='String;Class' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addEventListener' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:addEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture;priority;useWeakReference' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+</method>
+<method name='addModel' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:addModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName;model' param_types='String;com.soma.core.interfaces:IModel' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IModel'>
+</method>
+<method name='addView' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:addView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName;view' param_types='String;Object' param_defaults='undefined;undefined' result_type='Object'>
+</method>
+<method name='addWire' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:addWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName;wire' param_types='String;com.soma.core.interfaces:IWire' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IWire'>
+</method>
+<method name='createPlugin' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:createPlugin' isStatic='false' isFinal='false' isOverride='false'  param_names='plugin;pluginVO' param_types='Class;com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:ISomaPlugin'>
+</method>
+<method name='dispatchEvent' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:dispatchEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='dispose' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getCommand' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='getCommands' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getCommands' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='getLastSequencer' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getLastSequencer' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISequenceCommand'>
+</method>
+<method name='getModel' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IModel'>
+</method>
+<method name='getModels' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getModels' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='getRunningSequencers' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getRunningSequencers' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='getSequencer' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getSequencer' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='com.soma.core.interfaces:ISequenceCommand'>
+</method>
+<method name='getView' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='getViews' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getViews' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='getWire' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IWire'>
+</method>
+<method name='getWires' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getWires' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='hasCommand' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:hasCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasEventListener' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:hasEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasModel' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:hasModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasView' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:hasView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasWire' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:hasWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='isPartOfASequence' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:isPartOfASequence' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='removeCommand' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:removeCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeEventListener' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:removeEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+</method>
+<method name='removeModel' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:removeModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeView' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:removeView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeWire' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:removeWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='stopAllSequencers' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:stopAllSequencers' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='stopSequencerWithEvent' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:stopSequencerWithEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='stopSequencer' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:stopSequencer' isStatic='false' isFinal='false' isOverride='false'  param_names='sequencer' param_types='com.soma.core.interfaces:ISequenceCommand' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='willTrigger' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:willTrigger' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='controller' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:controller/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.controller:SomaController'>
+</method>
+<method name='models' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:models/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.model:SomaModels'>
+</method>
+<method name='stage' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:stage/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.display:Stage'>
+</method>
+<method name='views' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:views/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.view:SomaViews'>
+</method>
+<method name='wires' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:wires/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.wire:SomaWires'>
+</method>
+<packageRec name='com.soma.core.view.null' fullname='com.soma.core.view.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<classRec name='SomaViews' fullname='com.soma.core.view:SomaViews' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/view/SomaViews.as' namespace='com.soma.core.view' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</classRec>
+<method name='SomaViews' fullname='com.soma.core.view:SomaViews/SomaViews' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='addView' fullname='com.soma.core.view:SomaViews/addView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName;view' param_types='String;Object' param_defaults='undefined;undefined' result_type='Object'>
+</method>
+<method name='dispose' fullname='com.soma.core.view:SomaViews/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getView' fullname='com.soma.core.view:SomaViews/getView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='getViews' fullname='com.soma.core.view:SomaViews/getViews' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='hasView' fullname='com.soma.core.view:SomaViews/hasView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='com.soma.core.view:SomaViews/private:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='removeView' fullname='com.soma.core.view:SomaViews/removeView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='views' fullname='com.soma.core.view:SomaViews/protected:views' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
+</field>
+<packageRec name='com.soma.core.model.null' fullname='com.soma.core.model.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<classRec name='Model' fullname='com.soma.core.model:Model' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/model/Model.as' namespace='com.soma.core.model' access='public' baseclass='Object' interfaces='com.soma.core.interfaces:IModel' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</classRec>
+<method name='Model' fullname='com.soma.core.model:Model/Model' isStatic='false' isFinal='false' isOverride='false'  param_names='name;data;_dispatcher' param_types='String;Object;flash.events:IEventDispatcher' param_defaults='null;null;null' result_type='*'>
+</method>
+<method name='addEventListener' fullname='com.soma.core.model:Model/addEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture;priority;useWeakReference' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+</method>
+<method name='dispatchEvent' fullname='com.soma.core.model:Model/dispatchEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='dispose' fullname='com.soma.core.model:Model/protected:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='hasEventListener' fullname='com.soma.core.model:Model/hasEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='com.soma.core.model:Model/protected:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='registerDispatcher' fullname='com.soma.core.model:Model/somans:registerDispatcher' isStatic='false' isFinal='false' isOverride='false'  param_names='dispatcher' param_types='flash.events:IEventDispatcher' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeEventListener' fullname='com.soma.core.model:Model/removeEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+</method>
+<method name='willTrigger' fullname='com.soma.core.model:Model/willTrigger' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='data' fullname='com.soma.core.model:Model/data/get' isStatic='false' isFinal='true' isOverride='false'  result_type='Object'>
+</method>
+<method name='dispatcher' fullname='com.soma.core.model:Model/dispatcher/get' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.events:IEventDispatcher'>
+</method>
+<method name='name' fullname='com.soma.core.model:Model/name/get' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
+</method>
+<method name='data' fullname='com.soma.core.model:Model/data/set' isStatic='false' isFinal='true' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='name' fullname='com.soma.core.model:Model/name/set' isStatic='false' isFinal='true' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='NAME' fullname='com.soma.core.model:Model/NAME' type='String' isStatic='true' isConst='false' defaultValue='Soma::Model' >
+</field>
+<field name='_data' fullname='com.soma.core.model:Model/protected:_data' type='Object' isStatic='false' isConst='false' >
+</field>
+<field name='_dispatcher' fullname='com.soma.core.model:Model/private:_dispatcher' type='flash.events:IEventDispatcher' isStatic='false' isConst='false' >
+</field>
+<field name='_name' fullname='com.soma.core.model:Model/protected:_name' type='String' isStatic='false' isConst='false' >
+</field>
+<packageRec name='com.soma.core.model.null' fullname='com.soma.core.model.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<classRec name='SomaModels' fullname='com.soma.core.model:SomaModels' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/model/SomaModels.as' namespace='com.soma.core.model' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</classRec>
+<method name='SomaModels' fullname='com.soma.core.model:SomaModels/SomaModels' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='*'>
+</method>
+<method name='addModel' fullname='com.soma.core.model:SomaModels/addModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName;model' param_types='String;com.soma.core.interfaces:IModel' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IModel'>
+</method>
+<method name='dispose' fullname='com.soma.core.model:SomaModels/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getModel' fullname='com.soma.core.model:SomaModels/getModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IModel'>
+</method>
+<method name='getModels' fullname='com.soma.core.model:SomaModels/getModels' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='hasModel' fullname='com.soma.core.model:SomaModels/hasModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='com.soma.core.model:SomaModels/private:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='removeModel' fullname='com.soma.core.model:SomaModels/removeModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_instance' fullname='com.soma.core.model:SomaModels/private:_instance' type='com.soma.core.interfaces:ISoma' isStatic='false' isConst='false' >
+</field>
+<field name='models' fullname='com.soma.core.model:SomaModels/protected:models' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
+</field>
+<packageRec name='com.soma.core.controller.null' fullname='com.soma.core.controller.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<classRec name='SomaController' fullname='com.soma.core.controller:SomaController' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/SomaController.as' namespace='com.soma.core.controller' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</classRec>
+<method name='SomaController' fullname='com.soma.core.controller:SomaController/SomaController' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='*'>
+</method>
+<method name='addCommand' fullname='com.soma.core.controller:SomaController/addCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName;command' param_types='String;Class' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addInterceptor' fullname='com.soma.core.controller:SomaController/private:addInterceptor' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='dispose' fullname='com.soma.core.controller:SomaController/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='eventsHandler' fullname='com.soma.core.controller:SomaController/private:eventsHandler' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+</method>
+<method name='executeCommand' fullname='com.soma.core.controller:SomaController/com.soma.core.controller:executeCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+</method>
+<method name='getCommand' fullname='com.soma.core.controller:SomaController/getCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='getCommands' fullname='com.soma.core.controller:SomaController/getCommands' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='getLastSequencer' fullname='com.soma.core.controller:SomaController/getLastSequencer' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISequenceCommand'>
+</method>
+<method name='getRunningSequencers' fullname='com.soma.core.controller:SomaController/getRunningSequencers' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='getSequencer' fullname='com.soma.core.controller:SomaController/getSequencer' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='com.soma.core.interfaces:ISequenceCommand'>
+</method>
+<method name='hasCommand' fullname='com.soma.core.controller:SomaController/hasCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='com.soma.core.controller:SomaController/private:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='isPartOfASequence' fullname='com.soma.core.controller:SomaController/isPartOfASequence' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='registerSequencedCommand' fullname='com.soma.core.controller:SomaController/com.soma.core.controller:registerSequencedCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='sequencer;event' param_types='com.soma.core.interfaces:ISequenceCommand;flash.events:Event' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='removeCommand' fullname='com.soma.core.controller:SomaController/removeCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeInterceptor' fullname='com.soma.core.controller:SomaController/private:removeInterceptor' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='somaEventsHandler' fullname='com.soma.core.controller:SomaController/private:somaEventsHandler' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+</method>
+<method name='stopAllSequencers' fullname='com.soma.core.controller:SomaController/stopAllSequencers' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='stopSequencerWithEvent' fullname='com.soma.core.controller:SomaController/stopSequencerWithEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='stopSequencer' fullname='com.soma.core.controller:SomaController/stopSequencer' isStatic='false' isFinal='false' isOverride='false'  param_names='sequencer' param_types='com.soma.core.interfaces:ISequenceCommand' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='unregisterSequencedCommand' fullname='com.soma.core.controller:SomaController/com.soma.core.controller:unregisterSequencedCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='sequencer;event' param_types='com.soma.core.interfaces:ISequenceCommand;flash.events:Event' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='unregisterSequencer' fullname='com.soma.core.controller:SomaController/com.soma.core.controller:unregisterSequencer' isStatic='false' isFinal='false' isOverride='false'  param_names='sequencer' param_types='com.soma.core.interfaces:ISequenceCommand' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_commands' fullname='com.soma.core.controller:SomaController/private:_commands' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
+</field>
+<field name='_instance' fullname='com.soma.core.controller:SomaController/private:_instance' type='com.soma.core.interfaces:ISoma' isStatic='false' isConst='false' >
+</field>
+<field name='_lastEvent' fullname='com.soma.core.controller:SomaController/private:_lastEvent' type='flash.events:Event' isStatic='false' isConst='false' >
+</field>
+<field name='_lastSequencer' fullname='com.soma.core.controller:SomaController/private:_lastSequencer' type='com.soma.core.interfaces:ISequenceCommand' isStatic='false' isConst='false' >
+</field>
+<field name='_sequencers' fullname='com.soma.core.controller:SomaController/private:_sequencers' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
+</field>
+<packageRec name='com.soma.core.controller.null' fullname='com.soma.core.controller.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<classRec name='Command' fullname='com.soma.core.controller:Command' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/Command.as' namespace='com.soma.core.controller' access='public' baseclass='Object' interfaces='flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</classRec>
+<method name='Command' fullname='com.soma.core.controller:Command/Command' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='addCommand' fullname='com.soma.core.controller:Command/addCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName;command' param_types='String;Class' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addEventListener' fullname='com.soma.core.controller:Command/addEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture;priority;useWeakReference' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+</method>
+<method name='addModel' fullname='com.soma.core.controller:Command/addModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName;model' param_types='String;com.soma.core.interfaces:IModel' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IModel'>
+</method>
+<method name='addView' fullname='com.soma.core.controller:Command/addView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName;view' param_types='String;Object' param_defaults='undefined;undefined' result_type='Object'>
+</method>
+<method name='addWire' fullname='com.soma.core.controller:Command/addWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName;wire' param_types='String;com.soma.core.interfaces:IWire' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IWire'>
+</method>
+<method name='dispatchEvent' fullname='com.soma.core.controller:Command/dispatchEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='getCommand' fullname='com.soma.core.controller:Command/getCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='getCommands' fullname='com.soma.core.controller:Command/getCommands' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+</method>
+<method name='getLastSequencer' fullname='com.soma.core.controller:Command/getLastSequencer' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.interfaces:ISequenceCommand'>
+</method>
+<method name='getModel' fullname='com.soma.core.controller:Command/getModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IModel'>
+</method>
+<method name='getModels' fullname='com.soma.core.controller:Command/getModels' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='getRunningSequencers' fullname='com.soma.core.controller:Command/getRunningSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+</method>
+<method name='getSequencer' fullname='com.soma.core.controller:Command/getSequencer' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='com.soma.core.interfaces:ISequenceCommand'>
+</method>
+<method name='getView' fullname='com.soma.core.controller:Command/getView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='getViews' fullname='com.soma.core.controller:Command/getViews' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='getWire' fullname='com.soma.core.controller:Command/getWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IWire'>
+</method>
+<method name='getWires' fullname='com.soma.core.controller:Command/getWires' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='hasCommand' fullname='com.soma.core.controller:Command/hasCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasEventListener' fullname='com.soma.core.controller:Command/hasEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasModel' fullname='com.soma.core.controller:Command/hasModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasView' fullname='com.soma.core.controller:Command/hasView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasWire' fullname='com.soma.core.controller:Command/hasWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='com.soma.core.controller:Command/protected:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='isPartOfASequence' fullname='com.soma.core.controller:Command/isPartOfASequence' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='registerInstance' fullname='com.soma.core.controller:Command/somans:registerInstance' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeCommand' fullname='com.soma.core.controller:Command/removeCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeEventListener' fullname='com.soma.core.controller:Command/removeEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+</method>
+<method name='removeModel' fullname='com.soma.core.controller:Command/removeModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeView' fullname='com.soma.core.controller:Command/removeView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeWire' fullname='com.soma.core.controller:Command/removeWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='stopAllSequencers' fullname='com.soma.core.controller:Command/stopAllSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+</method>
+<method name='stopSequencerWithEvent' fullname='com.soma.core.controller:Command/stopSequencerWithEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='stopSequencer' fullname='com.soma.core.controller:Command/stopSequencer' isStatic='false' isFinal='true' isOverride='false'  param_names='sequencer' param_types='com.soma.core.interfaces:ISequenceCommand' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='willTrigger' fullname='com.soma.core.controller:Command/willTrigger' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='instance' fullname='com.soma.core.controller:Command/instance/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.interfaces:ISoma'>
+</method>
+<method name='stage' fullname='com.soma.core.controller:Command/stage/get' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.display:Stage'>
+</method>
+<field name='_instance' fullname='com.soma.core.controller:Command/private:_instance' type='com.soma.core.interfaces:ISoma' isStatic='false' isConst='false' >
+</field>
+<packageRec name='com.soma.core.controller.null' fullname='com.soma.core.controller.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<classRec name='ParallelCommand' fullname='com.soma.core.controller:ParallelCommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/ParallelCommand.as' namespace='com.soma.core.controller' access='public' baseclass='com.soma.core.controller:Command' interfaces='com.soma.core.interfaces:IParallelCommand' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</classRec>
+<method name='ParallelCommand' fullname='com.soma.core.controller:ParallelCommand/ParallelCommand' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='addSubCommand' fullname='com.soma.core.controller:ParallelCommand/protected:addSubCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+</method>
+<method name='execute' fullname='com.soma.core.controller:ParallelCommand/execute' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+</method>
+<method name='initializeSubCommands' fullname='com.soma.core.controller:ParallelCommand/protected:initializeSubCommands' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='initialize' fullname='com.soma.core.controller:ParallelCommand/protected:initialize' isStatic='false' isFinal='true' isOverride='true'  result_type='void'>
+</method>
+<method name='commands' fullname='com.soma.core.controller:ParallelCommand/commands/get' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+</method>
+<method name='length' fullname='com.soma.core.controller:ParallelCommand/length/get' isStatic='false' isFinal='true' isOverride='false'  result_type='int'>
+</method>
+<field name='_commands' fullname='com.soma.core.controller:ParallelCommand/private:_commands' type='Array' isStatic='false' isConst='false' >
+</field>
+<packageRec name='com.soma.core.controller.null' fullname='com.soma.core.controller.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<classRec name='SequenceCommand' fullname='com.soma.core.controller:SequenceCommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/SequenceCommand.as' namespace='com.soma.core.controller' access='public' baseclass='com.soma.core.controller:Command' interfaces='com.soma.core.interfaces:ISequenceCommand' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</classRec>
+<method name='SequenceCommand' fullname='com.soma.core.controller:SequenceCommand/SequenceCommand' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='addSubCommand' fullname='com.soma.core.controller:SequenceCommand/protected:addSubCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+</method>
+<method name='executeNextCommand' fullname='com.soma.core.controller:SequenceCommand/executeNextCommand' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+</method>
+<method name='execute' fullname='com.soma.core.controller:SequenceCommand/execute' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+</method>
+<method name='initializeSubCommands' fullname='com.soma.core.controller:SequenceCommand/protected:initializeSubCommands' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='initialize' fullname='com.soma.core.controller:SequenceCommand/protected:initialize' isStatic='false' isFinal='true' isOverride='true'  result_type='void'>
+</method>
+<method name='stop' fullname='com.soma.core.controller:SequenceCommand/stop' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+</method>
+<method name='commands' fullname='com.soma.core.controller:SequenceCommand/commands/get' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+</method>
+<method name='currentCommand' fullname='com.soma.core.controller:SequenceCommand/currentCommand/get' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.events:Event'>
+</method>
+<method name='length' fullname='com.soma.core.controller:SequenceCommand/length/get' isStatic='false' isFinal='true' isOverride='false'  result_type='int'>
+</method>
+<field name='_commands' fullname='com.soma.core.controller:SequenceCommand/private:_commands' type='Array' isStatic='false' isConst='false' >
+</field>
+<field name='_currentCommand' fullname='com.soma.core.controller:SequenceCommand/private:_currentCommand' type='flash.events:Event' isStatic='false' isConst='false' >
+</field>
+<packageRec name='com.soma.core.wire.null' fullname='com.soma.core.wire.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<classRec name='SomaWires' fullname='com.soma.core.wire:SomaWires' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/wire/SomaWires.as' namespace='com.soma.core.wire' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</classRec>
+<method name='SomaWires' fullname='com.soma.core.wire:SomaWires/SomaWires' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='*'>
+</method>
+<method name='addWire' fullname='com.soma.core.wire:SomaWires/addWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName;wire' param_types='String;com.soma.core.interfaces:IWire' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IWire'>
+</method>
+<method name='dispose' fullname='com.soma.core.wire:SomaWires/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getWire' fullname='com.soma.core.wire:SomaWires/getWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IWire'>
+</method>
+<method name='getWires' fullname='com.soma.core.wire:SomaWires/getWires' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='hasWire' fullname='com.soma.core.wire:SomaWires/hasWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='com.soma.core.wire:SomaWires/private:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='removeWire' fullname='com.soma.core.wire:SomaWires/removeWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_instance' fullname='com.soma.core.wire:SomaWires/private:_instance' type='com.soma.core.interfaces:ISoma' isStatic='false' isConst='false' >
+</field>
+<field name='wires' fullname='com.soma.core.wire:SomaWires/protected:wires' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
+</field>
+<packageRec name='com.soma.core.wire.null' fullname='com.soma.core.wire.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<classRec name='Wire' fullname='com.soma.core.wire:Wire' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/wire/Wire.as' namespace='com.soma.core.wire' access='public' baseclass='Object' interfaces='flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</classRec>
+<method name='Wire' fullname='com.soma.core.wire:Wire/Wire' isStatic='false' isFinal='true' isOverride='false'  param_names='name' param_types='String' param_defaults='null' result_type='*'>
+</method>
+<method name='addCommand' fullname='com.soma.core.wire:Wire/addCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName;command' param_types='String;Class' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addEventListener' fullname='com.soma.core.wire:Wire/addEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture;priority;useWeakReference' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+</method>
+<method name='addModel' fullname='com.soma.core.wire:Wire/addModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName;model' param_types='String;com.soma.core.interfaces:IModel' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IModel'>
+</method>
+<method name='addView' fullname='com.soma.core.wire:Wire/addView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName;view' param_types='String;Object' param_defaults='undefined;undefined' result_type='Object'>
+</method>
+<method name='addWire' fullname='com.soma.core.wire:Wire/addWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName;wire' param_types='String;com.soma.core.interfaces:IWire' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IWire'>
+</method>
+<method name='dispatchEvent' fullname='com.soma.core.wire:Wire/dispatchEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='dispose' fullname='com.soma.core.wire:Wire/protected:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getCommand' fullname='com.soma.core.wire:Wire/getCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='getCommands' fullname='com.soma.core.wire:Wire/getCommands' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+</method>
+<method name='getLastSequencer' fullname='com.soma.core.wire:Wire/getLastSequencer' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.interfaces:ISequenceCommand'>
+</method>
+<method name='getModel' fullname='com.soma.core.wire:Wire/getModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IModel'>
+</method>
+<method name='getModels' fullname='com.soma.core.wire:Wire/getModels' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='getName' fullname='com.soma.core.wire:Wire/getName' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
+</method>
+<method name='getRunningSequencers' fullname='com.soma.core.wire:Wire/getRunningSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+</method>
+<method name='getSequencer' fullname='com.soma.core.wire:Wire/getSequencer' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='com.soma.core.interfaces:ISequenceCommand'>
+</method>
+<method name='getView' fullname='com.soma.core.wire:Wire/getView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='getViews' fullname='com.soma.core.wire:Wire/getViews' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='getWire' fullname='com.soma.core.wire:Wire/getWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IWire'>
+</method>
+<method name='getWires' fullname='com.soma.core.wire:Wire/getWires' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='hasCommand' fullname='com.soma.core.wire:Wire/hasCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasEventListener' fullname='com.soma.core.wire:Wire/hasEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasModel' fullname='com.soma.core.wire:Wire/hasModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasView' fullname='com.soma.core.wire:Wire/hasView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasWire' fullname='com.soma.core.wire:Wire/hasWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='com.soma.core.wire:Wire/protected:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='isPartOfASequence' fullname='com.soma.core.wire:Wire/isPartOfASequence' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='registerInstance' fullname='com.soma.core.wire:Wire/somans:registerInstance' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeCommand' fullname='com.soma.core.wire:Wire/removeCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeEventListener' fullname='com.soma.core.wire:Wire/removeEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+</method>
+<method name='removeModel' fullname='com.soma.core.wire:Wire/removeModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeView' fullname='com.soma.core.wire:Wire/removeView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeWire' fullname='com.soma.core.wire:Wire/removeWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='setName' fullname='com.soma.core.wire:Wire/setName' isStatic='false' isFinal='true' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='stopAllSequencers' fullname='com.soma.core.wire:Wire/stopAllSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+</method>
+<method name='stopSequencerWithEvent' fullname='com.soma.core.wire:Wire/stopSequencerWithEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='stopSequencer' fullname='com.soma.core.wire:Wire/stopSequencer' isStatic='false' isFinal='true' isOverride='false'  param_names='sequencer' param_types='com.soma.core.interfaces:ISequenceCommand' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='willTrigger' fullname='com.soma.core.wire:Wire/willTrigger' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='instance' fullname='com.soma.core.wire:Wire/instance/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.interfaces:ISoma'>
+</method>
+<method name='stage' fullname='com.soma.core.wire:Wire/stage/get' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.display:Stage'>
+</method>
+<field name='NAME' fullname='com.soma.core.wire:Wire/NAME' type='String' isStatic='true' isConst='false' defaultValue='Soma::Wire' >
+</field>
+<field name='_instance' fullname='com.soma.core.wire:Wire/private:_instance' type='com.soma.core.interfaces:ISoma' isStatic='false' isConst='false' >
+</field>
+<field name='_name' fullname='com.soma.core.wire:Wire/protected:_name' type='String' isStatic='false' isConst='false' >
+</field>
+<packageRec name='com.soma.core.null' fullname='com.soma.core.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<classRec name='Soma' fullname='com.soma.core:Soma' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/Soma.as' namespace='com.soma.core' access='public' baseclass='flash.events:EventDispatcher' interfaces='com.soma.core.interfaces:ISoma' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
+	 <b>Class version:</b> v1.0.0<br />
+	 <b>Actionscript version:</b> 3.0<br />
+	 <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
+	 <br />
+	 <b>Usage:</b><br />
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</classRec>
+<method name='Soma' fullname='com.soma.core:Soma/Soma' isStatic='false' isFinal='false' isOverride='false'  param_names='stage' param_types='flash.display:Stage' param_defaults='undefined' result_type='*'>
+</method>
+<method name='addCommand' fullname='com.soma.core:Soma/addCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName;command' param_types='String;Class' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addModel' fullname='com.soma.core:Soma/addModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName;model' param_types='String;com.soma.core.interfaces:IModel' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IModel'>
+</method>
+<method name='addView' fullname='com.soma.core:Soma/addView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName;view' param_types='String;Object' param_defaults='undefined;undefined' result_type='Object'>
+</method>
+<method name='addWire' fullname='com.soma.core:Soma/addWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName;wire' param_types='String;com.soma.core.interfaces:IWire' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IWire'>
+</method>
+<method name='createPluginFromClassName' fullname='com.soma.core:Soma/createPluginFromClassName' isStatic='false' isFinal='true' isOverride='false'  param_names='pluginClassName;pluginVO' param_types='String;com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:ISomaPlugin'>
+</method>
+<method name='createPlugin' fullname='com.soma.core:Soma/createPlugin' isStatic='false' isFinal='true' isOverride='false'  param_names='plugin;pluginVO' param_types='Class;com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:ISomaPlugin'>
+</method>
+<method name='dispose' fullname='com.soma.core:Soma/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getCommand' fullname='com.soma.core:Soma/getCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='getCommands' fullname='com.soma.core:Soma/getCommands' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+</method>
+<method name='getLastSequencer' fullname='com.soma.core:Soma/getLastSequencer' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.interfaces:ISequenceCommand'>
+</method>
+<method name='getModel' fullname='com.soma.core:Soma/getModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IModel'>
+</method>
+<method name='getModels' fullname='com.soma.core:Soma/getModels' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='getRunningSequencers' fullname='com.soma.core:Soma/getRunningSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+</method>
+<method name='getSequencer' fullname='com.soma.core:Soma/getSequencer' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='com.soma.core.interfaces:ISequenceCommand'>
+</method>
+<method name='getView' fullname='com.soma.core:Soma/getView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='getViews' fullname='com.soma.core:Soma/getViews' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='getWire' fullname='com.soma.core:Soma/getWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IWire'>
+</method>
+<method name='getWires' fullname='com.soma.core:Soma/getWires' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+</method>
+<method name='hasCommand' fullname='com.soma.core:Soma/hasCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasModel' fullname='com.soma.core:Soma/hasModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasView' fullname='com.soma.core:Soma/hasView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='hasWire' fullname='com.soma.core:Soma/hasWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='com.soma.core:Soma/private:initialize' isStatic='false' isFinal='false' isOverride='false'  param_names='stage' param_types='flash.display:Stage' param_defaults='undefined' result_type='void'>
+</method>
+<method name='isPartOfASequence' fullname='com.soma.core:Soma/isPartOfASequence' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='registerCommands' fullname='com.soma.core:Soma/protected:registerCommands' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='registerModels' fullname='com.soma.core:Soma/protected:registerModels' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='registerPlugins' fullname='com.soma.core:Soma/protected:registerPlugins' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='registerViews' fullname='com.soma.core:Soma/protected:registerViews' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='registerWires' fullname='com.soma.core:Soma/protected:registerWires' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='removeCommand' fullname='com.soma.core:Soma/removeCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeModel' fullname='com.soma.core:Soma/removeModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeView' fullname='com.soma.core:Soma/removeView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeWire' fullname='com.soma.core:Soma/removeWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='stopAllSequencers' fullname='com.soma.core:Soma/stopAllSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+</method>
+<method name='stopSequencerWithEvent' fullname='com.soma.core:Soma/stopSequencerWithEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='stopSequencer' fullname='com.soma.core:Soma/stopSequencer' isStatic='false' isFinal='true' isOverride='false'  param_names='sequencer' param_types='com.soma.core.interfaces:ISequenceCommand' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='validateStage' fullname='com.soma.core:Soma/private:validateStage' isStatic='false' isFinal='false' isOverride='false'  param_names='stage' param_types='flash.display:Stage' param_defaults='undefined' result_type='void'>
+</method>
+<method name='controller' fullname='com.soma.core:Soma/controller/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.controller:SomaController'>
+</method>
+<method name='models' fullname='com.soma.core:Soma/models/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.model:SomaModels'>
+</method>
+<method name='stage' fullname='com.soma.core:Soma/stage/get' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.display:Stage'>
+</method>
+<method name='views' fullname='com.soma.core:Soma/views/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.view:SomaViews'>
+</method>
+<method name='wires' fullname='com.soma.core:Soma/wires/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.wire:SomaWires'>
+</method>
+<field name='_controller' fullname='com.soma.core:Soma/private:_controller' type='com.soma.core.controller:SomaController' isStatic='false' isConst='false' >
+</field>
+<field name='_models' fullname='com.soma.core:Soma/private:_models' type='com.soma.core.model:SomaModels' isStatic='false' isConst='false' >
+</field>
+<field name='_stage' fullname='com.soma.core:Soma/private:_stage' type='flash.display:Stage' isStatic='false' isConst='false' >
+</field>
+<field name='_views' fullname='com.soma.core:Soma/private:_views' type='com.soma.core.view:SomaViews' isStatic='false' isConst='false' >
+</field>
+<field name='_wires' fullname='com.soma.core:Soma/private:_wires' type='com.soma.core.wire:SomaWires' isStatic='false' isConst='false' >
+</field>
+</asdoc>
