@@ -11,7 +11,7 @@
 <booleanAttribute key="PASS_RSLS" value="false"/>
 <booleanAttribute key="PASS_SWCS" value="true"/>
 <intAttribute key="PLAYER_HEIGHT" value="600"/>
-<intAttribute key="PLAYER_WIDTH" value="1000"/>
+<intAttribute key="PLAYER_WIDTH" value="1200"/>
 <stringAttribute key="POST_COMPILE_ANT" value=""/>
 <stringAttribute key="PRE_COMPILE_ANT" value=""/>
 <stringAttribute key="PROJECT_NAME" value="somacore_framework"/>
