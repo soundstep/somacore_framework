@@ -8,6 +8,7 @@
 	
 	<fx:Script>
 		<![CDATA[
+			import com.soma.core.tests.suites.base.BaseSuite;
 			import org.flexunit.listeners.UIListener;
 			import org.flexunit.runner.FlexUnitCore;
 
@@ -16,7 +17,7 @@
 			public function runMe():void {
 				core = new FlexUnitCore();
 				core.addListener(new UIListener(uiListener));
-				core.run(SimpleTest);
+				core.run(BaseSuite);
 			}
 	]]>
 	</fx:Script>
