@@ -127,7 +127,7 @@ package com.soma.core {
 		// PUBLIC
 		//________________________________________________________________________________________________
 		
-		public function dispose() : void {
+		public function dispose():void {
 			try {
 				if (_models) { _models.dispose(); _models = null; }
 				if (_views) { _views.dispose(); _views = null; }
