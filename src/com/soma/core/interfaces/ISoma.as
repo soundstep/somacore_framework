@@ -63,6 +63,7 @@ package com.soma.core.interfaces {
 		function get wires():SomaWires;
 		
 		function createPlugin(plugin:Class, pluginVO:ISomaPluginVO):ISomaPlugin;
+		function createPluginFromClassName(pluginClassName:String, pluginVO:ISomaPluginVO):ISomaPlugin;
 		
 		function dispose():void;
 		

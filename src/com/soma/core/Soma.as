@@ -156,15 +156,10 @@ package com.soma.core {
 		}
 		
 		public final function createPlugin(plugin:Class, pluginVO:ISomaPluginVO):ISomaPlugin {
-			try {
-				var pluginInstance:Object = new plugin();
-				if (!(pluginInstance is ISomaPlugin)) throw new Error("Error in " + this + " The plugin class must implements ISomaPlugin");
-				ISomaPlugin(pluginInstance).initialize(pluginVO);
-				return pluginInstance as ISomaPlugin;
-			} catch (e:Error) {
-				trace(e);
-			}
-			return null;
+			var pluginInstance:Object = new plugin();
+			if (!(pluginInstance is ISomaPlugin)) throw new Error("Error in " + this + " The plugin class must implements ISomaPlugin");
+			ISomaPlugin(pluginInstance).initialize(pluginVO);
+			return pluginInstance as ISomaPlugin;
 		}
 
 		public final function createPluginFromClassName(pluginClassName:String, pluginVO:ISomaPluginVO):ISomaPlugin {
@@ -175,8 +170,8 @@ package com.soma.core {
 				ISomaPlugin(pluginInstance).initialize(pluginVO);
 				return pluginInstance as ISomaPlugin;
 			} catch (e:Error) {
-				if (e.errorID == 1065) trace("Error in " + this + " Plugin From ClassName not created (" + pluginClassName + "), you need to import your Class or use the createPlugin() method.");
-				else throw trace(e.message);
+				if (e.errorID == 1065) throw new Error("Error in " + this + " Plugin From ClassName not created (" + pluginClassName + "), you need to import your Class or use the createPlugin() method.");
+				else throw e;
 			}
 			return null;
 		}
