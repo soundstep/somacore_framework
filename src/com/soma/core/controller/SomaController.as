@@ -100,35 +100,42 @@ package com.soma.core.controller {
 		
 		private function addInterceptor(commandName:String):void {
 			if (_instance.stage == null) return;
-			_instance.stage.addEventListener(commandName, eventsHandler, true, -100);
-			_instance.addEventListener(commandName, somaEventsHandler, false, -100);
+			// handle events dispatched from the stage
+			_instance.stage.addEventListener(commandName, displayListHandler, false, int.MIN_VALUE);
+			// handle events dispatched from the display list
+			_instance.stage.addEventListener(commandName, displayListHandler, true, int.MIN_VALUE);
+			// handle events dispatched from the facade
+			_instance.addEventListener(commandName, instanceHandler, false, int.MIN_VALUE);
 		}
 		
 		private function removeInterceptor(commandName:String):void {
 			if (_instance.stage == null) return;
-			_instance.stage.removeEventListener(commandName, eventsHandler, true);
-			_instance.removeEventListener(commandName, somaEventsHandler, false);
+			_instance.stage.removeEventListener(commandName, displayListHandler, false);
+			_instance.stage.removeEventListener(commandName, displayListHandler, true);
+			_instance.removeEventListener(commandName, instanceHandler, false);
 		}
-		
-		private function eventsHandler(event:Event):void {
+
+		private function displayListHandler(event:Event):void {
 			if (event.bubbles && hasCommand(event.type)) {
 				event.stopPropagation();
 				var clonedEvent:Event = event.clone();
 				// store a reference of the events not to dispatch it twice
+				// in case it is dispatched from the display list
 				_lastEvent = clonedEvent;
 				_instance.dispatchEvent(clonedEvent);
 				if (!clonedEvent.isDefaultPrevented()) {
-					executeCommand(event);
-				}
+					executeCommand(event);				}
 				_lastEvent = null;
 			}
 		}
 		
-		private function somaEventsHandler(event:Event):void {
-			// if the event is equal to the lastEvent, this has already been dispatched for execution
-			if (_lastEvent != event) {
-				if (!event.isDefaultPrevented()) {
-					executeCommand(event);
+		private function instanceHandler(event:Event):void {
+			if (event.bubbles && hasCommand(event.type)) {
+				// if the event is equal to the lastEvent, this has already been dispatched for execution
+				if (_lastEvent != event) {
+					if (!event.isDefaultPrevented()) {
+						executeCommand(event);
+					}
 				}
 			}
 			_lastEvent = null;
@@ -176,6 +183,10 @@ package com.soma.core.controller {
 			}
 		}
 		
+		internal function commandIsValid(CommandClass:Class):Boolean {
+			return (new CommandClass() is ICommand);
+		}
+		
 		//
 		// PUBLIC
 		//________________________________________________________________________________________________
@@ -187,6 +198,9 @@ package com.soma.core.controller {
 		
 		public function addCommand(commandName:String, command:Class):void {
 			if (!_commands) return;
+			if (!commandIsValid(command)) {
+				throw new Error("Error in " + this + " Command \"" + commandName + "\" must implement ICommand.");
+			}
 			if (hasCommand(commandName)) {
 				throw new Error("Error in " + this + " Command \"" + commandName + "\" already registered.");
 			}

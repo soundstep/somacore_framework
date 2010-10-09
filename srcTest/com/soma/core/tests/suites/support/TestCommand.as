@@ -1,0 +1,7 @@
+package com.soma.core.tests.suites.support {	import com.soma.core.tests.suites.commands.ExecuteTests;
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommand;
+	import com.soma.core.controller.Command;
+		/**	 * <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />	 * <b>Class version:</b> 1.0<br />	 * <b>Actionscript version:</b> 3.0<br />	 * <b>Date:</b> Oct 9, 2010<br />	 * @example	 * <listing version="3.0"></listing>	 */		public class TestCommand extends Command implements ICommand {		//------------------------------------		// private, protected properties		//------------------------------------						//------------------------------------		// public properties		//------------------------------------								//------------------------------------		// constructor		//------------------------------------				public function TestCommand() {					}				//		// PRIVATE, PROTECTED		//________________________________________________________________________________________________						//		// PUBLIC		//________________________________________________________________________________________________				public function execute(event:Event):void {
+			switch (event.type) {
+				case TestEvent.TEST:					var e:TestEvent = TestEvent(event);					if (e.data is ExecuteTests) {						ExecuteTests(e.data).setToExecuted();					}					break;			}		}			}}

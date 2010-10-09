@@ -1,9 +1,10 @@
 package com.soma.core.tests.suites.commands {
+	import com.soma.core.tests.suites.support.TestCommand;
+	import com.soma.core.tests.suites.support.TestEvent;
 	import org.flexunit.asserts.assertEquals;
 	import org.flexunit.asserts.assertNull;
 	import org.hamcrest.object.instanceOf;
 	import org.hamcrest.assertThat;
-	import com.soma.core.controller.Command;
 	import com.soma.core.Soma;
 	import com.soma.core.interfaces.ISoma;
 	import org.flexunit.asserts.assertTrue;
@@ -46,30 +47,43 @@ package com.soma.core.tests.suites.commands {
 		[Test]
 		public function testHasCommand():void {
 			var soma:ISoma = new Soma(_stage);
-			soma.addCommand("event type", Command);
-			assertTrue(soma.hasCommand("event type"));
+			soma.addCommand(TestEvent.TEST, TestCommand);
+			assertTrue(soma.hasCommand(TestEvent.TEST));
 		}
 		
 		[Test]
 		public function testGetCommand():void {
 			var soma:ISoma = new Soma(_stage);
-			soma.addCommand("event type", Command);
-			assertThat(soma.getCommand("event type"), instanceOf(Class));
+			soma.addCommand(TestEvent.TEST, TestCommand);
+			assertThat(soma.getCommand(TestEvent.TEST), instanceOf(Class));
 		}
 		
 		[Test]
 		public function testRemoveCommand():void {
 			var soma:ISoma = new Soma(_stage);
-			soma.addCommand("event type", Command);
-			soma.removeCommand("event type");
-			assertNull(soma.getCommand("event type"));
+			soma.addCommand(TestEvent.TEST, TestCommand);
+			soma.removeCommand(TestEvent.TEST);
+			assertNull(soma.getCommand(TestEvent.TEST));
 		}
 		
 		[Test]
 		public function testCommandsLength():void {
 			var soma:ISoma = new Soma(_stage);
-			soma.addCommand("event type", Command);
+			soma.addCommand(TestEvent.TEST, TestCommand);
 			assertEquals(soma.getCommands().length, 1);
+		}
+		
+		[Test(expects="Error")]
+		public function testDoubleMapping():void {
+			var soma:ISoma = new Soma(_stage);
+			soma.addCommand(TestEvent.TEST, TestCommand);
+			soma.addCommand(TestEvent.TEST, TestCommand);
+		}
+
+		[Test(expects="Error")]
+		public function testMappingNonCommand():void {
+			var soma:ISoma = new Soma(_stage);
+			soma.addCommand(TestEvent.TEST, Object);
 		}
 		
 	}
