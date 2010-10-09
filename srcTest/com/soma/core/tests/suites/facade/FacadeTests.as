@@ -1,4 +1,4 @@
-package com.soma.core.tests.suites.base {	import com.soma.debugger.vo.SomaDebuggerVO;
+package com.soma.core.tests.suites.facade {	import com.soma.debugger.vo.SomaDebuggerVO;
 	import com.soma.debugger.SomaDebugger;
 	import flash.display.Sprite;
 	import org.hamcrest.object.instanceOf;
