@@ -23,6 +23,7 @@
  */
 
 package com.soma.core.controller {
+	import com.soma.core.ns.somans;
 	import com.soma.core.interfaces.ICommand;
 	import com.soma.core.interfaces.ISequenceCommand;
 	import com.soma.core.interfaces.ISoma;
@@ -50,8 +51,6 @@ package com.soma.core.controller {
 		//------------------------------------
 		// private, protected properties
 		//------------------------------------
-		
-		namespace somans = "http://www.soundstep.com/soma";
 		
 		private var _instance:ISoma;
 		
@@ -176,7 +175,8 @@ package com.soma.core.controller {
 				delete _sequencers[sequencer];
 			}
 		}
-
+		
+		//
 		// PUBLIC
 		//________________________________________________________________________________________________
 		

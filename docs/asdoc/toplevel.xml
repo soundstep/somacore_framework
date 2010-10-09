@@ -42,15 +42,15 @@
 	 </listing>
 	 ]]></example>
 </interfaceRec>
-<method name='data' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:data/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+<method name='getData' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:getData' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
 </method>
-<method name='dispatcher' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:dispatcher/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.events:IEventDispatcher'>
+<method name='getDispatcher' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:getDispatcher' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.events:IEventDispatcher'>
 </method>
-<method name='name' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:name/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<method name='getName' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:getName' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
 </method>
-<method name='data' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:data/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+<method name='setData' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:setData' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
 </method>
-<method name='name' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:name/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+<method name='setName' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:setName' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='void'>
 </method>
 <packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
 <description><![CDATA[
@@ -466,6 +466,8 @@
 </method>
 <method name='addWire' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:addWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName;wire' param_types='String;com.soma.core.interfaces:IWire' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IWire'>
 </method>
+<method name='createPluginFromClassName' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:createPluginFromClassName' isStatic='false' isFinal='false' isOverride='false'  param_names='pluginClassName;pluginVO' param_types='String;com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:ISomaPlugin'>
+</method>
 <method name='createPlugin' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:createPlugin' isStatic='false' isFinal='false' isOverride='false'  param_names='plugin;pluginVO' param_types='Class;com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:ISomaPlugin'>
 </method>
 <method name='dispatchEvent' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:dispatchEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
@@ -594,6 +596,32 @@
 </method>
 <field name='views' fullname='com.soma.core.view:SomaViews/protected:views' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
 </field>
+<packageRec name='com.soma.core.ns.null' fullname='com.soma.core.ns.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
 <packageRec name='com.soma.core.model.null' fullname='com.soma.core.model.null'>
 <description><![CDATA[
  The contents of this file are subject to the Mozilla Public License
@@ -636,13 +664,19 @@
 	 </listing>
 	 ]]></example>
 </classRec>
-<method name='Model' fullname='com.soma.core.model:Model/Model' isStatic='false' isFinal='false' isOverride='false'  param_names='name;data;_dispatcher' param_types='String;Object;flash.events:IEventDispatcher' param_defaults='null;null;null' result_type='*'>
+<method name='Model' fullname='com.soma.core.model:Model/Model' isStatic='false' isFinal='false' isOverride='false'  param_names='name;data;dispatcher' param_types='String;Object;flash.events:IEventDispatcher' param_defaults='null;null;null' result_type='*'>
 </method>
 <method name='addEventListener' fullname='com.soma.core.model:Model/addEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture;priority;useWeakReference' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
 </method>
 <method name='dispatchEvent' fullname='com.soma.core.model:Model/dispatchEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
 </method>
 <method name='dispose' fullname='com.soma.core.model:Model/protected:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getData' fullname='com.soma.core.model:Model/getData' isStatic='false' isFinal='true' isOverride='false'  result_type='Object'>
+</method>
+<method name='getDispatcher' fullname='com.soma.core.model:Model/getDispatcher' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.events:IEventDispatcher'>
+</method>
+<method name='getName' fullname='com.soma.core.model:Model/getName' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
 </method>
 <method name='hasEventListener' fullname='com.soma.core.model:Model/hasEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
 </method>
@@ -652,23 +686,17 @@
 </method>
 <method name='removeEventListener' fullname='com.soma.core.model:Model/removeEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
 </method>
+<method name='setData' fullname='com.soma.core.model:Model/setData' isStatic='false' isFinal='true' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='setName' fullname='com.soma.core.model:Model/setName' isStatic='false' isFinal='true' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
 <method name='willTrigger' fullname='com.soma.core.model:Model/willTrigger' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
-</method>
-<method name='data' fullname='com.soma.core.model:Model/data/get' isStatic='false' isFinal='true' isOverride='false'  result_type='Object'>
-</method>
-<method name='dispatcher' fullname='com.soma.core.model:Model/dispatcher/get' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.events:IEventDispatcher'>
-</method>
-<method name='name' fullname='com.soma.core.model:Model/name/get' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
-</method>
-<method name='data' fullname='com.soma.core.model:Model/data/set' isStatic='false' isFinal='true' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
-</method>
-<method name='name' fullname='com.soma.core.model:Model/name/set' isStatic='false' isFinal='true' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
 </method>
 <field name='NAME' fullname='com.soma.core.model:Model/NAME' type='String' isStatic='true' isConst='false' defaultValue='Soma::Model' >
 </field>
 <field name='_data' fullname='com.soma.core.model:Model/protected:_data' type='Object' isStatic='false' isConst='false' >
 </field>
-<field name='_dispatcher' fullname='com.soma.core.model:Model/private:_dispatcher' type='flash.events:IEventDispatcher' isStatic='false' isConst='false' >
+<field name='_dispatcher' fullname='com.soma.core.model:Model/protected:_dispatcher' type='flash.events:IEventDispatcher' isStatic='false' isConst='false' >
 </field>
 <field name='_name' fullname='com.soma.core.model:Model/protected:_name' type='String' isStatic='false' isConst='false' >
 </field>
@@ -1162,7 +1190,7 @@
  
  ]]></soundstep.com>
 </packageRec>
-<classRec name='Wire' fullname='com.soma.core.wire:Wire' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/wire/Wire.as' namespace='com.soma.core.wire' access='public' baseclass='Object' interfaces='flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
+<classRec name='Wire' fullname='com.soma.core.wire:Wire' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/wire/Wire.as' namespace='com.soma.core.wire' access='public' baseclass='Object' interfaces='com.soma.core.interfaces:IWire;flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
 	 <b>Class version:</b> v1.0.0<br />

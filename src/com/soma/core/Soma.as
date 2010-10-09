@@ -61,6 +61,7 @@ package com.soma.core {
 		// private, protected properties
 		//------------------------------------
 		
+		
 		private var _models:SomaModels;
 		private var _views:SomaViews;
 		private var _controller:SomaController;
@@ -123,7 +124,8 @@ package com.soma.core {
 		protected function registerPlugins():void {
 			
 		}
-
+		
+		//
 		// PUBLIC
 		//________________________________________________________________________________________________
 		

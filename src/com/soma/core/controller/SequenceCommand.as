@@ -83,6 +83,7 @@ package com.soma.core.controller {
 			instance.controller.registerSequencedCommand(this, event);
 		}
 		
+		//
 		// PUBLIC
 		//________________________________________________________________________________________________
 		

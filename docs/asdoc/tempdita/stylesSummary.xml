@@ -259,6 +259,7 @@
             <apiClassifierDef>
                <apiAccess value="public"/>
                <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:IWire</apiBaseInterface>
                <apiBaseInterface>flash.events:IEventDispatcher</apiBaseInterface>
                <apiBaseClassifier>Object</apiBaseClassifier>
             </apiClassifierDef>

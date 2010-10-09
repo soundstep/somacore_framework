@@ -23,6 +23,7 @@
  */
 
 package com.soma.core.model {
+	import com.soma.core.ns.somans;
 	import com.soma.core.interfaces.IModel;
 
 	import flash.events.Event;
@@ -49,9 +50,7 @@ package com.soma.core.model {
 		// private, protected properties
 		//------------------------------------
 		
-		namespace somans = "http://www.soundstep.com/soma";
-		
-		private var _dispatcher:IEventDispatcher;
+		protected var _dispatcher:IEventDispatcher;
 		protected var _data:Object;
 		protected var _name:String;
 
@@ -65,7 +64,7 @@ package com.soma.core.model {
 		// constructor
 		//------------------------------------
 		
-		public function Model(name:String = null, data:Object = null, _dispatcher:IEventDispatcher = null) {
+		public function Model(name:String = null, data:Object = null, dispatcher:IEventDispatcher = null) {
 			if (name != "" && name != null) _name = name;
 			_data = data;
 			_dispatcher = dispatcher;
@@ -83,11 +82,12 @@ package com.soma.core.model {
 			
 		}
 		
+		//
 		// PUBLIC
 		//________________________________________________________________________________________________
 		
 		somans function registerDispatcher(dispatcher:IEventDispatcher):void {
-			_dispatcher = dispatcher;
+			if (!_dispatcher) _dispatcher = dispatcher;
 			initialize();
 		}
 		
@@ -96,42 +96,42 @@ package com.soma.core.model {
 		}
 		
 		public final function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void {
-			dispatcher.addEventListener(type, listener, useCapture, priority, useWeakReference);
+			_dispatcher.addEventListener(type, listener, useCapture, priority, useWeakReference);
 		}
 
 		public final function dispatchEvent(event:Event):Boolean {
-			return dispatcher.dispatchEvent(event);
+			return _dispatcher.dispatchEvent(event);
 		}
 		
 		public final function hasEventListener(type:String):Boolean {
-			return dispatcher.hasEventListener(type);
+			return _dispatcher.hasEventListener(type);
 		}
 		
 		public final function removeEventListener(type:String, listener:Function, useCapture:Boolean = false):void {
-			dispatcher.removeEventListener(type, listener, useCapture);
+			_dispatcher.removeEventListener(type, listener, useCapture);
 		}
 
 		public final function willTrigger(type:String):Boolean {
-			return dispatcher.willTrigger(type);
+			return _dispatcher.willTrigger(type);
 		}
 		
-		public final function get name():String {
+		public final function getName():String {
 			return _name;
 		}
 		
-		public final function set name(value:String):void {
+		public final function setName(value:String):void {
 			_name = value;
 		}
 		
-		public final function get data():Object {
+		public final function getData():Object {
 			return _data;
 		}
 		
-		public final function set data(value:Object):void {
+		public final function setData(value:Object):void {
 			_data = value;
 		}
 		
-		public final function get dispatcher():IEventDispatcher {
+		public final function getDispatcher():IEventDispatcher {
 			return _dispatcher;
 		}
 		

@@ -23,6 +23,7 @@
  */
 
 package com.soma.core.model {
+	import com.soma.core.ns.somans;
 	import com.soma.core.interfaces.IModel;
 	import com.soma.core.interfaces.ISoma;
 
@@ -50,8 +51,6 @@ package com.soma.core.model {
 		// private, protected properties
 		//------------------------------------
 		
-		namespace somans = "http://www.soundstep.com/soma";
-		
 		private var _instance:ISoma;		
 		protected var models:Dictionary;
 
@@ -78,6 +77,7 @@ package com.soma.core.model {
 			models = new Dictionary();
 		}
 		
+		//
 		// PUBLIC
 		//________________________________________________________________________________________________
 		

@@ -23,6 +23,7 @@
  */
 
 package com.soma.core.wire {
+	import com.soma.core.ns.somans;
 	import com.soma.core.interfaces.ISoma;
 	import com.soma.core.interfaces.IWire;
 
@@ -49,8 +50,6 @@ package com.soma.core.wire {
 		// private, protected properties
 		//------------------------------------
 		
-		namespace somans = "http://www.soundstep.com/soma";
-		
 		private var _instance:ISoma;
 		protected var wires:Dictionary;
 
@@ -76,7 +75,8 @@ package com.soma.core.wire {
 		private function initialize():void {
 			wires = new Dictionary();
 		}
-		
+				
+		//
 		// PUBLIC
 		//________________________________________________________________________________________________
 		

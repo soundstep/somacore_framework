@@ -42,11 +42,11 @@ package com.soma.core.interfaces {
 	
 	public interface IModel {
 
-		function get name():String;
-		function set name(value:String):void;
-		function get data():Object;
-		function set data(value:Object):void;
-		function get dispatcher():IEventDispatcher;
+		function getName():String;
+		function setName(name:String):void;
+		function getData():Object;
+		function setData(value:Object):void;
+		function getDispatcher():IEventDispatcher;
 		
 	}
 }

@@ -23,6 +23,7 @@
  */
 
 package com.soma.core.wire {
+	import com.soma.core.ns.somans;
 	import com.soma.core.interfaces.IModel;
 	import com.soma.core.interfaces.ISequenceCommand;
 	import com.soma.core.interfaces.ISoma;
@@ -48,13 +49,11 @@ package com.soma.core.wire {
 	 * </listing>
 	 */
 	
-	public class Wire implements IEventDispatcher {
+	public class Wire implements IWire, IEventDispatcher {
 
 		//------------------------------------
 		// private, protected properties
 		//------------------------------------
-		
-		namespace somans = "http://www.soundstep.com/soma";
 		
 		private var _instance:ISoma;
 		protected var _name:String;
@@ -85,6 +84,7 @@ package com.soma.core.wire {
 			
 		}
 		
+		//
 		// PUBLIC
 		//________________________________________________________________________________________________
 		
