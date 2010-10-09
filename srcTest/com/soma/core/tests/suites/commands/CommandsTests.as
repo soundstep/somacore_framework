@@ -1,4 +1,5 @@
 package com.soma.core.tests.suites.commands {
+	import com.soma.core.tests.suites.support.EmptyModel;
 	import com.soma.core.tests.suites.support.TestCommand;
 	import com.soma.core.tests.suites.support.TestEvent;
 	import org.flexunit.asserts.assertEquals;
@@ -84,6 +85,7 @@ package com.soma.core.tests.suites.commands {
 		public function testMappingNonCommand():void {
 			var soma:ISoma = new Soma(_stage);
 			soma.addCommand(TestEvent.TEST, Object);
+			soma.addModel(EmptyModel.NAME, new EmptyModel(this));
 		}
 		
 	}
