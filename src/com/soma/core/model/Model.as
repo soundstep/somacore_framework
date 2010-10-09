@@ -123,16 +123,20 @@ package com.soma.core.model {
 			_name = value;
 		}
 		
-		public final function getData():Object {
+		public final function get data():Object {
 			return _data;
 		}
 		
-		public final function setData(value:Object):void {
+		public final function set data(value:Object):void {
 			_data = value;
 		}
 		
-		public final function getDispatcher():IEventDispatcher {
+		public final function get dispatcher():IEventDispatcher {
 			return _dispatcher;
+		}
+		
+		public final function set dispatcher(value:IEventDispatcher):void {
+			_dispatcher = value;
 		}
 		
 	}

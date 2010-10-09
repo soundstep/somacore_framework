@@ -44,9 +44,10 @@ package com.soma.core.interfaces {
 
 		function getName():String;
 		function setName(name:String):void;
-		function getData():Object;
-		function setData(value:Object):void;
-		function getDispatcher():IEventDispatcher;
+		function get data():Object;
+		function set data(value:Object):void;
+		function get dispatcher():IEventDispatcher;
+		function set dispatcher(value:IEventDispatcher):void;
 		
 	}
 }
