@@ -24,6 +24,8 @@ package com.soma.core.tests.suites.views {
 	
 	public class ViewsTests {
 		
+		private var _soma:ISoma;
+		
 		private static var _stage:Stage;
 		
 		[BeforeClass]
@@ -38,42 +40,38 @@ package com.soma.core.tests.suites.views {
 		
 		[Before]
 		public function runBefore():void {
-			
+			_soma = new Soma(_stage);
 		}
 		
 		[After]
 		public function runAfter():void {
-			
+			_soma.dispose();			_soma = null;
 		}
 		
 		[Test]
 		public function testHasView():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addView(EmptyView.NAME, new EmptyView());
-			assertTrue(soma.hasView(EmptyView.NAME));
+			_soma.addView(EmptyView.NAME, new EmptyView());
+			assertTrue(_soma.hasView(EmptyView.NAME));
 		}
 		
 		[Test]
 		public function testGetView():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addView(EmptyView.NAME, new EmptyView());
-			assertThat(soma.getView(EmptyView.NAME), instanceOf(EmptyView));
+			_soma.addView(EmptyView.NAME, new EmptyView());
+			assertThat(_soma.getView(EmptyView.NAME), instanceOf(EmptyView));
 		}
 		
 		[Test]
 		public function testRemoveView():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addView(EmptyView.NAME, new EmptyView());
-			soma.removeView(EmptyView.NAME);
-			assertNull(soma.getView(EmptyView.NAME));
+			_soma.addView(EmptyView.NAME, new EmptyView());
+			_soma.removeView(EmptyView.NAME);
+			assertNull(_soma.getView(EmptyView.NAME));
 		}
 		
 		[Test]
 		public function testViewsLength():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addView(EmptyView.NAME, new EmptyView());
+			_soma.addView(EmptyView.NAME, new EmptyView());
 			var count:int = 0;
-			for (var view:String in soma.getViews()) {
+			for (var view:String in _soma.getViews()) {
 				if (view) count++;
 			}
 			assertEquals(count, 1);
@@ -81,10 +79,9 @@ package com.soma.core.tests.suites.views {
 		
 		[Test(async)]
 		public function testViewInitialize():void {
-			var soma:ISoma = new Soma(_stage);
 			var view:EmptyView = new EmptyView();
 			view.addEventListener(EmptyView.EVENT_INITIALIZED, Async.asyncHandler(this, viewVerifyInitializeSuccess, 100, view, viewVerifyInitializeFailed), false, 0, true);
-			soma.addView(EmptyView.NAME, view);
+			_soma.addView(EmptyView.NAME, view);
 		}
 
 		private function viewVerifyInitializeFailed(view:Object):void {

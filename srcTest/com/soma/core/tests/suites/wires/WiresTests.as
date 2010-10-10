@@ -25,6 +25,8 @@ package com.soma.core.tests.suites.wires {
 	
 	public class WiresTests {
 		
+		private var _soma:ISoma;
+		
 		private static var _stage:Stage;
 		
 		[BeforeClass]
@@ -39,42 +41,38 @@ package com.soma.core.tests.suites.wires {
 		
 		[Before]
 		public function runBefore():void {
-			
+			_soma = new Soma(_stage);
 		}
 		
 		[After]
 		public function runAfter():void {
-			
+			_soma.dispose();			_soma = null;
 		}
 		
 		[Test]
 		public function testHasWire():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addWire(EmptyWire.NAME, new EmptyWire());
-			assertTrue(soma.hasWire(EmptyWire.NAME));
+			_soma.addWire(EmptyWire.NAME, new EmptyWire());
+			assertTrue(_soma.hasWire(EmptyWire.NAME));
 		}
 		
 		[Test]
 		public function testGetWire():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addWire(EmptyWire.NAME, new EmptyWire());
-			assertThat(soma.getWire(EmptyWire.NAME), instanceOf(EmptyWire));
+			_soma.addWire(EmptyWire.NAME, new EmptyWire());
+			assertThat(_soma.getWire(EmptyWire.NAME), instanceOf(EmptyWire));
 		}
 		
 		[Test]
 		public function testRemoveWire():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addWire(EmptyWire.NAME, new EmptyWire());
-			soma.removeWire(EmptyWire.NAME);
-			assertNull(soma.getWire(EmptyWire.NAME));
+			_soma.addWire(EmptyWire.NAME, new EmptyWire());
+			_soma.removeWire(EmptyWire.NAME);
+			assertNull(_soma.getWire(EmptyWire.NAME));
 		}
 		
 		[Test]
 		public function testWiresLength():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addWire(EmptyWire.NAME, new EmptyWire());
+			_soma.addWire(EmptyWire.NAME, new EmptyWire());
 			var count:int = 0;
-			for (var wire:String in soma.getWires()) {
+			for (var wire:String in _soma.getWires()) {
 				if (wire) count++;
 			}
 			assertEquals(count, 1);
@@ -82,25 +80,22 @@ package com.soma.core.tests.suites.wires {
 		
 		[Test]
 		public function testWiresGetName():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addWire(EmptyWire.NAME, new EmptyWire());
-			assertEquals(soma.getWire(EmptyWire.NAME).getName(), EmptyWire.NAME);
+			_soma.addWire(EmptyWire.NAME, new EmptyWire());
+			assertEquals(_soma.getWire(EmptyWire.NAME).getName(), EmptyWire.NAME);
 		}
 		
 		[Test]
 		public function testWiresSetName():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addWire(EmptyWire.NAME, new EmptyWire());
-			soma.getWire(EmptyWire.NAME).setName("new name");
-			assertEquals(soma.getWire(EmptyWire.NAME).getName(), "new name");
+			_soma.addWire(EmptyWire.NAME, new EmptyWire());
+			_soma.getWire(EmptyWire.NAME).setName("new name");
+			assertEquals(_soma.getWire(EmptyWire.NAME).getName(), "new name");
 		}
 		
 		[Test(async)]
 		public function testWireInitialize():void {
-			var soma:ISoma = new Soma(_stage);
 			var wire:Wire = new EmptyWire();
-			soma.addEventListener(EmptyWire.EVENT_INITIALIZED, Async.asyncHandler(this, wireVerifyInitializeSuccess, 100, wire, wireVerifyInitializeFailed), false, 0, true);
-			soma.addWire(EmptyWire.NAME, wire);
+			_soma.addEventListener(EmptyWire.EVENT_INITIALIZED, Async.asyncHandler(this, wireVerifyInitializeSuccess, 100, wire, wireVerifyInitializeFailed), false, 0, true);
+			_soma.addWire(EmptyWire.NAME, wire);
 		}
 
 		private function wireVerifyInitializeFailed(wire:Wire):void {

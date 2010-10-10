@@ -27,6 +27,8 @@ package com.soma.core.tests.suites.models {
 	
 	public class ModelsTests {
 		
+		private var _soma:ISoma;
+		
 		private static var _stage:Stage;
 		
 		[BeforeClass]
@@ -41,42 +43,38 @@ package com.soma.core.tests.suites.models {
 		
 		[Before]
 		public function runBefore():void {
-			
+			_soma = new Soma(_stage);
 		}
 		
 		[After]
 		public function runAfter():void {
-			
+			_soma.dispose();			_soma = null;
 		}
 		
 		[Test]
 		public function testHasModel():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addModel(EmptyModel.NAME, new EmptyModel());
-			assertTrue(soma.hasModel(EmptyModel.NAME));
+			_soma.addModel(EmptyModel.NAME, new EmptyModel());
+			assertTrue(_soma.hasModel(EmptyModel.NAME));
 		}
 		
 		[Test]
 		public function testGetModel():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addModel(EmptyModel.NAME, new EmptyModel());
-			assertThat(soma.getModel(EmptyModel.NAME), instanceOf(EmptyModel));
+			_soma.addModel(EmptyModel.NAME, new EmptyModel());
+			assertThat(_soma.getModel(EmptyModel.NAME), instanceOf(EmptyModel));
 		}
 		
 		[Test]
 		public function testRemoveModel():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addModel(EmptyModel.NAME, new EmptyModel());
-			soma.removeModel(EmptyModel.NAME);
-			assertNull(soma.getModel(EmptyModel.NAME));
+			_soma.addModel(EmptyModel.NAME, new EmptyModel());
+			_soma.removeModel(EmptyModel.NAME);
+			assertNull(_soma.getModel(EmptyModel.NAME));
 		}
 		
 		[Test]
 		public function testModelsLength():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addModel(EmptyModel.NAME, new EmptyModel());
+			_soma.addModel(EmptyModel.NAME, new EmptyModel());
 			var count:int = 0;
-			for (var model:String in soma.getModels()) {
+			for (var model:String in _soma.getModels()) {
 				if (model) count++;
 			}
 			assertEquals(count, 1);
@@ -84,64 +82,56 @@ package com.soma.core.tests.suites.models {
 		
 		[Test]
 		public function testModelsGetName():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addModel(EmptyModel.NAME, new EmptyModel());
-			assertEquals(soma.getModel(EmptyModel.NAME).getName(), EmptyModel.NAME);
+			_soma.addModel(EmptyModel.NAME, new EmptyModel());
+			assertEquals(_soma.getModel(EmptyModel.NAME).getName(), EmptyModel.NAME);
 		}
 		
 		[Test]
 		public function testModelsSetName():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addModel(EmptyModel.NAME, new EmptyModel());
-			soma.getModel(EmptyModel.NAME).setName("new name");
-			assertEquals(soma.getModel(EmptyModel.NAME).getName(), "new name");
+			_soma.addModel(EmptyModel.NAME, new EmptyModel());
+			_soma.getModel(EmptyModel.NAME).setName("new name");
+			assertEquals(_soma.getModel(EmptyModel.NAME).getName(), "new name");
 		}
 		
 		[Test]
 		public function testModelsGetData():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addModel(EmptyModel.NAME, new EmptyModel(this));
-			assertEquals(soma.getModel(EmptyModel.NAME).data, this);
+			_soma.addModel(EmptyModel.NAME, new EmptyModel(this));
+			assertEquals(_soma.getModel(EmptyModel.NAME).data, this);
 		}
 		
 		[Test]
 		public function testModelsSetData():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addModel(EmptyModel.NAME, new EmptyModel());
-			soma.getModel(EmptyModel.NAME).data = this;
-			assertEquals(soma.getModel(EmptyModel.NAME).data, this);
+			_soma.addModel(EmptyModel.NAME, new EmptyModel());
+			_soma.getModel(EmptyModel.NAME).data = this;
+			assertEquals(_soma.getModel(EmptyModel.NAME).data, this);
 		}
 		
 		[Test]
 		public function testModelsDefaultDispatcher():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addModel(EmptyModel.NAME, new EmptyModel());
-			assertEquals(soma.getModel(EmptyModel.NAME).dispatcher, soma);
+			_soma.addModel(EmptyModel.NAME, new EmptyModel());
+			assertEquals(_soma.getModel(EmptyModel.NAME).dispatcher, _soma);
 		}
 		
 		[Test]
 		public function testModelsGetDispatcher():void {
-			var soma:ISoma = new Soma(_stage);
 			var dispatcher:IEventDispatcher = new EventDispatcher();
-			soma.addModel(EmptyModel.NAME, new EmptyModel(null, dispatcher));
-			assertEquals(soma.getModel(EmptyModel.NAME).dispatcher, dispatcher);
+			_soma.addModel(EmptyModel.NAME, new EmptyModel(null, dispatcher));
+			assertEquals(_soma.getModel(EmptyModel.NAME).dispatcher, dispatcher);
 		}
 		
 		[Test]
 		public function testModelsSetDispatcher():void {
-			var soma:ISoma = new Soma(_stage);
 			var dispatcher:IEventDispatcher = new EventDispatcher();
-			soma.addModel(EmptyModel.NAME, new EmptyModel());
-			soma.getModel(EmptyModel.NAME).dispatcher = dispatcher;
-			assertEquals(soma.getModel(EmptyModel.NAME).dispatcher, dispatcher);
+			_soma.addModel(EmptyModel.NAME, new EmptyModel());
+			_soma.getModel(EmptyModel.NAME).dispatcher = dispatcher;
+			assertEquals(_soma.getModel(EmptyModel.NAME).dispatcher, dispatcher);
 		}
 		
 		[Test(async)]
 		public function testModelInitialize():void {
-			var soma:ISoma = new Soma(_stage);
 			var model:Model = new EmptyModel();
-			soma.addEventListener(EmptyModel.EVENT_INITIALIZED, Async.asyncHandler(this, modelVerifyInitializeSuccess, 100, model, modelVerifyInitializeFailed), false, 0, true);
-			soma.addModel(EmptyModel.NAME, model);
+			_soma.addEventListener(EmptyModel.EVENT_INITIALIZED, Async.asyncHandler(this, modelVerifyInitializeSuccess, 100, model, modelVerifyInitializeFailed), false, 0, true);
+			_soma.addModel(EmptyModel.NAME, model);
 		}
 
 		private function modelVerifyInitializeFailed(model:Model):void {

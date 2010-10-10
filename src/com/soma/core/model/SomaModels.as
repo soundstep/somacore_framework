@@ -51,7 +51,8 @@ package com.soma.core.model {
 		// private, protected properties
 		//------------------------------------
 		
-		private var _instance:ISoma;		
+		private var _instance:ISoma;
+			
 		protected var models:Dictionary;
 
 		//------------------------------------

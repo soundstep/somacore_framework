@@ -78,7 +78,7 @@ package com.soma.core.controller {
 		// PRIVATE, PROTECTED
 		//________________________________________________________________________________________________
 		
-		public function dispose() : void {
+		public function dispose():void {
 			for (var nameCommand:String in _commands) {
 				removeCommand(nameCommand);
 			}
@@ -161,9 +161,11 @@ package com.soma.core.controller {
 
 		internal function unregisterSequencedCommand(sequencer:ISequenceCommand, event:Event):void {
 			if (event == null) return;
+			if (_lastSequencer == sequencer) _lastSequencer = null;
 			if (_sequencers[sequencer] != null && _sequencers[sequencer] != undefined) {
-				var len:int = _sequencers[sequencer].length;
-				for (var i:int=0; i<len; i++) {
+				var i:Number = 0;
+				var l:int = _sequencers[sequencer].length;
+				for (; i<l; ++i) {
 					if (_sequencers[sequencer][i] == event) {
 						_sequencers[sequencer].splice(i, 1);
 						if (_sequencers[sequencer].length == 0) {
@@ -178,6 +180,7 @@ package com.soma.core.controller {
 		
 		internal function unregisterSequencer(sequencer:ISequenceCommand):void {
 			if (_sequencers[sequencer] != null && _sequencers[sequencer] != undefined) {
+				if (_lastSequencer == sequencer) _lastSequencer = null;
 				_sequencers[sequencer] = null;
 				delete _sequencers[sequencer];
 			}
@@ -236,8 +239,9 @@ package com.soma.core.controller {
 		public function getSequencer(event:Event):ISequenceCommand {
 			if (!_sequencers) return null;
 			for (var sequencer:Object in _sequencers) {
-				var len:int = _sequencers[sequencer].length;
-				for (var i:int=0; i<len; i++) {
+				var i:Number = 0;
+				var l:int = _sequencers[sequencer].length;
+				for (; i<l; ++i) {
 					if (_sequencers[sequencer][i] == event) {
 						return sequencer as ISequenceCommand;
 					}
@@ -249,8 +253,9 @@ package com.soma.core.controller {
 		public function stopSequencerWithEvent(event:Event):Boolean {
 			if (!_sequencers) return false;
 			for (var sequencer:Object in _sequencers) {
-				var len:int = _sequencers[sequencer].length;
-				for (var i:int=0; i<len; i++) {
+				var i:Number = 0;
+				var l:int = _sequencers[sequencer].length;
+				for (; i<l; ++i) {
 					if (_sequencers[sequencer][i] == event) {
 						ISequenceCommand(sequencer).stop();
 						return true;

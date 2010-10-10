@@ -23,6 +23,7 @@
  */
 
 package com.soma.core {
+	import flash.events.IEventDispatcher;
 	import com.soma.core.controller.SomaController;
 	import com.soma.core.interfaces.IModel;
 	import com.soma.core.interfaces.ISequenceCommand;
@@ -55,7 +56,7 @@ package com.soma.core {
 	 * </listing>
 	 */
 	
-	public class Soma extends EventDispatcher implements ISoma {
+	public class Soma extends EventDispatcher implements ISoma, IEventDispatcher {
 
 		//------------------------------------
 		// private, protected properties

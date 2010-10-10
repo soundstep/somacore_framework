@@ -42,6 +42,7 @@ package com.soma.core.interfaces {
 	public interface ISomaPlugin {
 
 		function initialize(pluginVO:ISomaPluginVO):void;
+		function dispose():void
 		
 	}
 }

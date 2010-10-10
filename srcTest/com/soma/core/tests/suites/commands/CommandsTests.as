@@ -1,5 +1,4 @@
 package com.soma.core.tests.suites.commands {
-	import com.soma.core.tests.suites.support.EmptyModel;
 	import com.soma.core.tests.suites.support.TestCommand;
 	import com.soma.core.tests.suites.support.TestEvent;
 	import org.flexunit.asserts.assertEquals;
@@ -23,6 +22,8 @@ package com.soma.core.tests.suites.commands {
 	
 	public class CommandsTests {
 		
+		private var _soma:ISoma;
+		
 		private static var _stage:Stage;
 		
 		[BeforeClass]
@@ -37,55 +38,45 @@ package com.soma.core.tests.suites.commands {
 		
 		[Before]
 		public function runBefore():void {
-			
+			_soma = new Soma(_stage);
+			_soma.addCommand(TestEvent.TEST, TestCommand);
 		}
 		
 		[After]
 		public function runAfter():void {
-			
+			_soma.dispose();
+			_soma = null;
 		}
 		
 		[Test]
 		public function testHasCommand():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addCommand(TestEvent.TEST, TestCommand);
-			assertTrue(soma.hasCommand(TestEvent.TEST));
+			assertTrue(_soma.hasCommand(TestEvent.TEST));
 		}
 		
 		[Test]
 		public function testGetCommand():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addCommand(TestEvent.TEST, TestCommand);
-			assertThat(soma.getCommand(TestEvent.TEST), instanceOf(Class));
+			assertThat(_soma.getCommand(TestEvent.TEST), instanceOf(Class));
 		}
 		
 		[Test]
 		public function testRemoveCommand():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addCommand(TestEvent.TEST, TestCommand);
-			soma.removeCommand(TestEvent.TEST);
-			assertNull(soma.getCommand(TestEvent.TEST));
+			_soma.removeCommand(TestEvent.TEST);
+			assertNull(_soma.getCommand(TestEvent.TEST));
 		}
 		
 		[Test]
 		public function testCommandsLength():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addCommand(TestEvent.TEST, TestCommand);
-			assertEquals(soma.getCommands().length, 1);
+			assertEquals(_soma.getCommands().length, 1);
 		}
 		
 		[Test(expects="Error")]
 		public function testDoubleMapping():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addCommand(TestEvent.TEST, TestCommand);
-			soma.addCommand(TestEvent.TEST, TestCommand);
+			_soma.addCommand(TestEvent.TEST, TestCommand);
 		}
 
 		[Test(expects="Error")]
 		public function testMappingNonCommand():void {
-			var soma:ISoma = new Soma(_stage);
-			soma.addCommand(TestEvent.TEST, Object);
-			soma.addModel(EmptyModel.NAME, new EmptyModel(this));
+			_soma.addCommand(TestEvent.TEST, Object);
 		}
 		
 	}
