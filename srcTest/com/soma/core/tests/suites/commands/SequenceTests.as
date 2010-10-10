@@ -27,7 +27,7 @@ package com.soma.core.tests.suites.commands {
 		}
 
 		private function sequencerErrorHandler(instance:ISoma):void {
-			fail("SequenceCommand not executed");
+			fail("SequenceCommand has not been executed under 500ms");
 			instance.dispose();
 			instance = null;
 		}
