@@ -30,7 +30,7 @@ package com.soma.core.tests.suites.commands {
 		}				[After]		public function runAfter():void {			_soma.stopAllSequencers();
 			_soma.dispose();
 			_soma = null;
-		}				[Test(async)]		public function testGetSequencer():void {			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testGetSequencerHandler, 500, _soma, sequencerErrorHandler));
+		}				[Test(async)]		public function testGetSequencer():void {			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testGetSequencerHandler, 500, _soma, sequencerErrorHandler), false, 0, true);
 			_soma.dispatchEvent(new TestEvent(TestEvent.TEST_SEQUENCE));			
 		}
 
@@ -43,7 +43,7 @@ package com.soma.core.tests.suites.commands {
 			assertThat(instance.getSequencer(Event(event.data)), instanceOf(TestSequenceCommand));
 		}				[Test(async)]
 		public function testStopSequencerWithEvent():void {
-			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testStopSequencerWithEventHandler, 500, _soma, sequencerErrorHandler));
+			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testStopSequencerWithEventHandler, 500, _soma, sequencerErrorHandler), false, 0, true);
 			_soma.dispatchEvent(new TestEvent(TestEvent.TEST_SEQUENCE));
 		}
 
@@ -54,7 +54,7 @@ package com.soma.core.tests.suites.commands {
 		
 		[Test(async)]
 		public function testStopSequencer():void {
-			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testStopSequencerHandler, 500, _soma, sequencerErrorHandler));
+			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testStopSequencerHandler, 500, _soma, sequencerErrorHandler), false, 0, true);
 			_soma.dispatchEvent(new TestEvent(TestEvent.TEST_SEQUENCE));
 		}
 
@@ -65,7 +65,7 @@ package com.soma.core.tests.suites.commands {
 		
 		[Test(async)]
 		public function testGetRunningSequencers():void {
-			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testGetRunningSequencersHandler, 500, _soma, sequencerErrorHandler));
+			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testGetRunningSequencersHandler, 500, _soma, sequencerErrorHandler), false, 0, true);
 			_soma.dispatchEvent(new TestEvent(TestEvent.TEST_SEQUENCE));
 		}
 
@@ -77,7 +77,7 @@ package com.soma.core.tests.suites.commands {
 		
 		[Test(async)]
 		public function testStopAllSequencers():void {
-			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testStopAllSequencersHandler, 500, _soma, sequencerErrorHandler));
+			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testStopAllSequencersHandler, 500, _soma, sequencerErrorHandler), false, 0, true);
 			_soma.dispatchEvent(new TestEvent(TestEvent.TEST_SEQUENCE));
 		}
 
@@ -91,7 +91,7 @@ package com.soma.core.tests.suites.commands {
 		
 		[Test(async)]
 		public function testIsPartOfASequence():void {
-			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testIsPartOfASequenceHandler, 500, _soma, sequencerErrorHandler));
+			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testIsPartOfASequenceHandler, 500, _soma, sequencerErrorHandler), false, 0, true);
 			_soma.dispatchEvent(new TestEvent(TestEvent.TEST_SEQUENCE));
 		}
 
@@ -101,7 +101,7 @@ package com.soma.core.tests.suites.commands {
 		
 		[Test(async)]
 		public function testGetLastSequencer():void {
-			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testGetLastSequencerHandler, 500, _soma, sequencerErrorHandler));
+			_soma.addEventListener(TestEvent.TEST_ASYNC_COMPLETE, Async.asyncHandler(this, testGetLastSequencerHandler, 500, _soma, sequencerErrorHandler), false, 0, true);
 			_soma.dispatchEvent(new TestEvent(TestEvent.TEST_SEQUENCE));
 		}
 

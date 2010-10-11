@@ -41,11 +41,11 @@ package com.soma.core.tests.suites.support {
 		//________________________________________________________________________________________________
 		
 		
-		//		
 		//
 		// PUBLIC
 		//________________________________________________________________________________________________
-public function initializeView():void {
+		
+		public function initializeView():void {
 			dispatchEvent(new Event(EVENT_INITIALIZED));
 		}
 		

@@ -50,7 +50,6 @@ package com.soma.core.tests.suites.support {
 			dispatchEvent(new Event(EVENT_DISPOSED));
 		}
 		
-		//		
 		//
 		// PUBLIC
 		//________________________________________________________________________________________________
