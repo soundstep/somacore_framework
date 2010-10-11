@@ -50,7 +50,7 @@ package com.soma.core.tests.suites.support {
 		public function execute(event:Event):void {
 			_event = event;
 			_sequencer = getSequencer(_event);
-			_timer = setTimeout(result, 100, {});
+			_timer = setTimeout(result, 200, {});
 		}
 
 		public function dispose():void {
