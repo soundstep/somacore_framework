@@ -44,7 +44,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="Command,com.soma.core.controller.Command,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerInstance,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencerWithEvent,stopSequencerWithEvent,stopSequencer,stopSequencer,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+                  content="Command,com.soma.core.controller.Command,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerInstance,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencerWithEvent,stopSequencerWithEvent,stopSequencer,stopSequencer,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.controller:SequenceCommand">
@@ -88,7 +88,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="SequenceCommand,com.soma.core.controller.SequenceCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerInstance,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencerWithEvent,stopSequencerWithEvent,stopSequencer,stopSequencer,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+                  content="SequenceCommand,com.soma.core.controller.SequenceCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerInstance,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencerWithEvent,stopSequencerWithEvent,stopSequencer,stopSequencer,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.controller:SomaController">
@@ -131,7 +131,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="SomaController,com.soma.core.controller.SomaController,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerInstance,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencerWithEvent,stopSequencerWithEvent,stopSequencer,stopSequencer,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+                  content="SomaController,com.soma.core.controller.SomaController,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerInstance,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencerWithEvent,stopSequencerWithEvent,stopSequencer,stopSequencer,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.controller:ParallelCommand">
@@ -175,7 +175,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="ParallelCommand,com.soma.core.controller.ParallelCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerInstance,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencerWithEvent,stopSequencerWithEvent,stopSequencer,stopSequencer,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+                  content="ParallelCommand,com.soma.core.controller.ParallelCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerInstance,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencerWithEvent,stopSequencerWithEvent,stopSequencer,stopSequencer,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
          </Keywords>
       </apiClassifier>
    </apiPackage>
@@ -224,7 +224,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="ISequenceCommand,com.soma.core.interfaces.ISequenceCommand,commands,commands,controller,currentCommand,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getData,getDispatcher,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setData,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+                  content="ISequenceCommand,com.soma.core.interfaces.ISequenceCommand,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ISoma">
@@ -268,7 +268,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="ISoma,com.soma.core.interfaces.ISoma,commands,commands,controller,currentCommand,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getData,getDispatcher,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setData,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+                  content="ISoma,com.soma.core.interfaces.ISoma,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ISomaPluginVO">
@@ -355,7 +355,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="ICommand,com.soma.core.interfaces.ICommand,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getData,getDispatcher,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setData,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+                  content="ICommand,com.soma.core.interfaces.ICommand,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:IModel">
@@ -399,7 +399,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="IModel,com.soma.core.interfaces.IModel,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getData,getDispatcher,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setData,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+                  content="IModel,com.soma.core.interfaces.IModel,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:IResponder">
@@ -443,7 +443,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="IResponder,com.soma.core.interfaces.IResponder,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getData,getDispatcher,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setData,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+                  content="IResponder,com.soma.core.interfaces.IResponder,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:IParallelCommand">
@@ -488,7 +488,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="IParallelCommand,com.soma.core.interfaces.IParallelCommand,commands,commands,controller,currentCommand,length,length,models,stage,views,wires"/>
+                  content="IParallelCommand,com.soma.core.interfaces.IParallelCommand,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ICommandASync">
@@ -577,7 +577,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="IWire,com.soma.core.interfaces.IWire,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getData,getDispatcher,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setData,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+                  content="IWire,com.soma.core.interfaces.IWire,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ISomaPlugin">
@@ -621,7 +621,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="ISomaPlugin,com.soma.core.interfaces.ISomaPlugin,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getData,getDispatcher,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setData,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
+                  content="ISomaPlugin,com.soma.core.interfaces.ISomaPlugin,addCommand,addEventListener,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencerWithEvent,stopSequencer,willTrigger"/>
          </Keywords>
       </apiClassifier>
    </apiPackage>
@@ -669,7 +669,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="Model,com.soma.core.model.Model,NAME,_data,_dispatcher,_name,models,addEventListener,addModel,dispatchEvent,dispose,dispose,getData,getDispatcher,getModel,getModels,getName,hasEventListener,hasModel,initialize,registerDispatcher,removeEventListener,removeModel,setData,setName,willTrigger"/>
+                  content="Model,com.soma.core.model.Model,NAME,_data,_dispatcher,_name,data,dispatcher,models,addEventListener,addModel,dispatchEvent,dispose,dispose,getModel,getModels,getName,hasEventListener,hasModel,initialize,registerDispatcher,removeEventListener,removeModel,setName,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.model:SomaModels">
@@ -712,7 +712,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="SomaModels,com.soma.core.model.SomaModels,NAME,_data,_dispatcher,_name,models,addEventListener,addModel,dispatchEvent,dispose,dispose,getData,getDispatcher,getModel,getModels,getName,hasEventListener,hasModel,initialize,registerDispatcher,removeEventListener,removeModel,setData,setName,willTrigger"/>
+                  content="SomaModels,com.soma.core.model.SomaModels,NAME,_data,_dispatcher,_name,data,dispatcher,models,addEventListener,addModel,dispatchEvent,dispose,dispose,getModel,getModels,getName,hasEventListener,hasModel,initialize,registerDispatcher,removeEventListener,removeModel,setName,willTrigger"/>
          </Keywords>
       </apiClassifier>
    </apiPackage>
@@ -862,15 +862,13 @@
          <apiName>Soma</apiName>
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
-	 
-	 Usage:
-	 </shortdesc>
+	 SomaCore is a lightweight event-based MVC framework written in AS3 that provides a structure, models, views management and commands.</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -879,27 +877,90 @@
                <apiAccess value="public"/>
                <apiStatic/>
                <apiBaseInterface>com.soma.core.interfaces:ISoma</apiBaseInterface>
+               <apiBaseInterface>flash.events:IEventDispatcher</apiBaseInterface>
                <apiBaseClassifier>flash.events:EventDispatcher</apiBaseClassifier>
             </apiClassifierDef>
             <apiDesc>
-	              <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
-	              <b>Class version:</b> v1.0.0
-	 <b>Actionscript version:</b> 3.0
-	 <b>Copyright:</b>
+	              <p>
+                  <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+               </p>
+	              <p>
+                  <b>Resources:</b> 
+                  <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
+               </p>
+	              <p>
+                  <b>Class version:</b> v1.0.0</p>
+	              <p>
+                  <b>Actionscript version:</b> 3.0</p>
+	              <p>
+                  <b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
-	 
-	 <b>Usage:</b>
+               </p>
+	              <p>SomaCore is a lightweight event-based MVC framework written in AS3 that provides a structure, models, views management and commands.
+	 Somacore can be used for Flash, Flex and AIR projects. SomaCore does not use any external library and does not use dependency injection. SomaCore is completely event-based and use a concept of wires to code in a efficient decoupled way.
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.</p>
+	              <p>Few things to know: SomaCore requires the stage to be instantiated. Commands are normal built-in Flash events with the bubbles property set to true. Commands can be used in the views as they are not really framework code.
+	 Wires are the glue of the frameworks elements (models, commands, views, wires) and can be used the way you wish, as proxy/mediators or managers.
+	 Wires can manage one class or multiple classes.
+	 Parallel and sequence commands are built-in.
+	 You can create and register customs plugins to the framework (such as the SomaCoreDebugger plugin).
+	 You can access to all the framework elements that you have registered (stage, framework instance, wires, models, views and commands) from commands and wires. 
+	 </p>
 	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
+            <example>To get started, create a instance of a class that extends the Soma class and implements the ISoma interface.
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.interfaces.ISoma;
+	import flash.display.Sprite;
+	
+	public class Main extends Sprite {
+		
+		private var _app:ISoma;
+		
+		public function Main() {
+			_app = new SomaApplication(stage);
+		}
+		
+	}
+}
 	 </codeblock>
+	              <codeblock rev="3.0">
+package  {
+	import com.soma.core.Soma;
+	import com.soma.core.interfaces.ISoma;
+	import flash.display.Stage;
+	
+	public class SomaApplication extends Soma implements ISoma {
+		public function SomaApplication(stage:Stage) {
+			super(stage);
+		}
+		
+		override protected function registerCommands():void {
+			
+		}
+		override protected function registerModels():void {
+			
+		}
+		override protected function registerPlugins():void {
+			
+		}
+		override protected function registerViews():void {
+			
+		}
+		override protected function registerWires():void {
+			
+		}
+		
+	}
+}
+	 </codeblock>
+	 
 	           </example>
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="Soma,com.soma.core.Soma,controller,models,stage,views,wires,addCommand,addModel,addView,addWire,createPluginFromClassName,createPlugin,dispose,getCommand,getCommands,getLastSequencer,getModel,getModels,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasModel,hasView,hasWire,isPartOfASequence,registerCommands,registerModels,registerPlugins,registerViews,registerWires,removeCommand,removeModel,removeView,removeWire,stopAllSequencers,stopSequencerWithEvent,stopSequencer"/>
+                  content="Soma,com.soma.core.Soma,controller,models,stage,views,wires,addCommand,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispose,getCommand,getCommands,getLastSequencer,getModel,getModels,getRunningSequencers,getSequencer,getViews,getView,getWire,getWires,hasCommand,hasModel,hasView,hasWire,isPartOfASequence,registerCommands,registerModels,registerPlugins,registerViews,registerWires,removeCommand,removeModel,removeView,removeWire,stopAllSequencers,stopSequencerWithEvent,stopSequencer"/>
          </Keywords>
       </apiClassifier>
    </apiPackage>

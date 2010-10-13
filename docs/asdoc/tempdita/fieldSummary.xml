@@ -196,7 +196,7 @@
 	 <b>Usage:</b>
 	 </apiDesc><example><codeblock rev="3.0">
 	 </codeblock>
-	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IResponder"><apiName>IResponder</apiName><shortdesc>
+	 </example></apiClassifierDetail><apiValue id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:data:get"><apiName>data</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:dispatcher:get"><apiName>dispatcher</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="flash.events:IEventDispatcher"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:IResponder"><apiName>IResponder</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Class version: v1.0.0
 	 Actionscript version: 3.0
@@ -328,7 +328,7 @@
 	 <b>Usage:</b>
 	 </apiDesc><example><codeblock rev="3.0">
 	 </codeblock>
-	 </example></apiClassifierDetail><apiValue id="com.soma.core.model:Model:NAME"><apiName>NAME</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiStatic/><apiData>Soma::Model</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.model:Model:protected:_data"><apiName>_data</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.model:Model:protected:_dispatcher"><apiName>_dispatcher</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="flash.events:IEventDispatcher"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.model:Model:protected:_name"><apiName>_name</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="String"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.model:SomaModels"><apiName>SomaModels</apiName><shortdesc>
+	 </example></apiClassifierDetail><apiValue id="com.soma.core.model:Model:NAME"><apiName>NAME</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiStatic/><apiData>Soma::Model</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.model:Model:protected:_data"><apiName>_data</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.model:Model:protected:_dispatcher"><apiName>_dispatcher</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="flash.events:IEventDispatcher"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.model:Model:protected:_name"><apiName>_name</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.model:Model:data:get"><apiName>data</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.model:Model:dispatcher:get"><apiName>dispatcher</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="flash.events:IEventDispatcher"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.model:SomaModels"><apiName>SomaModels</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Class version: v1.0.0
 	 Actionscript version: 3.0
@@ -418,24 +418,91 @@
 	 </codeblock>
 	 </example></apiClassifierDetail><apiValue id="com.soma.core.wire:SomaWires:protected:wires"><apiName>wires</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="flash.utils:Dictionary"/></apiValueDef></apiValueDetail></apiValue></apiClassifier></apiPackage><apiPackage id="com.soma.core"><apiName>com.soma.core</apiName><apiClassifier id="com.soma.core:Soma"><apiName>Soma</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
-	 
-	 Usage:
-	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISoma</apiBaseInterface><apiBaseClassifier>flash.events:EventDispatcher</apiBaseClassifier></apiClassifierDef><apiDesc>
-	 <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
-	 <b>Class version:</b> v1.0.0
-	 <b>Actionscript version:</b> 3.0
-	 <b>Copyright:</b>
+	 SomaCore is a lightweight event-based MVC framework written in AS3 that provides a structure, models, views management and commands.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISoma</apiBaseInterface><apiBaseInterface>flash.events:IEventDispatcher</apiBaseInterface><apiBaseClassifier>flash.events:EventDispatcher</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
-	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
-	 
-	 <b>Usage:</b>
-	 </apiDesc><example><codeblock rev="3.0">
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 <p>SomaCore is a lightweight event-based MVC framework written in AS3 that provides a structure, models, views management and commands.
+	 Somacore can be used for Flash, Flex and AIR projects. SomaCore does not use any external library and does not use dependency injection. SomaCore is completely event-based and use a concept of wires to code in a efficient decoupled way.
+	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.</p>
+	 <p>Few things to know: SomaCore requires the stage to be instantiated. Commands are normal built-in Flash events with the bubbles property set to true. Commands can be used in the views as they are not really framework code.
+	 Wires are the glue of the frameworks elements (models, commands, views, wires) and can be used the way you wish, as proxy/mediators or managers.
+	 Wires can manage one class or multiple classes.
+	 Parallel and sequence commands are built-in.
+	 You can create and register customs plugins to the framework (such as the SomaCoreDebugger plugin).
+	 You can access to all the framework elements that you have registered (stage, framework instance, wires, models, views and commands) from commands and wires. 
+	 </p>
+	 </apiDesc><example>To get started, create a instance of a class that extends the Soma class and implements the ISoma interface.
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.interfaces.ISoma;
+	import flash.display.Sprite;
+	
+	public class Main extends Sprite {
+		
+		private var _app:ISoma;
+		
+		public function Main() {
+			_app = new SomaApplication(stage);
+		}
+		
+	}
+}
 	 </codeblock>
-	 </example></apiClassifierDetail><apiValue id="com.soma.core:Soma:controller:get"><apiName>controller</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.controller:SomaController</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:models:get"><apiName>models</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.model:SomaModels</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:stage:get"><apiName>stage</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.display:Stage"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:views:get"><apiName>views</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.view:SomaViews</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:wires:get"><apiName>wires</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.wire:SomaWires</apiValueClassifier></apiValueDef></apiValueDetail></apiValue></apiClassifier></apiPackage></allClasses>
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.Soma;
+	import com.soma.core.interfaces.ISoma;
+	import flash.display.Stage;
+	
+	public class SomaApplication extends Soma implements ISoma {
+		public function SomaApplication(stage:Stage) {
+			super(stage);
+		}
+		
+		override protected function registerCommands():void {
+			
+		}
+		override protected function registerModels():void {
+			
+		}
+		override protected function registerPlugins():void {
+			
+		}
+		override protected function registerViews():void {
+			
+		}
+		override protected function registerWires():void {
+			
+		}
+		
+	}
+}
+	 </codeblock>
+	 
+	 </example></apiClassifierDetail><apiValue id="com.soma.core:Soma:controller:get"><apiName>controller</apiName><shortdesc>
+		 Gets the commands manager class.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.controller:SomaController</apiValueClassifier></apiValueDef><apiDesc>
+		 Gets the commands manager class.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:models:get"><apiName>models</apiName><shortdesc>
+		 Gets the model manager class.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.model:SomaModels</apiValueClassifier></apiValueDef><apiDesc>
+		 Gets the model manager class.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:stage:get"><apiName>stage</apiName><shortdesc>
+		 Get the stage that has been registered to the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.display:Stage"/></apiValueDef><apiDesc>
+		 Get the stage that has been registered to the framework.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:views:get"><apiName>views</apiName><shortdesc>
+		 Gets the view manager class.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.view:SomaViews</apiValueClassifier></apiValueDef><apiDesc>
+		 Gets the view manager class.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:wires:get"><apiName>wires</apiName><shortdesc>
+		 Gets the wires manager class.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.wire:SomaWires</apiValueClassifier></apiValueDef><apiDesc>
+		 Gets the wires manager class.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage></allClasses>

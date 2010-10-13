@@ -42,18 +42,77 @@ package com.soma.core {
 	import flash.utils.getDefinitionByName;
 
 	/**
-	 * <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 * <b>Class version:</b> v1.0.0<br />
-	 * <b>Actionscript version:</b> 3.0<br />
-	 * <b>Copyright:</b>
+	 * <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 * <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 * <p><b>Class version:</b> v1.0.0</p>
+	 * <p><b>Actionscript version:</b> 3.0</p>
+	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 * You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 * <br />
-	 * <b>Usage:</b><br />
+	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 * <p>SomaCore is a lightweight event-based MVC framework written in AS3 that provides a structure, models, views management and commands.
+	 * Somacore can be used for Flash, Flex and AIR projects. SomaCore does not use any external library and does not use dependency injection. SomaCore is completely event-based and use a concept of wires to code in a efficient decoupled way.
+	 * You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.</p>
+	 * <p>Few things to know: SomaCore requires the stage to be instantiated. Commands are normal built-in Flash events with the bubbles property set to true. Commands can be used in the views as they are not really framework code.
+	 * Wires are the glue of the frameworks elements (models, commands, views, wires) and can be used the way you wish, as proxy/mediators or managers.
+	 * Wires can manage one class or multiple classes.
+	 * Parallel and sequence commands are built-in.
+	 * You can create and register customs plugins to the framework (such as the SomaCoreDebugger plugin).
+	 * You can access to all the framework elements that you have registered (stage, framework instance, wires, models, views and commands) from commands and wires. 
+	 * </p>
 	 * @example
+	 * To get started, create a instance of a class that extends the Soma class and implements the ISoma interface.
 	 * <listing version="3.0">
+package  {
+	import com.soma.core.interfaces.ISoma;
+	import flash.display.Sprite;
+	
+	public class Main extends Sprite {
+		
+		private var _app:ISoma;
+		
+		public function Main() {
+			_app = new SomaApplication(stage);
+		}
+		
+	}
+}
 	 * </listing>
+	 * <listing version="3.0">
+package  {
+	import com.soma.core.Soma;
+	import com.soma.core.interfaces.ISoma;
+	import flash.display.Stage;
+	
+	public class SomaApplication extends Soma implements ISoma {
+
+		public function SomaApplication(stage:Stage) {
+			super(stage);
+		}
+		
+		override protected function registerCommands():void {
+			
+		}
+
+		override protected function registerModels():void {
+			
+		}
+
+		override protected function registerPlugins():void {
+			
+		}
+
+		override protected function registerViews():void {
+			
+		}
+
+		override protected function registerWires():void {
+			
+		}
+		
+	}
+}
+	 * </listing>
+	 * 
 	 */
 	
 	public class Soma extends EventDispatcher implements ISoma, IEventDispatcher {
@@ -62,13 +121,16 @@ package com.soma.core {
 		// private, protected properties
 		//------------------------------------
 		
-		
-		private var _models:SomaModels;
+		/** @private */
+		protected var _models:SomaModels;
+		/** @private */
 		private var _views:SomaViews;
-		private var _controller:SomaController;
-		private var _wires:SomaWires;
-		
-		private var _stage:Stage;
+		/** @private */
+		protected var _controller:SomaController;
+		/** @private */
+		protected var _wires:SomaWires;
+		/** @private */
+		protected var _stage:Stage;
 
 		//------------------------------------
 		// public properties
@@ -80,6 +142,10 @@ package com.soma.core {
 		// constructor
 		//------------------------------------
 		
+		/**
+		 * Create an instance of the SomaCore class.
+		 * @param stage The stage is used as a global EventDispatcher (as well as the Soma class), and is required to instantiate the framework.
+		 */
 		public function Soma(stage:Stage) {
 			initialize(stage);
 		}
@@ -88,7 +154,8 @@ package com.soma.core {
 		// PRIVATE, PROTECTED
 		//________________________________________________________________________________________________
 		
-		private function initialize(stage:Stage):void {
+		/** @private */
+		protected function initialize(stage:Stage):void {
 			validateStage(stage);
 			_stage = stage;
 			_models = new SomaModels(this);
@@ -102,26 +169,59 @@ package com.soma.core {
 			registerPlugins();
 		}
 		
-		private function validateStage(stage:Stage):void {
+		/** @private */
+		protected function validateStage(stage:Stage):void {
 			if (stage == null) throw new Error("Error in " + this + " You can't instantiate Soma with a stage that has a value null. Start soma after a Event.ADDED_TO_STAGE.");
 		}
 		
+		/** 
+		 * Method that you can optionally overwrite to register models to the framework.
+		 * @see com.soma.core.model.SomaModels
+		 * @example
+		 * <listing version="3.0">addModel(MyModel.NAME, new MyModel());</listing>
+		 */
 		protected function registerModels():void {
 			
 		}
-
+		
+		/** 
+		 * Method that you can optionally overwrite to register views to the framework.
+		 * @see com.soma.core.view.SomaViews
+		 * @example
+		 * <listing version="3.0">addView(MySprite.NAME, new MySprite());</listing>
+		 */
 		protected function registerViews():void {
 			
 		}
-
+		
+		/** 
+		 * Method that you can optionally overwrite to register commands (mapping events to command classes) to the framework.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">addCommand(MyEvent.DOSOMETING, MyCommandClass);</listing>
+		 */
 		protected function registerCommands():void {
 			
 		}
-
+		
+		/** 
+		 * Method that you can optionally overwrite to register wires to the framework.
+		 * @see com.soma.core.wire.SomaWires
+		 * @example
+		 * <listing version="3.0">addWire(MyWire.NAME, new MyWire());</listing>
+		 */
 		protected function registerWires():void {
 			
 		}
-
+		
+		/** 
+		 * Method that you can optionally overwrite to register plugins to the framework.
+		 * @example
+		 * <listing version="3.0">
+var pluginVO:SomaDebuggerVO = new SomaDebuggerVO(this, SomaDebugger.NAME_DEFAULT, getCommands(), true, false);
+var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger;
+		 * </listing>
+		 */
 		protected function registerPlugins():void {
 			
 		}
@@ -130,6 +230,9 @@ package com.soma.core {
 		// PUBLIC
 		//________________________________________________________________________________________________
 		
+		/**
+		 * Destroys the SomaCore core classes and elements registered to the framework.
+		 */
 		public function dispose():void {
 			try {
 				if (_models) { _models.dispose(); _models = null; }
@@ -141,23 +244,46 @@ package com.soma.core {
 				trace("Error in", this, "(dispose method):", e.message);
 			}
 		}
-
+		
+		/**
+		 * Gets the model manager class.
+		 */
 		public final function get models():SomaModels {
 			return _models;
 		}
 
+		/**
+		 * Gets the view manager class.
+		 */
 		public final function get views():SomaViews {
 			return _views;
 		}
 
+		/**
+		 * Gets the commands manager class.
+		 */
 		public final function get controller():SomaController {
 			return _controller;
 		}
 
+		/**
+		 * Gets the wires manager class.
+		 */
 		public final function get wires():SomaWires {
 			return _wires;
 		}
 		
+		/**
+		 * Creates a plugin instance.
+		 * @param plugin Class of the plugin that will be instantiated.
+		 * @param pluginVO Value Object class of the plugin.
+		 * @return An instance of the plugin.
+		 * @example
+		 * <listing version="3.0">
+var pluginVO:SomaDebuggerVO = new SomaDebuggerVO(this, SomaDebugger.NAME_DEFAULT, getCommands(), true, false);
+var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger;
+		 * </listing>
+		 */
 		public final function createPlugin(plugin:Class, pluginVO:ISomaPluginVO):ISomaPlugin {
 			var pluginInstance:Object = new plugin();
 			if (!(pluginInstance is ISomaPlugin)) throw new Error("Error in " + this + " The plugin class must implements ISomaPlugin");
@@ -165,6 +291,17 @@ package com.soma.core {
 			return pluginInstance as ISomaPlugin;
 		}
 
+		/**
+		 * Creates a plugin instance using the class name and the getDefinitionByName method.
+		 * @param plugin Class name of the plugin that will be instantiated.
+		 * @param pluginVO Value Object class of the plugin.
+		 * @return An instance of the plugin.
+		 * @example
+		 * <listing version="3.0">
+var pluginVO:SomaDebuggerVO = new SomaDebuggerVO(this, SomaDebugger.NAME_DEFAULT, getCommands(), true, false);
+var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.SomaDebugger", pluginVO) as SomaDebugger;
+		 * </listing>
+		 */
 		public final function createPluginFromClassName(pluginClassName:String, pluginVO:ISomaPluginVO):ISomaPlugin {
 			try {
 				var PluginClass:Class = getDefinitionByName(pluginClassName) as Class;
@@ -178,7 +315,11 @@ package com.soma.core {
 			}
 			return null;
 		}
-
+		
+		/**
+		 * Get the stage that has been registered to the framework.
+		 * @return The stage instance.
+		 */
 		public final function get stage():Stage {
 			return _stage;
 		}

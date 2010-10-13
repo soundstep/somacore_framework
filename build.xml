@@ -88,7 +88,13 @@
 	      <arg line="-window-title 'SomaCore ${somacore.version}'"/>
 	      <arg line="-main-title 'SomaCore ${somacore.version}'"/>
 	      <arg line="-footer 'SomaCore ${somacore.version} | Documentation generated at: ${docgen.time}'"/>
-	      <!-- <arg line="-package com.soma.core.controllers 'Commands and Events"/> -->
+	      <arg line="-package com.soma.core 'Contains the Soma class (entry point of the framework)'"/>
+	      <arg line="-package com.soma.core.controller 'Contains classes related to commands and events.'"/>
+	      <arg line="-package com.soma.core.interfaces 'Contains the interfaces used in the framework.'"/>
+	      <arg line="-package com.soma.core.model 'Contains the models manager and a Model abstract class.'"/>
+	      <arg line="-package com.soma.core.ns 'Contains the soma namespace (internal use).'"/>
+	      <arg line="-package com.soma.core.view 'Contains the views manager.'"/>
+	      <arg line="-package com.soma.core.wire 'Contains the wires manager and a Wire abstract class.'"/>
 	    </java>
 		<echo message="Success"/>
 		<eclipse.refreshLocal resource="${project.name}" />

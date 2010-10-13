@@ -291,6 +291,7 @@
                <apiAccess value="public"/>
                <apiStatic/>
                <apiBaseInterface>com.soma.core.interfaces:ISoma</apiBaseInterface>
+               <apiBaseInterface>flash.events:IEventDispatcher</apiBaseInterface>
                <apiBaseClassifier>flash.events:EventDispatcher</apiBaseClassifier>
             </apiClassifierDef>
          </apiClassifierDetail>

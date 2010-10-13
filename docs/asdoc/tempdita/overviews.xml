@@ -14,4 +14,27 @@
 <description></description>
 	</deprecated>
 	
-</overviews>
+
+<packages>
+<package name="com.soma.core">
+<shortDescription>Contains the Soma class (entry point of the framework)</shortDescription><longDescription>Contains the Soma class (entry point of the framework)</longDescription>
+</package>
+<package name="com.soma.core.controller">
+<shortDescription>Contains classes related to commands and events.</shortDescription><longDescription>Contains classes related to commands and events.</longDescription>
+</package>
+<package name="com.soma.core.interfaces">
+<shortDescription>Contains the interfaces used in the framework.</shortDescription><longDescription>Contains the interfaces used in the framework.</longDescription>
+</package>
+<package name="com.soma.core.model">
+<shortDescription>Contains the models manager and a Model abstract class.</shortDescription><longDescription>Contains the models manager and a Model abstract class.</longDescription>
+</package>
+<package name="com.soma.core.ns">
+<shortDescription>Contains the soma namespace (internal use).</shortDescription><longDescription>Contains the soma namespace (internal use).</longDescription>
+</package>
+<package name="com.soma.core.view">
+<shortDescription>Contains the views manager.</shortDescription><longDescription>Contains the views manager.</longDescription>
+</package>
+<package name="com.soma.core.wire">
+<shortDescription>Contains the wires manager and a Wire abstract class.</shortDescription><longDescription>Contains the wires manager and a Wire abstract class.</longDescription>
+</package>
+</packages></overviews>
