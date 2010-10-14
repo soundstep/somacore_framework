@@ -31,15 +31,14 @@ package com.soma.core.model {
 	import flash.utils.Dictionary;
 
 	/**
-	 * <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 * <b>Class version:</b> v1.0.0<br />
-	 * <b>Actionscript version:</b> 3.0<br />
-	 * <b>Copyright:</b>
+	 * <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 * <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 * <p><b>Class version:</b> v1.0.0</p>
+	 * <p><b>Actionscript version:</b> 3.0</p>
+	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 * You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 * <br />
-	 * <b>Usage:</b><br />
+	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 * 
 	 * @example
 	 * <listing version="3.0">
 	 * </listing>
@@ -90,11 +89,28 @@ package com.soma.core.model {
 			models = null;
 		}
 		
+		/**
+		 * Indicates wether a model has been registered to the framework.
+		 * @param modelName Name of the model.
+		 * @return A Boolean.
+		 * @see com.soma.core.model.SomaModels
+		 * @example
+		 * <listing version="3.0">hasModel(MyModel.NAME);</listing>
+		 */
 		public function hasModel(modelName:String):Boolean {
 			if (!models) return false;
 			return (models[modelName] != null || models[modelName] != undefined);
 		}
 		
+		/**
+		 * Registers a model to the framework.
+		 * @param modelName Name of the model.
+		 * @param model Instance of the model.
+		 * @return The model instance.
+		 * @see com.soma.core.model.SomaModels
+		 * @example
+		 * <listing version="3.0">addModel(MyModel.NAME, new MyModel());</listing>
+		 */
 		public function addModel(modelName:String, model:IModel):IModel {
 			if (!models) return null;
 			if (hasModel(modelName)) {
@@ -105,6 +121,13 @@ package com.soma.core.model {
 			return model;
 		}
 		
+		/**
+		 * Removes a model from the framework and call the dispose method of this model.
+		 * @param modelName Name of the model.
+		 * @see com.soma.core.model.SomaModels
+		 * @example
+		 * <listing version="3.0">removeModel(MyModel.NAME);</listing>
+		 */
 		public function removeModel(modelName:String):void {
 			if (!models) return;
 			if (!hasModel(modelName)) {
@@ -115,12 +138,27 @@ package com.soma.core.model {
 			delete models[modelName];
 		}
 		
+		/**
+		 * Retrieves the model instance that has been registered using its name.
+		 * @param modelName Name of the model.
+		 * @return A IModel instance.
+		 * @see com.soma.core.model.SomaModels
+		 * @example
+		 * <listing version="3.0">var myModel:MyModel = getModel(MyModel.NAME) as MyModel;</listing>
+		 */
 		public function getModel(modelName:String):IModel {
 			if (!models) return null;
 			if (!hasModel(modelName)) return null;
 			return models[modelName];
 		}
 		
+		/**
+		 * Retrieves all the model instances that have been registered to the framework.
+		 * @return A Dictionary (the key of the Dictionary is the name used for the registration).
+		 * @see com.soma.core.model.SomaModels
+		 * @example
+		 * <listing version="3.0">var models:Dictionary = getModels();</listing>
+		 */
 		public function getModels():Dictionary {
 			if (!models) return null;
 			var clone:Dictionary = new Dictionary();

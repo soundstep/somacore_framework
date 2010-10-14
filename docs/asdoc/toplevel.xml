@@ -28,15 +28,14 @@
 </packageRec>
 <interfaceRec name='IModel' fullname='com.soma.core.interfaces:IModel' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IModel.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -82,15 +81,14 @@
 </packageRec>
 <interfaceRec name='ISomaPlugin' fullname='com.soma.core.interfaces:ISomaPlugin' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISomaPlugin.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -128,15 +126,14 @@
 </packageRec>
 <interfaceRec name='IResponder' fullname='com.soma.core.interfaces:IResponder' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IResponder.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -174,15 +171,14 @@
 </packageRec>
 <interfaceRec name='ISomaPluginVO' fullname='com.soma.core.interfaces:ISomaPluginVO' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISomaPluginVO.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -216,15 +212,14 @@
 </packageRec>
 <interfaceRec name='IWire' fullname='com.soma.core.interfaces:IWire' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IWire.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -262,15 +257,14 @@
 </packageRec>
 <interfaceRec name='ICommand' fullname='com.soma.core.interfaces:ICommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ICommand.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -306,15 +300,14 @@
 </packageRec>
 <interfaceRec name='ICommandASync' fullname='com.soma.core.interfaces:ICommandASync' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ICommandASync.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:ICommand;com.soma.core.interfaces:IResponder' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -348,15 +341,14 @@
 </packageRec>
 <interfaceRec name='ISequenceCommand' fullname='com.soma.core.interfaces:ISequenceCommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISequenceCommand.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:ICommand' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -400,15 +392,14 @@
 </packageRec>
 <interfaceRec name='IParallelCommand' fullname='com.soma.core.interfaces:IParallelCommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IParallelCommand.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:ICommand' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -446,99 +437,423 @@
 </packageRec>
 <interfaceRec name='ISoma' fullname='com.soma.core.interfaces:ISoma' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISoma.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
 	 ]]></example>
 </interfaceRec>
 <method name='addCommand' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:addCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName;command' param_types='String;Class' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[
+		 Registers a command to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addCommand(MyEvent.DOSOMETHING, MyCommand);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<param><![CDATA[command Class that will be executed when a command has been dispatched.
+		 ]]></param>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='addEventListener' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:addEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture;priority;useWeakReference' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
 </method>
 <method name='addModel' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:addModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName;model' param_types='String;com.soma.core.interfaces:IModel' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IModel'>
+<description><![CDATA[
+		 Registers a model to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addModel(MyModel.NAME, new MyModel());</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<param><![CDATA[model Instance of the model.
+		 ]]></param>
+<return><![CDATA[The model instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='addView' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:addView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName;view' param_types='String;Object' param_defaults='undefined;undefined' result_type='Object'>
+<description><![CDATA[
+		 Registers a view to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addView(MySprite.NAME, new MySprite());</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<param><![CDATA[view Instance of the view.
+		 ]]></param>
+<return><![CDATA[The view instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='addWire' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:addWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName;wire' param_types='String;com.soma.core.interfaces:IWire' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IWire'>
+<description><![CDATA[
+		 Registers a wire to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addWire(MyWire.NAME, new MyWire());</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<param><![CDATA[view Instance of the wire.
+		 ]]></param>
+<return><![CDATA[The wire instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='createPluginFromClassName' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:createPluginFromClassName' isStatic='false' isFinal='false' isOverride='false'  param_names='pluginClassName;pluginVO' param_types='String;com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:ISomaPlugin'>
+<description><![CDATA[
+		 Creates a plugin instance using the class name and the getDefinitionByName method.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">
+var pluginVO:SomaDebuggerVO = new SomaDebuggerVO(this, SomaDebugger.NAME_DEFAULT, getCommands(), true, false);
+var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.SomaDebugger", pluginVO) as SomaDebugger;
+		 </listing>
+		 ]]></example>
+<param><![CDATA[plugin Class name of the plugin that will be instantiated.
+		 ]]></param>
+<param><![CDATA[pluginVO Value Object class of the plugin.
+		 ]]></param>
+<return><![CDATA[An instance of the plugin.
+		 ]]></return>
 </method>
 <method name='createPlugin' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:createPlugin' isStatic='false' isFinal='false' isOverride='false'  param_names='plugin;pluginVO' param_types='Class;com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:ISomaPlugin'>
+<description><![CDATA[
+		 Creates a plugin instance.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">
+var pluginVO:SomaDebuggerVO = new SomaDebuggerVO(this, SomaDebugger.NAME_DEFAULT, getCommands(), true, false);
+var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger;
+		 </listing>
+		 ]]></example>
+<param><![CDATA[plugin Class of the plugin that will be instantiated.
+		 ]]></param>
+<param><![CDATA[pluginVO Value Object class of the plugin.
+		 ]]></param>
+<return><![CDATA[An instance of the plugin.
+		 ]]></return>
 </method>
 <method name='dispatchEvent' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:dispatchEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
 </method>
 <method name='dispose' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<description><![CDATA[
+		 Destroys the SomaCore core classes and elements registered to the framework.
+		 ]]></description>
 </method>
 <method name='getCommand' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Class'>
+<description><![CDATA[
+		 Retrieves the command class that has been registered with a command name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var commandClass:ICommand = getCommand(MyEvent.DOSOMETHING) as ICommand;</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<return><![CDATA[A class.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getCommands' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getCommands' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+<description><![CDATA[
+		 Retrieves all the command names (event type) that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var commands:Array = getCommands();</listing>
+		 ]]></example>
+<return><![CDATA[An Array of String (command name).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getLastSequencer' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getLastSequencer' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISequenceCommand'>
+<description><![CDATA[
+		 Retrieves the last sequence command that has been instantiated in the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var lastSequencer:ISequenceCommand = getLastSequencer();</listing>
+		 ]]></example>
+<return><![CDATA[An ISequenceCommand instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getModel' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IModel'>
+<description><![CDATA[
+		 Retrieves the model instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var myModel:MyModel = getModel(MyModel.NAME) as MyModel;</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<return><![CDATA[A IModel instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='getModels' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getModels' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the model instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var models:Dictionary = getModels();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='getRunningSequencers' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getRunningSequencers' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+<description><![CDATA[
+		 Retrieves all the sequence command instances that are running.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sequencers:Array = getRunningSequencers();</listing>
+		 ]]></example>
+<return><![CDATA[An Array of ISequenceCommand instances.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getSequencer' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getSequencer' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='com.soma.core.interfaces:ISequenceCommand'>
+<description><![CDATA[
+		 Retrieves the sequence command instance using an event instance that has been created from this sequence command.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sequencer:ISequenceCommand = getSequencer(myEvent);</listing>
+		 ]]></example>
+<param><![CDATA[event Event instance.
+		 ]]></param>
+<return><![CDATA[A sequencer (ISequenceCommand).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getView' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Object'>
+<description><![CDATA[
+		 Retrieves the view instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var mySprite:MySprite = getView(MySprite.NAME) as MySprite;</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<return><![CDATA[An Object instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='getViews' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getViews' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the view instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sprites:Dictionary = getViews();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='getWire' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IWire'>
+<description><![CDATA[
+		 Retrieves the wire instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var myWire:MyWire = getWire(MyWire.NAME) as MyWire;</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<return><![CDATA[A wire instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='getWires' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:getWires' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the wire instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var wires:Dictionary = getWires();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='hasCommand' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:hasCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a command has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasCommand(MyEvent.DOSOMETHING);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='hasEventListener' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:hasEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
 </method>
 <method name='hasModel' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:hasModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a model has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasModel(MyModel.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='hasView' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:hasView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a view has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasView(MySprite.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='hasWire' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:hasWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a wire has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasWire(MyWire.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='isPartOfASequence' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:isPartOfASequence' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether an event has been instantiated from a ISequenceCommand class.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</listing>
+		 ]]></example>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='removeCommand' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:removeCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a command from the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeCommand(MyEvent.DOSOMETHING);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='removeEventListener' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:removeEventListener' isStatic='false' isFinal='false' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
 </method>
 <method name='removeModel' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:removeModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a model from the framework and call the dispose method of this model.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeModel(MyModel.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='removeView' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:removeView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a view from the framework and call the (optional) dispose method of this view.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeView(MySprite.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='removeWire' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:removeWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a wire from the framework and call the dispose method of this wire.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeWire(MyWire.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='stopAllSequencers' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:stopAllSequencers' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<description><![CDATA[
+		 Stops all the sequences command instances that are running.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">stopAllSequencers();</listing>
+		 ]]></example>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='stopSequencerWithEvent' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:stopSequencerWithEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Stops a sequence command using an event instance that has been created from this sequence command.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</listing>
+		 ]]></example>
+<param><![CDATA[event Event instance.
+		 ]]></param>
+<return><![CDATA[A Boolean (true if a sequence command has been stopped).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='stopSequencer' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:stopSequencer' isStatic='false' isFinal='false' isOverride='false'  param_names='sequencer' param_types='com.soma.core.interfaces:ISequenceCommand' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Stops a sequence command using the sequence command instance itself.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var success:Boolean = stopSequencer(mySequenceCommand);</listing>
+		 ]]></example>
+<param><![CDATA[sequencer The sequence command instance.
+		 ]]></param>
+<return><![CDATA[A Boolean (true if the sequence command has been stopped).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='willTrigger' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:willTrigger' isStatic='false' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
 </method>
 <method name='controller' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:controller/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.controller:SomaController'>
+<description><![CDATA[
+		 Gets the commands manager class.
+		 ]]></description>
 </method>
 <method name='models' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:models/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.model:SomaModels'>
+<description><![CDATA[
+		 Gets the model manager class.
+		 ]]></description>
 </method>
 <method name='stage' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:stage/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.display:Stage'>
+<description><![CDATA[
+		 Get the stage that has been registered to the framework.
+		 ]]></description>
+<return><![CDATA[The stage instance.
+		 ]]></return>
 </method>
 <method name='views' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:views/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.view:SomaViews'>
+<description><![CDATA[
+		 Gets the view manager class.
+		 ]]></description>
 </method>
 <method name='wires' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:wires/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.wire:SomaWires'>
+<description><![CDATA[
+		 Gets the wires manager class.
+		 ]]></description>
 </method>
 <packageRec name='com.soma.core.view.null' fullname='com.soma.core.view.null'>
 <description><![CDATA[
@@ -568,15 +883,14 @@
 </packageRec>
 <classRec name='SomaViews' fullname='com.soma.core.view:SomaViews' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/view/SomaViews.as' namespace='com.soma.core.view' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -585,18 +899,71 @@
 <method name='SomaViews' fullname='com.soma.core.view:SomaViews/SomaViews' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
 </method>
 <method name='addView' fullname='com.soma.core.view:SomaViews/addView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName;view' param_types='String;Object' param_defaults='undefined;undefined' result_type='Object'>
+<description><![CDATA[
+		 Registers a view to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addView(MySprite.NAME, new MySprite());</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<param><![CDATA[view Instance of the view.
+		 ]]></param>
+<return><![CDATA[The view instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='dispose' fullname='com.soma.core.view:SomaViews/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='getView' fullname='com.soma.core.view:SomaViews/getView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Object'>
+<description><![CDATA[
+		 Retrieves the view instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var mySprite:MySprite = getView(MySprite.NAME) as MySprite;</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<return><![CDATA[An Object instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='getViews' fullname='com.soma.core.view:SomaViews/getViews' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the view instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sprites:Dictionary = getViews();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='hasView' fullname='com.soma.core.view:SomaViews/hasView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a view has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasView(MySprite.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='initialize' fullname='com.soma.core.view:SomaViews/private:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='removeView' fullname='com.soma.core.view:SomaViews/removeView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a view from the framework and call the (optional) dispose method of this view.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeView(MySprite.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <field name='views' fullname='com.soma.core.view:SomaViews/protected:views' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
 </field>
@@ -654,15 +1021,14 @@
 </packageRec>
 <classRec name='Model' fullname='com.soma.core.model:Model' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/model/Model.as' namespace='com.soma.core.model' access='public' baseclass='Object' interfaces='com.soma.core.interfaces:IModel' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -734,15 +1100,14 @@
 </packageRec>
 <classRec name='SomaModels' fullname='com.soma.core.model:SomaModels' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/model/SomaModels.as' namespace='com.soma.core.model' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -751,18 +1116,71 @@
 <method name='SomaModels' fullname='com.soma.core.model:SomaModels/SomaModels' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='*'>
 </method>
 <method name='addModel' fullname='com.soma.core.model:SomaModels/addModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName;model' param_types='String;com.soma.core.interfaces:IModel' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IModel'>
+<description><![CDATA[
+		 Registers a model to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addModel(MyModel.NAME, new MyModel());</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<param><![CDATA[model Instance of the model.
+		 ]]></param>
+<return><![CDATA[The model instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='dispose' fullname='com.soma.core.model:SomaModels/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='getModel' fullname='com.soma.core.model:SomaModels/getModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IModel'>
+<description><![CDATA[
+		 Retrieves the model instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var myModel:MyModel = getModel(MyModel.NAME) as MyModel;</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<return><![CDATA[A IModel instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='getModels' fullname='com.soma.core.model:SomaModels/getModels' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the model instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var models:Dictionary = getModels();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='hasModel' fullname='com.soma.core.model:SomaModels/hasModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a model has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasModel(MyModel.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='initialize' fullname='com.soma.core.model:SomaModels/private:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='removeModel' fullname='com.soma.core.model:SomaModels/removeModel' isStatic='false' isFinal='false' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a model from the framework and call the dispose method of this model.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeModel(MyModel.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <field name='_instance' fullname='com.soma.core.model:SomaModels/private:_instance' type='com.soma.core.interfaces:ISoma' isStatic='false' isConst='false' >
 </field>
@@ -796,15 +1214,14 @@
 </packageRec>
 <classRec name='SomaController' fullname='com.soma.core.controller:SomaController' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/SomaController.as' namespace='com.soma.core.controller' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -813,6 +1230,17 @@
 <method name='SomaController' fullname='com.soma.core.controller:SomaController/SomaController' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='*'>
 </method>
 <method name='addCommand' fullname='com.soma.core.controller:SomaController/addCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName;command' param_types='String;Class' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[
+		 Registers a command to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addCommand(MyEvent.DOSOMETHING, MyCommand);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<param><![CDATA[command Class that will be executed when a command has been dispatched.
+		 ]]></param>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='addInterceptor' fullname='com.soma.core.controller:SomaController/private:addInterceptor' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
 </method>
@@ -825,34 +1253,143 @@
 <method name='executeCommand' fullname='com.soma.core.controller:SomaController/com.soma.core.controller:executeCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
 </method>
 <method name='getCommand' fullname='com.soma.core.controller:SomaController/getCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Class'>
+<description><![CDATA[
+		 Retrieves the command class that has been registered with a command name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var commandClass:ICommand = getCommand(MyEvent.DOSOMETHING) as ICommand;</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<return><![CDATA[A class.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getCommands' fullname='com.soma.core.controller:SomaController/getCommands' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+<description><![CDATA[
+		 Retrieves the sequence command instance using an event instance that has been created from this sequence command.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sequencer:ISequenceCommand = getSequencer(myEvent);</listing>
+		 ]]></example>
+<param><![CDATA[event Event instance.
+		 ]]></param>
+<return><![CDATA[A sequencer (ISequenceCommand).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getLastSequencer' fullname='com.soma.core.controller:SomaController/getLastSequencer' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISequenceCommand'>
+<description><![CDATA[
+		 Retrieves the last sequence command that has been instantiated in the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var lastSequencer:ISequenceCommand = getLastSequencer();</listing>
+		 ]]></example>
+<return><![CDATA[An ISequenceCommand instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getRunningSequencers' fullname='com.soma.core.controller:SomaController/getRunningSequencers' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+<description><![CDATA[
+		 Retrieves all the sequence command instances that are running.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sequencers:Array = getRunningSequencers();</listing>
+		 ]]></example>
+<return><![CDATA[An Array of ISequenceCommand instances.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getSequencer' fullname='com.soma.core.controller:SomaController/getSequencer' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='com.soma.core.interfaces:ISequenceCommand'>
+<description><![CDATA[
+		 Stops a sequence command using an event instance that has been created from this sequence command.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</listing>
+		 ]]></example>
+<param><![CDATA[event Event instance.
+		 ]]></param>
+<return><![CDATA[A Boolean (true if a sequence command has been stopped).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='hasCommand' fullname='com.soma.core.controller:SomaController/hasCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a command has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasCommand(MyEvent.DOSOMETHING);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='initialize' fullname='com.soma.core.controller:SomaController/private:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='instanceHandler' fullname='com.soma.core.controller:SomaController/private:instanceHandler' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
 </method>
 <method name='isPartOfASequence' fullname='com.soma.core.controller:SomaController/isPartOfASequence' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether an event has been instantiated from a ISequenceCommand class.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</listing>
+		 ]]></example>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='registerSequencedCommand' fullname='com.soma.core.controller:SomaController/com.soma.core.controller:registerSequencedCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='sequencer;event' param_types='com.soma.core.interfaces:ISequenceCommand;flash.events:Event' param_defaults='undefined;undefined' result_type='void'>
 </method>
 <method name='removeCommand' fullname='com.soma.core.controller:SomaController/removeCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a command from the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeCommand(MyEvent.DOSOMETHING);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='removeInterceptor' fullname='com.soma.core.controller:SomaController/private:removeInterceptor' isStatic='false' isFinal='false' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
 </method>
 <method name='stopAllSequencers' fullname='com.soma.core.controller:SomaController/stopAllSequencers' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<description><![CDATA[
+		 Stops all the sequences command instances that are running.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">stopAllSequencers();</listing>
+		 ]]></example>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='stopSequencerWithEvent' fullname='com.soma.core.controller:SomaController/stopSequencerWithEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Stops a sequence command using an event instance that has been created from this sequence command.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</listing>
+		 ]]></example>
+<param><![CDATA[event Event instance.
+		 ]]></param>
+<return><![CDATA[A Boolean (true if a sequence command has been stopped).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='stopSequencer' fullname='com.soma.core.controller:SomaController/stopSequencer' isStatic='false' isFinal='false' isOverride='false'  param_names='sequencer' param_types='com.soma.core.interfaces:ISequenceCommand' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Stops a sequence command using the sequence command instance itself.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var success:Boolean = stopSequencer(mySequenceCommand);</listing>
+		 ]]></example>
+<param><![CDATA[sequencer The sequence command instance.
+		 ]]></param>
+<return><![CDATA[A Boolean (true if the sequence command has been stopped).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='unregisterSequencedCommand' fullname='com.soma.core.controller:SomaController/com.soma.core.controller:unregisterSequencedCommand' isStatic='false' isFinal='false' isOverride='false'  param_names='sequencer;event' param_types='com.soma.core.interfaces:ISequenceCommand;flash.events:Event' param_defaults='undefined;undefined' result_type='void'>
 </method>
@@ -896,87 +1433,392 @@
 </packageRec>
 <classRec name='Command' fullname='com.soma.core.controller:Command' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/Command.as' namespace='com.soma.core.controller' access='public' baseclass='Object' interfaces='flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 Command class that will be instantiated when a registered event is dispatched.
 	 ]]></description>
-<example><![CDATA[<listing version="3.0">
+<example><![CDATA[Register a command.
+	 <listing version="3.0">
+addCommand(MyEvent.DOSOMETHING, CommandExample);
+	 </listing>
+	 <listing version="3.0">
+package  {
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommand;
+	import com.soma.core.controller.Command;
+	
+	public class CommandExample extends Command implements ICommand {
+
+		public function execute(event:Event):void {
+			
+		}
+		
+	}
+}
 	 </listing>
 	 ]]></example>
 </classRec>
 <method name='Command' fullname='com.soma.core.controller:Command/Command' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+		 Create an instance of the Command class. Should not be directly instantiated, the framework will instantiate the class.
+		 ]]></description>
 </method>
 <method name='addCommand' fullname='com.soma.core.controller:Command/addCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName;command' param_types='String;Class' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[
+		 Registers a command to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addCommand(MyEvent.DOSOMETHING, MyCommand);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<param><![CDATA[command Class that will be executed when a command has been dispatched.
+		 ]]></param>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='addEventListener' fullname='com.soma.core.controller:Command/addEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture;priority;useWeakReference' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
+<description><![CDATA[ ]]></description>
+<inheritDoc><![CDATA[]]></inheritDoc>
 </method>
 <method name='addModel' fullname='com.soma.core.controller:Command/addModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName;model' param_types='String;com.soma.core.interfaces:IModel' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IModel'>
+<description><![CDATA[
+		 Registers a model to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addModel(MyModel.NAME, new MyModel());</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<param><![CDATA[model Instance of the model.
+		 ]]></param>
+<return><![CDATA[The model instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='addView' fullname='com.soma.core.controller:Command/addView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName;view' param_types='String;Object' param_defaults='undefined;undefined' result_type='Object'>
+<description><![CDATA[
+		 Registers a view to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addView(MySprite.NAME, new MySprite());</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<param><![CDATA[view Instance of the view.
+		 ]]></param>
+<return><![CDATA[The view instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='addWire' fullname='com.soma.core.controller:Command/addWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName;wire' param_types='String;com.soma.core.interfaces:IWire' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IWire'>
+<description><![CDATA[
+		 Registers a wire to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addWire(MyWire.NAME, new MyWire());</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<param><![CDATA[view Instance of the wire.
+		 ]]></param>
+<return><![CDATA[The wire instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='dispatchEvent' fullname='com.soma.core.controller:Command/dispatchEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
 </method>
 <method name='getCommand' fullname='com.soma.core.controller:Command/getCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Class'>
+<description><![CDATA[
+		 Retrieves the command class that has been registered with a command name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var commandClass:ICommand = getCommand(MyEvent.DOSOMETHING) as ICommand;</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<return><![CDATA[A class.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getCommands' fullname='com.soma.core.controller:Command/getCommands' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+<description><![CDATA[
+		 Retrieves all the command names (event type) that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var commands:Array = getCommands();</listing>
+		 ]]></example>
+<return><![CDATA[An Array of String (command name).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getLastSequencer' fullname='com.soma.core.controller:Command/getLastSequencer' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.interfaces:ISequenceCommand'>
+<description><![CDATA[
+		 Retrieves the last sequence command that has been instantiated in the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var lastSequencer:ISequenceCommand = getLastSequencer();</listing>
+		 ]]></example>
+<return><![CDATA[An ISequenceCommand instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getModel' fullname='com.soma.core.controller:Command/getModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IModel'>
+<description><![CDATA[
+		 Retrieves the model instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var myModel:MyModel = getModel(MyModel.NAME) as MyModel;</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<return><![CDATA[A IModel instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='getModels' fullname='com.soma.core.controller:Command/getModels' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the model instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var models:Dictionary = getModels();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='getRunningSequencers' fullname='com.soma.core.controller:Command/getRunningSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+<description><![CDATA[
+		 Retrieves all the sequence command instances that are running.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sequencers:Array = getRunningSequencers();</listing>
+		 ]]></example>
+<return><![CDATA[An Array of ISequenceCommand instances.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getSequencer' fullname='com.soma.core.controller:Command/getSequencer' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='com.soma.core.interfaces:ISequenceCommand'>
+<description><![CDATA[
+		 Retrieves the sequence command instance using an event instance that has been created from this sequence command.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sequencer:ISequenceCommand = getSequencer(myEvent);</listing>
+		 ]]></example>
+<param><![CDATA[event Event instance.
+		 ]]></param>
+<return><![CDATA[A sequencer (ISequenceCommand).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getView' fullname='com.soma.core.controller:Command/getView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Object'>
+<description><![CDATA[
+		 Retrieves the view instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var mySprite:MySprite = getView(MySprite.NAME) as MySprite;</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<return><![CDATA[An Object instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='getViews' fullname='com.soma.core.controller:Command/getViews' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the view instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sprites:Dictionary = getViews();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='getWire' fullname='com.soma.core.controller:Command/getWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IWire'>
+<description><![CDATA[
+		 Retrieves the wire instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var myWire:MyWire = getWire(MyWire.NAME) as MyWire;</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<return><![CDATA[A wire instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='getWires' fullname='com.soma.core.controller:Command/getWires' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the wire instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var wires:Dictionary = getWires();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='hasCommand' fullname='com.soma.core.controller:Command/hasCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a command has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasCommand(MyEvent.DOSOMETHING);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='hasEventListener' fullname='com.soma.core.controller:Command/hasEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
 </method>
 <method name='hasModel' fullname='com.soma.core.controller:Command/hasModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a model has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasModel(MyModel.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='hasView' fullname='com.soma.core.controller:Command/hasView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a view has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasView(MySprite.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='hasWire' fullname='com.soma.core.controller:Command/hasWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a wire has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasWire(MyWire.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='initialize' fullname='com.soma.core.controller:Command/protected:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<description><![CDATA[ 
+		 Method that you can optionally overwrite and that is called after the command has been registered with the framework.
+		 ]]></description>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='isPartOfASequence' fullname='com.soma.core.controller:Command/isPartOfASequence' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether an event has been instantiated from a ISequenceCommand class.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</listing>
+		 ]]></example>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='registerInstance' fullname='com.soma.core.controller:Command/somans:registerInstance' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='void'>
+<description><![CDATA[ ]]></description>
+<private><![CDATA[]]></private>
 </method>
 <method name='removeCommand' fullname='com.soma.core.controller:Command/removeCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a command from the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeCommand(MyEvent.DOSOMETHING);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='removeEventListener' fullname='com.soma.core.controller:Command/removeEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
 </method>
 <method name='removeModel' fullname='com.soma.core.controller:Command/removeModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a model from the framework and call the dispose method of this model.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeModel(MyModel.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='removeView' fullname='com.soma.core.controller:Command/removeView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a view from the framework and call the (optional) dispose method of this view.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeView(MySprite.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='removeWire' fullname='com.soma.core.controller:Command/removeWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a wire from the framework and call the dispose method of this wire.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeWire(MyWire.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='stopAllSequencers' fullname='com.soma.core.controller:Command/stopAllSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+<description><![CDATA[
+		 Stops all the sequences command instances that are running.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">stopAllSequencers();</listing>
+		 ]]></example>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='stopSequencerWithEvent' fullname='com.soma.core.controller:Command/stopSequencerWithEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Stops a sequence command using an event instance that has been created from this sequence command.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</listing>
+		 ]]></example>
+<param><![CDATA[event Event instance.
+		 ]]></param>
+<return><![CDATA[A Boolean (true if a sequence command has been stopped).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='stopSequencer' fullname='com.soma.core.controller:Command/stopSequencer' isStatic='false' isFinal='true' isOverride='false'  param_names='sequencer' param_types='com.soma.core.interfaces:ISequenceCommand' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Stops a sequence command using the sequence command instance itself.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var success:Boolean = stopSequencer(mySequenceCommand);</listing>
+		 ]]></example>
+<param><![CDATA[sequencer The sequence command instance.
+		 ]]></param>
+<return><![CDATA[A Boolean (true if the sequence command has been stopped).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='willTrigger' fullname='com.soma.core.controller:Command/willTrigger' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
 </method>
@@ -985,6 +1827,8 @@
 <method name='stage' fullname='com.soma.core.controller:Command/stage/get' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.display:Stage'>
 </method>
 <field name='_instance' fullname='com.soma.core.controller:Command/private:_instance' type='com.soma.core.interfaces:ISoma' isStatic='false' isConst='false' >
+<description><![CDATA[ ]]></description>
+<private><![CDATA[]]></private>
 </field>
 <packageRec name='com.soma.core.controller.null' fullname='com.soma.core.controller.null'>
 <description><![CDATA[
@@ -1014,15 +1858,14 @@
 </packageRec>
 <classRec name='ParallelCommand' fullname='com.soma.core.controller:ParallelCommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/ParallelCommand.as' namespace='com.soma.core.controller' access='public' baseclass='com.soma.core.controller:Command' interfaces='com.soma.core.interfaces:IParallelCommand' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -1072,15 +1915,14 @@
 </packageRec>
 <classRec name='SequenceCommand' fullname='com.soma.core.controller:SequenceCommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/SequenceCommand.as' namespace='com.soma.core.controller' access='public' baseclass='com.soma.core.controller:Command' interfaces='com.soma.core.interfaces:ISequenceCommand' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -1138,15 +1980,14 @@
 </packageRec>
 <classRec name='SomaWires' fullname='com.soma.core.wire:SomaWires' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/wire/SomaWires.as' namespace='com.soma.core.wire' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -1155,18 +1996,71 @@
 <method name='SomaWires' fullname='com.soma.core.wire:SomaWires/SomaWires' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='*'>
 </method>
 <method name='addWire' fullname='com.soma.core.wire:SomaWires/addWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName;wire' param_types='String;com.soma.core.interfaces:IWire' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IWire'>
+<description><![CDATA[
+		 Registers a wire to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addWire(MyWire.NAME, new MyWire());</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<param><![CDATA[view Instance of the wire.
+		 ]]></param>
+<return><![CDATA[The wire instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='dispose' fullname='com.soma.core.wire:SomaWires/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='getWire' fullname='com.soma.core.wire:SomaWires/getWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IWire'>
+<description><![CDATA[
+		 Retrieves the wire instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var myWire:MyWire = getWire(MyWire.NAME) as MyWire;</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<return><![CDATA[A wire instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='getWires' fullname='com.soma.core.wire:SomaWires/getWires' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the wire instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var wires:Dictionary = getWires();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='hasWire' fullname='com.soma.core.wire:SomaWires/hasWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a wire has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasWire(MyWire.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='initialize' fullname='com.soma.core.wire:SomaWires/private:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='removeWire' fullname='com.soma.core.wire:SomaWires/removeWire' isStatic='false' isFinal='false' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a wire from the framework and call the dispose method of this wire.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeWire(MyWire.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <field name='_instance' fullname='com.soma.core.wire:SomaWires/private:_instance' type='com.soma.core.interfaces:ISoma' isStatic='false' isConst='false' >
 </field>
@@ -1200,15 +2094,14 @@
 </packageRec>
 <classRec name='Wire' fullname='com.soma.core.wire:Wire' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/wire/Wire.as' namespace='com.soma.core.wire' access='public' baseclass='Object' interfaces='com.soma.core.interfaces:IWire;flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-	 <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 <b>Class version:</b> v1.0.0<br />
-	 <b>Actionscript version:</b> 3.0<br />
-	 <b>Copyright:</b>
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 <br />
-	 <b>Usage:</b><br />
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
 	 ]]></description>
 <example><![CDATA[<listing version="3.0">
 	 </listing>
@@ -1217,76 +2110,353 @@
 <method name='Wire' fullname='com.soma.core.wire:Wire/Wire' isStatic='false' isFinal='true' isOverride='false'  param_names='name' param_types='String' param_defaults='null' result_type='*'>
 </method>
 <method name='addCommand' fullname='com.soma.core.wire:Wire/addCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName;command' param_types='String;Class' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[
+		 Registers a command to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addCommand(MyEvent.DOSOMETHING, MyCommand);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<param><![CDATA[command Class that will be executed when a command has been dispatched.
+		 ]]></param>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='addEventListener' fullname='com.soma.core.wire:Wire/addEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture;priority;useWeakReference' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
 </method>
 <method name='addModel' fullname='com.soma.core.wire:Wire/addModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName;model' param_types='String;com.soma.core.interfaces:IModel' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IModel'>
+<description><![CDATA[
+		 Registers a model to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addModel(MyModel.NAME, new MyModel());</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<param><![CDATA[model Instance of the model.
+		 ]]></param>
+<return><![CDATA[The model instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='addView' fullname='com.soma.core.wire:Wire/addView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName;view' param_types='String;Object' param_defaults='undefined;undefined' result_type='Object'>
+<description><![CDATA[
+		 Registers a view to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addView(MySprite.NAME, new MySprite());</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<param><![CDATA[view Instance of the view.
+		 ]]></param>
+<return><![CDATA[The view instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='addWire' fullname='com.soma.core.wire:Wire/addWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName;wire' param_types='String;com.soma.core.interfaces:IWire' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IWire'>
+<description><![CDATA[
+		 Registers a wire to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addWire(MyWire.NAME, new MyWire());</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<param><![CDATA[view Instance of the wire.
+		 ]]></param>
+<return><![CDATA[The wire instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='dispatchEvent' fullname='com.soma.core.wire:Wire/dispatchEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
 </method>
 <method name='dispose' fullname='com.soma.core.wire:Wire/protected:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='getCommand' fullname='com.soma.core.wire:Wire/getCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Class'>
+<description><![CDATA[
+		 Retrieves the command class that has been registered with a command name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var commandClass:ICommand = getCommand(MyEvent.DOSOMETHING) as ICommand;</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<return><![CDATA[A class.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getCommands' fullname='com.soma.core.wire:Wire/getCommands' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+<description><![CDATA[
+		 Retrieves all the command names (event type) that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var commands:Array = getCommands();</listing>
+		 ]]></example>
+<return><![CDATA[An Array of String (command name).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getLastSequencer' fullname='com.soma.core.wire:Wire/getLastSequencer' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.interfaces:ISequenceCommand'>
+<description><![CDATA[
+		 Retrieves the last sequence command that has been instantiated in the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var lastSequencer:ISequenceCommand = getLastSequencer();</listing>
+		 ]]></example>
+<return><![CDATA[An ISequenceCommand instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getModel' fullname='com.soma.core.wire:Wire/getModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IModel'>
+<description><![CDATA[
+		 Retrieves the model instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var myModel:MyModel = getModel(MyModel.NAME) as MyModel;</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<return><![CDATA[A IModel instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='getModels' fullname='com.soma.core.wire:Wire/getModels' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the model instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var models:Dictionary = getModels();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='getName' fullname='com.soma.core.wire:Wire/getName' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
 </method>
 <method name='getRunningSequencers' fullname='com.soma.core.wire:Wire/getRunningSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+<description><![CDATA[
+		 Retrieves all the sequence command instances that are running.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sequencers:Array = getRunningSequencers();</listing>
+		 ]]></example>
+<return><![CDATA[An Array of ISequenceCommand instances.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getSequencer' fullname='com.soma.core.wire:Wire/getSequencer' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='com.soma.core.interfaces:ISequenceCommand'>
+<description><![CDATA[
+		 Retrieves the sequence command instance using an event instance that has been created from this sequence command.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sequencer:ISequenceCommand = getSequencer(myEvent);</listing>
+		 ]]></example>
+<param><![CDATA[event Event instance.
+		 ]]></param>
+<return><![CDATA[A sequencer (ISequenceCommand).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getView' fullname='com.soma.core.wire:Wire/getView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Object'>
+<description><![CDATA[
+		 Retrieves the view instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var mySprite:MySprite = getView(MySprite.NAME) as MySprite;</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<return><![CDATA[An Object instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='getViews' fullname='com.soma.core.wire:Wire/getViews' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the view instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sprites:Dictionary = getViews();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='getWire' fullname='com.soma.core.wire:Wire/getWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IWire'>
+<description><![CDATA[
+		 Retrieves the wire instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var myWire:MyWire = getWire(MyWire.NAME) as MyWire;</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<return><![CDATA[A wire instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='getWires' fullname='com.soma.core.wire:Wire/getWires' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the wire instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var wires:Dictionary = getWires();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='hasCommand' fullname='com.soma.core.wire:Wire/hasCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a command has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasCommand(MyEvent.DOSOMETHING);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='hasEventListener' fullname='com.soma.core.wire:Wire/hasEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
 </method>
 <method name='hasModel' fullname='com.soma.core.wire:Wire/hasModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a model has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasModel(MyModel.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='hasView' fullname='com.soma.core.wire:Wire/hasView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a view has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasView(MySprite.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='hasWire' fullname='com.soma.core.wire:Wire/hasWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a wire has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasWire(MyWire.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='initialize' fullname='com.soma.core.wire:Wire/protected:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='isPartOfASequence' fullname='com.soma.core.wire:Wire/isPartOfASequence' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether an event has been instantiated from a ISequenceCommand class.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</listing>
+		 ]]></example>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='registerInstance' fullname='com.soma.core.wire:Wire/somans:registerInstance' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='void'>
 </method>
 <method name='removeCommand' fullname='com.soma.core.wire:Wire/removeCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a command from the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeCommand(MyEvent.DOSOMETHING);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='removeEventListener' fullname='com.soma.core.wire:Wire/removeEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
 </method>
 <method name='removeModel' fullname='com.soma.core.wire:Wire/removeModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a model from the framework and call the dispose method of this model.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeModel(MyModel.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='removeView' fullname='com.soma.core.wire:Wire/removeView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a view from the framework and call the (optional) dispose method of this view.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeView(MySprite.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='removeWire' fullname='com.soma.core.wire:Wire/removeWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a wire from the framework and call the dispose method of this wire.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeWire(MyWire.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='setName' fullname='com.soma.core.wire:Wire/setName' isStatic='false' isFinal='true' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='void'>
 </method>
 <method name='stopAllSequencers' fullname='com.soma.core.wire:Wire/stopAllSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+<description><![CDATA[
+		 Stops all the sequences command instances that are running.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">stopAllSequencers();</listing>
+		 ]]></example>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='stopSequencerWithEvent' fullname='com.soma.core.wire:Wire/stopSequencerWithEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Stops a sequence command using an event instance that has been created from this sequence command.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</listing>
+		 ]]></example>
+<param><![CDATA[event Event instance.
+		 ]]></param>
+<return><![CDATA[A Boolean (true if a sequence command has been stopped).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='stopSequencer' fullname='com.soma.core.wire:Wire/stopSequencer' isStatic='false' isFinal='true' isOverride='false'  param_names='sequencer' param_types='com.soma.core.interfaces:ISequenceCommand' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Stops a sequence command using the sequence command instance itself.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var success:Boolean = stopSequencer(mySequenceCommand);</listing>
+		 ]]></example>
+<param><![CDATA[sequencer The sequence command instance.
+		 ]]></param>
+<return><![CDATA[A Boolean (true if the sequence command has been stopped).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='willTrigger' fullname='com.soma.core.wire:Wire/willTrigger' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
 </method>
@@ -1409,12 +2579,62 @@ package  {
 		 ]]></param>
 </method>
 <method name='addCommand' fullname='com.soma.core:Soma/addCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName;command' param_types='String;Class' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[
+		 Registers a command to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addCommand(MyEvent.DOSOMETHING, MyCommand);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<param><![CDATA[command Class that will be executed when a command has been dispatched.
+		 ]]></param>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='addModel' fullname='com.soma.core:Soma/addModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName;model' param_types='String;com.soma.core.interfaces:IModel' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IModel'>
+<description><![CDATA[
+		 Registers a model to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addModel(MyModel.NAME, new MyModel());</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<param><![CDATA[model Instance of the model.
+		 ]]></param>
+<return><![CDATA[The model instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='addView' fullname='com.soma.core:Soma/addView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName;view' param_types='String;Object' param_defaults='undefined;undefined' result_type='Object'>
+<description><![CDATA[
+		 Registers a view to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addView(MySprite.NAME, new MySprite());</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<param><![CDATA[view Instance of the view.
+		 ]]></param>
+<return><![CDATA[The view instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='addWire' fullname='com.soma.core:Soma/addWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName;wire' param_types='String;com.soma.core.interfaces:IWire' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IWire'>
+<description><![CDATA[
+		 Registers a wire to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addWire(MyWire.NAME, new MyWire());</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<param><![CDATA[view Instance of the wire.
+		 ]]></param>
+<return><![CDATA[The wire instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='createPluginFromClassName' fullname='com.soma.core:Soma/createPluginFromClassName' isStatic='false' isFinal='true' isOverride='false'  param_names='pluginClassName;pluginVO' param_types='String;com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:ISomaPlugin'>
 <description><![CDATA[
@@ -1454,40 +2674,202 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 ]]></description>
 </method>
 <method name='getCommand' fullname='com.soma.core:Soma/getCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Class'>
+<description><![CDATA[
+		 Retrieves the command class that has been registered with a command name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var commandClass:ICommand = getCommand(MyEvent.DOSOMETHING) as ICommand;</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<return><![CDATA[A class.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getCommands' fullname='com.soma.core:Soma/getCommands' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+<description><![CDATA[
+		 Retrieves all the command names (event type) that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var commands:Array = getCommands();</listing>
+		 ]]></example>
+<return><![CDATA[An Array of String (command name).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getLastSequencer' fullname='com.soma.core:Soma/getLastSequencer' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.interfaces:ISequenceCommand'>
+<description><![CDATA[
+		 Retrieves the last sequence command that has been instantiated in the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var lastSequencer:ISequenceCommand = getLastSequencer();</listing>
+		 ]]></example>
+<return><![CDATA[An ISequenceCommand instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getModel' fullname='com.soma.core:Soma/getModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IModel'>
+<description><![CDATA[
+		 Retrieves the model instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var myModel:MyModel = getModel(MyModel.NAME) as MyModel;</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<return><![CDATA[A IModel instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='getModels' fullname='com.soma.core:Soma/getModels' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the model instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var models:Dictionary = getModels();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='getRunningSequencers' fullname='com.soma.core:Soma/getRunningSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+<description><![CDATA[
+		 Retrieves all the sequence command instances that are running.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sequencers:Array = getRunningSequencers();</listing>
+		 ]]></example>
+<return><![CDATA[An Array of ISequenceCommand instances.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getSequencer' fullname='com.soma.core:Soma/getSequencer' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='com.soma.core.interfaces:ISequenceCommand'>
+<description><![CDATA[
+		 Retrieves the sequence command instance using an event instance that has been created from this sequence command.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sequencer:ISequenceCommand = getSequencer(myEvent);</listing>
+		 ]]></example>
+<param><![CDATA[event Event instance.
+		 ]]></param>
+<return><![CDATA[A sequencer (ISequenceCommand).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='getView' fullname='com.soma.core:Soma/getView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Object'>
+<description><![CDATA[
+		 Retrieves the view instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var mySprite:MySprite = getView(MySprite.NAME) as MySprite;</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<return><![CDATA[An Object instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='getViews' fullname='com.soma.core:Soma/getViews' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the view instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sprites:Dictionary = getViews();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='getWire' fullname='com.soma.core:Soma/getWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='com.soma.core.interfaces:IWire'>
+<description><![CDATA[
+		 Retrieves the wire instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var myWire:MyWire = getWire(MyWire.NAME) as MyWire;</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<return><![CDATA[A wire instance.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='getWires' fullname='com.soma.core:Soma/getWires' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the wire instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var wires:Dictionary = getWires();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='hasCommand' fullname='com.soma.core:Soma/hasCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a command has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasCommand(MyEvent.DOSOMETHING);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='hasModel' fullname='com.soma.core:Soma/hasModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a model has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasModel(MyModel.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='hasView' fullname='com.soma.core:Soma/hasView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a view has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasView(MySprite.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='hasWire' fullname='com.soma.core:Soma/hasWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a wire has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasWire(MyWire.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='initialize' fullname='com.soma.core:Soma/protected:initialize' isStatic='false' isFinal='false' isOverride='false'  param_names='stage' param_types='flash.display:Stage' param_defaults='undefined' result_type='void'>
 <description><![CDATA[ ]]></description>
 <private><![CDATA[]]></private>
 </method>
 <method name='isPartOfASequence' fullname='com.soma.core:Soma/isPartOfASequence' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether an event has been instantiated from a ISequenceCommand class.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</listing>
+		 ]]></example>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='registerCommands' fullname='com.soma.core:Soma/protected:registerCommands' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 <description><![CDATA[ 
@@ -1536,18 +2918,83 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 ]]></see>
 </method>
 <method name='removeCommand' fullname='com.soma.core:Soma/removeCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a command from the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeCommand(MyEvent.DOSOMETHING);</listing>
+		 ]]></example>
+<param><![CDATA[commandName Event type that is used as a command name.
+		 ]]></param>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='removeModel' fullname='com.soma.core:Soma/removeModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a model from the framework and call the dispose method of this model.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeModel(MyModel.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[modelName Name of the model.
+		 ]]></param>
+<see><![CDATA[com.soma.core.model.SomaModels
+		 ]]></see>
 </method>
 <method name='removeView' fullname='com.soma.core:Soma/removeView' isStatic='false' isFinal='true' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a view from the framework and call the (optional) dispose method of this view.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeView(MySprite.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<see><![CDATA[com.soma.core.view.SomaViews
+		 ]]></see>
 </method>
 <method name='removeWire' fullname='com.soma.core:Soma/removeWire' isStatic='false' isFinal='true' isOverride='false'  param_names='wireName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a wire from the framework and call the dispose method of this wire.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeWire(MyWire.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[wireName Name of the wire.
+		 ]]></param>
+<see><![CDATA[com.soma.core.wire.SomaWires
+		 ]]></see>
 </method>
 <method name='stopAllSequencers' fullname='com.soma.core:Soma/stopAllSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
+<description><![CDATA[
+		 Stops all the sequences command instances that are running.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">stopAllSequencers();</listing>
+		 ]]></example>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='stopSequencerWithEvent' fullname='com.soma.core:Soma/stopSequencerWithEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Stops a sequence command using an event instance that has been created from this sequence command.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</listing>
+		 ]]></example>
+<param><![CDATA[event Event instance.
+		 ]]></param>
+<return><![CDATA[A Boolean (true if a sequence command has been stopped).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='stopSequencer' fullname='com.soma.core:Soma/stopSequencer' isStatic='false' isFinal='true' isOverride='false'  param_names='sequencer' param_types='com.soma.core.interfaces:ISequenceCommand' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Stops a sequence command using the sequence command instance itself.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var success:Boolean = stopSequencer(mySequenceCommand);</listing>
+		 ]]></example>
+<param><![CDATA[sequencer The sequence command instance.
+		 ]]></param>
+<return><![CDATA[A Boolean (true if the sequence command has been stopped).
+		 ]]></return>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='validateStage' fullname='com.soma.core:Soma/protected:validateStage' isStatic='false' isFinal='false' isOverride='false'  param_names='stage' param_types='flash.display:Stage' param_defaults='undefined' result_type='void'>
 <description><![CDATA[ ]]></description>

@@ -30,15 +30,14 @@ package com.soma.core.model {
 	import flash.events.IEventDispatcher;
 
 	/**
-	 * <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 * <b>Class version:</b> v1.0.0<br />
-	 * <b>Actionscript version:</b> 3.0<br />
-	 * <b>Copyright:</b>
+	 * <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 * <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 * <p><b>Class version:</b> v1.0.0</p>
+	 * <p><b>Actionscript version:</b> 3.0</p>
+	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 * You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 * <br />
-	 * <b>Usage:</b><br />
+	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 * 
 	 * @example
 	 * <listing version="3.0">
 	 * </listing>

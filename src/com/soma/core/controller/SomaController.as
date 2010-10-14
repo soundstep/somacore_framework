@@ -32,15 +32,14 @@ package com.soma.core.controller {
 	import flash.utils.Dictionary;
 
 	/**
-	 * <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 * <b>Class version:</b> v1.0.0<br />
-	 * <b>Actionscript version:</b> 3.0<br />
-	 * <b>Copyright:</b>
+	 * <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 * <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 * <p><b>Class version:</b> v1.0.0</p>
+	 * <p><b>Actionscript version:</b> 3.0</p>
+	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 * You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 * <br />
-	 * <b>Usage:</b><br />
+	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 * 
 	 * @example
 	 * <listing version="3.0">
 	 * </listing>
@@ -194,11 +193,27 @@ package com.soma.core.controller {
 		// PUBLIC
 		//________________________________________________________________________________________________
 		
+		/**
+		 * Indicates wether a command has been registered to the framework.
+		 * @param commandName Event type that is used as a command name.
+		 * @return A Boolean.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">hasCommand(MyEvent.DOSOMETHING);</listing>
+		 */
 		public function hasCommand(commandName:String):Boolean {
 			if (!_commands) return false;
 			return !(_commands[commandName] == null || _commands[commandName] == undefined);
 		}
 		
+		/**
+		 * Registers a command to the framework.
+		 * @param commandName Event type that is used as a command name.
+		 * @param command Class that will be executed when a command has been dispatched.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">addCommand(MyEvent.DOSOMETHING, MyCommand);</listing>
+		 */
 		public function addCommand(commandName:String, command:Class):void {
 			if (!_commands) return;
 			if (!commandIsValid(command)) {
@@ -211,6 +226,13 @@ package com.soma.core.controller {
 			addInterceptor(commandName);
 		}
 		
+		/**
+		 * Removes a command from the framework.
+		 * @param commandName Event type that is used as a command name.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">removeCommand(MyEvent.DOSOMETHING);</listing>
+		 */
 		public function removeCommand(commandName:String):void {
 			if (!_commands) return;
 			if (!hasCommand(commandName)) {
@@ -221,12 +243,28 @@ package com.soma.core.controller {
 			removeInterceptor(commandName);
 		}
 		
+		/**
+		 * Retrieves the command class that has been registered with a command name.
+		 * @param commandName Event type that is used as a command name.
+		 * @return A class.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var commandClass:ICommand = getCommand(MyEvent.DOSOMETHING) as ICommand;</listing>
+		 */
 		public function getCommand(commandName:String):Class {
 			if (!_commands) return null;
 			if (!hasCommand(commandName)) return null;
 			return _commands[commandName];
 		}
 		
+		/**
+		 * Retrieves the sequence command instance using an event instance that has been created from this sequence command.
+		 * @param event Event instance.
+		 * @return A sequencer (ISequenceCommand).
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var sequencer:ISequenceCommand = getSequencer(myEvent);</listing>
+		 */
 		public function getCommands():Array {
 			if (!_commands) return null;
 			var array:Array = [];
@@ -236,6 +274,14 @@ package com.soma.core.controller {
 			return array;
 		}
 		
+		/**
+		 * Stops a sequence command using an event instance that has been created from this sequence command.
+		 * @param event Event instance.
+		 * @return A Boolean (true if a sequence command has been stopped).
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</listing>
+		 */
 		public function getSequencer(event:Event):ISequenceCommand {
 			if (!_sequencers) return null;
 			for (var sequencer:Object in _sequencers) {
@@ -250,6 +296,14 @@ package com.soma.core.controller {
 			return null;
 		}
 		
+		/**
+		 * Stops a sequence command using an event instance that has been created from this sequence command.
+		 * @param event Event instance.
+		 * @return A Boolean (true if a sequence command has been stopped).
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</listing>
+		 */
 		public function stopSequencerWithEvent(event:Event):Boolean {
 			if (!_sequencers) return false;
 			for (var sequencer:Object in _sequencers) {
@@ -265,12 +319,27 @@ package com.soma.core.controller {
 			return false;
 		}
 		
+		/**
+		 * Stops a sequence command using the sequence command instance itself.
+		 * @param sequencer The sequence command instance.
+		 * @return A Boolean (true if the sequence command has been stopped).
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var success:Boolean = stopSequencer(mySequenceCommand);</listing>
+		 */
 		public function stopSequencer(sequencer:ISequenceCommand):Boolean {
 			if (sequencer == null) return false;
 			sequencer.stop();
 			return true;
 		}
 		
+		/**
+		 * Retrieves all the sequence command instances that are running.
+		 * @return An Array of ISequenceCommand instances.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var sequencers:Array = getRunningSequencers();</listing>
+		 */
 		public function getRunningSequencers():Array {
 			if (!_sequencers) return null;
 			var array:Array = [];
@@ -280,6 +349,12 @@ package com.soma.core.controller {
 			return array;
 		}
 		
+		/**
+		 * Stops all the sequences command instances that are running.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">stopAllSequencers();</listing>
+		 */
 		public function stopAllSequencers():void {
 			if (!_sequencers) return;
 			for (var sequencer:Object in _sequencers) {
@@ -287,11 +362,25 @@ package com.soma.core.controller {
 			}
 		}
 		
+		/**
+		 * Indicates wether an event has been instantiated from a ISequenceCommand class.
+		 * @return A Boolean.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</listing>
+		 */
 		public function isPartOfASequence(event:Event):Boolean {
 			if (!_sequencers) return false;
 			return (getSequencer(event) != null);
 		}
 		
+		/**
+		 * Retrieves the last sequence command that has been instantiated in the framework.
+		 * @return An ISequenceCommand instance.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var lastSequencer:ISequenceCommand = getLastSequencer();</listing>
+		 */
 		public function getLastSequencer():ISequenceCommand {
 			return _lastSequencer;
 		}

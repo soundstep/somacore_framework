@@ -35,15 +35,14 @@ package com.soma.core.wire {
 	import flash.utils.Dictionary;
 
 	/**
-	 * <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 * <b>Class version:</b> v1.0.0<br />
-	 * <b>Actionscript version:</b> 3.0<br />
-	 * <b>Copyright:</b>
+	 * <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 * <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 * <p><b>Class version:</b> v1.0.0</p>
+	 * <p><b>Actionscript version:</b> 3.0</p>
+	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 * You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 * <br />
-	 * <b>Usage:</b><br />
+	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 * 
 	 * @example
 	 * <listing version="3.0">
 	 * </listing>
@@ -133,136 +132,342 @@ package com.soma.core.wire {
 			_name = name;
 		}
 		
+		/**
+		 * Indicates wether a command has been registered to the framework.
+		 * @param commandName Event type that is used as a command name.
+		 * @return A Boolean.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">hasCommand(MyEvent.DOSOMETHING);</listing>
+		 */
 		public final function hasCommand(commandName:String):Boolean {
 			if (!_instance.controller) return false;
 			return _instance.controller.hasCommand(commandName);
 		}
 		
+		/**
+		 * Registers a command to the framework.
+		 * @param commandName Event type that is used as a command name.
+		 * @param command Class that will be executed when a command has been dispatched.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">addCommand(MyEvent.DOSOMETHING, MyCommand);</listing>
+		 */
 		public final function addCommand(commandName:String, command:Class):void {
 			if (!_instance.controller) return;
 			_instance.controller.addCommand(commandName, command);
 		}
 		
+		/**
+		 * Removes a command from the framework.
+		 * @param commandName Event type that is used as a command name.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">removeCommand(MyEvent.DOSOMETHING);</listing>
+		 */
 		public final function removeCommand(commandName:String):void {
 			if (!_instance.controller) return;
 			_instance.controller.removeCommand(commandName);
 		}
 		
+		/**
+		 * Retrieves the command class that has been registered with a command name.
+		 * @param commandName Event type that is used as a command name.
+		 * @return A class.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var commandClass:ICommand = getCommand(MyEvent.DOSOMETHING) as ICommand;</listing>
+		 */
 		public final function getCommand(commandName:String):Class {
 			if (!_instance.controller) return null;
 			return _instance.controller.getCommand(commandName);
 		}
 		
+		/**
+		 * Retrieves all the command names (event type) that have been registered to the framework.
+		 * @return An Array of String (command name).
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var commands:Array = getCommands();</listing>
+		 */
 		public final function getCommands():Array {
 			if (!_instance.controller) return null;
 			return _instance.controller.getCommands();
 		}
 		
+		/**
+		 * Retrieves the sequence command instance using an event instance that has been created from this sequence command.
+		 * @param event Event instance.
+		 * @return A sequencer (ISequenceCommand).
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var sequencer:ISequenceCommand = getSequencer(myEvent);</listing>
+		 */
 		public final function getSequencer(event:Event):ISequenceCommand {
 			if (!_instance.controller) return null;
 			return _instance.controller.getSequencer(event);
 		}
 		
+		/**
+		 * Stops a sequence command using an event instance that has been created from this sequence command.
+		 * @param event Event instance.
+		 * @return A Boolean (true if a sequence command has been stopped).
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</listing>
+		 */
 		public final function stopSequencerWithEvent(event:Event):Boolean {
 			if (!_instance.controller) return false;
 			return _instance.controller.stopSequencerWithEvent(event);
 		}
 		
+		/**
+		 * Stops a sequence command using the sequence command instance itself.
+		 * @param sequencer The sequence command instance.
+		 * @return A Boolean (true if the sequence command has been stopped).
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var success:Boolean = stopSequencer(mySequenceCommand);</listing>
+		 */
 		public final function stopSequencer(sequencer:ISequenceCommand):Boolean {
 			if (!_instance.controller) return false;
 			return _instance.controller.stopSequencer(sequencer);
 		}
 		
+		/**
+		 * Retrieves all the sequence command instances that are running.
+		 * @return An Array of ISequenceCommand instances.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var sequencers:Array = getRunningSequencers();</listing>
+		 */
 		public final function getRunningSequencers():Array {
 			if (!_instance.controller) return null;
 			return _instance.controller.getRunningSequencers();
 		}
 		
+		/**
+		 * Stops all the sequences command instances that are running.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">stopAllSequencers();</listing>
+		 */
 		public final function stopAllSequencers():void {
 			if (!_instance.controller) return;
 			_instance.controller.stopAllSequencers();
 		}
 		
+		/**
+		 * Indicates wether an event has been instantiated from a ISequenceCommand class.
+		 * @return A Boolean.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</listing>
+		 */
 		public final function isPartOfASequence(event:Event):Boolean {
 			if (!_instance.controller) return false;
 			return _instance.controller.isPartOfASequence(event);
 		}
 		
+		/**
+		 * Retrieves the last sequence command that has been instantiated in the framework.
+		 * @return An ISequenceCommand instance.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">var lastSequencer:ISequenceCommand = getLastSequencer();</listing>
+		 */
 		public final function getLastSequencer():ISequenceCommand {
 			if (!_instance.controller) return null;
 			return _instance.controller.getLastSequencer();
 		}
 		
+		/**
+		 * Indicates wether a model has been registered to the framework.
+		 * @param modelName Name of the model.
+		 * @return A Boolean.
+		 * @see com.soma.core.model.SomaModels
+		 * @example
+		 * <listing version="3.0">hasModel(MyModel.NAME);</listing>
+		 */
 		public final function hasModel(modelName:String):Boolean {
 			if (!_instance.models) return false;
 			return _instance.models.hasModel(modelName);
 		}
 		
+		/**
+		 * Registers a model to the framework.
+		 * @param modelName Name of the model.
+		 * @param model Instance of the model.
+		 * @return The model instance.
+		 * @see com.soma.core.model.SomaModels
+		 * @example
+		 * <listing version="3.0">addModel(MyModel.NAME, new MyModel());</listing>
+		 */
 		public final function addModel(modelName:String, model:IModel):IModel {
 			if (!_instance.models) return null;
 			return _instance.models.addModel(modelName, model);
 		}
 		
+		/**
+		 * Removes a model from the framework and call the dispose method of this model.
+		 * @param modelName Name of the model.
+		 * @see com.soma.core.model.SomaModels
+		 * @example
+		 * <listing version="3.0">removeModel(MyModel.NAME);</listing>
+		 */
 		public final function removeModel(modelName:String):void {
 			if (!_instance.models) return;
 			_instance.models.removeModel(modelName);
 		}
 		
+		/**
+		 * Retrieves the model instance that has been registered using its name.
+		 * @param modelName Name of the model.
+		 * @return A IModel instance.
+		 * @see com.soma.core.model.SomaModels
+		 * @example
+		 * <listing version="3.0">var myModel:MyModel = getModel(MyModel.NAME) as MyModel;</listing>
+		 */
 		public final function getModel(modelName:String):IModel {
 			if (!_instance.models) return null;
 			return _instance.models.getModel(modelName);
 		}
 		
+		/**
+		 * Retrieves all the model instances that have been registered to the framework.
+		 * @return A Dictionary (the key of the Dictionary is the name used for the registration).
+		 * @see com.soma.core.model.SomaModels
+		 * @example
+		 * <listing version="3.0">var models:Dictionary = getModels();</listing>
+		 */
 		public final function getModels():Dictionary {
 			if (!_instance.models) return null;
 			return _instance.models.getModels();
 		}
 		
+		/**
+		 * Indicates wether a view has been registered to the framework.
+		 * @param viewName Name of the view.
+		 * @return A Boolean.
+		 * @see com.soma.core.view.SomaViews
+		 * @example
+		 * <listing version="3.0">hasView(MySprite.NAME);</listing>
+		 */
 		public final function hasView(viewName:String):Boolean {
 			if (!_instance.views) return false;
 			return _instance.views.hasView(viewName);
 		}
 		
+		/**
+		 * Registers a view to the framework.
+		 * @param viewName Name of the view.
+		 * @param view Instance of the view.
+		 * @return The view instance.
+		 * @see  com.soma.core.view.SomaViews
+		 * @example
+		 * <listing version="3.0">addView(MySprite.NAME, new MySprite());</listing>
+		 */
 		public final function addView(viewName:String, view:Object):Object {
 			if (!_instance.views) return null;
 			return _instance.views.addView(viewName, view);
 		}
 		
+		/**
+		 * Removes a view from the framework and call the (optional) dispose method of this view.
+		 * @param viewName Name of the view.
+		 * @see com.soma.core.view.SomaViews
+		 * @example
+		 * <listing version="3.0">removeView(MySprite.NAME);</listing>
+		 */
 		public final function removeView(viewName:String):void {
 			if (!_instance.views) return;
 			_instance.views.removeView(viewName);
 		}
 		
+		/**
+		 * Retrieves the view instance that has been registered using its name.
+		 * @param viewName Name of the view.
+		 * @return An Object instance.
+		 * @see com.soma.core.view.SomaViews
+		 * @example
+		 * <listing version="3.0">var mySprite:MySprite = getView(MySprite.NAME) as MySprite;</listing>
+		 */
 		public final function getView(viewName:String):Object {
 			if (!_instance.views) return null;
 			return _instance.views.getView(viewName);
 		}
 		
+		/**
+		 * Retrieves all the view instances that have been registered to the framework.
+		 * @return A Dictionary (the key of the Dictionary is the name used for the registration).
+		 * @see com.soma.core.view.SomaViews
+		 * @example
+		 * <listing version="3.0">var sprites:Dictionary = getViews();</listing>
+		 */
 		public final function getViews():Dictionary {
 			if (!_instance.views) return null;
 			return _instance.views.getViews();
 		}
 		
+		/**
+		 * Indicates wether a wire has been registered to the framework.
+		 * @param wireName Name of the wire.
+		 * @return A Boolean.
+		 * @see com.soma.core.wire.SomaWires
+		 * @example
+		 * <listing version="3.0">hasWire(MyWire.NAME);</listing>
+		 */
 		public final function hasWire(wireName:String):Boolean {
 			if (!_instance.wires) return false;
 			return _instance.wires.hasWire(wireName);
 		}
 		
+		/**
+		 * Registers a wire to the framework.
+		 * @param wireName Name of the wire.
+		 * @param view Instance of the wire.
+		 * @return The wire instance.
+		 * @see com.soma.core.wire.SomaWires
+		 * @example
+		 * <listing version="3.0">addWire(MyWire.NAME, new MyWire());</listing>
+		 */
 		public final function addWire(wireName:String, wire:IWire):IWire {
 			if (!_instance.wires) return null;
 			return _instance.wires.addWire(wireName, wire);
 		}
 		
+		/**
+		 * Removes a wire from the framework and call the dispose method of this wire.
+		 * @param wireName Name of the wire.
+		 * @see com.soma.core.wire.SomaWires
+		 * @example
+		 * <listing version="3.0">removeWire(MyWire.NAME);</listing>
+		 */
 		public final function removeWire(wireName:String):void {
 			if (!_instance.wires) return;
 			_instance.wires.removeWire(wireName);
 		}
 		
+		/**
+		 * Retrieves the wire instance that has been registered using its name.
+		 * @param wireName Name of the wire.
+		 * @return A wire instance.
+		 * @see com.soma.core.wire.SomaWires
+		 * @example
+		 * <listing version="3.0">var myWire:MyWire = getWire(MyWire.NAME) as MyWire;</listing>
+		 */
 		public final function getWire(wireName:String):IWire {
 			if (!_instance.wires) return null;
 			return _instance.wires.getWire(wireName);
 		}
 		
+		/**
+		 * Retrieves all the wire instances that have been registered to the framework.
+		 * @return A Dictionary (the key of the Dictionary is the name used for the registration).
+		 * @see com.soma.core.wire.SomaWires
+		 * @example
+		 * <listing version="3.0">var wires:Dictionary = getWires();</listing>
+		 */
 		public final function getWires():Dictionary {
 			if (!_instance.wires) return null;
 			return _instance.wires.getWires();

@@ -30,15 +30,14 @@ package com.soma.core.wire {
 	import flash.utils.Dictionary;
 
 	/**
-	 * <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
-	 * <b>Class version:</b> v1.0.0<br />
-	 * <b>Actionscript version:</b> 3.0<br />
-	 * <b>Copyright:</b>
+	 * <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 * <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 * <p><b>Class version:</b> v1.0.0</p>
+	 * <p><b>Actionscript version:</b> 3.0</p>
+	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a><br />
-	 * You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.<br />
-	 * <br />
-	 * <b>Usage:</b><br />
+	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 * 
 	 * @example
 	 * <listing version="3.0">
 	 * </listing>
@@ -88,11 +87,28 @@ package com.soma.core.wire {
 			wires = null;
 		}
 		
+		/**
+		 * Indicates wether a wire has been registered to the framework.
+		 * @param wireName Name of the wire.
+		 * @return A Boolean.
+		 * @see com.soma.core.wire.SomaWires
+		 * @example
+		 * <listing version="3.0">hasWire(MyWire.NAME);</listing>
+		 */
 		public function hasWire(wireName:String):Boolean {
 			if (!wires) return false;
 			return (wires[wireName] != null || wires[wireName] != undefined);
 		}
 		
+		/**
+		 * Registers a wire to the framework.
+		 * @param wireName Name of the wire.
+		 * @param view Instance of the wire.
+		 * @return The wire instance.
+		 * @see com.soma.core.wire.SomaWires
+		 * @example
+		 * <listing version="3.0">addWire(MyWire.NAME, new MyWire());</listing>
+		 */
 		public function addWire(wireName:String, wire:IWire):IWire {
 			if (!wires) return null;
 			if (hasWire(wireName)) {
@@ -103,6 +119,13 @@ package com.soma.core.wire {
 			return wire;
 		}
 		
+		/**
+		 * Removes a wire from the framework and call the dispose method of this wire.
+		 * @param wireName Name of the wire.
+		 * @see com.soma.core.wire.SomaWires
+		 * @example
+		 * <listing version="3.0">removeWire(MyWire.NAME);</listing>
+		 */
 		public function removeWire(wireName:String):void {
 			if (!wires) return;
 			if (!hasWire(wireName)) {
@@ -113,12 +136,27 @@ package com.soma.core.wire {
 			delete wires[wireName];
 		}
 		
+		/**
+		 * Retrieves the wire instance that has been registered using its name.
+		 * @param wireName Name of the wire.
+		 * @return A wire instance.
+		 * @see com.soma.core.wire.SomaWires
+		 * @example
+		 * <listing version="3.0">var myWire:MyWire = getWire(MyWire.NAME) as MyWire;</listing>
+		 */
 		public function getWire(wireName:String):IWire {
 			if (!wires) return null;
 			if (!hasWire(wireName)) return null;
 			return wires[wireName];
 		}
 		
+		/**
+		 * Retrieves all the wire instances that have been registered to the framework.
+		 * @return A Dictionary (the key of the Dictionary is the name used for the registration).
+		 * @see com.soma.core.wire.SomaWires
+		 * @example
+		 * <listing version="3.0">var wires:Dictionary = getWires();</listing>
+		 */
 		public function getWires():Dictionary {
 			if (!wires) return null;
 			var clone:Dictionary = new Dictionary();
