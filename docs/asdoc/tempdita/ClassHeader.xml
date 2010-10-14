@@ -13,12 +13,12 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 Command class that will be instantiated when a registered event is dispatched.</shortdesc>
+	 Command class that will be instantiated when a registered event is dispatched, the framework will automatically call the execute method.</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
             <meta name="keywords"
-               content="Command,com.soma.core.controller.Command,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+               content="Command,com.soma.core.controller.Command,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -43,11 +43,12 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 Command class that will be instantiated when a registered event is dispatched.
+	 Command class that will be instantiated when a registered event is dispatched, the framework will automatically call the execute method.
 	 </apiDesc>
             <example>Register a command.
 	 <codeblock rev="3.0">
 addCommand(MyEvent.DOSOMETHING, CommandExample);
+dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 	 </codeblock>
 	              <codeblock rev="3.0">
 package  {
@@ -80,6 +81,20 @@ package  {
                <Excludes/>
             </Inheritancelist>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.controller.xml#SomaController">
+               <linktext>com.soma.core.controller.SomaController</linktext>
+            </link>
+            <link href="com.soma.core.controller.xml#ParallelCommand">
+               <linktext>com.soma.core.controller.ParallelCommand</linktext>
+            </link>
+            <link href="com.soma.core.controller.xml#SequenceCommand">
+               <linktext>com.soma.core.controller.SequenceCommand</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#ICommand">
+               <linktext>com.soma.core.interfaces.ICommand</linktext>
+            </link>
+         </related-links>
       </apiClassifier>
       <apiClassifier id="com.soma.core.controller:SequenceCommand">
          <apiName>SequenceCommand</apiName>
@@ -97,7 +112,7 @@ package  {
             <asMetadata/>
          </prolog>
             <meta name="keywords"
-               content="SequenceCommand,com.soma.core.controller.SequenceCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+               content="SequenceCommand,com.soma.core.controller.SequenceCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -159,7 +174,7 @@ package  {
             <asMetadata/>
          </prolog>
             <meta name="keywords"
-               content="SomaController,com.soma.core.controller.SomaController,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+               content="SomaController,com.soma.core.controller.SomaController,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -211,13 +226,12 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The ParallelCommand class is used to execute a list of commands at the same time.</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
             <meta name="keywords"
-               content="ParallelCommand,com.soma.core.controller.ParallelCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+               content="ParallelCommand,com.soma.core.controller.ParallelCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -242,10 +256,32 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
-	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
+	 The ParallelCommand class is used to execute a list of commands at the same time.
+	 </apiDesc>
+            <example>Register commands and a parallel command.
+	 <codeblock rev="3.0">
+addCommand(MyEvent.DO_SOMETHING, CommandExample);
+addCommand(MyEvent.DO_SOMETHING_ELSE, CommandExample);
+addCommand(MyEvent.EXECUTE_SEQUENCE, ParallelCommandExample);
+dispatchEvent(new MyEvent(MyEvent.EXECUTE_SEQUENCE));
+	 </codeblock>
+	              <codeblock rev="3.0">
+package  {
+	import com.soma.core.interfaces.IParallelCommand;
+	import com.soma.core.controller.ParallelCommand;
+	
+	public class ParallelCommandExample extends ParallelCommand implements IParallelCommand {
+		public function ParallelCommandExample() {
+			
+		}
+		
+		override protected function initializeSubCommands():void {
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING));
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ELSE));
+		}
+		
+	}
+}
 	 </codeblock>
 	           </example>
             <Inheritancelist>
@@ -262,6 +298,20 @@ package  {
                <Excludes/>
             </Inheritancelist>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.controller.xml#SomaController">
+               <linktext>com.soma.core.controller.SomaController</linktext>
+            </link>
+            <link href="com.soma.core.controller.xml#Command">
+               <linktext>com.soma.core.controller.Command</linktext>
+            </link>
+            <link href="com.soma.core.controller.xml#SequenceCommand">
+               <linktext>com.soma.core.controller.SequenceCommand</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#IParallelCommand">
+               <linktext>com.soma.core.interfaces.IParallelCommand</linktext>
+            </link>
+         </related-links>
       </apiClassifier>
    </apiPackage>
    <apiPackage id="com.soma.core.interfaces">
@@ -283,7 +333,7 @@ package  {
             <asMetadata/>
          </prolog>
             <meta name="keywords"
-               content="ISequenceCommand,com.soma.core.interfaces.ISequenceCommand,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
+               content="ISequenceCommand,com.soma.core.interfaces.ISequenceCommand,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -349,7 +399,7 @@ package  {
             <asMetadata/>
          </prolog>
             <meta name="keywords"
-               content="ISoma,com.soma.core.interfaces.ISoma,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
+               content="ISoma,com.soma.core.interfaces.ISoma,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -468,7 +518,7 @@ package  {
             <asMetadata/>
          </prolog>
             <meta name="keywords"
-               content="ICommand,com.soma.core.interfaces.ICommand,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
+               content="ICommand,com.soma.core.interfaces.ICommand,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -527,7 +577,7 @@ package  {
             <asMetadata/>
          </prolog>
             <meta name="keywords"
-               content="IModel,com.soma.core.interfaces.IModel,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
+               content="IModel,com.soma.core.interfaces.IModel,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -588,7 +638,7 @@ package  {
             <asMetadata/>
          </prolog>
             <meta name="keywords"
-               content="IResponder,com.soma.core.interfaces.IResponder,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
+               content="IResponder,com.soma.core.interfaces.IResponder,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -625,6 +675,72 @@ package  {
                   <Inherit id=""/>
                </Inheritance>
                <Implements/>
+               <Subclasses/>
+               <Implementors/>
+               <Excludes/>
+            </Inheritancelist>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ICommandASync">
+         <apiName>ICommandASync</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 
+	 </shortdesc>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+            <meta name="keywords" content="ICommandASync,com.soma.core.interfaces.ICommandASync"/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
+               <apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+            <apiDesc>
+	              <p>
+                  <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+               </p>
+	              <p>
+                  <b>Resources:</b> 
+                  <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
+               </p>
+	              <p>
+                  <b>Class version:</b> v1.0.0</p>
+	              <p>
+                  <b>Actionscript version:</b> 3.0</p>
+	              <p>
+                  <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+               </p>
+	 
+	           </apiDesc>
+            <example>
+               <codeblock rev="3.0">
+	 </codeblock>
+	           </example>
+            <Inheritancelist>
+               <BaseInterface>
+                  <Interface id="com.soma.core.interfaces:ICommand"/>
+                  <Interface id="com.soma.core.interfaces:IResponder"/>
+               </BaseInterface>
+               <Inheritance>
+                  <Inherit id=""/>
+               </Inheritance>
+               <Implements>
+                  <Implement id="com.soma.core.interfaces:ICommand"/>
+                  <Implement id="com.soma.core.interfaces:IResponder"/>
+               </Implements>
                <Subclasses/>
                <Implementors/>
                <Excludes/>
@@ -697,72 +813,6 @@ package  {
             </Inheritancelist>
          </apiClassifierDetail>
       </apiClassifier>
-      <apiClassifier id="com.soma.core.interfaces:ICommandASync">
-         <apiName>ICommandASync</apiName>
-         <shortdesc>
-	 Author: Romuald Quantin - www.soundstep.com
-	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
-	 Actionscript version: 3.0
-	 Copyright:
-	 Mozilla Public License 1.1 (MPL 1.1) 
-	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
-         <prolog>
-            <asMetadata/>
-         </prolog>
-            <meta name="keywords" content="ICommandASync,com.soma.core.interfaces.ICommandASync"/>
-         <apiClassifierDetail>
-            <apiClassifierDef>
-               <apiInterface/>
-               <apiAccess value="public"/>
-               <apiStatic/>
-               <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
-               <apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface>
-               <apiBaseClassifier/>
-            </apiClassifierDef>
-            <apiDesc>
-	              <p>
-                  <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
-               </p>
-	              <p>
-                  <b>Resources:</b> 
-                  <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
-               </p>
-	              <p>
-                  <b>Class version:</b> v1.0.0</p>
-	              <p>
-                  <b>Actionscript version:</b> 3.0</p>
-	              <p>
-                  <b>Copyright:</b>
-	 Mozilla Public License 1.1 (MPL 1.1) 
-	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
-               </p>
-	 
-	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
-	 </codeblock>
-	           </example>
-            <Inheritancelist>
-               <BaseInterface>
-                  <Interface id="com.soma.core.interfaces:ICommand"/>
-                  <Interface id="com.soma.core.interfaces:IResponder"/>
-               </BaseInterface>
-               <Inheritance>
-                  <Inherit id=""/>
-               </Inheritance>
-               <Implements>
-                  <Implement id="com.soma.core.interfaces:ICommand"/>
-                  <Implement id="com.soma.core.interfaces:IResponder"/>
-               </Implements>
-               <Subclasses/>
-               <Implementors/>
-               <Excludes/>
-            </Inheritancelist>
-         </apiClassifierDetail>
-      </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:IWire">
          <apiName>IWire</apiName>
          <shortdesc>
@@ -779,7 +829,7 @@ package  {
             <asMetadata/>
          </prolog>
             <meta name="keywords"
-               content="IWire,com.soma.core.interfaces.IWire,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
+               content="IWire,com.soma.core.interfaces.IWire,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -840,7 +890,7 @@ package  {
             <asMetadata/>
          </prolog>
             <meta name="keywords"
-               content="ISomaPlugin,com.soma.core.interfaces.ISomaPlugin,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,executeNextCommand,execute,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
+               content="ISomaPlugin,com.soma.core.interfaces.ISomaPlugin,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>

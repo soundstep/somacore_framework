@@ -26,7 +26,52 @@
  
  ]]></soundstep.com>
 </packageRec>
-<interfaceRec name='IModel' fullname='com.soma.core.interfaces:IModel' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IModel.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<interfaceRec name='ISomaPlugin' fullname='com.soma.core.interfaces:ISomaPlugin' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISomaPlugin.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</interfaceRec>
+<method name='dispose' fullname='com.soma.core.interfaces:ISomaPlugin/com.soma.core.interfaces:ISomaPlugin:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='initialize' fullname='com.soma.core.interfaces:ISomaPlugin/com.soma.core.interfaces:ISomaPlugin:initialize' isStatic='false' isFinal='false' isOverride='false'  param_names='pluginVO' param_types='com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined' result_type='void'>
+</method>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='IModel' fullname='com.soma.core.interfaces:IModel' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IModel.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -79,52 +124,7 @@
  
  ]]></soundstep.com>
 </packageRec>
-<interfaceRec name='ISomaPlugin' fullname='com.soma.core.interfaces:ISomaPlugin' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISomaPlugin.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
-<description><![CDATA[
-	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
-	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
-	 <p><b>Class version:</b> v1.0.0</p>
-	 <p><b>Actionscript version:</b> 3.0</p>
-	 <p><b>Copyright:</b>
-	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 
-	 ]]></description>
-<example><![CDATA[<listing version="3.0">
-	 </listing>
-	 ]]></example>
-</interfaceRec>
-<method name='dispose' fullname='com.soma.core.interfaces:ISomaPlugin/com.soma.core.interfaces:ISomaPlugin:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
-</method>
-<method name='initialize' fullname='com.soma.core.interfaces:ISomaPlugin/com.soma.core.interfaces:ISomaPlugin:initialize' isStatic='false' isFinal='false' isOverride='false'  param_names='pluginVO' param_types='com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined' result_type='void'>
-</method>
-<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
-<description><![CDATA[
- The contents of this file are subject to the Mozilla Public License
- Version 1.1 (the "License"); you may not use this file except in compliance
- with the License. You may obtain a copy of the License at
- 
- http://www.mozilla.org/MPL/
- 
- Software distributed under the License is distributed on an "AS IS" basis,
- WITHOUT WARRANTY OF ANY KIND, either express or implied.
- See the License for the specific language governing rights and
- limitations under the License.
- 
- The Original Code is SomaCore.
- 
- The Initial Developer of the Original Code is Romuald Quantin.
- romu]]></description>
-<soundstep.com><![CDATA[(www.soundstep.com).
- 
- Portions created by
- 
- Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
- All Rights Reserved.
- 
- ]]></soundstep.com>
-</packageRec>
-<interfaceRec name='IResponder' fullname='com.soma.core.interfaces:IResponder' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IResponder.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<interfaceRec name='IResponder' fullname='com.soma.core.interfaces:IResponder' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IResponder.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -169,48 +169,7 @@
  
  ]]></soundstep.com>
 </packageRec>
-<interfaceRec name='ISomaPluginVO' fullname='com.soma.core.interfaces:ISomaPluginVO' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISomaPluginVO.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
-<description><![CDATA[
-	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
-	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
-	 <p><b>Class version:</b> v1.0.0</p>
-	 <p><b>Actionscript version:</b> 3.0</p>
-	 <p><b>Copyright:</b>
-	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 
-	 ]]></description>
-<example><![CDATA[<listing version="3.0">
-	 </listing>
-	 ]]></example>
-</interfaceRec>
-<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
-<description><![CDATA[
- The contents of this file are subject to the Mozilla Public License
- Version 1.1 (the "License"); you may not use this file except in compliance
- with the License. You may obtain a copy of the License at
- 
- http://www.mozilla.org/MPL/
- 
- Software distributed under the License is distributed on an "AS IS" basis,
- WITHOUT WARRANTY OF ANY KIND, either express or implied.
- See the License for the specific language governing rights and
- limitations under the License.
- 
- The Original Code is SomaCore.
- 
- The Initial Developer of the Original Code is Romuald Quantin.
- romu]]></description>
-<soundstep.com><![CDATA[(www.soundstep.com).
- 
- Portions created by
- 
- Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
- All Rights Reserved.
- 
- ]]></soundstep.com>
-</packageRec>
-<interfaceRec name='IWire' fullname='com.soma.core.interfaces:IWire' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IWire.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<interfaceRec name='IWire' fullname='com.soma.core.interfaces:IWire' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IWire.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -255,7 +214,48 @@
  
  ]]></soundstep.com>
 </packageRec>
-<interfaceRec name='ICommand' fullname='com.soma.core.interfaces:ICommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ICommand.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<interfaceRec name='ISomaPluginVO' fullname='com.soma.core.interfaces:ISomaPluginVO' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISomaPluginVO.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 
+	 ]]></description>
+<example><![CDATA[<listing version="3.0">
+	 </listing>
+	 ]]></example>
+</interfaceRec>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='ICommand' fullname='com.soma.core.interfaces:ICommand' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ICommand.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -271,6 +271,12 @@
 	 ]]></example>
 </interfaceRec>
 <method name='execute' fullname='com.soma.core.interfaces:ICommand/com.soma.core.interfaces:ICommand:execute' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Method called by the framework, this is the execution of the command.
+		 You can access from all the framework elements in this method (wires, commands, models, views, instance of the framework and stage).
+		 ]]></description>
+<param><![CDATA[event Event instance dispatched to execute the command.
+		 ]]></param>
 </method>
 <packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
 <description><![CDATA[
@@ -298,7 +304,7 @@
  
  ]]></soundstep.com>
 </packageRec>
-<interfaceRec name='ICommandASync' fullname='com.soma.core.interfaces:ICommandASync' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ICommandASync.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:ICommand;com.soma.core.interfaces:IResponder' isFinal='false' isDynamic='false' >
+<interfaceRec name='IParallelCommand' fullname='com.soma.core.interfaces:IParallelCommand' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IParallelCommand.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:ICommand' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -313,6 +319,10 @@
 	 </listing>
 	 ]]></example>
 </interfaceRec>
+<method name='commands' fullname='com.soma.core.interfaces:IParallelCommand/com.soma.core.interfaces:IParallelCommand:commands/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='length' fullname='com.soma.core.interfaces:IParallelCommand/com.soma.core.interfaces:IParallelCommand:length/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+</method>
 <packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
 <description><![CDATA[
  The contents of this file are subject to the Mozilla Public License
@@ -339,7 +349,7 @@
  
  ]]></soundstep.com>
 </packageRec>
-<interfaceRec name='ISequenceCommand' fullname='com.soma.core.interfaces:ISequenceCommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISequenceCommand.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:ICommand' isFinal='false' isDynamic='false' >
+<interfaceRec name='ISequenceCommand' fullname='com.soma.core.interfaces:ISequenceCommand' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISequenceCommand.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:ICommand' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -390,7 +400,7 @@
  
  ]]></soundstep.com>
 </packageRec>
-<interfaceRec name='IParallelCommand' fullname='com.soma.core.interfaces:IParallelCommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IParallelCommand.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:ICommand' isFinal='false' isDynamic='false' >
+<interfaceRec name='ICommandASync' fullname='com.soma.core.interfaces:ICommandASync' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ICommandASync.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:ICommand;com.soma.core.interfaces:IResponder' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -405,10 +415,6 @@
 	 </listing>
 	 ]]></example>
 </interfaceRec>
-<method name='commands' fullname='com.soma.core.interfaces:IParallelCommand/com.soma.core.interfaces:IParallelCommand:commands/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
-</method>
-<method name='length' fullname='com.soma.core.interfaces:IParallelCommand/com.soma.core.interfaces:IParallelCommand:length/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
-</method>
 <packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
 <description><![CDATA[
  The contents of this file are subject to the Mozilla Public License
@@ -435,7 +441,7 @@
  
  ]]></soundstep.com>
 </packageRec>
-<interfaceRec name='ISoma' fullname='com.soma.core.interfaces:ISoma' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISoma.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<interfaceRec name='ISoma' fullname='com.soma.core.interfaces:ISoma' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISoma.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -855,6 +861,32 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 Gets the wires manager class.
 		 ]]></description>
 </method>
+<packageRec name='com.soma.core.ns.null' fullname='com.soma.core.ns.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
 <packageRec name='com.soma.core.view.null' fullname='com.soma.core.view.null'>
 <description><![CDATA[
  The contents of this file are subject to the Mozilla Public License
@@ -881,7 +913,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
  
  ]]></soundstep.com>
 </packageRec>
-<classRec name='SomaViews' fullname='com.soma.core.view:SomaViews' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/view/SomaViews.as' namespace='com.soma.core.view' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<classRec name='SomaViews' fullname='com.soma.core.view:SomaViews' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/view/SomaViews.as' namespace='com.soma.core.view' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -967,32 +999,6 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 </method>
 <field name='views' fullname='com.soma.core.view:SomaViews/protected:views' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
 </field>
-<packageRec name='com.soma.core.ns.null' fullname='com.soma.core.ns.null'>
-<description><![CDATA[
- The contents of this file are subject to the Mozilla Public License
- Version 1.1 (the "License"); you may not use this file except in compliance
- with the License. You may obtain a copy of the License at
- 
- http://www.mozilla.org/MPL/
- 
- Software distributed under the License is distributed on an "AS IS" basis,
- WITHOUT WARRANTY OF ANY KIND, either express or implied.
- See the License for the specific language governing rights and
- limitations under the License.
- 
- The Original Code is SomaCore.
- 
- The Initial Developer of the Original Code is Romuald Quantin.
- romu]]></description>
-<soundstep.com><![CDATA[(www.soundstep.com).
- 
- Portions created by
- 
- Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
- All Rights Reserved.
- 
- ]]></soundstep.com>
-</packageRec>
 <packageRec name='com.soma.core.model.null' fullname='com.soma.core.model.null'>
 <description><![CDATA[
  The contents of this file are subject to the Mozilla Public License
@@ -1019,7 +1025,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
  
  ]]></soundstep.com>
 </packageRec>
-<classRec name='Model' fullname='com.soma.core.model:Model' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/model/Model.as' namespace='com.soma.core.model' access='public' baseclass='Object' interfaces='com.soma.core.interfaces:IModel' isFinal='false' isDynamic='false' >
+<classRec name='Model' fullname='com.soma.core.model:Model' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/model/Model.as' namespace='com.soma.core.model' access='public' baseclass='Object' interfaces='com.soma.core.interfaces:IModel' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -1098,7 +1104,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
  
  ]]></soundstep.com>
 </packageRec>
-<classRec name='SomaModels' fullname='com.soma.core.model:SomaModels' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/model/SomaModels.as' namespace='com.soma.core.model' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<classRec name='SomaModels' fullname='com.soma.core.model:SomaModels' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/model/SomaModels.as' namespace='com.soma.core.model' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -1212,7 +1218,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
  
  ]]></soundstep.com>
 </packageRec>
-<classRec name='SomaController' fullname='com.soma.core.controller:SomaController' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/SomaController.as' namespace='com.soma.core.controller' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<classRec name='SomaController' fullname='com.soma.core.controller:SomaController' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/SomaController.as' namespace='com.soma.core.controller' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -1431,7 +1437,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
  
  ]]></soundstep.com>
 </packageRec>
-<classRec name='Command' fullname='com.soma.core.controller:Command' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/Command.as' namespace='com.soma.core.controller' access='public' baseclass='Object' interfaces='flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
+<classRec name='Command' fullname='com.soma.core.controller:Command' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/Command.as' namespace='com.soma.core.controller' access='public' baseclass='Object' interfaces='flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -1440,11 +1446,12 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 Command class that will be instantiated when a registered event is dispatched.
+	 Command class that will be instantiated when a registered event is dispatched, the framework will automatically call the execute method.
 	 ]]></description>
 <example><![CDATA[Register a command.
 	 <listing version="3.0">
 addCommand(MyEvent.DOSOMETHING, CommandExample);
+dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 	 </listing>
 	 <listing version="3.0">
 package  {
@@ -1462,6 +1469,14 @@ package  {
 }
 	 </listing>
 	 ]]></example>
+<see><![CDATA[com.soma.core.controller.SomaController
+	 ]]></see>
+<see><![CDATA[com.soma.core.controller.ParallelCommand
+	 ]]></see>
+<see><![CDATA[com.soma.core.controller.SequenceCommand
+	 ]]></see>
+<see><![CDATA[com.soma.core.interfaces.ICommand
+	 ]]></see>
 </classRec>
 <method name='Command' fullname='com.soma.core.controller:Command/Command' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
 <description><![CDATA[
@@ -1482,8 +1497,19 @@ package  {
 		 ]]></see>
 </method>
 <method name='addEventListener' fullname='com.soma.core.controller:Command/addEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture;priority;useWeakReference' param_types='String;Function;Boolean;int;Boolean' param_defaults='undefined;undefined;false;0;false' result_type='void'>
-<description><![CDATA[ ]]></description>
-<inheritDoc><![CDATA[]]></inheritDoc>
+<description><![CDATA[
+		 Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.
+		 ]]></description>
+<param><![CDATA[type The type of event.
+		 ]]></param>
+<param><![CDATA[listener The listener function that processes the event.
+		 ]]></param>
+<param><![CDATA[useCapture Determines whether the listener works in the capture phase or the target and bubbling phases.
+		 ]]></param>
+<param><![CDATA[priority The priority level of the event listener.
+		 ]]></param>
+<param><![CDATA[useWeakReference Determines whether the reference to the listener is strong or weak.
+		 ]]></param>
 </method>
 <method name='addModel' fullname='com.soma.core.controller:Command/addModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName;model' param_types='String;com.soma.core.interfaces:IModel' param_defaults='undefined;undefined' result_type='com.soma.core.interfaces:IModel'>
 <description><![CDATA[
@@ -1531,6 +1557,13 @@ package  {
 		 ]]></see>
 </method>
 <method name='dispatchEvent' fullname='com.soma.core.controller:Command/dispatchEvent' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Dispatches an event into the event flow. The event target is the EventDispatcher object upon which dispatchEvent() is called.
+		 ]]></description>
+<param><![CDATA[event The event object dispatched into the event flow.
+		 ]]></param>
+<return><![CDATA[A value of true unless preventDefault() is called on the event, in which case it returns false.
+		 ]]></return>
 </method>
 <method name='getCommand' fullname='com.soma.core.controller:Command/getCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='Class'>
 <description><![CDATA[
@@ -1677,6 +1710,13 @@ package  {
 		 ]]></see>
 </method>
 <method name='hasEventListener' fullname='com.soma.core.controller:Command/hasEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Checks whether the EventDispatcher object has any listeners registered for a specific type of event.
+		 ]]></description>
+<param><![CDATA[type The type of event.
+		 ]]></param>
+<return><![CDATA[A value of true if a listener of the specified type is registered; false otherwise.
+		 ]]></return>
 </method>
 <method name='hasModel' fullname='com.soma.core.controller:Command/hasModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='Boolean'>
 <description><![CDATA[
@@ -1751,6 +1791,15 @@ package  {
 		 ]]></see>
 </method>
 <method name='removeEventListener' fullname='com.soma.core.controller:Command/removeEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
+<description><![CDATA[
+		 Removes a listener from the EventDispatcher object. If there is no matching listener registered with the EventDispatcher object, a call to this method has no effect.
+		 ]]></description>
+<param><![CDATA[type The type of event. 
+		 ]]></param>
+<param><![CDATA[listener The listener object to remove. 
+		 ]]></param>
+<param><![CDATA[useCapture Specifies whether the listener was registered for the capture phase or the target and bubbling phases.
+		 ]]></param>
 </method>
 <method name='removeModel' fullname='com.soma.core.controller:Command/removeModel' isStatic='false' isFinal='true' isOverride='false'  param_names='modelName' param_types='String' param_defaults='undefined' result_type='void'>
 <description><![CDATA[
@@ -1821,10 +1870,29 @@ package  {
 		 ]]></see>
 </method>
 <method name='willTrigger' fullname='com.soma.core.controller:Command/willTrigger' isStatic='false' isFinal='true' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.
+		 ]]></description>
+<param><![CDATA[type The type of event. 
+		 ]]></param>
+<return><![CDATA[A value of true if a listener of the specified type will be triggered; false otherwise. 
+		 ]]></return>
 </method>
 <method name='instance' fullname='com.soma.core.controller:Command/instance/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.interfaces:ISoma'>
+<description><![CDATA[
+		 Retrieves the instance of the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var myExtendedSomaClass:SomaApplication = SomaApplication(instance);</listing>
+		 ]]></example>
+<return><![CDATA[An ISoma instance.
+		 ]]></return>
 </method>
 <method name='stage' fullname='com.soma.core.controller:Command/stage/get' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.display:Stage'>
+<description><![CDATA[
+		 Get the stage that has been registered to the framework.
+		 ]]></description>
+<return><![CDATA[The stage instance.
+		 ]]></return>
 </method>
 <field name='_instance' fullname='com.soma.core.controller:Command/private:_instance' type='com.soma.core.interfaces:ISoma' isStatic='false' isConst='false' >
 <description><![CDATA[ ]]></description>
@@ -1856,7 +1924,7 @@ package  {
  
  ]]></soundstep.com>
 </packageRec>
-<classRec name='ParallelCommand' fullname='com.soma.core.controller:ParallelCommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/ParallelCommand.as' namespace='com.soma.core.controller' access='public' baseclass='com.soma.core.controller:Command' interfaces='com.soma.core.interfaces:IParallelCommand' isFinal='false' isDynamic='false' >
+<classRec name='ParallelCommand' fullname='com.soma.core.controller:ParallelCommand' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/ParallelCommand.as' namespace='com.soma.core.controller' access='public' baseclass='com.soma.core.controller:Command' interfaces='com.soma.core.interfaces:IParallelCommand' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -1865,27 +1933,90 @@ package  {
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 
+	 The ParallelCommand class is used to execute a list of commands at the same time.
 	 ]]></description>
-<example><![CDATA[<listing version="3.0">
+<example><![CDATA[Register commands and a parallel command.
+	 <listing version="3.0">
+addCommand(MyEvent.DO_SOMETHING, CommandExample);
+addCommand(MyEvent.DO_SOMETHING_ELSE, CommandExample);
+addCommand(MyEvent.EXECUTE_SEQUENCE, ParallelCommandExample);
+dispatchEvent(new MyEvent(MyEvent.EXECUTE_SEQUENCE));
+	 </listing>
+	 <listing version="3.0">
+package  {
+	import com.soma.core.interfaces.IParallelCommand;
+	import com.soma.core.controller.ParallelCommand;
+	
+	public class ParallelCommandExample extends ParallelCommand implements IParallelCommand {
+
+		public function ParallelCommandExample() {
+			
+		}
+		
+		override protected function initializeSubCommands():void {
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING));
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ELSE));
+		}
+		
+	}
+}
 	 </listing>
 	 ]]></example>
+<see><![CDATA[com.soma.core.controller.SomaController
+	 ]]></see>
+<see><![CDATA[com.soma.core.controller.Command
+	 ]]></see>
+<see><![CDATA[com.soma.core.controller.SequenceCommand
+	 ]]></see>
+<see><![CDATA[com.soma.core.interfaces.IParallelCommand
+	 ]]></see>
 </classRec>
 <method name='ParallelCommand' fullname='com.soma.core.controller:ParallelCommand/ParallelCommand' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[
+		 Create an instance of the ParallelCommand class. Should not be directly instantiated, the framework will instantiate the class.
+		 ]]></description>
 </method>
 <method name='addSubCommand' fullname='com.soma.core.controller:ParallelCommand/protected:addSubCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Add a command to the list of commands to execute in parallel.
+		 ]]></description>
+<param><![CDATA[event Event instance (must be registered as a command previously).
+		 ]]></param>
 </method>
 <method name='execute' fullname='com.soma.core.controller:ParallelCommand/execute' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+<description><![CDATA[ ]]></description>
+<private><![CDATA[]]></private>
 </method>
 <method name='initializeSubCommands' fullname='com.soma.core.controller:ParallelCommand/protected:initializeSubCommands' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<description><![CDATA[ 
+		 Method that you can overwrite to add commands to the sequence.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addSubCommand(new MyEvent(MyEvent.DO_SOMETHING));</listing>
+		 ]]></example>
+<see><![CDATA[com.soma.core.controller.SomaController
+		 ]]></see>
 </method>
 <method name='initialize' fullname='com.soma.core.controller:ParallelCommand/protected:initialize' isStatic='false' isFinal='true' isOverride='true'  result_type='void'>
+<description><![CDATA[ ]]></description>
+<private><![CDATA[]]></private>
 </method>
 <method name='commands' fullname='com.soma.core.controller:ParallelCommand/commands/get' isStatic='false' isFinal='true' isOverride='false'  result_type='Array'>
+<description><![CDATA[
+		 Retrieves the list of commands added as subcommands.
+		 ]]></description>
+<return><![CDATA[An Array of commands.
+		 ]]></return>
 </method>
 <method name='length' fullname='com.soma.core.controller:ParallelCommand/length/get' isStatic='false' isFinal='true' isOverride='false'  result_type='int'>
+<description><![CDATA[
+		 Retrieves the number of commands added as subcommands.
+		 ]]></description>
+<return><![CDATA[An integer.
+		 ]]></return>
 </method>
 <field name='_commands' fullname='com.soma.core.controller:ParallelCommand/private:_commands' type='Array' isStatic='false' isConst='false' >
+<description><![CDATA[ ]]></description>
+<private><![CDATA[]]></private>
 </field>
 <packageRec name='com.soma.core.controller.null' fullname='com.soma.core.controller.null'>
 <description><![CDATA[
@@ -1913,7 +2044,7 @@ package  {
  
  ]]></soundstep.com>
 </packageRec>
-<classRec name='SequenceCommand' fullname='com.soma.core.controller:SequenceCommand' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/SequenceCommand.as' namespace='com.soma.core.controller' access='public' baseclass='com.soma.core.controller:Command' interfaces='com.soma.core.interfaces:ISequenceCommand' isFinal='false' isDynamic='false' >
+<classRec name='SequenceCommand' fullname='com.soma.core.controller:SequenceCommand' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/controller/SequenceCommand.as' namespace='com.soma.core.controller' access='public' baseclass='com.soma.core.controller:Command' interfaces='com.soma.core.interfaces:ISequenceCommand' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -1978,7 +2109,7 @@ package  {
  
  ]]></soundstep.com>
 </packageRec>
-<classRec name='SomaWires' fullname='com.soma.core.wire:SomaWires' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/wire/SomaWires.as' namespace='com.soma.core.wire' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<classRec name='SomaWires' fullname='com.soma.core.wire:SomaWires' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/wire/SomaWires.as' namespace='com.soma.core.wire' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -2092,7 +2223,7 @@ package  {
  
  ]]></soundstep.com>
 </packageRec>
-<classRec name='Wire' fullname='com.soma.core.wire:Wire' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/wire/Wire.as' namespace='com.soma.core.wire' access='public' baseclass='Object' interfaces='com.soma.core.interfaces:IWire;flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
+<classRec name='Wire' fullname='com.soma.core.wire:Wire' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/wire/Wire.as' namespace='com.soma.core.wire' access='public' baseclass='Object' interfaces='com.soma.core.interfaces:IWire;flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -2496,7 +2627,7 @@ package  {
  
  ]]></soundstep.com>
 </packageRec>
-<classRec name='Soma' fullname='com.soma.core:Soma' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/Soma.as' namespace='com.soma.core' access='public' baseclass='flash.events:EventDispatcher' interfaces='com.soma.core.interfaces:ISoma;flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
+<classRec name='Soma' fullname='com.soma.core:Soma' sourcefile='/Users/romualdq/Documents/devserver/workspace/somacore_framework/src/com/soma/core/Soma.as' namespace='com.soma.core' access='public' baseclass='flash.events:EventDispatcher' interfaces='com.soma.core.interfaces:ISoma;flash.events:IEventDispatcher' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>

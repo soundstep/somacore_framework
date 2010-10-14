@@ -2,6 +2,7 @@
 /bin/*
 .project
 *.swf
+user.properties
 
 .DS_Store?
 ehthumbs.db

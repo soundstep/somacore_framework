@@ -6,7 +6,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 Command class that will be instantiated when a registered event is dispatched.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>flash.events:IEventDispatcher</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Command class that will be instantiated when a registered event is dispatched, the framework will automatically call the execute method.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>flash.events:IEventDispatcher</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
 	 <p><b>Class version:</b> v1.0.0</p>
@@ -14,10 +14,11 @@
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 Command class that will be instantiated when a registered event is dispatched.
+	 Command class that will be instantiated when a registered event is dispatched, the framework will automatically call the execute method.
 	 </apiDesc><example>Register a command.
 	 <codeblock rev="3.0">
 addCommand(MyEvent.DOSOMETHING, CommandExample);
+dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 	 </codeblock>
 	 <codeblock rev="3.0">
 package  {
@@ -33,7 +34,14 @@ package  {
 	}
 }
 	 </codeblock>
-	 </example></apiClassifierDetail><apiValue id="com.soma.core.controller:Command:instance:get"><apiName>instance</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISoma</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.controller:Command:stage:get"><apiName>stage</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.display:Stage"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.controller:SequenceCommand"><apiName>SequenceCommand</apiName><shortdesc>
+	 </example></apiClassifierDetail><apiValue id="com.soma.core.controller:Command:instance:get"><apiName>instance</apiName><shortdesc>
+		 Retrieves the instance of the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISoma</apiValueClassifier></apiValueDef><apiDesc>
+		 Retrieves the instance of the framework.
+		 </apiDesc><example><codeblock rev="3.0">var myExtendedSomaClass:SomaApplication = SomaApplication(instance);</codeblock>
+		 </example></apiValueDetail></apiValue><apiValue id="com.soma.core.controller:Command:stage:get"><apiName>stage</apiName><shortdesc>
+		 Get the stage that has been registered to the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.display:Stage"/></apiValueDef><apiDesc>
+		 Get the stage that has been registered to the framework.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.controller:SequenceCommand"><apiName>SequenceCommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
@@ -81,8 +89,7 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IParallelCommand</apiBaseInterface><apiBaseClassifier>com.soma.core.controller:Command</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The ParallelCommand class is used to execute a list of commands at the same time.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IParallelCommand</apiBaseInterface><apiBaseClassifier>com.soma.core.controller:Command</apiBaseClassifier></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
 	 <p><b>Class version:</b> v1.0.0</p>
@@ -90,10 +97,39 @@ package  {
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
-	 </apiDesc><example><codeblock rev="3.0">
+	 The ParallelCommand class is used to execute a list of commands at the same time.
+	 </apiDesc><example>Register commands and a parallel command.
+	 <codeblock rev="3.0">
+addCommand(MyEvent.DO_SOMETHING, CommandExample);
+addCommand(MyEvent.DO_SOMETHING_ELSE, CommandExample);
+addCommand(MyEvent.EXECUTE_SEQUENCE, ParallelCommandExample);
+dispatchEvent(new MyEvent(MyEvent.EXECUTE_SEQUENCE));
 	 </codeblock>
-	 </example></apiClassifierDetail><apiValue id="com.soma.core.controller:ParallelCommand:commands:get"><apiName>commands</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.controller:ParallelCommand:length:get"><apiName>length</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef></apiValueDetail></apiValue></apiClassifier></apiPackage><apiPackage id="com.soma.core.interfaces"><apiName>com.soma.core.interfaces</apiName><apiClassifier id="com.soma.core.interfaces:ISequenceCommand"><apiName>ISequenceCommand</apiName><shortdesc>
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.interfaces.IParallelCommand;
+	import com.soma.core.controller.ParallelCommand;
+	
+	public class ParallelCommandExample extends ParallelCommand implements IParallelCommand {
+		public function ParallelCommandExample() {
+			
+		}
+		
+		override protected function initializeSubCommands():void {
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING));
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ELSE));
+		}
+		
+	}
+}
+	 </codeblock>
+	 </example></apiClassifierDetail><apiValue id="com.soma.core.controller:ParallelCommand:commands:get"><apiName>commands</apiName><shortdesc>
+		 Retrieves the list of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef><apiDesc>
+		 Retrieves the list of commands added as subcommands.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.controller:ParallelCommand:length:get"><apiName>length</apiName><shortdesc>
+		 Retrieves the number of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef><apiDesc>
+		 Retrieves the number of commands added as subcommands.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage><apiPackage id="com.soma.core.interfaces"><apiName>com.soma.core.interfaces</apiName><apiClassifier id="com.soma.core.interfaces:ISequenceCommand"><apiName>ISequenceCommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
@@ -228,6 +264,26 @@ package  {
 	 
 	 </apiDesc><example><codeblock rev="3.0">
 	 </codeblock>
+	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommandASync"><apiName>ICommandASync</apiName><shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 
+	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 
+	 </apiDesc><example><codeblock rev="3.0">
+	 </codeblock>
 	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IParallelCommand"><apiName>IParallelCommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
@@ -248,27 +304,7 @@ package  {
 	 
 	 </apiDesc><example><codeblock rev="3.0">
 	 </codeblock>
-	 </example></apiClassifierDetail><apiValue id="com.soma.core.interfaces:IParallelCommand:com.soma.core.interfaces:IParallelCommand:commands:get"><apiName>commands</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:IParallelCommand:com.soma.core.interfaces:IParallelCommand:length:get"><apiName>length</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommandASync"><apiName>ICommandASync</apiName><shortdesc>
-	 Author: Romuald Quantin - www.soundstep.com
-	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
-	 Actionscript version: 3.0
-	 Copyright:
-	 Mozilla Public License 1.1 (MPL 1.1) 
-	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
-	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
-	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v1.0.0</p>
-	 <p><b>Actionscript version:</b> 3.0</p>
-	 <p><b>Copyright:</b>
-	 Mozilla Public License 1.1 (MPL 1.1) 
-	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
-	 </apiDesc><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IWire"><apiName>IWire</apiName><shortdesc>
+	 </example></apiClassifierDetail><apiValue id="com.soma.core.interfaces:IParallelCommand:com.soma.core.interfaces:IParallelCommand:commands:get"><apiName>commands</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:IParallelCommand:com.soma.core.interfaces:IParallelCommand:length:get"><apiName>length</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:IWire"><apiName>IWire</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0

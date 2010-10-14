@@ -42,11 +42,12 @@ package com.soma.core.controller {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * Command class that will be instantiated when a registered event is dispatched.
+	 * Command class that will be instantiated when a registered event is dispatched, the framework will automatically call the execute method.
 	 * @example
 	 * Register a command.
 	 * <listing version="3.0">
 addCommand(MyEvent.DOSOMETHING, CommandExample);
+dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 	 * </listing>
 	 * <listing version="3.0">
 package  {
@@ -63,7 +64,8 @@ package  {
 	}
 }
 	 * </listing>
-	 */
+	 * @see com.soma.core.controller.SomaController
+	 * @see com.soma.core.controller.ParallelCommand	 * @see com.soma.core.controller.SequenceCommand	 * @see com.soma.core.interfaces.ICommand	 */
 	
 	public class Command implements IEventDispatcher {
 

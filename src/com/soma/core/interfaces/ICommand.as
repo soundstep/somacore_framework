@@ -40,7 +40,12 @@ package com.soma.core.interfaces {
 	 */
 	
 	public interface ICommand {
-
+		
+		/**
+		 * Method called by the framework, this is the execution of the command.
+		 * You can access from all the framework elements in this method (wires, commands, models, views, instance of the framework and stage).
+		 * @param event Event instance dispatched to execute the command.
+		 */
 		function execute(event:Event):void;
 		
 	}

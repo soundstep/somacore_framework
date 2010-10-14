@@ -12,7 +12,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 Command class that will be instantiated when a registered event is dispatched.</shortdesc>
+	 Command class that will be instantiated when a registered event is dispatched, the framework will automatically call the execute method.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -38,7 +38,7 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 Command class that will be instantiated when a registered event is dispatched.
+	 Command class that will be instantiated when a registered event is dispatched, the framework will automatically call the execute method.
 	 </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.controller:SequenceCommand">
@@ -130,8 +130,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The ParallelCommand class is used to execute a list of commands at the same time.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -157,8 +156,8 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
-	        </apiDesc>
+	 The ParallelCommand class is used to execute a list of commands at the same time.
+	 </apiDesc>
       </apiClassifier>
    </apiPackage>
    <apiPackage id="com.soma.core.interfaces">
@@ -404,8 +403,8 @@
 	 
 	        </apiDesc>
       </apiClassifier>
-      <apiClassifier id="com.soma.core.interfaces:IParallelCommand">
-         <apiName>IParallelCommand</apiName>
+      <apiClassifier id="com.soma.core.interfaces:ICommandASync">
+         <apiName>ICommandASync</apiName>
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
@@ -422,6 +421,7 @@
                <apiAccess value="public"/>
                <apiStatic/>
                <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
+               <apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface>
                <apiBaseClassifier/>
             </apiClassifierDef>
          </apiClassifierDetail>
@@ -445,8 +445,8 @@
 	 
 	        </apiDesc>
       </apiClassifier>
-      <apiClassifier id="com.soma.core.interfaces:ICommandASync">
-         <apiName>ICommandASync</apiName>
+      <apiClassifier id="com.soma.core.interfaces:IParallelCommand">
+         <apiName>IParallelCommand</apiName>
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
@@ -463,7 +463,6 @@
                <apiAccess value="public"/>
                <apiStatic/>
                <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
-               <apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface>
                <apiBaseClassifier/>
             </apiClassifierDef>
          </apiClassifierDetail>

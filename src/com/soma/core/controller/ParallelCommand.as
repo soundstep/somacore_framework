@@ -35,10 +35,38 @@ package com.soma.core.controller {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * 
+	 * The ParallelCommand class is used to execute a list of commands at the same time.
 	 * @example
+	 * Register commands and a parallel command.
 	 * <listing version="3.0">
+addCommand(MyEvent.DO_SOMETHING, CommandExample);
+addCommand(MyEvent.DO_SOMETHING_ELSE, CommandExample);
+addCommand(MyEvent.EXECUTE_SEQUENCE, ParallelCommandExample);
+dispatchEvent(new MyEvent(MyEvent.EXECUTE_SEQUENCE));
 	 * </listing>
+	 * <listing version="3.0">
+package  {
+	import com.soma.core.interfaces.IParallelCommand;
+	import com.soma.core.controller.ParallelCommand;
+	
+	public class ParallelCommandExample extends ParallelCommand implements IParallelCommand {
+
+		public function ParallelCommandExample() {
+			
+		}
+		
+		override protected function initializeSubCommands():void {
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING));
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ELSE));
+		}
+		
+	}
+}
+	 * </listing>
+	 * @see com.soma.core.controller.SomaController
+	 * @see com.soma.core.controller.Command
+	 * @see com.soma.core.controller.SequenceCommand
+	 * @see com.soma.core.interfaces.IParallelCommand
 	 */
 	
 	public class ParallelCommand extends Command implements IParallelCommand {
@@ -47,6 +75,7 @@ package com.soma.core.controller {
 		// private, protected properties
 		//------------------------------------
 		
+		/** @private */
 		private var _commands:Array;
 
 		//------------------------------------
@@ -59,6 +88,9 @@ package com.soma.core.controller {
 		// constructor
 		//------------------------------------
 		
+		/**
+		 * Create an instance of the ParallelCommand class. Should not be directly instantiated, the framework will instantiate the class.
+		 */
 		public function ParallelCommand() {
 			
 		}
@@ -67,15 +99,29 @@ package com.soma.core.controller {
 		// PRIVATE, PROTECTED
 		//________________________________________________________________________________________________
 		
+		/** @private */
 		override protected final function initialize():void {
 			_commands = [];
 			initializeSubCommands();
 		}
 		
+		/** 
+		 * Method that you can overwrite to add commands to the sequence.
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">addSubCommand(new MyEvent(MyEvent.DO_SOMETHING));</listing>
+		 */
 		protected function initializeSubCommands():void {
 			
 		}
-
+		
+		/**
+		 * Add a command to the list of commands to execute in parallel.
+		 * @param event Event instance (must be registered as a command previously).
+		 * @see com.soma.core.controller.SomaController
+		 * @example
+		 * <listing version="3.0">addSubCommand(new MyEvent(MyEvent.DO_SOMETHING));</listing>
+		 */
 		protected final function addSubCommand(event:Event):void {
 			_commands.push(event);
 		}
@@ -84,6 +130,7 @@ package com.soma.core.controller {
 		// PUBLIC
 		//________________________________________________________________________________________________
 		
+		/** @private */
 		public final function execute(event:Event):void {
 			while (_commands.length > 0) {
 				var command:Event = _commands.shift();
@@ -92,11 +139,19 @@ package com.soma.core.controller {
 			_commands = null;
 		}
 		
+		/**
+		 * Retrieves the number of commands added as subcommands.
+		 * @return An integer.
+		 */
 		public final function get length():int {
 			if (_commands == null) return -1;
 			return _commands.length;
 		}
 		
+		/**
+		 * Retrieves the list of commands added as subcommands.
+		 * @return An Array of commands.
+		 */
 		public final function get commands():Array {
 			return _commands;
 		}
