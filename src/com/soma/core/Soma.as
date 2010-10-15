@@ -147,7 +147,7 @@ package  {
 		 * @param stage The stage is used as a global EventDispatcher (as well as the Soma class), and is required to instantiate the framework.
 		 */
 		public function Soma(stage:Stage) {
-			initialize(stage);
+			initializeApplication(stage);
 		}
 		
 		//
@@ -155,7 +155,7 @@ package  {
 		//________________________________________________________________________________________________
 		
 		/** @private */
-		protected function initialize(stage:Stage):void {
+		private function initializeApplication(stage:Stage):void {
 			validateStage(stage);
 			_stage = stage;
 			_models = new SomaModels(this);
@@ -170,7 +170,7 @@ package  {
 		}
 		
 		/** @private */
-		protected function validateStage(stage:Stage):void {
+		private function validateStage(stage:Stage):void {
 			if (stage == null) throw new Error("Error in " + this + " You can't instantiate Soma with a stage that has a value null. Start soma after a Event.ADDED_TO_STAGE.");
 		}
 		

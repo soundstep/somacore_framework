@@ -3657,7 +3657,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 <see><![CDATA[com.soma.core.wire.SomaWires
 		 ]]></see>
 </method>
-<method name='initialize' fullname='com.soma.core:Soma/protected:initialize' isStatic='false' isFinal='false' isOverride='false'  param_names='stage' param_types='flash.display:Stage' param_defaults='undefined' result_type='void'>
+<method name='initializeApplication' fullname='com.soma.core:Soma/private:initializeApplication' isStatic='false' isFinal='false' isOverride='false'  param_names='stage' param_types='flash.display:Stage' param_defaults='undefined' result_type='void'>
 <description><![CDATA[ ]]></description>
 <private><![CDATA[]]></private>
 </method>
@@ -3797,7 +3797,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 <see><![CDATA[com.soma.core.controller.SomaController
 		 ]]></see>
 </method>
-<method name='validateStage' fullname='com.soma.core:Soma/protected:validateStage' isStatic='false' isFinal='false' isOverride='false'  param_names='stage' param_types='flash.display:Stage' param_defaults='undefined' result_type='void'>
+<method name='validateStage' fullname='com.soma.core:Soma/private:validateStage' isStatic='false' isFinal='false' isOverride='false'  param_names='stage' param_types='flash.display:Stage' param_defaults='undefined' result_type='void'>
 <description><![CDATA[ ]]></description>
 <private><![CDATA[]]></private>
 </method>
