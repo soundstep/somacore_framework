@@ -6,7 +6,6 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
@@ -15,10 +14,22 @@
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
-	 </apiDesc><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:executeNextCommand"><apiName>executeNextCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:stop"><apiName>stop</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiValue id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:commands:get"><apiName>commands</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:currentCommand:get"><apiName>currentCommand</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.events:Event"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:length:get"><apiName>length</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISoma"><apiName>ISoma</apiName><shortdesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.controller.xml#SequenceCommand"><linktext>com.soma.core.controller.SequenceCommand</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:executeNextCommand"><apiName>executeNextCommand</apiName><shortdesc>
+		 Method used to execute the next command in the list of subcommands.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Method used to execute the next command in the list of subcommands.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:stop"><apiName>stop</apiName><shortdesc>
+		 Stops the current sequence.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops the current sequence.
+		 </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:commands:get"><apiName>commands</apiName><shortdesc>
+		 Retrieves the list of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef><apiDesc>
+		 Retrieves the list of commands added as subcommands.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:currentCommand:get"><apiName>currentCommand</apiName><shortdesc>
+		 Retrieves the command that is currently executed (running).</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.events:Event"/></apiValueDef><apiDesc>
+		 Retrieves the command that is currently executed (running).
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:length:get"><apiName>length</apiName><shortdesc>
+		 Retrieves the number of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef><apiDesc>
+		 Retrieves the number of commands added as subcommands.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISoma"><apiName>ISoma</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
@@ -26,8 +37,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 Interface used by the class that will extend the Soma class.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
 	 <p><b>Class version:</b> v1.0.0</p>
@@ -35,16 +45,22 @@
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
-	 </apiDesc><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:addCommand"><apiName>addCommand</apiName><shortdesc>
+	 Interface used by the class that will extend the Soma class.
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.xml#Soma"><linktext>com.soma.core.Soma</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:addCommand"><apiName>addCommand</apiName><shortdesc>
 		 Registers a command to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam><apiParam><apiItemName>command</apiItemName><apiType value="Class"/><apiDesc>Class that will be executed when a command has been dispatched.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Registers a command to the framework.
 		 </apiDesc><example><codeblock rev="3.0">addCommand(MyEvent.DOSOMETHING, MyCommand);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:addEventListener"><apiName>addEventListener</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam><apiParam><apiItemName>priority</apiItemName><apiType value="int"/><apiData>0</apiData></apiParam><apiParam><apiItemName>useWeakReference</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:addModel"><apiName>addModel</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:addEventListener"><apiName>addEventListener</apiName><shortdesc>
+		 Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event.
+		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/><apiDesc>The listener function that processes the event.
+		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Determines whether the listener works in the capture phase or the target and bubbling phases.
+		 </apiDesc></apiParam><apiParam><apiItemName>priority</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>The priority level of the event listener.
+		 </apiDesc></apiParam><apiParam><apiItemName>useWeakReference</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Determines whether the reference to the listener is strong or weak.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:addModel"><apiName>addModel</apiName><shortdesc>
 		 Registers a model to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The model instance.
 		 </apiDesc><apiOperationClassifier>com.soma.core.interfaces:IModel</apiOperationClassifier></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam><apiParam><apiItemName>model</apiItemName><apiOperationClassifier>com.soma.core.interfaces:IModel</apiOperationClassifier><apiDesc>Instance of the model.
@@ -85,7 +101,12 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 var pluginVO:SomaDebuggerVO = new SomaDebuggerVO(this, SomaDebugger.NAME_DEFAULT, getCommands(), true, false);
 var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger;
 		 </codeblock>
-		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:dispatchEvent"><apiName>dispatchEvent</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:dispose"><apiName>dispose</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:dispatchEvent"><apiName>dispatchEvent</apiName><shortdesc>
+		 Dispatches an event into the event flow.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A value of true unless preventDefault() is called on the event, in which case it returns false.
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>The event object dispatched into the event flow.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Dispatches an event into the event flow. The event target is the EventDispatcher object upon which dispatchEvent() is called.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:dispose"><apiName>dispose</apiName><shortdesc>
 		 Destroys the SomaCore core classes and elements registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
 		 Destroys the SomaCore core classes and elements registered to the framework.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:getCommand"><apiName>getCommand</apiName><shortdesc>
@@ -154,7 +175,12 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether a command has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasCommand(MyEvent.DOSOMETHING);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:hasEventListener"><apiName>hasEventListener</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:hasModel"><apiName>hasModel</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:hasEventListener"><apiName>hasEventListener</apiName><shortdesc>
+		 Checks whether the EventDispatcher object has any listeners registered for a specific type of event.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A value of true if a listener of the specified type is registered; false otherwise.
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks whether the EventDispatcher object has any listeners registered for a specific type of event.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:hasModel"><apiName>hasModel</apiName><shortdesc>
 		 Indicates wether a model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
@@ -182,7 +208,13 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a command from the framework.
 		 </apiDesc><example><codeblock rev="3.0">removeCommand(MyEvent.DOSOMETHING);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:removeEventListener"><apiName>removeEventListener</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:removeModel"><apiName>removeModel</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:removeEventListener"><apiName>removeEventListener</apiName><shortdesc>
+		 Removes a listener from the EventDispatcher object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event. 
+		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/><apiDesc>The listener object to remove. 
+		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Specifies whether the listener was registered for the capture phase or the target and bubbling phases.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes a listener from the EventDispatcher object. If there is no matching listener registered with the EventDispatcher object, a call to this method has no effect.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:removeModel"><apiName>removeModel</apiName><shortdesc>
 		 Removes a model from the framework and call the dispose method of this model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a model from the framework and call the dispose method of this model.
@@ -198,8 +230,8 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 Removes a wire from the framework and call the dispose method of this wire.
 		 </apiDesc><example><codeblock rev="3.0">removeWire(MyWire.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
-		 Stops all the sequences command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
-		 Stops all the sequences command instances that are running.
+		 Stops all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops all the sequence command instances that are running.
 		 </apiDesc><example><codeblock rev="3.0">stopAllSequencers();</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:stopSequencerWithEvent"><apiName>stopSequencerWithEvent</apiName><shortdesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean (true if a sequence command has been stopped).
@@ -213,7 +245,12 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Stops a sequence command using the sequence command instance itself.
 		 </apiDesc><example><codeblock rev="3.0">var success:Boolean = stopSequencer(mySequenceCommand);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:willTrigger"><apiName>willTrigger</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:controller:get"><apiName>controller</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:willTrigger"><apiName>willTrigger</apiName><shortdesc>
+		 Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A value of true if a listener of the specified type will be triggered; false otherwise. 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.
+		 </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:controller:get"><apiName>controller</apiName><shortdesc>
 		 Gets the commands manager class.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.controller:SomaController</apiValueClassifier></apiValueDef><apiDesc>
 		 Gets the commands manager class.
 		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:models:get"><apiName>models</apiName><shortdesc>
@@ -236,8 +273,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 Interface used by a class that will hold the plugin options (ex: SomaDebuggerVO).</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
 	 <p><b>Class version:</b> v1.0.0</p>
@@ -245,10 +281,8 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
-	 </apiDesc><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommand"><apiName>ICommand</apiName><shortdesc>
+	 Interface used by a class that will hold the plugin options (ex: SomaDebuggerVO).
+	 </apiDesc></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommand"><apiName>ICommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
@@ -256,7 +290,6 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
@@ -265,10 +298,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
-	 </apiDesc><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ICommand:com.soma.core.interfaces:ICommand:execute"><apiName>execute</apiName><shortdesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.controller.xml#Command"><linktext>com.soma.core.controller.Command</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:ICommand:com.soma.core.interfaces:ICommand:execute"><apiName>execute</apiName><shortdesc>
 		 Method called by the framework, this is the execution of the command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>Event instance dispatched to execute the command.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Method called by the framework, this is the execution of the command.
@@ -281,7 +311,6 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
@@ -290,10 +319,22 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
-	 </apiDesc><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:getName"><apiName>getName</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:setName"><apiName>setName</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiValue id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:data:get"><apiName>data</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:dispatcher:get"><apiName>dispatcher</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="flash.events:IEventDispatcher"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:IResponder"><apiName>IResponder</apiName><shortdesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.model.xml#Model"><linktext>com.soma.core.model.Model</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:getName"><apiName>getName</apiName><shortdesc>
+		 Retrieves the name of the model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A String.
+		 </apiDesc><apiType value="String"/></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves the name of the model.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:setName"><apiName>setName</apiName><shortdesc>
+		 Sets the name of the model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiDesc>A String.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the name of the model.
+		 </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:data:get"><apiName>data</apiName><shortdesc>
+		 Data of the model.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef><apiDesc>
+		 Data of the model.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:dispatcher:get"><apiName>dispatcher</apiName><shortdesc>
+		 EventDispatcher instance of the model.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="flash.events:IEventDispatcher"/><apiDefaultValue>The framework instance.
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 EventDispatcher instance of the model.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:IResponder"><apiName>IResponder</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
@@ -301,8 +342,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 Interface used by a class that receive data from a asynchronous call.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
 	 <p><b>Class version:</b> v1.0.0</p>
@@ -310,10 +350,16 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
-	 </apiDesc><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:IResponder:com.soma.core.interfaces:IResponder:fault"><apiName>fault</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>info</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IResponder:com.soma.core.interfaces:IResponder:result"><apiName>result</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>data</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommandASync"><apiName>ICommandASync</apiName><shortdesc>
+	 Interface used by a class that receive data from a asynchronous call.
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.controller.xml#SequenceCommand"><linktext>com.soma.core.controller.SequenceCommand</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:IResponder:com.soma.core.interfaces:IResponder:fault"><apiName>fault</apiName><shortdesc>
+		 Method that receives a fault object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>info</apiItemName><apiType value="Object"/><apiDesc>The fault Object.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Method that receives a fault object.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IResponder:com.soma.core.interfaces:IResponder:result"><apiName>result</apiName><shortdesc>
+		 Method that receives a success object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>data</apiItemName><apiType value="Object"/><apiDesc>THe success Object.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Method that receives a success object.
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommandASync"><apiName>ICommandASync</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
@@ -321,8 +367,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 Interface used to create asynchronous command.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
 	 <p><b>Class version:</b> v1.0.0</p>
@@ -330,10 +375,43 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
+	 Interface used to create asynchronous command.
 	 </apiDesc><example><codeblock rev="3.0">
+package {
+	import flash.utils.clearTimeout;
+	import flash.utils.setTimeout;
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommandASync;
+	import com.soma.core.controller.Command;
+	
+	public class CommandASyncExample extends Command implements ICommandASync {
+		private var _event:Event;
+		private var _timer:int;
+		public function CommandASyncExample() {
+			
+		}
+		
+		public function execute(event:Event):void {
+			_event = event;
+			_timer = setTimeout(result, 1000, {});
+		}
+		
+		public function fault(info:Object):void {
+			
+		}
+		
+		public function result(data:Object):void {
+			if (isPartOfASequence(_event)) {
+				getSequencer(_event).executeNextCommand();
+			}
+			_event = null;
+			clearTimeout(_timer);
+		}
+		
+	}
+}
 	 </codeblock>
-	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IParallelCommand"><apiName>IParallelCommand</apiName><shortdesc>
+	 </example></apiClassifierDetail><related-links><link href="com.soma.core.controller.xml#Command"><linktext>com.soma.core.controller.Command</linktext></link><link href="com.soma.core.interfaces.xml#ICommand"><linktext>com.soma.core.interfaces.ICommand</linktext></link><link href="com.soma.core.interfaces.xml#IResponder"><linktext>com.soma.core.interfaces.IResponder</linktext></link></related-links></apiClassifier><apiClassifier id="com.soma.core.interfaces:IParallelCommand"><apiName>IParallelCommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
@@ -341,7 +419,6 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
@@ -350,10 +427,13 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
-	 </apiDesc><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiValue id="com.soma.core.interfaces:IParallelCommand:com.soma.core.interfaces:IParallelCommand:commands:get"><apiName>commands</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:IParallelCommand:com.soma.core.interfaces:IParallelCommand:length:get"><apiName>length</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:IWire"><apiName>IWire</apiName><shortdesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link><link href="com.soma.core.controller.xml#Command"><linktext>com.soma.core.controller.Command</linktext></link><link href="com.soma.core.interfaces.xml#ICommand"><linktext>com.soma.core.interfaces.ICommand</linktext></link><link href="com.soma.core.interfaces.xml#IParallelCommand"><linktext>com.soma.core.interfaces.IParallelCommand</linktext></link></related-links><apiValue id="com.soma.core.interfaces:IParallelCommand:com.soma.core.interfaces:IParallelCommand:commands:get"><apiName>commands</apiName><shortdesc>
+		 Retrieves the list of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef><apiDesc>
+		 Retrieves the list of commands added as subcommands.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:IParallelCommand:com.soma.core.interfaces:IParallelCommand:length:get"><apiName>length</apiName><shortdesc>
+		 Retrieves the number of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef><apiDesc>
+		 Retrieves the number of commands added as subcommands.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:IWire"><apiName>IWire</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
@@ -361,7 +441,6 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
@@ -370,10 +449,15 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
-	 </apiDesc><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:getName"><apiName>getName</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:setName"><apiName>setName</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaPlugin"><apiName>ISomaPlugin</apiName><shortdesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.wire.xml#Wire"><linktext>com.soma.core.wire.Wire</linktext></link><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:getName"><apiName>getName</apiName><shortdesc>
+		 Retrieves the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A String.
+		 </apiDesc><apiType value="String"/></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves the name of the wire.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:setName"><apiName>setName</apiName><shortdesc>
+		 Sets the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiDesc>A String.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the name of the wire.
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaPlugin"><apiName>ISomaPlugin</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
@@ -381,8 +465,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 Interface used by a class that is meant to be instantiated by the framework (ex:SomaDebugger).</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
 	 <p><b>Class version:</b> v1.0.0</p>
@@ -390,7 +473,11 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
-	 </apiDesc><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISomaPlugin:com.soma.core.interfaces:ISomaPlugin:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaPlugin:com.soma.core.interfaces:ISomaPlugin:initialize"><apiName>initialize</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>pluginVO</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISomaPluginVO</apiOperationClassifier></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier></apiPackage>
+	 Interface used by a class that is meant to be instantiated by the framework (ex:SomaDebugger).
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.xml#Soma"><linktext>com.soma.core.Soma</linktext></link><link href="com.soma.core.interfaces.xml#ISomaPluginVO"><linktext>com.soma.core.interfaces.ISomaPluginVO</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:ISomaPlugin:com.soma.core.interfaces:ISomaPlugin:dispose"><apiName>dispose</apiName><shortdesc>
+		 Destroys the elements created by the plugin.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Destroys the elements created by the plugin.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaPlugin:com.soma.core.interfaces:ISomaPlugin:initialize"><apiName>initialize</apiName><shortdesc>
+		 Initializes the plugin.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>pluginVO</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISomaPluginVO</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Initializes the plugin.
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier></apiPackage>

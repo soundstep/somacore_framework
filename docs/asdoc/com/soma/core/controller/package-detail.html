@@ -34,8 +34,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="SomaController.html">SomaController</a></td><td class="summaryTableLastCol">
+	 The SequenceCommand class is used to execute a list of commands one after the other.</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="SomaController.html">SomaController</a></td><td class="summaryTableLastCol">
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
@@ -43,5 +42,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </td></tr></table><p></p><div><p></p><center class="copyright"><footer>SomaCore v1.0.0 | Documentation generated at: 10/14/2010 05:35 PM</footer><br/>Thu Oct 14 2010, 05:36 PM +01:00  </center></div></div></body></html><!--SomaCore v1.0.0 | Documentation generated at: 10/14/2010 05:35 PM<br/>Thu Oct 14 2010, 05:36 PM +01:00  -->
+	 The SomaController handles the commands added to the framework and the events dispatched from eiher a display list or a framework element (instance of the framework, commands or wires).
+	 All the events dispatched with a property bubbles set to false will be ignored, that's why the event mapped to a command class must have this property set to true.
+	 You can add commands, remove commands and dispatch commands from: the framework instance, the stage, any DisplayObject (as long as it is added to the stage), a wire, a command or a model using its dispatcher property.
+	 You can create 4 types of commands: synchronous (Command), asynchronous (Command that implements ICommandASync), parallel (ParallelCommand) and sequence (SequenceCommand).</td></tr></table><p></p><div><p></p><center class="copyright"><footer>SomaCore v1.0.0 | Documentation generated at: 10/15/2010 03:42 PM</footer><br/>Fri Oct 15 2010, 03:42 PM +01:00  </center></div></div></body></html><!--SomaCore v1.0.0 | Documentation generated at: 10/15/2010 03:42 PM<br/>Fri Oct 15 2010, 03:42 PM +01:00  -->

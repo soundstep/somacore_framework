@@ -51,8 +51,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The SequenceCommand class is used to execute a list of commands one after the other.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -78,8 +77,8 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
-	        </apiDesc>
+	 The SequenceCommand class is used to execute a list of commands one after the other. The command added can be asynchronous or synchronous.
+	 </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.controller:SomaController">
          <apiName>SomaController</apiName>
@@ -91,8 +90,10 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The SomaController handles the commands added to the framework and the events dispatched from eiher a display list or a framework element (instance of the framework, commands or wires).
+	 All the events dispatched with a property bubbles set to false will be ignored, that's why the event mapped to a command class must have this property set to true.
+	 You can add commands, remove commands and dispatch commands from: the framework instance, the stage, any DisplayObject (as long as it is added to the stage), a wire, a command or a model using its dispatcher property.
+	 You can create 4 types of commands: synchronous (Command), asynchronous (Command that implements ICommandASync), parallel (ParallelCommand) and sequence (SequenceCommand).</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -117,7 +118,11 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
+	           <p>The SomaController handles the commands added to the framework and the events dispatched from eiher a display list or a framework element (instance of the framework, commands or wires).</p>
+	           <p>All the events dispatched with a property bubbles set to false will be ignored, that's why the event mapped to a command class must have this property set to true.</p>
+	           <p>You can add commands, remove commands and dispatch commands from: the framework instance, the stage, any DisplayObject (as long as it is added to the stage), a wire, a command or a model using its dispatcher property.</p>
+	           <p>You can create 4 types of commands: synchronous (Command), asynchronous (Command that implements ICommandASync), parallel (ParallelCommand) and sequence (SequenceCommand). See each class for a detailed explanation and examples.</p>
+	           <p>You can use the properties of a custom event to send parameters and receive them in the command.</p>
 	        </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.controller:ParallelCommand">
@@ -172,7 +177,6 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
@@ -200,7 +204,6 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
 	        </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ISoma">
@@ -213,8 +216,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 Interface used by the class that will extend the Soma class.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -240,8 +242,8 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
-	        </apiDesc>
+	 Interface used by the class that will extend the Soma class.
+	 </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ISomaPluginVO">
          <apiName>ISomaPluginVO</apiName>
@@ -253,8 +255,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 Interface used by a class that will hold the plugin options (ex: SomaDebuggerVO).</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -280,8 +281,8 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
-	        </apiDesc>
+	 Interface used by a class that will hold the plugin options (ex: SomaDebuggerVO).
+	 </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ICommand">
          <apiName>ICommand</apiName>
@@ -293,7 +294,6 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
@@ -320,7 +320,6 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
 	        </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:IModel">
@@ -333,7 +332,6 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
@@ -360,7 +358,6 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
 	        </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:IResponder">
@@ -373,8 +370,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 Interface used by a class that receive data from a asynchronous call.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -400,8 +396,8 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
-	        </apiDesc>
+	 Interface used by a class that receive data from a asynchronous call.
+	 </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ICommandASync">
          <apiName>ICommandASync</apiName>
@@ -413,8 +409,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 Interface used to create asynchronous command.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -442,8 +437,8 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
-	        </apiDesc>
+	 Interface used to create asynchronous command.
+	 </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:IParallelCommand">
          <apiName>IParallelCommand</apiName>
@@ -455,7 +450,6 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
@@ -483,7 +477,6 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
 	        </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:IWire">
@@ -496,7 +489,6 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
@@ -523,7 +515,6 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
 	        </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ISomaPlugin">
@@ -536,8 +527,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 Interface used by a class that is meant to be instantiated by the framework (ex:SomaDebugger).</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -563,8 +553,8 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
-	        </apiDesc>
+	 Interface used by a class that is meant to be instantiated by the framework (ex:SomaDebugger).
+	 </apiDesc>
       </apiClassifier>
    </apiPackage>
    <apiPackage id="com.soma.core.model">
@@ -579,8 +569,8 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The model is the class used to manage you application's data model.
+	 The data can be XML, local data, data retrieved from a server or anything.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -606,7 +596,8 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
+	           <p>The model is the class used to manage you application's data model.</p>
+	           <p>The data can be XML, local data, data retrieved from a server or anything. Ideally, the data should be set to the data property of the model instance, but you are free to create specific getters.</p>
 	        </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.model:SomaModels">
@@ -619,8 +610,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The SomaModels class handles the models of the application.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -645,8 +635,8 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
-	        </apiDesc>
+	 The SomaModels class handles the models of the application. See the Model class documentation for implementation.
+	 </apiDesc>
       </apiClassifier>
    </apiPackage>
    <apiPackage id="com.soma.core.view">
@@ -661,8 +651,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The SomaViews class handles the views of the application (DisplayObject).</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -687,8 +676,8 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
-	        </apiDesc>
+	 The SomaViews class handles the views of the application (DisplayObject).
+	 </apiDesc>
       </apiClassifier>
    </apiPackage>
    <apiPackage id="com.soma.core.wire">
@@ -703,8 +692,8 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 A Wire is a class that will hold the logic of the Application.
+	 Wires can be used in many ways, depending on how you want to manage your views, commands and models.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -731,7 +720,12 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
+	           <p>A Wire is a class that will hold the logic of the Application.</p>
+	           <p>Wires can be used in many ways, depending on how you want to manage your views, commands and models. A wire can be used as a manager and handle many models, views or other wires.
+	 A wire can also be used in a one-to-one way (as a proxy), a single wire that handles a single view, a single wire that handles a single model, and so on.</p>
+	           <p>Wires can be flexible or rigid depending on how your build your application.</p>
+	           <p>A wire has access to everything in the framework: you can create views, add and dispatch commands, create models, access to the framework instance, access to the stage, and so on.</p>
+	           <p>A wire can also be in control of the commands that are dispatched by listening to them and even stop their execution if needed (see the examples in this page).</p> 
 	        </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.wire:SomaWires">
@@ -744,8 +738,7 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The SomaWires class handles the wires of the application.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -770,8 +763,8 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	 
-	        </apiDesc>
+	 The SomaWires class handles the wires of the application. See the Wire class documentation for implementation. 
+	 </apiDesc>
       </apiClassifier>
    </apiPackage>
    <apiPackage id="com.soma.core">

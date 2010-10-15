@@ -32,15 +32,21 @@ package com.soma.core.interfaces {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * 
-	 * @example
-	 * <listing version="3.0">
-	 * </listing>
+	 * Interface used by a class that is meant to be instantiated by the framework (ex:SomaDebugger).
+	 * @see com.soma.core.Soma
+	 * @see com.soma.core.interfaces.ISomaPluginVO
 	 */
 	
 	public interface ISomaPlugin {
-
+		
+		/**
+		 * Initializes the plugin.
+		 * @param pluginVO
+		 */
 		function initialize(pluginVO:ISomaPluginVO):void;
+		/**
+		 * Destroys the elements created by the plugin.
+		 */
 		function dispose():void
 		
 	}

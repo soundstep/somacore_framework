@@ -42,10 +42,79 @@ package com.soma.core.wire {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * 
+	 * <p>A Wire is a class that will hold the logic of the Application.</p>
+	 * <p>Wires can be used in many ways, depending on how you want to manage your views, commands and models. A wire can be used as a manager and handle many models, views or other wires.
+	 * A wire can also be used in a one-to-one way (as a proxy), a single wire that handles a single view, a single wire that handles a single model, and so on.</p>
+	 * <p>Wires can be flexible or rigid depending on how your build your application.</p>
+	 * <p>A wire has access to everything in the framework: you can create views, add and dispatch commands, create models, access to the framework instance, access to the stage, and so on.</p>
+	 * <p>A wire can also be in control of the commands that are dispatched by listening to them and even stop their execution if needed (see the examples in this page).</p> 
 	 * @example
+	 * Create a wire
 	 * <listing version="3.0">
+package  {
+	import com.soma.core.wire.Wire;
+	import com.soma.core.interfaces.IWire;
+	
+	public class WireExample extends Wire implements IWire {
+		
+		public static const NAME:String = "Wire example name";
+		
+		public function WireExample() {
+			super(NAME);
+		}
+		
+		override protected function initialize():void {
+			// called when the wire has been registered to the framework
+		}
+		
+		override protected function dispose():void {
+			// called when the wire has been removed from the framework
+		}
+		
+	}
+}
 	 * </listing>
+	 * Add a wire.
+	 * <listing version="3.0">
+addWire(WireExample.NAME, new WireExample());
+	 * </listing>
+	 * Remove a wire.
+	 * <listing version="3.0">
+removeWire(WireExample.NAME);
+	 * </listing>
+	 * Retrieve a wire.
+	 * <listing version="3.0">
+var wire:WireExample = getWire(WireExample.NAME) as WireExample;
+	 * </listing>
+	 * Create a shortcut to retrieve a wire is a good practice.
+	 * <listing version="3.0">
+private function get wireExample():WireExample {
+	return getWire(WireExample.NAME) as WireExample;
+}
+private function doSomething():void {
+	trace(wireExample.myWireProperty);
+}
+	 * </listing>
+	 * Listening to a command in a wire.
+	 * <listing version="3.0">
+override protected function initialize():void {
+	// called when the wire has been registered to the framework
+	 addEventListener(MyEvent.DO_SOMETHING, handler);
+}
+	 * </listing>
+	 * Stopping the execution of a command in a wire.
+	 * You need to set the cancelable property of the event to true when you dispatch it.
+	 * Any command can be stopped using the flash event built-in method: preventDefault.
+	 * <listing version="3.0">
+override protected function initialize():void {
+	// called when the wire has been registered to the framework
+	 addEventListener(MyEvent.DO_SOMETHING, myEventHandler);
+}
+private function myEventHandler(event:MyEvent):void {
+	e.preventDefault();
+}
+	 * </listing>
+	 * @see com.soma.core.wire.SomaWires
 	 */
 	
 	public class Wire implements IWire, IEventDispatcher {
@@ -54,19 +123,25 @@ package com.soma.core.wire {
 		// private, protected properties
 		//------------------------------------
 		
+		/** @private */
 		private var _instance:ISoma;
+		/**
+		 * Name of the wire.
+		 */
 		protected var _name:String;
 
 		//------------------------------------
 		// public final properties
 		//------------------------------------
 		
-		public static var NAME:String = "Soma::Wire";
-		
 		//------------------------------------
 		// constructor
 		//------------------------------------
 		
+		/**
+		 * Create an instance of a Wire class. The Wire class should be extended.
+		 * @param name Name of the wire.
+		 */
 		public final function Wire(name:String = null) {
 			if (name != "" && name != null) _name = name;
 		}
@@ -75,10 +150,16 @@ package com.soma.core.wire {
 		// PRIVATE, PROTECTED
 		//________________________________________________________________________________________________
 		
+		/**
+		 * Method that can you can override, called when the wire has been registered to the framework.
+		 */
 		protected function initialize():void {
 			
 		}
 		
+		/**
+		 * Method that can you can override, called when the wire has been removed from the framework.
+		 */
 		protected function dispose():void {
 			
 		}
@@ -87,47 +168,96 @@ package com.soma.core.wire {
 		// PUBLIC
 		//________________________________________________________________________________________________
 		
+		/** @private */
 		somans function registerInstance(instance:ISoma):void {
 			_instance = instance;
 			initialize();
 		}
 		
+		/** @private */
 		somans function dispose():void {
 			dispose();
 		}
 		
+		/**
+		 * Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.
+		 * @param type The type of event.
+		 * @param listener The listener function that processes the event.
+		 * @param useCapture Determines whether the listener works in the capture phase or the target and bubbling phases.
+		 * @param priority The priority level of the event listener.
+		 * @param useWeakReference Determines whether the reference to the listener is strong or weak.
+		 */
 		public final function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void {
 			_instance.addEventListener(type, listener, useCapture, priority, useWeakReference);
 		}
-
+		
+		/**
+		 * Dispatches an event into the event flow. The event target is the EventDispatcher object upon which dispatchEvent() is called.
+		 * @param event The event object dispatched into the event flow.
+		 * @return A value of true unless preventDefault() is called on the event, in which case it returns false.
+		 */
 		public final function dispatchEvent(event:Event):Boolean {
 			return _instance.dispatchEvent(event);
 		}
 		
+		/**
+		 * Checks whether the EventDispatcher object has any listeners registered for a specific type of event.
+		 * @param type The type of event.
+		 * @return A value of true if a listener of the specified type is registered; false otherwise.
+		 */
 		public final function hasEventListener(type:String):Boolean {
 			return _instance.hasEventListener(type);
 		}
 		
+		/**
+		 * Removes a listener from the EventDispatcher object. If there is no matching listener registered with the EventDispatcher object, a call to this method has no effect.
+		 * @param type The type of event. 
+		 * @param listener The listener object to remove. 
+		 * @param useCapture Specifies whether the listener was registered for the capture phase or the target and bubbling phases.
+		 */
 		public final function removeEventListener(type:String, listener:Function, useCapture:Boolean = false):void {
 			_instance.removeEventListener(type, listener, useCapture);
 		}
-
+		
+		/**
+		 * Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.
+		 * @param type The type of event. 
+		 * @return A value of true if a listener of the specified type will be triggered; false otherwise. 
+		 */
 		public final function willTrigger(type:String):Boolean {
 			return _instance.willTrigger(type);
 		}
 		
+		/**
+		 * Retrieves the instance of the framework.
+		 * @return An ISoma instance.
+		 * @example
+		 * <listing version="3.0">var myExtendedSomaClass:SomaApplication = SomaApplication(instance);</listing>
+		 */
 		public final function get instance():ISoma {
 			return _instance;
 		}
 		
+		/**
+		 * Get the stage that has been registered to the framework.
+		 * @return The stage instance.
+		 */
 		public final function get stage():Stage {
 			return _instance.stage;
 		}
 		
+		/**
+		 * Retrieves the name of the wire.
+		 * @return A String.
+		 */
 		public final function getName():String {
 			return _name;
 		}
 		
+		/**
+		 * Sets the name of the wire.
+		 * @param value A String.
+		 */
 		public final function setName(name:String):void {
 			_name = name;
 		}
@@ -247,7 +377,7 @@ package com.soma.core.wire {
 		}
 		
 		/**
-		 * Stops all the sequences command instances that are running.
+		 * Stops all the sequence command instances that are running.
 		 * @see com.soma.core.controller.SomaController
 		 * @example
 		 * <listing version="3.0">stopAllSequencers();</listing>

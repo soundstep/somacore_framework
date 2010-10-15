@@ -33,9 +33,28 @@ package com.soma.core.view {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * 
+	 * The SomaViews class handles the views of the application (DisplayObject).
 	 * @example
+	 * Add a view.
 	 * <listing version="3.0">
+addView(MySprite.NAME, new MySprite());
+	 * </listing>
+	 * Remove a view.
+	 * <listing version="3.0">
+removeView(MySprite.NAME);
+	 * </listing>
+	 * Retrieve a view.
+	 * <listing version="3.0">
+var sprite:MySprite = getView(MySprite.NAME) as MySprite;
+	 * </listing>
+	 * Create a shortcut to retrieve a view is a good practice.
+	 * <listing version="3.0">
+private function get mySprite():MySprite {
+	return getView(MySprite.NAME) as MySprite;
+}
+private function doSomething():void {
+	trace(mySprite);
+}
 	 * </listing>
 	 */
 	
@@ -45,6 +64,7 @@ package com.soma.core.view {
 		// private, protected properties
 		//------------------------------------
 		
+		/** @private */
 		protected var views:Dictionary;
 
 		//------------------------------------
@@ -57,6 +77,9 @@ package com.soma.core.view {
 		// constructor
 		//------------------------------------
 		
+		/**
+		 * Create an instance of the SomaViews class. Should not be directly instantiated, the framework will instantiate the class.
+		 */
 		public function SomaViews() {
 			initialize();
 		}
@@ -65,6 +88,7 @@ package com.soma.core.view {
 		// PRIVATE, PROTECTED
 		//________________________________________________________________________________________________
 		
+		/** @private */
 		private function initialize():void {
 			views = new Dictionary();
 		}
@@ -73,7 +97,10 @@ package com.soma.core.view {
 		// PUBLIC
 		//________________________________________________________________________________________________
 		
-		public function dispose() : void {
+		/**
+		 * Destroys all the views and properties. The class will call the dispose method of each view instance.
+		 */
+		public function dispose():void {
 			// dispose objects, graphics and events listeners
 			for (var name:String in views) {
 				removeView(name);
@@ -85,7 +112,6 @@ package com.soma.core.view {
 		 * Indicates wether a view has been registered to the framework.
 		 * @param viewName Name of the view.
 		 * @return A Boolean.
-		 * @see com.soma.core.view.SomaViews
 		 * @example
 		 * <listing version="3.0">hasView(MySprite.NAME);</listing>
 		 */
@@ -99,7 +125,6 @@ package com.soma.core.view {
 		 * @param viewName Name of the view.
 		 * @param view Instance of the view.
 		 * @return The view instance.
-		 * @see  com.soma.core.view.SomaViews
 		 * @example
 		 * <listing version="3.0">addView(MySprite.NAME, new MySprite());</listing>
 		 */
@@ -116,7 +141,6 @@ package com.soma.core.view {
 		/**
 		 * Removes a view from the framework and call the (optional) dispose method of this view.
 		 * @param viewName Name of the view.
-		 * @see com.soma.core.view.SomaViews
 		 * @example
 		 * <listing version="3.0">removeView(MySprite.NAME);</listing>
 		 */
@@ -134,7 +158,6 @@ package com.soma.core.view {
 		 * Retrieves the view instance that has been registered using its name.
 		 * @param viewName Name of the view.
 		 * @return An Object instance.
-		 * @see com.soma.core.view.SomaViews
 		 * @example
 		 * <listing version="3.0">var mySprite:MySprite = getView(MySprite.NAME) as MySprite;</listing>
 		 */
@@ -147,7 +170,6 @@ package com.soma.core.view {
 		/**
 		 * Retrieves all the view instances that have been registered to the framework.
 		 * @return A Dictionary (the key of the Dictionary is the name used for the registration).
-		 * @see com.soma.core.view.SomaViews
 		 * @example
 		 * <listing version="3.0">var sprites:Dictionary = getViews();</listing>
 		 */

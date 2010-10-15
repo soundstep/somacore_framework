@@ -32,10 +32,46 @@ package com.soma.core.interfaces {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * 
+	 * Interface used to create asynchronous command.
 	 * @example
 	 * <listing version="3.0">
+package {
+
+	import flash.utils.clearTimeout;
+	import flash.utils.setTimeout;
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommandASync;
+	import com.soma.core.controller.Command;
+	
+	public class CommandASyncExample extends Command implements ICommandASync {
+		private var _event:Event;
+		private var _timer:int;
+
+		public function CommandASyncExample() {
+			
+		}
+		
+		public function execute(event:Event):void {
+			_event = event;
+			_timer = setTimeout(result, 1000, {});
+		}
+		
+		public function fault(info:Object):void {
+			
+		}
+		
+		public function result(data:Object):void {
+			if (isPartOfASequence(_event)) {
+				getSequencer(_event).executeNextCommand();
+			}
+			_event = null;
+			clearTimeout(_timer);
+		}
+		
+	}
+}
 	 * </listing>
+	 * @see com.soma.core.controller.Command	 * @see com.soma.core.interfaces.ICommand	 * @see com.soma.core.interfaces.IResponder
 	 */
 	
 	public interface ICommandASync extends ICommand, IResponder {

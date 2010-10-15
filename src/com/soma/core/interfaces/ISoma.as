@@ -40,18 +40,45 @@ package com.soma.core.interfaces {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * 
-	 * @example
-	 * <listing version="3.0">
-	 * </listing>
+	 * Interface used by the class that will extend the Soma class.
+	 * @see com.soma.core.Soma
 	 */
 	
 	public interface ISoma {
 		
+		/**
+		 * Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.
+		 * @param type The type of event.
+		 * @param listener The listener function that processes the event.
+		 * @param useCapture Determines whether the listener works in the capture phase or the target and bubbling phases.
+		 * @param priority The priority level of the event listener.
+		 * @param useWeakReference Determines whether the reference to the listener is strong or weak.
+		 */
 		function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void;
+		/**
+		 * Dispatches an event into the event flow. The event target is the EventDispatcher object upon which dispatchEvent() is called.
+		 * @param event The event object dispatched into the event flow.
+		 * @return A value of true unless preventDefault() is called on the event, in which case it returns false.
+		 */
 		function dispatchEvent(event:Event):Boolean;
+		/**
+		 * Checks whether the EventDispatcher object has any listeners registered for a specific type of event.
+		 * @param type The type of event.
+		 * @return A value of true if a listener of the specified type is registered; false otherwise.
+		 */
 		function hasEventListener(type:String):Boolean;
+		/**
+		 * Removes a listener from the EventDispatcher object. If there is no matching listener registered with the EventDispatcher object, a call to this method has no effect.
+		 * @param type The type of event. 
+		 * @param listener The listener object to remove. 
+		 * @param useCapture Specifies whether the listener was registered for the capture phase or the target and bubbling phases.
+		 */
 		function removeEventListener(type:String, listener:Function, useCapture:Boolean = false):void;
+		/**
+		 * Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.
+		 * @param type The type of event. 
+		 * @return A value of true if a listener of the specified type will be triggered; false otherwise. 
+		 */
 		function willTrigger(type:String):Boolean;
 		
 		/**
@@ -187,7 +214,7 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 		 */
 		function getRunningSequencers():Array;
 		/**
-		 * Stops all the sequences command instances that are running.
+		 * Stops all the sequence command instances that are running.
 		 * @see com.soma.core.controller.SomaController
 		 * @example
 		 * <listing version="3.0">stopAllSequencers();</listing>

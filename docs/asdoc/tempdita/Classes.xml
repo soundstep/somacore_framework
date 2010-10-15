@@ -48,7 +48,8 @@
 addCommand(MyEvent.DOSOMETHING, CommandExample);
 dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 	 </codeblock>
-	              <codeblock rev="3.0">
+	 Create a normal command.
+	 <codeblock rev="3.0">
 package  {
 	import flash.events.Event;
 	import com.soma.core.interfaces.ICommand;
@@ -56,6 +57,33 @@ package  {
 	
 	public class CommandExample extends Command implements ICommand {
 		public function execute(event:Event):void {
+			
+		}
+		
+	}
+}
+	 </codeblock>
+	 Create an asynchronous command.
+	 <codeblock rev="3.0">
+package  {
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommandASync;
+	import com.soma.core.controller.Command;
+	
+	public class CommandASyncExample extends Command implements ICommandASync {
+		public function CommandASyncExample() {
+			
+		}
+		
+		public function execute(event:Event):void {
+			
+		}
+		
+		public function fault(info:Object):void {
+			
+		}
+		
+		public function result(data:Object):void {
 			
 		}
 		
@@ -77,10 +105,13 @@ package  {
             <link href="com.soma.core.interfaces.xml#ICommand">
                <linktext>com.soma.core.interfaces.ICommand</linktext>
             </link>
+            <link href="com.soma.core.interfaces.xml#ICommandASync">
+               <linktext>com.soma.core.interfaces.ICommandASync</linktext>
+            </link>
          </related-links>
          <Keywords>
             <meta name="keywords"
-                  content="Command,com.soma.core.controller.Command,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+                  content="Command,com.soma.core.controller.Command,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,dispatchEvent,dispose,executeNextCommand,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.controller:SequenceCommand">
@@ -93,8 +124,7 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The SequenceCommand class is used to execute a list of commands one after the other.</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -122,16 +152,92 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
-	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
+	 The SequenceCommand class is used to execute a list of commands one after the other. The command added can be asynchronous or synchronous.
+	 </apiDesc>
+            <example>Register commands and a sequence command.
+	 <codeblock rev="3.0">
+addCommand(MyEvent.DO_SOMETHING_ASYNCHRONOUS, CommandASyncExample);
+addCommand(MyEvent.DO_SOMETHING_ELSE_ASYNCHRONOUS, CommandASyncExample);
+addCommand(MyEvent.EXECUTE_SEQUENCE_COMMAND, SequenceCommandExample);
+dispatchEvent(new MyEvent(MyEvent.EXECUTE_SEQUENCE_COMMAND));
+	 </codeblock>
+	 Each asynchronous command added to a sequence much use the executeNextCommand method. Here is an example.
+	 <codeblock rev="3.0">
+package {
+	import flash.utils.clearTimeout;
+	import flash.utils.setTimeout;
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommandASync;
+	import com.soma.core.controller.Command;
+	
+	public class CommandASyncExample extends Command implements ICommandASync {
+		private var _event:Event;
+		private var _timer:int;
+		public function CommandASyncExample() {
+			
+		}
+		
+		public function execute(event:Event):void {
+			_event = event;
+			_timer = setTimeout(result, 1000, {});
+		}
+		
+		public function fault(info:Object):void {
+			
+		}
+		
+		public function result(data:Object):void {
+			if (isPartOfASequence(_event)) {
+				getSequencer(_event).executeNextCommand();
+			}
+			_event = null;
+			clearTimeout(_timer);
+		}
+		
+	}
+}
+	 </codeblock>
+	 Create a sequence command.
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.interfaces.ISequenceCommand;
+	import com.soma.core.controller.SequenceCommand;
+	
+	public class SequenceCommandExample extends SequenceCommand implements ISequenceCommand {
+		public function SequenceCommandExample() {
+			
+		}
+		
+		override protected function initializeSubCommands():void {
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ASYNCHRONOUS));
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ELSE_ASYNCHRONOUS));
+		}
+		
+	}
+}
 	 </codeblock>
 	           </example>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.controller.xml#SomaController">
+               <linktext>com.soma.core.controller.SomaController</linktext>
+            </link>
+            <link href="com.soma.core.controller.xml#Command">
+               <linktext>com.soma.core.controller.Command</linktext>
+            </link>
+            <link href="com.soma.core.controller.xml#SequenceCommand">
+               <linktext>com.soma.core.controller.SequenceCommand</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#IParallelCommand">
+               <linktext>com.soma.core.interfaces.IParallelCommand</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#ICommandASync">
+               <linktext>com.soma.core.interfaces.ICommandASync</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
-                  content="SequenceCommand,com.soma.core.controller.SequenceCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+                  content="SequenceCommand,com.soma.core.controller.SequenceCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,dispatchEvent,dispose,executeNextCommand,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.controller:SomaController">
@@ -144,8 +250,10 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The SomaController handles the commands added to the framework and the events dispatched from eiher a display list or a framework element (instance of the framework, commands or wires).
+	 All the events dispatched with a property bubbles set to false will be ignored, that's why the event mapped to a command class must have this property set to true.
+	 You can add commands, remove commands and dispatch commands from: the framework instance, the stage, any DisplayObject (as long as it is added to the stage), a wire, a command or a model using its dispatcher property.
+	 You can create 4 types of commands: synchronous (Command), asynchronous (Command that implements ICommandASync), parallel (ParallelCommand) and sequence (SequenceCommand).</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -172,16 +280,46 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
+	              <p>The SomaController handles the commands added to the framework and the events dispatched from eiher a display list or a framework element (instance of the framework, commands or wires).</p>
+	              <p>All the events dispatched with a property bubbles set to false will be ignored, that's why the event mapped to a command class must have this property set to true.</p>
+	              <p>You can add commands, remove commands and dispatch commands from: the framework instance, the stage, any DisplayObject (as long as it is added to the stage), a wire, a command or a model using its dispatcher property.</p>
+	              <p>You can create 4 types of commands: synchronous (Command), asynchronous (Command that implements ICommandASync), parallel (ParallelCommand) and sequence (SequenceCommand). See each class for a detailed explanation and examples.</p>
+	              <p>You can use the properties of a custom event to send parameters and receive them in the command.</p>
 	           </apiDesc>
             <example>
                <codeblock rev="3.0">
+addCommand(MyEvent.DOSOMETHING, CommandExample);
+removeCommand(MyEvent.DOSOMETHING);
+dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 	 </codeblock>
 	           </example>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.controller.xml#Command">
+               <linktext>com.soma.core.controller.Command</linktext>
+            </link>
+            <link href="com.soma.core.controller.xml#ParallelCommand">
+               <linktext>com.soma.core.controller.ParallelCommand</linktext>
+            </link>
+            <link href="com.soma.core.controller.xml#SequenceCommand">
+               <linktext>com.soma.core.controller.SequenceCommand</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#ICommand">
+               <linktext>com.soma.core.interfaces.ICommand</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#ICommandASync">
+               <linktext>com.soma.core.interfaces.ICommandASync</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#IParallelCommand">
+               <linktext>com.soma.core.interfaces.IParallelCommand</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#ISequenceCommand">
+               <linktext>com.soma.core.interfaces.ISequenceCommand</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
-                  content="SomaController,com.soma.core.controller.SomaController,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+                  content="SomaController,com.soma.core.controller.SomaController,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,dispatchEvent,dispose,executeNextCommand,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.controller:ParallelCommand">
@@ -228,8 +366,8 @@ package  {
 	 <codeblock rev="3.0">
 addCommand(MyEvent.DO_SOMETHING, CommandExample);
 addCommand(MyEvent.DO_SOMETHING_ELSE, CommandExample);
-addCommand(MyEvent.EXECUTE_SEQUENCE, ParallelCommandExample);
-dispatchEvent(new MyEvent(MyEvent.EXECUTE_SEQUENCE));
+addCommand(MyEvent.EXECUTE_PARALLEL_COMMAND, ParallelCommandExample);
+dispatchEvent(new MyEvent(MyEvent.EXECUTE_PARALLEL_COMMAND));
 	 </codeblock>
 	              <codeblock rev="3.0">
 package  {
@@ -267,7 +405,7 @@ package  {
          </related-links>
          <Keywords>
             <meta name="keywords"
-                  content="ParallelCommand,com.soma.core.controller.ParallelCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,commandIsValid,dispatchEvent,dispose,executeCommand,executeNextCommand,execute,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,registerSequencedCommand,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,unregisterSequencedCommand,unregisterSequencer,willTrigger"/>
+                  content="ParallelCommand,com.soma.core.controller.ParallelCommand,commands,commands,currentCommand,instance,length,length,stage,addCommand,addCommand,addEventListener,addModel,addSubCommand,addSubCommand,addView,addWire,dispatchEvent,dispose,executeNextCommand,getCommand,getCommand,getCommands,getCommands,getLastSequencer,getLastSequencer,getModel,getModels,getRunningSequencers,getRunningSequencers,getSequencer,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,initializeSubCommands,initializeSubCommands,isPartOfASequence,isPartOfASequence,removeCommand,removeCommand,removeEventListener,removeModel,removeView,removeWire,stop,stopAllSequencers,stopAllSequencers,stopSequencer,stopSequencer,stopSequencerWithEvent,stopSequencerWithEvent,willTrigger"/>
          </Keywords>
       </apiClassifier>
    </apiPackage>
@@ -284,7 +422,6 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc>
          <prolog>
             <asMetadata/>
@@ -314,13 +451,13 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
 	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
-	 </codeblock>
-	           </example>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.controller.xml#SequenceCommand">
+               <linktext>com.soma.core.controller.SequenceCommand</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
                   content="ISequenceCommand,com.soma.core.interfaces.ISequenceCommand,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
@@ -336,8 +473,7 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 Interface used by the class that will extend the Soma class.</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -365,13 +501,14 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
-	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
-	 </codeblock>
-	           </example>
+	 Interface used by the class that will extend the Soma class.
+	 </apiDesc>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.xml#Soma">
+               <linktext>com.soma.core.Soma</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
                   content="ISoma,com.soma.core.interfaces.ISoma,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
@@ -387,8 +524,7 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 Interface used by a class that will hold the plugin options (ex: SomaDebuggerVO).</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -416,12 +552,8 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
-	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
-	 </codeblock>
-	           </example>
+	 Interface used by a class that will hold the plugin options (ex: SomaDebuggerVO).
+	 </apiDesc>
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords" content="ISomaPluginVO,com.soma.core.interfaces.ISomaPluginVO"/>
@@ -437,7 +569,6 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc>
          <prolog>
             <asMetadata/>
@@ -466,13 +597,13 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
 	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
-	 </codeblock>
-	           </example>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.controller.xml#Command">
+               <linktext>com.soma.core.controller.Command</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
                   content="ICommand,com.soma.core.interfaces.ICommand,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
@@ -488,7 +619,6 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc>
          <prolog>
             <asMetadata/>
@@ -517,13 +647,13 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
 	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
-	 </codeblock>
-	           </example>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.model.xml#Model">
+               <linktext>com.soma.core.model.Model</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
                   content="IModel,com.soma.core.interfaces.IModel,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
@@ -539,8 +669,7 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 Interface used by a class that receive data from a asynchronous call.</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -568,13 +697,14 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
-	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
-	 </codeblock>
-	           </example>
+	 Interface used by a class that receive data from a asynchronous call.
+	 </apiDesc>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.controller.xml#SequenceCommand">
+               <linktext>com.soma.core.controller.SequenceCommand</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
                   content="IResponder,com.soma.core.interfaces.IResponder,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
@@ -590,8 +720,7 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 Interface used to create asynchronous command.</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -621,13 +750,57 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
-	           </apiDesc>
+	 Interface used to create asynchronous command.
+	 </apiDesc>
             <example>
                <codeblock rev="3.0">
+package {
+	import flash.utils.clearTimeout;
+	import flash.utils.setTimeout;
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommandASync;
+	import com.soma.core.controller.Command;
+	
+	public class CommandASyncExample extends Command implements ICommandASync {
+		private var _event:Event;
+		private var _timer:int;
+		public function CommandASyncExample() {
+			
+		}
+		
+		public function execute(event:Event):void {
+			_event = event;
+			_timer = setTimeout(result, 1000, {});
+		}
+		
+		public function fault(info:Object):void {
+			
+		}
+		
+		public function result(data:Object):void {
+			if (isPartOfASequence(_event)) {
+				getSequencer(_event).executeNextCommand();
+			}
+			_event = null;
+			clearTimeout(_timer);
+		}
+		
+	}
+}
 	 </codeblock>
 	           </example>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.controller.xml#Command">
+               <linktext>com.soma.core.controller.Command</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#ICommand">
+               <linktext>com.soma.core.interfaces.ICommand</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#IResponder">
+               <linktext>com.soma.core.interfaces.IResponder</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords" content="ICommandASync,com.soma.core.interfaces.ICommandASync"/>
          </Keywords>
@@ -642,7 +815,6 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc>
          <prolog>
             <asMetadata/>
@@ -672,13 +844,22 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
 	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
-	 </codeblock>
-	           </example>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.controller.xml#SomaController">
+               <linktext>com.soma.core.controller.SomaController</linktext>
+            </link>
+            <link href="com.soma.core.controller.xml#Command">
+               <linktext>com.soma.core.controller.Command</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#ICommand">
+               <linktext>com.soma.core.interfaces.ICommand</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#IParallelCommand">
+               <linktext>com.soma.core.interfaces.IParallelCommand</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
                   content="IParallelCommand,com.soma.core.interfaces.IParallelCommand,commands,commands,controller,currentCommand,data,dispatcher,length,length,models,stage,views,wires"/>
@@ -694,7 +875,6 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
 	 </shortdesc>
          <prolog>
             <asMetadata/>
@@ -723,13 +903,16 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
 	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
-	 </codeblock>
-	           </example>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.wire.xml#Wire">
+               <linktext>com.soma.core.wire.Wire</linktext>
+            </link>
+            <link href="com.soma.core.wire.xml#SomaWires">
+               <linktext>com.soma.core.wire.SomaWires</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
                   content="IWire,com.soma.core.interfaces.IWire,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
@@ -745,8 +928,7 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 Interface used by a class that is meant to be instantiated by the framework (ex:SomaDebugger).</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -774,13 +956,17 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
-	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
-	 </codeblock>
-	           </example>
+	 Interface used by a class that is meant to be instantiated by the framework (ex:SomaDebugger).
+	 </apiDesc>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.xml#Soma">
+               <linktext>com.soma.core.Soma</linktext>
+            </link>
+            <link href="com.soma.core.interfaces.xml#ISomaPluginVO">
+               <linktext>com.soma.core.interfaces.ISomaPluginVO</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
                   content="ISomaPlugin,com.soma.core.interfaces.ISomaPlugin,addCommand,addEventListener,addModel,addView,addWire,createPlugin,createPluginFromClassName,dispatchEvent,dispose,dispose,execute,executeNextCommand,fault,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,result,setName,setName,stop,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
@@ -800,8 +986,8 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The model is the class used to manage you application's data model.
+	 The data can be XML, local data, data retrieved from a server or anything.</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -829,16 +1015,69 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
+	              <p>The model is the class used to manage you application's data model.</p>
+	              <p>The data can be XML, local data, data retrieved from a server or anything. Ideally, the data should be set to the data property of the model instance, but you are free to create specific getters.</p>
 	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
+            <example>Create a model.
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.interfaces.IModel;
+	import com.soma.core.model.Model;
+	
+	public class ModelExample extends Model implements IModel {
+		
+		public static const NAME:String = "Model example name";
+		
+		public function ModelExample() {
+			super(NAME);
+		}
+		
+		override protected function initialize():void {
+			// called when the model has been registered to the framework
+			data = new XML('&lt;myXML/&gt;');
+			// you can use the model as a dispatcher (default dispatcher is the framework instance) to dispatch commands, example:
+			dispatchEvent(new MyEvent(MyEvent.DATA_READY));
+		}
+		
+		override protected function dispose():void {
+			// called when the model has been removed from the framework
+			data = null;
+		}
+		
+	}
+}
+	 </codeblock>
+	 Add a model.
+	 <codeblock rev="3.0">
+addModel(ModelExample.NAME, new ModelExample());
+	 </codeblock>
+	 Remove a model.
+	 <codeblock rev="3.0">
+removeModel(ModelExample.NAME);
+	 </codeblock>
+	 Retrieve a model.
+	 <codeblock rev="3.0">
+var model:ModelExample = getModel(ModelExample.NAME) as ModelExample;
+	 </codeblock>
+	 Create a shortcut to retrieve a model is a good practice.
+	 <codeblock rev="3.0">
+private function get modelExample():ModelExample {
+	return getModel(ModelExample.NAME) as ModelExample;
+}
+private function doSomething():void {
+	trace(modelExample.data);
+}
 	 </codeblock>
 	           </example>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.model.xml#SomaModels">
+               <linktext>com.soma.core.model.SomaModels</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
-                  content="Model,com.soma.core.model.Model,NAME,_data,_dispatcher,_name,data,dispatcher,models,addEventListener,addModel,dispatchEvent,dispose,dispose,getModel,getModels,getName,hasEventListener,hasModel,initialize,registerDispatcher,removeEventListener,removeModel,setName,willTrigger"/>
+                  content="Model,com.soma.core.model.Model,_data,_dispatcher,_name,data,dispatcher,models,addEventListener,addModel,dispatchEvent,dispose,dispose,getModel,getModels,getName,hasEventListener,hasModel,initialize,removeEventListener,removeModel,setName,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.model:SomaModels">
@@ -851,8 +1090,7 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The SomaModels class handles the models of the application.</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -879,16 +1117,17 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
-	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
-	 </codeblock>
-	           </example>
+	 The SomaModels class handles the models of the application. See the Model class documentation for implementation.
+	 </apiDesc>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.model.xml#Model">
+               <linktext>com.soma.core.model.Model</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
-                  content="SomaModels,com.soma.core.model.SomaModels,NAME,_data,_dispatcher,_name,data,dispatcher,models,addEventListener,addModel,dispatchEvent,dispose,dispose,getModel,getModels,getName,hasEventListener,hasModel,initialize,registerDispatcher,removeEventListener,removeModel,setName,willTrigger"/>
+                  content="SomaModels,com.soma.core.model.SomaModels,_data,_dispatcher,_name,data,dispatcher,models,addEventListener,addModel,dispatchEvent,dispose,dispose,getModel,getModels,getName,hasEventListener,hasModel,initialize,removeEventListener,removeModel,setName,willTrigger"/>
          </Keywords>
       </apiClassifier>
    </apiPackage>
@@ -905,8 +1144,7 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The SomaViews class handles the views of the application (DisplayObject).</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -933,16 +1171,34 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
-	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
+	 The SomaViews class handles the views of the application (DisplayObject).
+	 </apiDesc>
+            <example>Add a view.
+	 <codeblock rev="3.0">
+addView(MySprite.NAME, new MySprite());
+	 </codeblock>
+	 Remove a view.
+	 <codeblock rev="3.0">
+removeView(MySprite.NAME);
+	 </codeblock>
+	 Retrieve a view.
+	 <codeblock rev="3.0">
+var sprite:MySprite = getView(MySprite.NAME) as MySprite;
+	 </codeblock>
+	 Create a shortcut to retrieve a view is a good practice.
+	 <codeblock rev="3.0">
+private function get mySprite():MySprite {
+	return getView(MySprite.NAME) as MySprite;
+}
+private function doSomething():void {
+	trace(mySprite);
+}
 	 </codeblock>
 	           </example>
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="SomaViews,com.soma.core.view.SomaViews,views,addView,dispose,getView,getViews,hasView,removeView"/>
+                  content="SomaViews,com.soma.core.view.SomaViews,addView,dispose,getView,getViews,hasView,removeView"/>
          </Keywords>
       </apiClassifier>
    </apiPackage>
@@ -959,8 +1215,8 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 A Wire is a class that will hold the logic of the Application.
+	 Wires can be used in many ways, depending on how you want to manage your views, commands and models.</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -989,16 +1245,88 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
+	              <p>A Wire is a class that will hold the logic of the Application.</p>
+	              <p>Wires can be used in many ways, depending on how you want to manage your views, commands and models. A wire can be used as a manager and handle many models, views or other wires.
+	 A wire can also be used in a one-to-one way (as a proxy), a single wire that handles a single view, a single wire that handles a single model, and so on.</p>
+	              <p>Wires can be flexible or rigid depending on how your build your application.</p>
+	              <p>A wire has access to everything in the framework: you can create views, add and dispatch commands, create models, access to the framework instance, access to the stage, and so on.</p>
+	              <p>A wire can also be in control of the commands that are dispatched by listening to them and even stop their execution if needed (see the examples in this page).</p> 
 	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
+            <example>Create a wire
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.wire.Wire;
+	import com.soma.core.interfaces.IWire;
+	
+	public class WireExample extends Wire implements IWire {
+		
+		public static const NAME:String = "Wire example name";
+		
+		public function WireExample() {
+			super(NAME);
+		}
+		
+		override protected function initialize():void {
+			// called when the wire has been registered to the framework
+		}
+		
+		override protected function dispose():void {
+			// called when the wire has been removed from the framework
+		}
+		
+	}
+}
+	 </codeblock>
+	 Add a wire.
+	 <codeblock rev="3.0">
+addWire(WireExample.NAME, new WireExample());
+	 </codeblock>
+	 Remove a wire.
+	 <codeblock rev="3.0">
+removeWire(WireExample.NAME);
+	 </codeblock>
+	 Retrieve a wire.
+	 <codeblock rev="3.0">
+var wire:WireExample = getWire(WireExample.NAME) as WireExample;
+	 </codeblock>
+	 Create a shortcut to retrieve a wire is a good practice.
+	 <codeblock rev="3.0">
+private function get wireExample():WireExample {
+	return getWire(WireExample.NAME) as WireExample;
+}
+private function doSomething():void {
+	trace(wireExample.myWireProperty);
+}
+	 </codeblock>
+	 Listening to a command in a wire.
+	 <codeblock rev="3.0">
+override protected function initialize():void {
+	// called when the wire has been registered to the framework
+	 addEventListener(MyEvent.DO_SOMETHING, handler);
+}
+	 </codeblock>
+	 Stopping the execution of a command in a wire.
+	 You need to set the cancelable property of the event to true when you dispatch it.
+	 Any command can be stopped using the flash event built-in method: preventDefault.
+	 <codeblock rev="3.0">
+override protected function initialize():void {
+	// called when the wire has been registered to the framework
+	 addEventListener(MyEvent.DO_SOMETHING, myEventHandler);
+}
+private function myEventHandler(event:MyEvent):void {
+	e.preventDefault();
+}
 	 </codeblock>
 	           </example>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.wire.xml#SomaWires">
+               <linktext>com.soma.core.wire.SomaWires</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
-                  content="Wire,com.soma.core.wire.Wire,NAME,_name,instance,stage,wires,addCommand,addEventListener,addModel,addView,addWire,addWire,dispatchEvent,dispose,dispose,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWire,getWires,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,hasWire,initialize,isPartOfASequence,registerInstance,removeCommand,removeEventListener,removeModel,removeView,removeWire,removeWire,setName,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
+                  content="Wire,com.soma.core.wire.Wire,_name,instance,stage,wires,addCommand,addEventListener,addModel,addView,addWire,addWire,dispatchEvent,dispose,dispose,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWire,getWires,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,removeWire,setName,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
          </Keywords>
       </apiClassifier>
       <apiClassifier id="com.soma.core.wire:SomaWires">
@@ -1011,8 +1339,7 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc>
+	 The SomaWires class handles the wires of the application.</shortdesc>
          <prolog>
             <asMetadata/>
          </prolog>
@@ -1039,16 +1366,17 @@ package  {
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
                </p>
-	 
-	           </apiDesc>
-            <example>
-               <codeblock rev="3.0">
-	 </codeblock>
-	           </example>
+	 The SomaWires class handles the wires of the application. See the Wire class documentation for implementation. 
+	 </apiDesc>
          </apiClassifierDetail>
+         <related-links>
+            <link href="com.soma.core.wire.xml#Wire">
+               <linktext>com.soma.core.wire.Wire</linktext>
+            </link>
+         </related-links>
          <Keywords>
             <meta name="keywords"
-                  content="SomaWires,com.soma.core.wire.SomaWires,NAME,_name,instance,stage,wires,addCommand,addEventListener,addModel,addView,addWire,addWire,dispatchEvent,dispose,dispose,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWire,getWires,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,hasWire,initialize,isPartOfASequence,registerInstance,removeCommand,removeEventListener,removeModel,removeView,removeWire,removeWire,setName,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
+                  content="SomaWires,com.soma.core.wire.SomaWires,_name,instance,stage,wires,addCommand,addEventListener,addModel,addView,addWire,addWire,dispatchEvent,dispose,dispose,getCommand,getCommands,getLastSequencer,getModel,getModels,getName,getRunningSequencers,getSequencer,getView,getViews,getWire,getWire,getWires,getWires,hasCommand,hasEventListener,hasModel,hasView,hasWire,hasWire,initialize,isPartOfASequence,removeCommand,removeEventListener,removeModel,removeView,removeWire,removeWire,setName,stopAllSequencers,stopSequencer,stopSequencerWithEvent,willTrigger"/>
          </Keywords>
       </apiClassifier>
    </apiPackage>

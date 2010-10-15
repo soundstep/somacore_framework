@@ -259,8 +259,8 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 Removes a wire from the framework and call the dispose method of this wire.
 		 </apiDesc><example><codeblock rev="3.0">removeWire(MyWire.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core:Soma:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
-		 Stops all the sequences command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
-		 Stops all the sequences command instances that are running.
+		 Stops all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops all the sequence command instances that are running.
 		 </apiDesc><example><codeblock rev="3.0">stopAllSequencers();</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core:Soma:stopSequencerWithEvent"><apiName>stopSequencerWithEvent</apiName><shortdesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean (true if a sequence command has been stopped).

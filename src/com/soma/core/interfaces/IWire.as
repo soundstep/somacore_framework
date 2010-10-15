@@ -32,15 +32,20 @@ package com.soma.core.interfaces {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * 
-	 * @example
-	 * <listing version="3.0">
-	 * </listing>
+	 * @see com.soma.core.wire.Wire	 * @see com.soma.core.wire.SomaWires
 	 */
 	
 	public interface IWire {
-
+		
+		/**
+		 * Retrieves the name of the wire.
+		 * @return A String.
+		 */
 		function getName():String;
+		/**
+		 * Sets the name of the wire.
+		 * @param value A String.
+		 */
 		function setName(name:String):void;
 		
 	}

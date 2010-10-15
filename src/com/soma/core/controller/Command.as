@@ -49,6 +49,7 @@ package com.soma.core.controller {
 addCommand(MyEvent.DOSOMETHING, CommandExample);
 dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 	 * </listing>
+	 * Create a normal command.
 	 * <listing version="3.0">
 package  {
 	import flash.events.Event;
@@ -64,8 +65,36 @@ package  {
 	}
 }
 	 * </listing>
+	 * Create an asynchronous command.
+	 * <listing version="3.0">
+package  {
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommandASync;
+	import com.soma.core.controller.Command;
+	
+	public class CommandASyncExample extends Command implements ICommandASync {
+
+		public function CommandASyncExample() {
+			
+		}
+		
+		public function execute(event:Event):void {
+			
+		}
+		
+		public function fault(info:Object):void {
+			
+		}
+		
+		public function result(data:Object):void {
+			
+		}
+		
+	}
+}
+	 * </listing>
 	 * @see com.soma.core.controller.SomaController
-	 * @see com.soma.core.controller.ParallelCommand	 * @see com.soma.core.controller.SequenceCommand	 * @see com.soma.core.interfaces.ICommand	 */
+	 * @see com.soma.core.controller.ParallelCommand	 * @see com.soma.core.controller.SequenceCommand	 * @see com.soma.core.interfaces.ICommand	 * @see com.soma.core.interfaces.ICommandASync	 */
 	
 	public class Command implements IEventDispatcher {
 
@@ -297,7 +326,7 @@ package  {
 		}
 		
 		/**
-		 * Stops all the sequences command instances that are running.
+		 * Stops all the sequence command instances that are running.
 		 * @see com.soma.core.controller.SomaController
 		 * @example
 		 * <listing version="3.0">stopAllSequencers();</listing>

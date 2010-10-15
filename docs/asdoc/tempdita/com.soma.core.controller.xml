@@ -20,6 +20,7 @@
 addCommand(MyEvent.DOSOMETHING, CommandExample);
 dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 	 </codeblock>
+	 Create a normal command.
 	 <codeblock rev="3.0">
 package  {
 	import flash.events.Event;
@@ -34,7 +35,34 @@ package  {
 	}
 }
 	 </codeblock>
-	 </example></apiClassifierDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link><link href="com.soma.core.controller.xml#ParallelCommand"><linktext>com.soma.core.controller.ParallelCommand</linktext></link><link href="com.soma.core.controller.xml#SequenceCommand"><linktext>com.soma.core.controller.SequenceCommand</linktext></link><link href="com.soma.core.interfaces.xml#ICommand"><linktext>com.soma.core.interfaces.ICommand</linktext></link></related-links><apiConstructor id="com.soma.core.controller:Command:Command"><apiName>Command</apiName><shortdesc>
+	 Create an asynchronous command.
+	 <codeblock rev="3.0">
+package  {
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommandASync;
+	import com.soma.core.controller.Command;
+	
+	public class CommandASyncExample extends Command implements ICommandASync {
+		public function CommandASyncExample() {
+			
+		}
+		
+		public function execute(event:Event):void {
+			
+		}
+		
+		public function fault(info:Object):void {
+			
+		}
+		
+		public function result(data:Object):void {
+			
+		}
+		
+	}
+}
+	 </codeblock>
+	 </example></apiClassifierDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link><link href="com.soma.core.controller.xml#ParallelCommand"><linktext>com.soma.core.controller.ParallelCommand</linktext></link><link href="com.soma.core.controller.xml#SequenceCommand"><linktext>com.soma.core.controller.SequenceCommand</linktext></link><link href="com.soma.core.interfaces.xml#ICommand"><linktext>com.soma.core.interfaces.ICommand</linktext></link><link href="com.soma.core.interfaces.xml#ICommandASync"><linktext>com.soma.core.interfaces.ICommandASync</linktext></link></related-links><apiConstructor id="com.soma.core.controller:Command:Command"><apiName>Command</apiName><shortdesc>
 		 Create an instance of the Command class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
 		 Create an instance of the Command class. Should not be directly instantiated, the framework will instantiate the class.
 		 </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.soma.core.controller:Command:addCommand"><apiName>addCommand</apiName><shortdesc>
@@ -201,8 +229,8 @@ package  {
 		 Removes a wire from the framework and call the dispose method of this wire.
 		 </apiDesc><example><codeblock rev="3.0">removeWire(MyWire.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:Command:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
-		 Stops all the sequences command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
-		 Stops all the sequences command instances that are running.
+		 Stops all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops all the sequence command instances that are running.
 		 </apiDesc><example><codeblock rev="3.0">stopAllSequencers();</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:Command:stopSequencerWithEvent"><apiName>stopSequencerWithEvent</apiName><shortdesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean (true if a sequence command has been stopped).
@@ -236,8 +264,7 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISequenceCommand</apiBaseInterface><apiBaseClassifier>com.soma.core.controller:Command</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The SequenceCommand class is used to execute a list of commands one after the other.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISequenceCommand</apiBaseInterface><apiBaseClassifier>com.soma.core.controller:Command</apiBaseClassifier></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
 	 <p><b>Class version:</b> v1.0.0</p>
@@ -245,10 +272,97 @@ package  {
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
-	 </apiDesc><example><codeblock rev="3.0">
+	 The SequenceCommand class is used to execute a list of commands one after the other. The command added can be asynchronous or synchronous.
+	 </apiDesc><example>Register commands and a sequence command.
+	 <codeblock rev="3.0">
+addCommand(MyEvent.DO_SOMETHING_ASYNCHRONOUS, CommandASyncExample);
+addCommand(MyEvent.DO_SOMETHING_ELSE_ASYNCHRONOUS, CommandASyncExample);
+addCommand(MyEvent.EXECUTE_SEQUENCE_COMMAND, SequenceCommandExample);
+dispatchEvent(new MyEvent(MyEvent.EXECUTE_SEQUENCE_COMMAND));
 	 </codeblock>
-	 </example></apiClassifierDetail><apiConstructor id="com.soma.core.controller:SequenceCommand:SequenceCommand"><apiName>SequenceCommand</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef></apiConstructorDetail></apiConstructor><apiOperation id="com.soma.core.controller:SequenceCommand:protected:addSubCommand"><apiName>addSubCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:executeNextCommand"><apiName>executeNextCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:execute"><apiName>execute</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:protected:initializeSubCommands"><apiName>initializeSubCommands</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:protected:initialize"><apiName>initialize</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiFinal/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:stop"><apiName>stop</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiValue id="com.soma.core.controller:SequenceCommand:commands:get"><apiName>commands</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.controller:SequenceCommand:currentCommand:get"><apiName>currentCommand</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.events:Event"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.controller:SequenceCommand:length:get"><apiName>length</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.controller:SomaController"><apiName>SomaController</apiName><shortdesc>
+	 Each asynchronous command added to a sequence much use the executeNextCommand method. Here is an example.
+	 <codeblock rev="3.0">
+package {
+	import flash.utils.clearTimeout;
+	import flash.utils.setTimeout;
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommandASync;
+	import com.soma.core.controller.Command;
+	
+	public class CommandASyncExample extends Command implements ICommandASync {
+		private var _event:Event;
+		private var _timer:int;
+		public function CommandASyncExample() {
+			
+		}
+		
+		public function execute(event:Event):void {
+			_event = event;
+			_timer = setTimeout(result, 1000, {});
+		}
+		
+		public function fault(info:Object):void {
+			
+		}
+		
+		public function result(data:Object):void {
+			if (isPartOfASequence(_event)) {
+				getSequencer(_event).executeNextCommand();
+			}
+			_event = null;
+			clearTimeout(_timer);
+		}
+		
+	}
+}
+	 </codeblock>
+	 Create a sequence command.
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.interfaces.ISequenceCommand;
+	import com.soma.core.controller.SequenceCommand;
+	
+	public class SequenceCommandExample extends SequenceCommand implements ISequenceCommand {
+		public function SequenceCommandExample() {
+			
+		}
+		
+		override protected function initializeSubCommands():void {
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ASYNCHRONOUS));
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ELSE_ASYNCHRONOUS));
+		}
+		
+	}
+}
+	 </codeblock>
+	 </example></apiClassifierDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link><link href="com.soma.core.controller.xml#Command"><linktext>com.soma.core.controller.Command</linktext></link><link href="com.soma.core.controller.xml#SequenceCommand"><linktext>com.soma.core.controller.SequenceCommand</linktext></link><link href="com.soma.core.interfaces.xml#IParallelCommand"><linktext>com.soma.core.interfaces.IParallelCommand</linktext></link><link href="com.soma.core.interfaces.xml#ICommandASync"><linktext>com.soma.core.interfaces.ICommandASync</linktext></link></related-links><apiConstructor id="com.soma.core.controller:SequenceCommand:SequenceCommand"><apiName>SequenceCommand</apiName><shortdesc>
+		 Create an instance of the SequenceCommand class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+		 Create an instance of the SequenceCommand class. Should not be directly instantiated, the framework will instantiate the class.
+		 </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.soma.core.controller:SequenceCommand:protected:addSubCommand"><apiName>addSubCommand</apiName><shortdesc>
+		 Add a command to the list of commands to execute one after the other.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>Event instance (must be registered as a command previously).
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Add a command to the list of commands to execute one after the other.
+		 </apiDesc><example><codeblock rev="3.0">addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ASYNC));</codeblock>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:executeNextCommand"><apiName>executeNextCommand</apiName><shortdesc>
+		 Method used to execute the next command in the list of subcommands.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Method used to execute the next command in the list of subcommands.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:protected:initializeSubCommands"><apiName>initializeSubCommands</apiName><shortdesc> 
+		 Method that you can overwrite to add commands to the sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc> 
+		 Method that you can overwrite to add commands to the sequence command.
+		 </apiDesc><example><codeblock rev="3.0">addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ASYNC));</codeblock>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:stop"><apiName>stop</apiName><shortdesc>
+		 Stops the current sequence.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops the current sequence.
+		 </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.soma.core.controller:SequenceCommand:commands:get"><apiName>commands</apiName><shortdesc>
+		 Retrieves the list of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef><apiDesc>
+		 Retrieves the list of commands added as subcommands.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.controller:SequenceCommand:currentCommand:get"><apiName>currentCommand</apiName><shortdesc>
+		 Retrieves the command that is currently executed (running).</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.events:Event"/></apiValueDef><apiDesc>
+		 Retrieves the command that is currently executed (running).
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.controller:SequenceCommand:length:get"><apiName>length</apiName><shortdesc>
+		 Retrieves the number of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef><apiDesc>
+		 Retrieves the number of commands added as subcommands.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.controller:SomaController"><apiName>SomaController</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
@@ -256,8 +370,10 @@ package  {
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 
-	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The SomaController handles the commands added to the framework and the events dispatched from eiher a display list or a framework element (instance of the framework, commands or wires).
+	 All the events dispatched with a property bubbles set to false will be ignored, that's why the event mapped to a command class must have this property set to true.
+	 You can add commands, remove commands and dispatch commands from: the framework instance, the stage, any DisplayObject (as long as it is added to the stage), a wire, a command or a model using its dispatcher property.
+	 You can create 4 types of commands: synchronous (Command), asynchronous (Command that implements ICommandASync), parallel (ParallelCommand) and sequence (SequenceCommand).</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
 	 <p><b>Class version:</b> v1.0.0</p>
@@ -265,75 +381,88 @@ package  {
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 
+	 <p>The SomaController handles the commands added to the framework and the events dispatched from eiher a display list or a framework element (instance of the framework, commands or wires).</p>
+	 <p>All the events dispatched with a property bubbles set to false will be ignored, that's why the event mapped to a command class must have this property set to true.</p>
+	 <p>You can add commands, remove commands and dispatch commands from: the framework instance, the stage, any DisplayObject (as long as it is added to the stage), a wire, a command or a model using its dispatcher property.</p>
+	 <p>You can create 4 types of commands: synchronous (Command), asynchronous (Command that implements ICommandASync), parallel (ParallelCommand) and sequence (SequenceCommand). See each class for a detailed explanation and examples.</p>
+	 <p>You can use the properties of a custom event to send parameters and receive them in the command.</p>
 	 </apiDesc><example><codeblock rev="3.0">
+addCommand(MyEvent.DOSOMETHING, CommandExample);
+removeCommand(MyEvent.DOSOMETHING);
+dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 	 </codeblock>
-	 </example></apiClassifierDetail><apiConstructor id="com.soma.core.controller:SomaController:SomaController"><apiName>SomaController</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier></apiParam></apiConstructorDef></apiConstructorDetail></apiConstructor><apiOperation id="com.soma.core.controller:SomaController:addCommand"><apiName>addCommand</apiName><shortdesc>
+	 </example></apiClassifierDetail><related-links><link href="com.soma.core.controller.xml#Command"><linktext>com.soma.core.controller.Command</linktext></link><link href="com.soma.core.controller.xml#ParallelCommand"><linktext>com.soma.core.controller.ParallelCommand</linktext></link><link href="com.soma.core.controller.xml#SequenceCommand"><linktext>com.soma.core.controller.SequenceCommand</linktext></link><link href="com.soma.core.interfaces.xml#ICommand"><linktext>com.soma.core.interfaces.ICommand</linktext></link><link href="com.soma.core.interfaces.xml#ICommandASync"><linktext>com.soma.core.interfaces.ICommandASync</linktext></link><link href="com.soma.core.interfaces.xml#IParallelCommand"><linktext>com.soma.core.interfaces.IParallelCommand</linktext></link><link href="com.soma.core.interfaces.xml#ISequenceCommand"><linktext>com.soma.core.interfaces.ISequenceCommand</linktext></link></related-links><apiConstructor id="com.soma.core.controller:SomaController:SomaController"><apiName>SomaController</apiName><shortdesc>
+		 Create an instance of the SomaController class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier></apiParam></apiConstructorDef><apiDesc>
+		 Create an instance of the SomaController class. Should not be directly instantiated, the framework will instantiate the class.
+		 </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.soma.core.controller:SomaController:addCommand"><apiName>addCommand</apiName><shortdesc>
 		 Registers a command to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam><apiParam><apiItemName>command</apiItemName><apiType value="Class"/><apiDesc>Class that will be executed when a command has been dispatched.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Registers a command to the framework.
 		 </apiDesc><example><codeblock rev="3.0">addCommand(MyEvent.DOSOMETHING, MyCommand);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:com.soma.core.controller:commandIsValid"><apiName>commandIsValid</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>CommandClass</apiItemName><apiType value="Class"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:com.soma.core.controller:executeCommand"><apiName>executeCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getCommand"><apiName>getCommand</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:dispose"><apiName>dispose</apiName><shortdesc>
+		 Destroys the SomaController elements (all commands, sequencers and properties).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Destroys the SomaController elements (all commands, sequencers and properties).
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getCommand"><apiName>getCommand</apiName><shortdesc>
 		 Retrieves the command class that has been registered with a command name.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A class.
 		 </apiDesc><apiType value="Class"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Retrieves the command class that has been registered with a command name.
 		 </apiDesc><example><codeblock rev="3.0">var commandClass:ICommand = getCommand(MyEvent.DOSOMETHING) as ICommand;</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getCommands"><apiName>getCommands</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getCommands"><apiName>getCommands</apiName><shortdesc>
 		 Retrieves the sequence command instance using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A sequencer (ISequenceCommand).
 		 </apiDesc><apiType value="Array"/></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves the sequence command instance using an event instance that has been created from this sequence command.
 		 </apiDesc><example><codeblock rev="3.0">var sequencer:ISequenceCommand = getSequencer(myEvent);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getLastSequencer"><apiName>getLastSequencer</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getLastSequencer"><apiName>getLastSequencer</apiName><shortdesc>
 		 Retrieves the last sequence command that has been instantiated in the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>An ISequenceCommand instance.
 		 </apiDesc><apiOperationClassifier>com.soma.core.interfaces:ISequenceCommand</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves the last sequence command that has been instantiated in the framework.
 		 </apiDesc><example><codeblock rev="3.0">var lastSequencer:ISequenceCommand = getLastSequencer();</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getRunningSequencers"><apiName>getRunningSequencers</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getRunningSequencers"><apiName>getRunningSequencers</apiName><shortdesc>
 		 Retrieves all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>An Array of ISequenceCommand instances.
 		 </apiDesc><apiType value="Array"/></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves all the sequence command instances that are running.
 		 </apiDesc><example><codeblock rev="3.0">var sequencers:Array = getRunningSequencers();</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getSequencer"><apiName>getSequencer</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getSequencer"><apiName>getSequencer</apiName><shortdesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean (true if a sequence command has been stopped).
 		 </apiDesc><apiOperationClassifier>com.soma.core.interfaces:ISequenceCommand</apiOperationClassifier></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>Event instance.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.
 		 </apiDesc><example><codeblock rev="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:hasCommand"><apiName>hasCommand</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:hasCommand"><apiName>hasCommand</apiName><shortdesc>
 		 Indicates wether a command has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether a command has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasCommand(MyEvent.DOSOMETHING);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:isPartOfASequence"><apiName>isPartOfASequence</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:isPartOfASequence"><apiName>isPartOfASequence</apiName><shortdesc>
 		 Indicates wether an event has been instantiated from a ISequenceCommand class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether an event has been instantiated from a ISequenceCommand class.
 		 </apiDesc><example><codeblock rev="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:com.soma.core.controller:registerSequencedCommand"><apiName>registerSequencedCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>sequencer</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISequenceCommand</apiOperationClassifier></apiParam><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:removeCommand"><apiName>removeCommand</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:removeCommand"><apiName>removeCommand</apiName><shortdesc>
 		 Removes a command from the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a command from the framework.
 		 </apiDesc><example><codeblock rev="3.0">removeCommand(MyEvent.DOSOMETHING);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
-		 Stops all the sequences command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
-		 Stops all the sequences command instances that are running.
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
+		 Stops all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops all the sequence command instances that are running.
 		 </apiDesc><example><codeblock rev="3.0">stopAllSequencers();</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:stopSequencerWithEvent"><apiName>stopSequencerWithEvent</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:stopSequencerWithEvent"><apiName>stopSequencerWithEvent</apiName><shortdesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean (true if a sequence command has been stopped).
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>Event instance.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.
 		 </apiDesc><example><codeblock rev="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:stopSequencer"><apiName>stopSequencer</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:stopSequencer"><apiName>stopSequencer</apiName><shortdesc>
 		 Stops a sequence command using the sequence command instance itself.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean (true if the sequence command has been stopped).
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>sequencer</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISequenceCommand</apiOperationClassifier><apiDesc>The sequence command instance.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Stops a sequence command using the sequence command instance itself.
 		 </apiDesc><example><codeblock rev="3.0">var success:Boolean = stopSequencer(mySequenceCommand);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:com.soma.core.controller:unregisterSequencedCommand"><apiName>unregisterSequencedCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>sequencer</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISequenceCommand</apiOperationClassifier></apiParam><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:com.soma.core.controller:unregisterSequencer"><apiName>unregisterSequencer</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>sequencer</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISequenceCommand</apiOperationClassifier></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.controller:ParallelCommand"><apiName>ParallelCommand</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.controller:ParallelCommand"><apiName>ParallelCommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v1.0.0
@@ -354,8 +483,8 @@ package  {
 	 <codeblock rev="3.0">
 addCommand(MyEvent.DO_SOMETHING, CommandExample);
 addCommand(MyEvent.DO_SOMETHING_ELSE, CommandExample);
-addCommand(MyEvent.EXECUTE_SEQUENCE, ParallelCommandExample);
-dispatchEvent(new MyEvent(MyEvent.EXECUTE_SEQUENCE));
+addCommand(MyEvent.EXECUTE_PARALLEL_COMMAND, ParallelCommandExample);
+dispatchEvent(new MyEvent(MyEvent.EXECUTE_PARALLEL_COMMAND));
 	 </codeblock>
 	 <codeblock rev="3.0">
 package  {
@@ -382,9 +511,10 @@ package  {
 		 Add a command to the list of commands to execute in parallel.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>Event instance (must be registered as a command previously).
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Add a command to the list of commands to execute in parallel.
-		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:ParallelCommand:protected:initializeSubCommands"><apiName>initializeSubCommands</apiName><shortdesc> 
-		 Method that you can overwrite to add commands to the sequence.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc> 
-		 Method that you can overwrite to add commands to the sequence.
+		 </apiDesc><example><codeblock rev="3.0">addSubCommand(new MyEvent(MyEvent.DO_SOMETHING));</codeblock>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:ParallelCommand:protected:initializeSubCommands"><apiName>initializeSubCommands</apiName><shortdesc> 
+		 Method that you can overwrite to add commands to the parallele command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc> 
+		 Method that you can overwrite to add commands to the parallele command.
 		 </apiDesc><example><codeblock rev="3.0">addSubCommand(new MyEvent(MyEvent.DO_SOMETHING));</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiValue id="com.soma.core.controller:ParallelCommand:commands:get"><apiName>commands</apiName><shortdesc>
 		 Retrieves the list of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef><apiDesc>

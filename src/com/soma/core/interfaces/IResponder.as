@@ -32,15 +32,21 @@ package com.soma.core.interfaces {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * 
-	 * @example
-	 * <listing version="3.0">
-	 * </listing>
+	 * Interface used by a class that receive data from a asynchronous call.
+	 * @see com.soma.core.controller.SequenceCommand
 	 */
 	
 	public interface IResponder {
-
+		
+		/**
+		 * Method that receives a fault object.
+		 * @param info The fault Object.
+		 */
 		function fault(info:Object):void;
+		/**
+		 * Method that receives a success object.
+		 * @param data THe success Object.
+		 */
 		function result(data:Object):void;
 		
 	}

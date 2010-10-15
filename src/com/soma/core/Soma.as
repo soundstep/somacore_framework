@@ -439,7 +439,7 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 		}
 		
 		/**
-		 * Stops all the sequences command instances that are running.
+		 * Stops all the sequence command instances that are running.
 		 * @see com.soma.core.controller.SomaController
 		 * @example
 		 * <listing version="3.0">stopAllSequencers();</listing>

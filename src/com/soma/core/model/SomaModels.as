@@ -38,10 +38,8 @@ package com.soma.core.model {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * 
-	 * @example
-	 * <listing version="3.0">
-	 * </listing>
+	 * The SomaModels class handles the models of the application. See the Model class documentation for implementation.
+	 * @see com.soma.core.model.Model
 	 */
 	
 	public class SomaModels {
@@ -50,8 +48,11 @@ package com.soma.core.model {
 		// private, protected properties
 		//------------------------------------
 		
+		/** @private */
 		private var _instance:ISoma;
-			
+		/**
+		 * List of the models registered to the framework.
+		 */
 		protected var models:Dictionary;
 
 		//------------------------------------
@@ -64,6 +65,9 @@ package com.soma.core.model {
 		// constructor
 		//------------------------------------
 		
+		/**
+		 * Create an instance of the SomaModels class. Should not be directly instantiated, the framework will instantiate the class.
+		 */
 		public function SomaModels(instance:ISoma) {
 			_instance = instance;
 			initialize();
@@ -73,6 +77,7 @@ package com.soma.core.model {
 		// PRIVATE, PROTECTED
 		//________________________________________________________________________________________________
 		
+		/** @private */
 		private function initialize():void {
 			models = new Dictionary();
 		}
@@ -81,7 +86,10 @@ package com.soma.core.model {
 		// PUBLIC
 		//________________________________________________________________________________________________
 		
-		public function dispose() : void {
+		/**
+		 * Destroys all the models and properties. The class will call the dispose method of each model instance.
+		 */
+		public function dispose():void {
 			for (var name:String in models) {
 				removeModel(name);
 			}
@@ -93,7 +101,6 @@ package com.soma.core.model {
 		 * Indicates wether a model has been registered to the framework.
 		 * @param modelName Name of the model.
 		 * @return A Boolean.
-		 * @see com.soma.core.model.SomaModels
 		 * @example
 		 * <listing version="3.0">hasModel(MyModel.NAME);</listing>
 		 */
@@ -124,7 +131,6 @@ package com.soma.core.model {
 		/**
 		 * Removes a model from the framework and call the dispose method of this model.
 		 * @param modelName Name of the model.
-		 * @see com.soma.core.model.SomaModels
 		 * @example
 		 * <listing version="3.0">removeModel(MyModel.NAME);</listing>
 		 */
@@ -142,7 +148,6 @@ package com.soma.core.model {
 		 * Retrieves the model instance that has been registered using its name.
 		 * @param modelName Name of the model.
 		 * @return A IModel instance.
-		 * @see com.soma.core.model.SomaModels
 		 * @example
 		 * <listing version="3.0">var myModel:MyModel = getModel(MyModel.NAME) as MyModel;</listing>
 		 */
@@ -155,7 +160,6 @@ package com.soma.core.model {
 		/**
 		 * Retrieves all the model instances that have been registered to the framework.
 		 * @return A Dictionary (the key of the Dictionary is the name used for the registration).
-		 * @see com.soma.core.model.SomaModels
 		 * @example
 		 * <listing version="3.0">var models:Dictionary = getModels();</listing>
 		 */

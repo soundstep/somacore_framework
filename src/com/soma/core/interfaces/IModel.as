@@ -33,18 +33,30 @@ package com.soma.core.interfaces {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * 
-	 * @example
-	 * <listing version="3.0">
-	 * </listing>
+	 * @see com.soma.core.model.Model
 	 */
 	
 	public interface IModel {
-
+		
+		/**
+		 * Retrieves the name of the model.
+		 * @return A String.
+		 */
 		function getName():String;
+		/**
+		 * Sets the name of the model.
+		 * @param value A String.
+		 */
 		function setName(name:String):void;
+		/**
+		 * Data of the model.
+		 */
 		function get data():Object;
 		function set data(value:Object):void;
+		/**
+		 * EventDispatcher instance of the model.
+		 * @default The framework instance.
+		 */
 		function get dispatcher():IEventDispatcher;
 		function set dispatcher(value:IEventDispatcher):void;
 		

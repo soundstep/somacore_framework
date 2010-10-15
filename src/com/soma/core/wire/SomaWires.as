@@ -37,10 +37,8 @@ package com.soma.core.wire {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * 
-	 * @example
-	 * <listing version="3.0">
-	 * </listing>
+	 * The SomaWires class handles the wires of the application. See the Wire class documentation for implementation. 
+	 * @see com.soma.core.wire.Wire
 	 */
 	
 	public class SomaWires {
@@ -49,7 +47,11 @@ package com.soma.core.wire {
 		// private, protected properties
 		//------------------------------------
 		
+		/** @private */
 		private var _instance:ISoma;
+		/**
+		 * List of the wires registered to the framework.
+		 */
 		protected var wires:Dictionary;
 
 		//------------------------------------
@@ -62,6 +64,9 @@ package com.soma.core.wire {
 		// constructor
 		//------------------------------------
 		
+		/**
+		 * Create an instance of the SomaWires class. Should not be directly instantiated, the framework will instantiate the class.
+		 */
 		public function SomaWires(instance:ISoma) {
 			_instance = instance;
 			initialize();
@@ -71,6 +76,7 @@ package com.soma.core.wire {
 		// PRIVATE, PROTECTED
 		//________________________________________________________________________________________________
 		
+		/** @private */
 		private function initialize():void {
 			wires = new Dictionary();
 		}
@@ -79,7 +85,10 @@ package com.soma.core.wire {
 		// PUBLIC
 		//________________________________________________________________________________________________
 		
-		public function dispose() : void {
+		/**
+		 * Destroys all the models and properties. The class will call the dispose method of each model instance.
+		 */
+		public function dispose():void {
 			for (var name:String in wires) {
 				removeWire(name);
 			}

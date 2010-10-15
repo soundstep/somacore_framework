@@ -32,15 +32,23 @@ package com.soma.core.interfaces {
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * 
-	 * @example
-	 * <listing version="3.0">
-	 * </listing>
+	 * @see com.soma.core.controller.SomaController
+	 * @see com.soma.core.controller.Command
+	 * @see com.soma.core.interfaces.ICommand
+	 * @see com.soma.core.interfaces.IParallelCommand
 	 */
 	
 	public interface IParallelCommand extends ICommand {
 		
+		/**
+		 * Retrieves the number of commands added as subcommands.
+		 * @return An integer.
+		 */
 		function get length():int;
+		/**
+		 * Retrieves the list of commands added as subcommands.
+		 * @return An Array of commands.
+		 */
 		function get commands():Array;
 		
 	}

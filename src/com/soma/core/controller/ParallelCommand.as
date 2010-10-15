@@ -41,8 +41,8 @@ package com.soma.core.controller {
 	 * <listing version="3.0">
 addCommand(MyEvent.DO_SOMETHING, CommandExample);
 addCommand(MyEvent.DO_SOMETHING_ELSE, CommandExample);
-addCommand(MyEvent.EXECUTE_SEQUENCE, ParallelCommandExample);
-dispatchEvent(new MyEvent(MyEvent.EXECUTE_SEQUENCE));
+addCommand(MyEvent.EXECUTE_PARALLEL_COMMAND, ParallelCommandExample);
+dispatchEvent(new MyEvent(MyEvent.EXECUTE_PARALLEL_COMMAND));
 	 * </listing>
 	 * <listing version="3.0">
 package  {
@@ -106,7 +106,7 @@ package  {
 		}
 		
 		/** 
-		 * Method that you can overwrite to add commands to the sequence.
+		 * Method that you can overwrite to add commands to the parallele command.
 		 * @see com.soma.core.controller.SomaController
 		 * @example
 		 * <listing version="3.0">addSubCommand(new MyEvent(MyEvent.DO_SOMETHING));</listing>

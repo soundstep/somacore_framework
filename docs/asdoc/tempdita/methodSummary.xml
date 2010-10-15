@@ -3,6 +3,7 @@
 addCommand(MyEvent.DOSOMETHING, CommandExample);
 dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 	 </codeblock>
+	 Create a normal command.
 	 <codeblock rev="3.0">
 package  {
 	import flash.events.Event;
@@ -11,6 +12,33 @@ package  {
 	
 	public class CommandExample extends Command implements ICommand {
 		public function execute(event:Event):void {
+			
+		}
+		
+	}
+}
+	 </codeblock>
+	 Create an asynchronous command.
+	 <codeblock rev="3.0">
+package  {
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommandASync;
+	import com.soma.core.controller.Command;
+	
+	public class CommandASyncExample extends Command implements ICommandASync {
+		public function CommandASyncExample() {
+			
+		}
+		
+		public function execute(event:Event):void {
+			
+		}
+		
+		public function fault(info:Object):void {
+			
+		}
+		
+		public function result(data:Object):void {
 			
 		}
 		
@@ -181,8 +209,8 @@ package  {
 		 Removes a wire from the framework and call the dispose method of this wire.
 		 </apiDesc><example><codeblock rev="3.0">removeWire(MyWire.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:Command:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
-		 Stops all the sequences command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
-		 Stops all the sequences command instances that are running.
+		 Stops all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops all the sequence command instances that are running.
 		 </apiDesc><example><codeblock rev="3.0">stopAllSequencers();</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:Command:stopSequencerWithEvent"><apiName>stopSequencerWithEvent</apiName><shortdesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean (true if a sequence command has been stopped).
@@ -204,9 +232,90 @@ package  {
 		 </apiDesc></apiOperationDetail></apiOperation><apiConstructor id="com.soma.core.controller:Command:Command"><apiName>Command</apiName><shortdesc>
 		 Create an instance of the Command class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
 		 Create an instance of the Command class. Should not be directly instantiated, the framework will instantiate the class.
-		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="com.soma.core.controller:SequenceCommand"><apiName>SequenceCommand</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISequenceCommand</apiBaseInterface><apiBaseClassifier>com.soma.core.controller:Command</apiBaseClassifier></apiClassifierDef><example><codeblock rev="3.0">
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="com.soma.core.controller:SequenceCommand"><apiName>SequenceCommand</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISequenceCommand</apiBaseInterface><apiBaseClassifier>com.soma.core.controller:Command</apiBaseClassifier></apiClassifierDef><example>Register commands and a sequence command.
+	 <codeblock rev="3.0">
+addCommand(MyEvent.DO_SOMETHING_ASYNCHRONOUS, CommandASyncExample);
+addCommand(MyEvent.DO_SOMETHING_ELSE_ASYNCHRONOUS, CommandASyncExample);
+addCommand(MyEvent.EXECUTE_SEQUENCE_COMMAND, SequenceCommandExample);
+dispatchEvent(new MyEvent(MyEvent.EXECUTE_SEQUENCE_COMMAND));
 	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.controller:SequenceCommand:protected:addSubCommand"><apiName>addSubCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:executeNextCommand"><apiName>executeNextCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:execute"><apiName>execute</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:protected:initializeSubCommands"><apiName>initializeSubCommands</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:protected:initialize"><apiName>initialize</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiFinal/><apiIsOverride/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:stop"><apiName>stop</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiConstructor id="com.soma.core.controller:SequenceCommand:SequenceCommand"><apiName>SequenceCommand</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="com.soma.core.controller:SomaController"><apiName>SomaController</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><example><codeblock rev="3.0">
+	 Each asynchronous command added to a sequence much use the executeNextCommand method. Here is an example.
+	 <codeblock rev="3.0">
+package {
+	import flash.utils.clearTimeout;
+	import flash.utils.setTimeout;
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommandASync;
+	import com.soma.core.controller.Command;
+	
+	public class CommandASyncExample extends Command implements ICommandASync {
+		private var _event:Event;
+		private var _timer:int;
+		public function CommandASyncExample() {
+			
+		}
+		
+		public function execute(event:Event):void {
+			_event = event;
+			_timer = setTimeout(result, 1000, {});
+		}
+		
+		public function fault(info:Object):void {
+			
+		}
+		
+		public function result(data:Object):void {
+			if (isPartOfASequence(_event)) {
+				getSequencer(_event).executeNextCommand();
+			}
+			_event = null;
+			clearTimeout(_timer);
+		}
+		
+	}
+}
+	 </codeblock>
+	 Create a sequence command.
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.interfaces.ISequenceCommand;
+	import com.soma.core.controller.SequenceCommand;
+	
+	public class SequenceCommandExample extends SequenceCommand implements ISequenceCommand {
+		public function SequenceCommandExample() {
+			
+		}
+		
+		override protected function initializeSubCommands():void {
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ASYNCHRONOUS));
+			addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ELSE_ASYNCHRONOUS));
+		}
+		
+	}
+}
+	 </codeblock>
+	 </example></apiClassifierDetail><apiOperation id="com.soma.core.controller:SequenceCommand:protected:addSubCommand"><apiName>addSubCommand</apiName><shortdesc>
+		 Add a command to the list of commands to execute one after the other.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>Event instance (must be registered as a command previously).
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Add a command to the list of commands to execute one after the other.
+		 </apiDesc><example><codeblock rev="3.0">addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ASYNC));</codeblock>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:executeNextCommand"><apiName>executeNextCommand</apiName><shortdesc>
+		 Method used to execute the next command in the list of subcommands.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Method used to execute the next command in the list of subcommands.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:protected:initializeSubCommands"><apiName>initializeSubCommands</apiName><shortdesc> 
+		 Method that you can overwrite to add commands to the sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc> 
+		 Method that you can overwrite to add commands to the sequence command.
+		 </apiDesc><example><codeblock rev="3.0">addSubCommand(new MyEvent(MyEvent.DO_SOMETHING_ASYNC));</codeblock>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SequenceCommand:stop"><apiName>stop</apiName><shortdesc>
+		 Stops the current sequence.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops the current sequence.
+		 </apiDesc></apiOperationDetail></apiOperation><apiConstructor id="com.soma.core.controller:SequenceCommand:SequenceCommand"><apiName>SequenceCommand</apiName><shortdesc>
+		 Create an instance of the SequenceCommand class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+		 Create an instance of the SequenceCommand class. Should not be directly instantiated, the framework will instantiate the class.
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="com.soma.core.controller:SomaController"><apiName>SomaController</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><example><codeblock rev="3.0">
+addCommand(MyEvent.DOSOMETHING, CommandExample);
+removeCommand(MyEvent.DOSOMETHING);
+dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 	 </codeblock>
 	 </example></apiClassifierDetail><apiOperation id="com.soma.core.controller:SomaController:addCommand"><apiName>addCommand</apiName><shortdesc>
 		 Registers a command to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
@@ -214,71 +323,77 @@ package  {
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Registers a command to the framework.
 		 </apiDesc><example><codeblock rev="3.0">addCommand(MyEvent.DOSOMETHING, MyCommand);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:com.soma.core.controller:commandIsValid"><apiName>commandIsValid</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>CommandClass</apiItemName><apiType value="Class"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:com.soma.core.controller:executeCommand"><apiName>executeCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getCommand"><apiName>getCommand</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:dispose"><apiName>dispose</apiName><shortdesc>
+		 Destroys the SomaController elements (all commands, sequencers and properties).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Destroys the SomaController elements (all commands, sequencers and properties).
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getCommand"><apiName>getCommand</apiName><shortdesc>
 		 Retrieves the command class that has been registered with a command name.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Class"/><apiDesc>A class.
 		 </apiDesc></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Retrieves the command class that has been registered with a command name.
 		 </apiDesc><example><codeblock rev="3.0">var commandClass:ICommand = getCommand(MyEvent.DOSOMETHING) as ICommand;</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getCommands"><apiName>getCommands</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getCommands"><apiName>getCommands</apiName><shortdesc>
 		 Retrieves the sequence command instance using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Array"/><apiDesc>A sequencer (ISequenceCommand).
 		 </apiDesc></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves the sequence command instance using an event instance that has been created from this sequence command.
 		 </apiDesc><example><codeblock rev="3.0">var sequencer:ISequenceCommand = getSequencer(myEvent);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getLastSequencer"><apiName>getLastSequencer</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getLastSequencer"><apiName>getLastSequencer</apiName><shortdesc>
 		 Retrieves the last sequence command that has been instantiated in the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:ISequenceCommand</apiOperationClassifier><apiDesc>An ISequenceCommand instance.
 		 </apiDesc></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves the last sequence command that has been instantiated in the framework.
 		 </apiDesc><example><codeblock rev="3.0">var lastSequencer:ISequenceCommand = getLastSequencer();</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getRunningSequencers"><apiName>getRunningSequencers</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getRunningSequencers"><apiName>getRunningSequencers</apiName><shortdesc>
 		 Retrieves all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Array"/><apiDesc>An Array of ISequenceCommand instances.
 		 </apiDesc></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves all the sequence command instances that are running.
 		 </apiDesc><example><codeblock rev="3.0">var sequencers:Array = getRunningSequencers();</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getSequencer"><apiName>getSequencer</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:getSequencer"><apiName>getSequencer</apiName><shortdesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:ISequenceCommand</apiOperationClassifier><apiDesc>A Boolean (true if a sequence command has been stopped).
 		 </apiDesc></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>Event instance.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.
 		 </apiDesc><example><codeblock rev="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:hasCommand"><apiName>hasCommand</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:hasCommand"><apiName>hasCommand</apiName><shortdesc>
 		 Indicates wether a command has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean.
 		 </apiDesc></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether a command has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasCommand(MyEvent.DOSOMETHING);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:isPartOfASequence"><apiName>isPartOfASequence</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:isPartOfASequence"><apiName>isPartOfASequence</apiName><shortdesc>
 		 Indicates wether an event has been instantiated from a ISequenceCommand class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean.
 		 </apiDesc></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether an event has been instantiated from a ISequenceCommand class.
 		 </apiDesc><example><codeblock rev="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:com.soma.core.controller:registerSequencedCommand"><apiName>registerSequencedCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>sequencer</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISequenceCommand</apiOperationClassifier></apiParam><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:removeCommand"><apiName>removeCommand</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:removeCommand"><apiName>removeCommand</apiName><shortdesc>
 		 Removes a command from the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a command from the framework.
 		 </apiDesc><example><codeblock rev="3.0">removeCommand(MyEvent.DOSOMETHING);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
-		 Stops all the sequences command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
-		 Stops all the sequences command instances that are running.
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
+		 Stops all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops all the sequence command instances that are running.
 		 </apiDesc><example><codeblock rev="3.0">stopAllSequencers();</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:stopSequencerWithEvent"><apiName>stopSequencerWithEvent</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:stopSequencerWithEvent"><apiName>stopSequencerWithEvent</apiName><shortdesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean (true if a sequence command has been stopped).
 		 </apiDesc></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>Event instance.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.
 		 </apiDesc><example><codeblock rev="3.0">var success:Boolean = stopSequencerWithEvent(myEvent);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:stopSequencer"><apiName>stopSequencer</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:stopSequencer"><apiName>stopSequencer</apiName><shortdesc>
 		 Stops a sequence command using the sequence command instance itself.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean (true if the sequence command has been stopped).
 		 </apiDesc></apiReturn><apiParam><apiItemName>sequencer</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISequenceCommand</apiOperationClassifier><apiDesc>The sequence command instance.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Stops a sequence command using the sequence command instance itself.
 		 </apiDesc><example><codeblock rev="3.0">var success:Boolean = stopSequencer(mySequenceCommand);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:SomaController:com.soma.core.controller:unregisterSequencedCommand"><apiName>unregisterSequencedCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>sequencer</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISequenceCommand</apiOperationClassifier></apiParam><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:SomaController:com.soma.core.controller:unregisterSequencer"><apiName>unregisterSequencer</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>sequencer</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISequenceCommand</apiOperationClassifier></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiConstructor id="com.soma.core.controller:SomaController:SomaController"><apiName>SomaController</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier></apiParam></apiConstructorDef></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="com.soma.core.controller:ParallelCommand"><apiName>ParallelCommand</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IParallelCommand</apiBaseInterface><apiBaseClassifier>com.soma.core.controller:Command</apiBaseClassifier></apiClassifierDef><example>Register commands and a parallel command.
+		 </example></apiOperationDetail></apiOperation><apiConstructor id="com.soma.core.controller:SomaController:SomaController"><apiName>SomaController</apiName><shortdesc>
+		 Create an instance of the SomaController class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier></apiParam></apiConstructorDef><apiDesc>
+		 Create an instance of the SomaController class. Should not be directly instantiated, the framework will instantiate the class.
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="com.soma.core.controller:ParallelCommand"><apiName>ParallelCommand</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IParallelCommand</apiBaseInterface><apiBaseClassifier>com.soma.core.controller:Command</apiBaseClassifier></apiClassifierDef><example>Register commands and a parallel command.
 	 <codeblock rev="3.0">
 addCommand(MyEvent.DO_SOMETHING, CommandExample);
 addCommand(MyEvent.DO_SOMETHING_ELSE, CommandExample);
-addCommand(MyEvent.EXECUTE_SEQUENCE, ParallelCommandExample);
-dispatchEvent(new MyEvent(MyEvent.EXECUTE_SEQUENCE));
+addCommand(MyEvent.EXECUTE_PARALLEL_COMMAND, ParallelCommandExample);
+dispatchEvent(new MyEvent(MyEvent.EXECUTE_PARALLEL_COMMAND));
 	 </codeblock>
 	 <codeblock rev="3.0">
 package  {
@@ -302,24 +417,35 @@ package  {
 		 Add a command to the list of commands to execute in parallel.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>Event instance (must be registered as a command previously).
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Add a command to the list of commands to execute in parallel.
-		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.controller:ParallelCommand:protected:initializeSubCommands"><apiName>initializeSubCommands</apiName><shortdesc> 
-		 Method that you can overwrite to add commands to the sequence.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc> 
-		 Method that you can overwrite to add commands to the sequence.
+		 </apiDesc><example><codeblock rev="3.0">addSubCommand(new MyEvent(MyEvent.DO_SOMETHING));</codeblock>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.controller:ParallelCommand:protected:initializeSubCommands"><apiName>initializeSubCommands</apiName><shortdesc> 
+		 Method that you can overwrite to add commands to the parallele command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc> 
+		 Method that you can overwrite to add commands to the parallele command.
 		 </apiDesc><example><codeblock rev="3.0">addSubCommand(new MyEvent(MyEvent.DO_SOMETHING));</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiConstructor id="com.soma.core.controller:ParallelCommand:ParallelCommand"><apiName>ParallelCommand</apiName><shortdesc>
 		 Create an instance of the ParallelCommand class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
 		 Create an instance of the ParallelCommand class. Should not be directly instantiated, the framework will instantiate the class.
-		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier></apiPackage><apiPackage id="com.soma.core.interfaces"><apiName>com.soma.core.interfaces</apiName><apiClassifier id="com.soma.core.interfaces:ISequenceCommand"><apiName>ISequenceCommand</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:executeNextCommand"><apiName>executeNextCommand</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:stop"><apiName>stop</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISoma"><apiName>ISoma</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:addCommand"><apiName>addCommand</apiName><shortdesc>
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier></apiPackage><apiPackage id="com.soma.core.interfaces"><apiName>com.soma.core.interfaces</apiName><apiClassifier id="com.soma.core.interfaces:ISequenceCommand"><apiName>ISequenceCommand</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:executeNextCommand"><apiName>executeNextCommand</apiName><shortdesc>
+		 Method used to execute the next command in the list of subcommands.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Method used to execute the next command in the list of subcommands.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISequenceCommand:com.soma.core.interfaces:ISequenceCommand:stop"><apiName>stop</apiName><shortdesc>
+		 Stops the current sequence.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops the current sequence.
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISoma"><apiName>ISoma</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:addCommand"><apiName>addCommand</apiName><shortdesc>
 		 Registers a command to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam><apiParam><apiItemName>command</apiItemName><apiType value="Class"/><apiDesc>Class that will be executed when a command has been dispatched.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Registers a command to the framework.
 		 </apiDesc><example><codeblock rev="3.0">addCommand(MyEvent.DOSOMETHING, MyCommand);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:addEventListener"><apiName>addEventListener</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam><apiParam><apiItemName>priority</apiItemName><apiType value="int"/><apiData>0</apiData></apiParam><apiParam><apiItemName>useWeakReference</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:addModel"><apiName>addModel</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:addEventListener"><apiName>addEventListener</apiName><shortdesc>
+		 Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event.
+		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/><apiDesc>The listener function that processes the event.
+		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Determines whether the listener works in the capture phase or the target and bubbling phases.
+		 </apiDesc></apiParam><apiParam><apiItemName>priority</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>The priority level of the event listener.
+		 </apiDesc></apiParam><apiParam><apiItemName>useWeakReference</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Determines whether the reference to the listener is strong or weak.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:addModel"><apiName>addModel</apiName><shortdesc>
 		 Registers a model to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:IModel</apiOperationClassifier><apiDesc>The model instance.
 		 </apiDesc></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam><apiParam><apiItemName>model</apiItemName><apiOperationClassifier>com.soma.core.interfaces:IModel</apiOperationClassifier><apiDesc>Instance of the model.
@@ -360,7 +486,12 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 var pluginVO:SomaDebuggerVO = new SomaDebuggerVO(this, SomaDebugger.NAME_DEFAULT, getCommands(), true, false);
 var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger;
 		 </codeblock>
-		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:dispatchEvent"><apiName>dispatchEvent</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:dispose"><apiName>dispose</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:dispatchEvent"><apiName>dispatchEvent</apiName><shortdesc>
+		 Dispatches an event into the event flow.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/><apiDesc>A value of true unless preventDefault() is called on the event, in which case it returns false.
+		 </apiDesc></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>The event object dispatched into the event flow.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Dispatches an event into the event flow. The event target is the EventDispatcher object upon which dispatchEvent() is called.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:dispose"><apiName>dispose</apiName><shortdesc>
 		 Destroys the SomaCore core classes and elements registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
 		 Destroys the SomaCore core classes and elements registered to the framework.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:getCommand"><apiName>getCommand</apiName><shortdesc>
@@ -429,7 +560,12 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether a command has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasCommand(MyEvent.DOSOMETHING);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:hasEventListener"><apiName>hasEventListener</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:hasModel"><apiName>hasModel</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:hasEventListener"><apiName>hasEventListener</apiName><shortdesc>
+		 Checks whether the EventDispatcher object has any listeners registered for a specific type of event.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/><apiDesc>A value of true if a listener of the specified type is registered; false otherwise.
+		 </apiDesc></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks whether the EventDispatcher object has any listeners registered for a specific type of event.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:hasModel"><apiName>hasModel</apiName><shortdesc>
 		 Indicates wether a model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean.
 		 </apiDesc></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
@@ -457,7 +593,13 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a command from the framework.
 		 </apiDesc><example><codeblock rev="3.0">removeCommand(MyEvent.DOSOMETHING);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:removeEventListener"><apiName>removeEventListener</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:removeModel"><apiName>removeModel</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:removeEventListener"><apiName>removeEventListener</apiName><shortdesc>
+		 Removes a listener from the EventDispatcher object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event. 
+		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/><apiDesc>The listener object to remove. 
+		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Specifies whether the listener was registered for the capture phase or the target and bubbling phases.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes a listener from the EventDispatcher object. If there is no matching listener registered with the EventDispatcher object, a call to this method has no effect.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:removeModel"><apiName>removeModel</apiName><shortdesc>
 		 Removes a model from the framework and call the dispose method of this model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a model from the framework and call the dispose method of this model.
@@ -473,8 +615,8 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 Removes a wire from the framework and call the dispose method of this wire.
 		 </apiDesc><example><codeblock rev="3.0">removeWire(MyWire.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
-		 Stops all the sequences command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
-		 Stops all the sequences command instances that are running.
+		 Stops all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops all the sequence command instances that are running.
 		 </apiDesc><example><codeblock rev="3.0">stopAllSequencers();</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:stopSequencerWithEvent"><apiName>stopSequencerWithEvent</apiName><shortdesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean (true if a sequence command has been stopped).
@@ -488,61 +630,235 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Stops a sequence command using the sequence command instance itself.
 		 </apiDesc><example><codeblock rev="3.0">var success:Boolean = stopSequencer(mySequenceCommand);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:willTrigger"><apiName>willTrigger</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaPluginVO"><apiName>ISomaPluginVO</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommand"><apiName>ICommand</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ICommand:com.soma.core.interfaces:ICommand:execute"><apiName>execute</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:willTrigger"><apiName>willTrigger</apiName><shortdesc>
+		 Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/><apiDesc>A value of true if a listener of the specified type will be triggered; false otherwise. 
+		 </apiDesc></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaPluginVO"><apiName>ISomaPluginVO</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommand"><apiName>ICommand</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ICommand:com.soma.core.interfaces:ICommand:execute"><apiName>execute</apiName><shortdesc>
 		 Method called by the framework, this is the execution of the command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>Event instance dispatched to execute the command.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Method called by the framework, this is the execution of the command.
 		 You can access from all the framework elements in this method (wires, commands, models, views, instance of the framework and stage).
-		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:IModel"><apiName>IModel</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:IModel"><apiName>IModel</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:getName"><apiName>getName</apiName><shortdesc>
+		 Retrieves the name of the model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/><apiDesc>A String.
+		 </apiDesc></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves the name of the model.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:setName"><apiName>setName</apiName><shortdesc>
+		 Sets the name of the model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiDesc>A String.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the name of the model.
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:IResponder"><apiName>IResponder</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:IResponder:com.soma.core.interfaces:IResponder:fault"><apiName>fault</apiName><shortdesc>
+		 Method that receives a fault object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>info</apiItemName><apiType value="Object"/><apiDesc>The fault Object.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Method that receives a fault object.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IResponder:com.soma.core.interfaces:IResponder:result"><apiName>result</apiName><shortdesc>
+		 Method that receives a success object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>data</apiItemName><apiType value="Object"/><apiDesc>THe success Object.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Method that receives a success object.
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommandASync"><apiName>ICommandASync</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
+package {
+	import flash.utils.clearTimeout;
+	import flash.utils.setTimeout;
+	import flash.events.Event;
+	import com.soma.core.interfaces.ICommandASync;
+	import com.soma.core.controller.Command;
+	
+	public class CommandASyncExample extends Command implements ICommandASync {
+		private var _event:Event;
+		private var _timer:int;
+		public function CommandASyncExample() {
+			
+		}
+		
+		public function execute(event:Event):void {
+			_event = event;
+			_timer = setTimeout(result, 1000, {});
+		}
+		
+		public function fault(info:Object):void {
+			
+		}
+		
+		public function result(data:Object):void {
+			if (isPartOfASequence(_event)) {
+				getSequencer(_event).executeNextCommand();
+			}
+			_event = null;
+			clearTimeout(_timer);
+		}
+		
+	}
+}
 	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:getName"><apiName>getName</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:setName"><apiName>setName</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:IResponder"><apiName>IResponder</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
+	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IParallelCommand"><apiName>IParallelCommand</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IWire"><apiName>IWire</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:getName"><apiName>getName</apiName><shortdesc>
+		 Retrieves the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/><apiDesc>A String.
+		 </apiDesc></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves the name of the wire.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:setName"><apiName>setName</apiName><shortdesc>
+		 Sets the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiDesc>A String.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the name of the wire.
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaPlugin"><apiName>ISomaPlugin</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISomaPlugin:com.soma.core.interfaces:ISomaPlugin:dispose"><apiName>dispose</apiName><shortdesc>
+		 Destroys the elements created by the plugin.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Destroys the elements created by the plugin.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaPlugin:com.soma.core.interfaces:ISomaPlugin:initialize"><apiName>initialize</apiName><shortdesc>
+		 Initializes the plugin.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>pluginVO</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISomaPluginVO</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Initializes the plugin.
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier></apiPackage><apiPackage id="com.soma.core.model"><apiName>com.soma.core.model</apiName><apiClassifier id="com.soma.core.model:Model"><apiName>Model</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IModel</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><example>Create a model.
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.interfaces.IModel;
+	import com.soma.core.model.Model;
+	
+	public class ModelExample extends Model implements IModel {
+		
+		public static const NAME:String = "Model example name";
+		
+		public function ModelExample() {
+			super(NAME);
+		}
+		
+		override protected function initialize():void {
+			// called when the model has been registered to the framework
+			data = new XML('&lt;myXML/&gt;');
+			// you can use the model as a dispatcher (default dispatcher is the framework instance) to dispatch commands, example:
+			dispatchEvent(new MyEvent(MyEvent.DATA_READY));
+		}
+		
+		override protected function dispose():void {
+			// called when the model has been removed from the framework
+			data = null;
+		}
+		
+	}
+}
 	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:IResponder:com.soma.core.interfaces:IResponder:fault"><apiName>fault</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>info</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IResponder:com.soma.core.interfaces:IResponder:result"><apiName>result</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>data</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommandASync"><apiName>ICommandASync</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
+	 Add a model.
+	 <codeblock rev="3.0">
+addModel(ModelExample.NAME, new ModelExample());
 	 </codeblock>
-	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IParallelCommand"><apiName>IParallelCommand</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
+	 Remove a model.
+	 <codeblock rev="3.0">
+removeModel(ModelExample.NAME);
 	 </codeblock>
-	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IWire"><apiName>IWire</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
+	 Retrieve a model.
+	 <codeblock rev="3.0">
+var model:ModelExample = getModel(ModelExample.NAME) as ModelExample;
 	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:getName"><apiName>getName</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:setName"><apiName>setName</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaPlugin"><apiName>ISomaPlugin</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
+	 Create a shortcut to retrieve a model is a good practice.
+	 <codeblock rev="3.0">
+private function get modelExample():ModelExample {
+	return getModel(ModelExample.NAME) as ModelExample;
+}
+private function doSomething():void {
+	trace(modelExample.data);
+}
 	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISomaPlugin:com.soma.core.interfaces:ISomaPlugin:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaPlugin:com.soma.core.interfaces:ISomaPlugin:initialize"><apiName>initialize</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>pluginVO</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISomaPluginVO</apiOperationClassifier></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier></apiPackage><apiPackage id="com.soma.core.model"><apiName>com.soma.core.model</apiName><apiClassifier id="com.soma.core.model:Model"><apiName>Model</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IModel</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.model:Model:addEventListener"><apiName>addEventListener</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam><apiParam><apiItemName>priority</apiItemName><apiType value="int"/><apiData>0</apiData></apiParam><apiParam><apiItemName>useWeakReference</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:dispatchEvent"><apiName>dispatchEvent</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:protected:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:getName"><apiName>getName</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="String"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:hasEventListener"><apiName>hasEventListener</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:protected:initialize"><apiName>initialize</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:somans:registerDispatcher"><apiName>registerDispatcher</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="somans"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>dispatcher</apiItemName><apiType value="flash.events:IEventDispatcher"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:removeEventListener"><apiName>removeEventListener</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:setName"><apiName>setName</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:willTrigger"><apiName>willTrigger</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiConstructor id="com.soma.core.model:Model:Model"><apiName>Model</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData>null</apiData></apiParam><apiParam><apiItemName>data</apiItemName><apiType value="Object"/><apiData>null</apiData></apiParam><apiParam><apiItemName>dispatcher</apiItemName><apiType value="flash.events:IEventDispatcher"/><apiData>null</apiData></apiParam></apiConstructorDef></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="com.soma.core.model:SomaModels"><apiName>SomaModels</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.model:SomaModels:addModel"><apiName>addModel</apiName><shortdesc>
+	 </example></apiClassifierDetail><apiOperation id="com.soma.core.model:Model:addEventListener"><apiName>addEventListener</apiName><shortdesc>
+		 Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event.
+		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/><apiDesc>The listener function that processes the event.
+		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Determines whether the listener works in the capture phase or the target and bubbling phases.
+		 </apiDesc></apiParam><apiParam><apiItemName>priority</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>The priority level of the event listener.
+		 </apiDesc></apiParam><apiParam><apiItemName>useWeakReference</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Determines whether the reference to the listener is strong or weak.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:dispatchEvent"><apiName>dispatchEvent</apiName><shortdesc>
+		 Dispatches an event into the event flow.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/><apiDesc>A value of true unless preventDefault() is called on the event, in which case it returns false.
+		 </apiDesc></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>The event object dispatched into the event flow.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Dispatches an event into the event flow. The event target is the EventDispatcher object upon which dispatchEvent() is called.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:protected:dispose"><apiName>dispose</apiName><shortdesc>
+		 Method that can you can override, called when the model has been removed from the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Method that can you can override, called when the model has been removed from the framework.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:getName"><apiName>getName</apiName><shortdesc>
+		 Retrieves the name of the model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="String"/><apiDesc>A String.
+		 </apiDesc></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves the name of the model.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:hasEventListener"><apiName>hasEventListener</apiName><shortdesc>
+		 Checks whether the EventDispatcher object has any listeners registered for a specific type of event.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/><apiDesc>A value of true if a listener of the specified type is registered; false otherwise.
+		 </apiDesc></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks whether the EventDispatcher object has any listeners registered for a specific type of event.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:protected:initialize"><apiName>initialize</apiName><shortdesc>
+		 Method that can you can override, called when the model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Method that can you can override, called when the model has been registered to the framework.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:removeEventListener"><apiName>removeEventListener</apiName><shortdesc>
+		 Removes a listener from the EventDispatcher object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event. 
+		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/><apiDesc>The listener object to remove. 
+		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Specifies whether the listener was registered for the capture phase or the target and bubbling phases.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes a listener from the EventDispatcher object. If there is no matching listener registered with the EventDispatcher object, a call to this method has no effect.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:setName"><apiName>setName</apiName><shortdesc>
+		 Sets the name of the model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/><apiDesc>A String.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the name of the model.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:willTrigger"><apiName>willTrigger</apiName><shortdesc>
+		 Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/><apiDesc>A value of true if a listener of the specified type will be triggered; false otherwise. 
+		 </apiDesc></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.
+		 </apiDesc></apiOperationDetail></apiOperation><apiConstructor id="com.soma.core.model:Model:Model"><apiName>Model</apiName><shortdesc>
+		 Create an instance of a Model class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData>null</apiData><apiDesc>Name of the model.
+		 </apiDesc></apiParam><apiParam><apiItemName>data</apiItemName><apiType value="Object"/><apiData>null</apiData><apiDesc>Data of the model.
+		 </apiDesc></apiParam><apiParam><apiItemName>dispatcher</apiItemName><apiType value="flash.events:IEventDispatcher"/><apiData>null</apiData><apiDesc>EventDispatcher instance that can be used to dispatch commands.
+		 </apiDesc></apiParam></apiConstructorDef><apiDesc>
+		 Create an instance of a Model class. The Model class should be extended.
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="com.soma.core.model:SomaModels"><apiName>SomaModels</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef></apiClassifierDetail><apiOperation id="com.soma.core.model:SomaModels:addModel"><apiName>addModel</apiName><shortdesc>
 		 Registers a model to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:IModel</apiOperationClassifier><apiDesc>The model instance.
 		 </apiDesc></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam><apiParam><apiItemName>model</apiItemName><apiOperationClassifier>com.soma.core.interfaces:IModel</apiOperationClassifier><apiDesc>Instance of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Registers a model to the framework.
 		 </apiDesc><example><codeblock rev="3.0">addModel(MyModel.NAME, new MyModel());</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.model:SomaModels:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:SomaModels:getModel"><apiName>getModel</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.model:SomaModels:dispose"><apiName>dispose</apiName><shortdesc>
+		 Destroys all the models and properties.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Destroys all the models and properties. The class will call the dispose method of each model instance.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:SomaModels:getModel"><apiName>getModel</apiName><shortdesc>
 		 Retrieves the model instance that has been registered using its name.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:IModel</apiOperationClassifier><apiDesc>A IModel instance.
 		 </apiDesc></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Retrieves the model instance that has been registered using its name.
 		 </apiDesc><example><codeblock rev="3.0">var myModel:MyModel = getModel(MyModel.NAME) as MyModel;</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.model:SomaModels:getModels"><apiName>getModels</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:SomaModels:getModels"><apiName>getModels</apiName><shortdesc>
 		 Retrieves all the model instances that have been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="flash.utils:Dictionary"/><apiDesc>A Dictionary (the key of the Dictionary is the name used for the registration).
 		 </apiDesc></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves all the model instances that have been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">var models:Dictionary = getModels();</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.model:SomaModels:hasModel"><apiName>hasModel</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:SomaModels:hasModel"><apiName>hasModel</apiName><shortdesc>
 		 Indicates wether a model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean.
 		 </apiDesc></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether a model has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasModel(MyModel.NAME);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.model:SomaModels:removeModel"><apiName>removeModel</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:SomaModels:removeModel"><apiName>removeModel</apiName><shortdesc>
 		 Removes a model from the framework and call the dispose method of this model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a model from the framework and call the dispose method of this model.
 		 </apiDesc><example><codeblock rev="3.0">removeModel(MyModel.NAME);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiConstructor id="com.soma.core.model:SomaModels:SomaModels"><apiName>SomaModels</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier></apiParam></apiConstructorDef></apiConstructorDetail></apiConstructor></apiClassifier></apiPackage><apiPackage id="com.soma.core.view"><apiName>com.soma.core.view</apiName><apiClassifier id="com.soma.core.view:SomaViews"><apiName>SomaViews</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><example><codeblock rev="3.0">
+		 </example></apiOperationDetail></apiOperation><apiConstructor id="com.soma.core.model:SomaModels:SomaModels"><apiName>SomaModels</apiName><shortdesc>
+		 Create an instance of the SomaModels class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier></apiParam></apiConstructorDef><apiDesc>
+		 Create an instance of the SomaModels class. Should not be directly instantiated, the framework will instantiate the class.
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier></apiPackage><apiPackage id="com.soma.core.view"><apiName>com.soma.core.view</apiName><apiClassifier id="com.soma.core.view:SomaViews"><apiName>SomaViews</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><example>Add a view.
+	 <codeblock rev="3.0">
+addView(MySprite.NAME, new MySprite());
+	 </codeblock>
+	 Remove a view.
+	 <codeblock rev="3.0">
+removeView(MySprite.NAME);
+	 </codeblock>
+	 Retrieve a view.
+	 <codeblock rev="3.0">
+var sprite:MySprite = getView(MySprite.NAME) as MySprite;
+	 </codeblock>
+	 Create a shortcut to retrieve a view is a good practice.
+	 <codeblock rev="3.0">
+private function get mySprite():MySprite {
+	return getView(MySprite.NAME) as MySprite;
+}
+private function doSomething():void {
+	trace(mySprite);
+}
 	 </codeblock>
 	 </example></apiClassifierDetail><apiOperation id="com.soma.core.view:SomaViews:addView"><apiName>addView</apiName><shortdesc>
 		 Registers a view to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/><apiDesc>The view instance.
@@ -551,29 +867,98 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Registers a view to the framework.
 		 </apiDesc><example><codeblock rev="3.0">addView(MySprite.NAME, new MySprite());</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.view.xml#SomaViews"><linktext>com.soma.core.view.SomaViews</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.view:SomaViews:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.view:SomaViews:getView"><apiName>getView</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.view:SomaViews:dispose"><apiName>dispose</apiName><shortdesc>
+		 Destroys all the views and properties.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Destroys all the views and properties. The class will call the dispose method of each view instance.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.view:SomaViews:getView"><apiName>getView</apiName><shortdesc>
 		 Retrieves the view instance that has been registered using its name.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/><apiDesc>An Object instance.
 		 </apiDesc></apiReturn><apiParam><apiItemName>viewName</apiItemName><apiType value="String"/><apiDesc>Name of the view.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Retrieves the view instance that has been registered using its name.
 		 </apiDesc><example><codeblock rev="3.0">var mySprite:MySprite = getView(MySprite.NAME) as MySprite;</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.view.xml#SomaViews"><linktext>com.soma.core.view.SomaViews</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.view:SomaViews:getViews"><apiName>getViews</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.view:SomaViews:getViews"><apiName>getViews</apiName><shortdesc>
 		 Retrieves all the view instances that have been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="flash.utils:Dictionary"/><apiDesc>A Dictionary (the key of the Dictionary is the name used for the registration).
 		 </apiDesc></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves all the view instances that have been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">var sprites:Dictionary = getViews();</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.view.xml#SomaViews"><linktext>com.soma.core.view.SomaViews</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.view:SomaViews:hasView"><apiName>hasView</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.view:SomaViews:hasView"><apiName>hasView</apiName><shortdesc>
 		 Indicates wether a view has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean.
 		 </apiDesc></apiReturn><apiParam><apiItemName>viewName</apiItemName><apiType value="String"/><apiDesc>Name of the view.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether a view has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasView(MySprite.NAME);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.view.xml#SomaViews"><linktext>com.soma.core.view.SomaViews</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.view:SomaViews:removeView"><apiName>removeView</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.view:SomaViews:removeView"><apiName>removeView</apiName><shortdesc>
 		 Removes a view from the framework and call the (optional) dispose method of this view.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>viewName</apiItemName><apiType value="String"/><apiDesc>Name of the view.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a view from the framework and call the (optional) dispose method of this view.
 		 </apiDesc><example><codeblock rev="3.0">removeView(MySprite.NAME);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.view.xml#SomaViews"><linktext>com.soma.core.view.SomaViews</linktext></link></related-links></apiOperation><apiConstructor id="com.soma.core.view:SomaViews:SomaViews"><apiName>SomaViews</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef></apiConstructorDetail></apiConstructor></apiClassifier></apiPackage><apiPackage id="com.soma.core.wire"><apiName>com.soma.core.wire</apiName><apiClassifier id="com.soma.core.wire:Wire"><apiName>Wire</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IWire</apiBaseInterface><apiBaseInterface>flash.events:IEventDispatcher</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><example><codeblock rev="3.0">
+		 </example></apiOperationDetail></apiOperation><apiConstructor id="com.soma.core.view:SomaViews:SomaViews"><apiName>SomaViews</apiName><shortdesc>
+		 Create an instance of the SomaViews class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+		 Create an instance of the SomaViews class. Should not be directly instantiated, the framework will instantiate the class.
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier></apiPackage><apiPackage id="com.soma.core.wire"><apiName>com.soma.core.wire</apiName><apiClassifier id="com.soma.core.wire:Wire"><apiName>Wire</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IWire</apiBaseInterface><apiBaseInterface>flash.events:IEventDispatcher</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><example>Create a wire
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.wire.Wire;
+	import com.soma.core.interfaces.IWire;
+	
+	public class WireExample extends Wire implements IWire {
+		
+		public static const NAME:String = "Wire example name";
+		
+		public function WireExample() {
+			super(NAME);
+		}
+		
+		override protected function initialize():void {
+			// called when the wire has been registered to the framework
+		}
+		
+		override protected function dispose():void {
+			// called when the wire has been removed from the framework
+		}
+		
+	}
+}
+	 </codeblock>
+	 Add a wire.
+	 <codeblock rev="3.0">
+addWire(WireExample.NAME, new WireExample());
+	 </codeblock>
+	 Remove a wire.
+	 <codeblock rev="3.0">
+removeWire(WireExample.NAME);
+	 </codeblock>
+	 Retrieve a wire.
+	 <codeblock rev="3.0">
+var wire:WireExample = getWire(WireExample.NAME) as WireExample;
+	 </codeblock>
+	 Create a shortcut to retrieve a wire is a good practice.
+	 <codeblock rev="3.0">
+private function get wireExample():WireExample {
+	return getWire(WireExample.NAME) as WireExample;
+}
+private function doSomething():void {
+	trace(wireExample.myWireProperty);
+}
+	 </codeblock>
+	 Listening to a command in a wire.
+	 <codeblock rev="3.0">
+override protected function initialize():void {
+	// called when the wire has been registered to the framework
+	 addEventListener(MyEvent.DO_SOMETHING, handler);
+}
+	 </codeblock>
+	 Stopping the execution of a command in a wire.
+	 You need to set the cancelable property of the event to true when you dispatch it.
+	 Any command can be stopped using the flash event built-in method: preventDefault.
+	 <codeblock rev="3.0">
+override protected function initialize():void {
+	// called when the wire has been registered to the framework
+	 addEventListener(MyEvent.DO_SOMETHING, myEventHandler);
+}
+private function myEventHandler(event:MyEvent):void {
+	e.preventDefault();
+}
 	 </codeblock>
 	 </example></apiClassifierDetail><apiOperation id="com.soma.core.wire:Wire:addCommand"><apiName>addCommand</apiName><shortdesc>
 		 Registers a command to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
@@ -581,7 +966,15 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Registers a command to the framework.
 		 </apiDesc><example><codeblock rev="3.0">addCommand(MyEvent.DOSOMETHING, MyCommand);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:addEventListener"><apiName>addEventListener</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam><apiParam><apiItemName>priority</apiItemName><apiType value="int"/><apiData>0</apiData></apiParam><apiParam><apiItemName>useWeakReference</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:addModel"><apiName>addModel</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:addEventListener"><apiName>addEventListener</apiName><shortdesc>
+		 Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event.
+		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/><apiDesc>The listener function that processes the event.
+		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Determines whether the listener works in the capture phase or the target and bubbling phases.
+		 </apiDesc></apiParam><apiParam><apiItemName>priority</apiItemName><apiType value="int"/><apiData>0</apiData><apiDesc>The priority level of the event listener.
+		 </apiDesc></apiParam><apiParam><apiItemName>useWeakReference</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Determines whether the reference to the listener is strong or weak.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Registers an event listener object with an EventDispatcher object so that the listener receives notification of an event.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:addModel"><apiName>addModel</apiName><shortdesc>
 		 Registers a model to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:IModel</apiOperationClassifier><apiDesc>The model instance.
 		 </apiDesc></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam><apiParam><apiItemName>model</apiItemName><apiOperationClassifier>com.soma.core.interfaces:IModel</apiOperationClassifier><apiDesc>Instance of the model.
@@ -602,7 +995,15 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Registers a wire to the framework.
 		 </apiDesc><example><codeblock rev="3.0">addWire(MyWire.NAME, new MyWire());</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:dispatchEvent"><apiName>dispatchEvent</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:protected:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:getCommand"><apiName>getCommand</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:dispatchEvent"><apiName>dispatchEvent</apiName><shortdesc>
+		 Dispatches an event into the event flow.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/><apiDesc>A value of true unless preventDefault() is called on the event, in which case it returns false.
+		 </apiDesc></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>The event object dispatched into the event flow.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Dispatches an event into the event flow. The event target is the EventDispatcher object upon which dispatchEvent() is called.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:protected:dispose"><apiName>dispose</apiName><shortdesc>
+		 Method that can you can override, called when the wire has been removed from the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Method that can you can override, called when the wire has been removed from the framework.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:getCommand"><apiName>getCommand</apiName><shortdesc>
 		 Retrieves the command class that has been registered with a command name.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Class"/><apiDesc>A class.
 		 </apiDesc></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
@@ -629,7 +1030,11 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves all the model instances that have been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">var models:Dictionary = getModels();</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:getName"><apiName>getName</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="String"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:getRunningSequencers"><apiName>getRunningSequencers</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:getName"><apiName>getName</apiName><shortdesc>
+		 Retrieves the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="String"/><apiDesc>A String.
+		 </apiDesc></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves the name of the wire.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:getRunningSequencers"><apiName>getRunningSequencers</apiName><shortdesc>
 		 Retrieves all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Array"/><apiDesc>An Array of ISequenceCommand instances.
 		 </apiDesc></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves all the sequence command instances that are running.
@@ -668,7 +1073,12 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether a command has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasCommand(MyEvent.DOSOMETHING);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:hasEventListener"><apiName>hasEventListener</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:hasModel"><apiName>hasModel</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:hasEventListener"><apiName>hasEventListener</apiName><shortdesc>
+		 Checks whether the EventDispatcher object has any listeners registered for a specific type of event.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/><apiDesc>A value of true if a listener of the specified type is registered; false otherwise.
+		 </apiDesc></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks whether the EventDispatcher object has any listeners registered for a specific type of event.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:hasModel"><apiName>hasModel</apiName><shortdesc>
 		 Indicates wether a model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean.
 		 </apiDesc></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
@@ -686,17 +1096,26 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether a wire has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasWire(MyWire.NAME);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:protected:initialize"><apiName>initialize</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:isPartOfASequence"><apiName>isPartOfASequence</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:protected:initialize"><apiName>initialize</apiName><shortdesc>
+		 Method that can you can override, called when the wire has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Method that can you can override, called when the wire has been registered to the framework.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:isPartOfASequence"><apiName>isPartOfASequence</apiName><shortdesc>
 		 Indicates wether an event has been instantiated from a ISequenceCommand class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean.
 		 </apiDesc></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether an event has been instantiated from a ISequenceCommand class.
 		 </apiDesc><example><codeblock rev="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:somans:registerInstance"><apiName>registerInstance</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="somans"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:removeCommand"><apiName>removeCommand</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:removeCommand"><apiName>removeCommand</apiName><shortdesc>
 		 Removes a command from the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a command from the framework.
 		 </apiDesc><example><codeblock rev="3.0">removeCommand(MyEvent.DOSOMETHING);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:removeEventListener"><apiName>removeEventListener</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:removeModel"><apiName>removeModel</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:removeEventListener"><apiName>removeEventListener</apiName><shortdesc>
+		 Removes a listener from the EventDispatcher object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event. 
+		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/><apiDesc>The listener object to remove. 
+		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Specifies whether the listener was registered for the capture phase or the target and bubbling phases.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes a listener from the EventDispatcher object. If there is no matching listener registered with the EventDispatcher object, a call to this method has no effect.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:removeModel"><apiName>removeModel</apiName><shortdesc>
 		 Removes a model from the framework and call the dispose method of this model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a model from the framework and call the dispose method of this model.
@@ -711,9 +1130,13 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a wire from the framework and call the dispose method of this wire.
 		 </apiDesc><example><codeblock rev="3.0">removeWire(MyWire.NAME);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:setName"><apiName>setName</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
-		 Stops all the sequences command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
-		 Stops all the sequences command instances that are running.
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:setName"><apiName>setName</apiName><shortdesc>
+		 Sets the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiDesc>A String.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the name of the wire.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
+		 Stops all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops all the sequence command instances that are running.
 		 </apiDesc><example><codeblock rev="3.0">stopAllSequencers();</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:stopSequencerWithEvent"><apiName>stopSequencerWithEvent</apiName><shortdesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean (true if a sequence command has been stopped).
@@ -727,16 +1150,26 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Stops a sequence command using the sequence command instance itself.
 		 </apiDesc><example><codeblock rev="3.0">var success:Boolean = stopSequencer(mySequenceCommand);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:willTrigger"><apiName>willTrigger</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiConstructor id="com.soma.core.wire:Wire:Wire"><apiName>Wire</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData>null</apiData></apiParam></apiConstructorDef></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="com.soma.core.wire:SomaWires"><apiName>SomaWires</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><example><codeblock rev="3.0">
-	 </codeblock>
-	 </example></apiClassifierDetail><apiOperation id="com.soma.core.wire:SomaWires:addWire"><apiName>addWire</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:willTrigger"><apiName>willTrigger</apiName><shortdesc>
+		 Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/><apiDesc>A value of true if a listener of the specified type will be triggered; false otherwise. 
+		 </apiDesc></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.
+		 </apiDesc></apiOperationDetail></apiOperation><apiConstructor id="com.soma.core.wire:Wire:Wire"><apiName>Wire</apiName><shortdesc>
+		 Create an instance of a Wire class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData>null</apiData><apiDesc>Name of the wire.
+		 </apiDesc></apiParam></apiConstructorDef><apiDesc>
+		 Create an instance of a Wire class. The Wire class should be extended.
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier><apiClassifier id="com.soma.core.wire:SomaWires"><apiName>SomaWires</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef></apiClassifierDetail><apiOperation id="com.soma.core.wire:SomaWires:addWire"><apiName>addWire</apiName><shortdesc>
 		 Registers a wire to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:IWire</apiOperationClassifier><apiDesc>The wire instance.
 		 </apiDesc></apiReturn><apiParam><apiItemName>wireName</apiItemName><apiType value="String"/><apiDesc>Name of the wire.
 		 </apiDesc></apiParam><apiParam><apiItemName>wire</apiItemName><apiOperationClassifier>com.soma.core.interfaces:IWire</apiOperationClassifier><apiDesc>Instance of the wire.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Registers a wire to the framework.
 		 </apiDesc><example><codeblock rev="3.0">addWire(MyWire.NAME, new MyWire());</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:getWire"><apiName>getWire</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:dispose"><apiName>dispose</apiName><shortdesc>
+		 Destroys all the models and properties.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Destroys all the models and properties. The class will call the dispose method of each model instance.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:getWire"><apiName>getWire</apiName><shortdesc>
 		 Retrieves the wire instance that has been registered using its name.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:IWire</apiOperationClassifier><apiDesc>A wire instance.
 		 </apiDesc></apiReturn><apiParam><apiItemName>wireName</apiItemName><apiType value="String"/><apiDesc>Name of the wire.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
@@ -758,7 +1191,10 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a wire from the framework and call the dispose method of this wire.
 		 </apiDesc><example><codeblock rev="3.0">removeWire(MyWire.NAME);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiConstructor id="com.soma.core.wire:SomaWires:SomaWires"><apiName>SomaWires</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier></apiParam></apiConstructorDef></apiConstructorDetail></apiConstructor></apiClassifier></apiPackage><apiPackage id="com.soma.core"><apiName>com.soma.core</apiName><apiClassifier id="com.soma.core:Soma"><apiName>Soma</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISoma</apiBaseInterface><apiBaseInterface>flash.events:IEventDispatcher</apiBaseInterface><apiBaseClassifier>flash.events:EventDispatcher</apiBaseClassifier></apiClassifierDef><example>To get started, create a instance of a class that extends the Soma class and implements the ISoma interface.
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiConstructor id="com.soma.core.wire:SomaWires:SomaWires"><apiName>SomaWires</apiName><shortdesc>
+		 Create an instance of the SomaWires class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier></apiParam></apiConstructorDef><apiDesc>
+		 Create an instance of the SomaWires class. Should not be directly instantiated, the framework will instantiate the class.
+		 </apiDesc></apiConstructorDetail></apiConstructor></apiClassifier></apiPackage><apiPackage id="com.soma.core"><apiName>com.soma.core</apiName><apiClassifier id="com.soma.core:Soma"><apiName>Soma</apiName><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISoma</apiBaseInterface><apiBaseInterface>flash.events:IEventDispatcher</apiBaseInterface><apiBaseClassifier>flash.events:EventDispatcher</apiBaseClassifier></apiClassifierDef><example>To get started, create a instance of a class that extends the Soma class and implements the ISoma interface.
 	 <codeblock rev="3.0">
 package  {
 	import com.soma.core.interfaces.ISoma;
@@ -989,8 +1425,8 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 Removes a wire from the framework and call the dispose method of this wire.
 		 </apiDesc><example><codeblock rev="3.0">removeWire(MyWire.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core:Soma:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
-		 Stops all the sequences command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
-		 Stops all the sequences command instances that are running.
+		 Stops all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Stops all the sequence command instances that are running.
 		 </apiDesc><example><codeblock rev="3.0">stopAllSequencers();</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core:Soma:stopSequencerWithEvent"><apiName>stopSequencerWithEvent</apiName><shortdesc>
 		 Stops a sequence command using an event instance that has been created from this sequence command.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="Boolean"/><apiDesc>A Boolean (true if a sequence command has been stopped).
