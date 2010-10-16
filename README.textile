@@ -18,7 +18,7 @@ h3. Few things to know
 * Wires are the glue of the frameworks elements (models, commands, views, wires) and can be used the way you wish, as proxy/mediators or managers.
 * Wires can manage one class or multiple classes.
 * Wires and commands access to all the framework elements (stage, framework instance, wires, models, views and commands).
-* Plugins can be created for theframework (such as the SomaCoreDebugger plugin).
+* Plugins can be created for the framework (such as the SomaCoreDebugger plugin).
 
 h3. Links
 
@@ -27,6 +27,7 @@ h3. Links
 * "SomaCore main page":http://www.soundstep.com/blog/downloads/somacore/
 * "Diagram":http://www.soundstep.com/blog/source/somacore/diagram/SomaDiagram.pdf
 * "Video tutorial":http://www.soundstep.com/blog/source/somacore/tutorials/getting-started/
+* "Demos":http://github.com/soundstep/somacore_demos
 
 h3. License
 
