@@ -101,21 +101,4 @@
 		<fdt.browse location="${dir.docs.asdoc}/index.html"/>
 	</target>
 	
-	<!--
-  <target name="usage">
-    <echo message=""/>
-    <echo message="Robotlegs Build Usage"/>
-    <echo message=""/>
-    <echo message="Available targets are:"/>
-    <echo message=""/>
-    <echo message="test          -&gt; Build Robotlegs SWC and run unit tests"/>
-    <echo message="asdoc         -&gt; Build Robotlegs SWC, test, and generate asdocs"/>
-    <echo message="package       -&gt; Build Robotlegs SWC, test, and create release zip"/>
-    <echo message="compile       -&gt; Build Robotlegs SWC"/>
-    <echo message="clean         -&gt; Remove all folders created by build script"/>
-    <echo message="init          -&gt; Clean and create build folders"/>
-    <echo message=""/>
-  </target>
-  -->
-	
 </project>
