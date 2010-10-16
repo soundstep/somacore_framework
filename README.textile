@@ -1,0 +1,53 @@
+h2. SomaCore | AS3 MVC Framework for Flash, Flex and AIR.
+
+SomaCore is a lightweight event-based MVC framework written in AS3 that provides a structure, models, views management and commands. Somacore can be used for Flash, Flex and AIR projects.
+
+SomaCore does not use any external library and does not use dependency injection.
+
+SomaCore is completely event-based and use a concept of wires to code in a efficient decoupled way.
+
+You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.
+
+h3. Few things to know
+
+* SomaCore requires the stage to be instantiated.
+* Commands are normal built-in Flash events with the bubbles property set to true.
+* Powerful flow control using the built-in flash event model.
+* Commands can be used in the views as they are not really framework code.
+* Parallel and sequence commands are built-in.
+* Wires are the glue of the frameworks elements (models, commands, views, wires) and can be used the way you wish, as proxy/mediators or managers.
+* Wires can manage one class or multiple classes.
+* Wires and commands access to all the framework elements (stage, framework instance, wires, models, views and commands).
+* Plugins can be created for theframework (such as the SomaCoreDebugger plugin).
+
+h3. Links
+
+* "Soundstep Blog":http://www.soundstep.com/
+* "Soundstep Twitter":http://www.twitter.com/soundstep/
+* "SomaCore main page":http://www.soundstep.com/blog/downloads/somacore/
+* "Diagram":http://www.soundstep.com/blog/source/somacore/diagram/SomaDiagram.pdf
+* "Video tutorial":http://www.soundstep.com/blog/source/somacore/tutorials/getting-started/
+
+h3. License
+
+The contents of this file are subject to the Mozilla Public License
+
+Version 1.1 (the "License"); you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.mozilla.org/MPL/
+ 
+Software distributed under the License is distributed on an "AS IS" basis,
+WITHOUT WARRANTY OF ANY KIND, either express or implied.
+See the License for the specific language governing rights and
+limitations under the License.
+
+The Original Code is SomaCore.
+
+The Initial Developer of the Original Code is Romuald Quantin.
+
+Portions created by
+
+Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+
+All Rights Reserved.
