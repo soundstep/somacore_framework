@@ -56,7 +56,7 @@ package com.soma.core {
 	 * Wires are the glue of the frameworks elements (models, commands, views, wires) and can be used the way you wish, as proxy/mediators or managers.
 	 * Wires can manage one class or multiple classes.
 	 * Parallel and sequence commands are built-in.
-	 * You can create and register customs plugins to the framework (such as the SomaCoreDebugger plugin).
+	 * You can create and register customs plugins to the framework (such as the SomaDebugger plugin).
 	 * You can access to all the framework elements that you have registered (stage, framework instance, wires, models, views and commands) from commands and wires. 
 	 * </p>
 	 * @example

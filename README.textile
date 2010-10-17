@@ -18,7 +18,7 @@ h3. Few things to know
 * Wires are the glue of the frameworks elements (models, commands, views, wires) and can be used the way you wish, as proxy/mediators or managers.
 * Wires can manage one class or multiple classes.
 * Wires and commands access to all the framework elements (stage, framework instance, wires, models, views and commands).
-* Plugins can be created for the framework (such as the SomaCoreDebugger plugin).
+* Plugins can be created for the framework (such as the SomaDebugger plugin).
 
 h3. Links
 

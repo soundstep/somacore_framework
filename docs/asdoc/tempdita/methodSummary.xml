@@ -656,7 +656,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 Method that receives a success object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>data</apiItemName><apiType value="Object"/><apiDesc>THe success Object.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Method that receives a success object.
-		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommandASync"><apiName>ICommandASync</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:IParallelCommand"><apiName>IParallelCommand</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommandASync"><apiName>ICommandASync</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><example><codeblock rev="3.0">
 package {
 	import flash.utils.clearTimeout;
 	import flash.utils.setTimeout;
@@ -691,7 +691,7 @@ package {
 	}
 }
 	 </codeblock>
-	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IParallelCommand"><apiName>IParallelCommand</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IWire"><apiName>IWire</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:getName"><apiName>getName</apiName><shortdesc>
+	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IWire"><apiName>IWire</apiName><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:getName"><apiName>getName</apiName><shortdesc>
 		 Retrieves the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/><apiDesc>A String.
 		 </apiDesc></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves the name of the wire.

@@ -145,6 +145,21 @@
             <asMetadata/>
          </prolog>
       </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:IParallelCommand">
+         <apiName>IParallelCommand</apiName>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+      </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ICommandASync">
          <apiName>ICommandASync</apiName>
          <apiClassifierDetail>
@@ -154,21 +169,6 @@
                <apiStatic/>
                <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
                <apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface>
-               <apiBaseClassifier/>
-            </apiClassifierDef>
-         </apiClassifierDetail>
-         <prolog>
-            <asMetadata/>
-         </prolog>
-      </apiClassifier>
-      <apiClassifier id="com.soma.core.interfaces:IParallelCommand">
-         <apiName>IParallelCommand</apiName>
-         <apiClassifierDetail>
-            <apiClassifierDef>
-               <apiInterface/>
-               <apiAccess value="public"/>
-               <apiStatic/>
-               <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
                <apiBaseClassifier/>
             </apiClassifierDef>
          </apiClassifierDetail>
