@@ -28,10 +28,12 @@ h3. Links
 * "Diagram":http://www.soundstep.com/blog/source/somacore/diagram/SomaDiagram.pdf
 * "Video tutorial":http://www.soundstep.com/blog/source/somacore/tutorials/getting-started/
 * "Demos":http://github.com/soundstep/somacore_demos
+* "Documentation":http://www.soundstep.com/blog/source/somacore/docs/
+* "Manual":http://github.com/soundstep/somacore_framework/wiki
 
 h3. Demos
 
-* "Repository of the demos":ttp://github.com/soundstep/somacore_demos
+* "Repository of the demos":http://github.com/soundstep/somacore_demos
 
 h2. SomaColor
 
@@ -57,10 +59,8 @@ You may obtain a copy of the License at
 
 http://www.mozilla.org/MPL/
  
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied.
-See the License for the specific language governing rights and
-limitations under the License.
+Software distributed under the License is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied.
+See the License for the specific language governing rights and limitations under the License.
 
 The Original Code is SomaCore.
 
