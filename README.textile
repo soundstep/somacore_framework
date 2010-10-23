@@ -29,7 +29,26 @@ h3. Links
 * "Video tutorial":http://www.soundstep.com/blog/source/somacore/tutorials/getting-started/
 * "Demos":http://github.com/soundstep/somacore_demos
 
-h3. License
+h3. Demos
+
+* "Repository of the demos":ttp://github.com/soundstep/somacore_demos
+
+h2. SomaColor
+
+* "Pure AS3 demo":http://www.soundstep.com/blog/source/somacore/demo/Flash/SomaColor/
+* "View Source":http://www.soundstep.com/blog/source/somacore/demo/Flash/SomaColor/srcview
+
+h2. SomaCafeTownSend
+
+* "Flash Builder / Flex demo":http://www.soundstep.com/blog/source/somacore/demo/Flex/CafeTownSend/
+* "View Source":http://www.soundstep.com/blog/source/somacore/demo/Flex/CafeTownSend/srcview
+
+h2. SomaCoreGC (flash player debugger needed)
+
+* "Garbage Collection monitor demo with the SomaCoreDebugger":http://www.soundstep.com/blog/source/somacore/demo/Flash/SomaCoreGC/
+* "View Source":http://www.soundstep.com/blog/source/somacore/demo/Flash/SomaCoreGC/srcview
+
+h2. License
 
 The contents of this file are subject to the Mozilla Public License
 
