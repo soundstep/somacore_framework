@@ -35,6 +35,11 @@ h3. Demos
 
 * "Repository of the demos":http://github.com/soundstep/somacore_demos
 
+h2. SomaCore Hello World
+
+* "Simple Application that shows a message":http://www.soundstep.com/blog/source/somacore/demo/Flash/SomaCoreHelloWorld/
+* "View Source":http://www.soundstep.com/blog/source/somacore/demo/Flash/SomaCoreHelloWorld/srcview/
+
 h2. SomaColor
 
 * "Pure AS3 demo":http://www.soundstep.com/blog/source/somacore/demo/Flash/SomaColor/
