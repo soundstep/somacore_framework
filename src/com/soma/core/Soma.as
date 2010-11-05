@@ -194,6 +194,9 @@ package  {
 				var injector:Object = new _injectorClass();
 				if (!(injector is ISomaInjector)) throw new Error("Error in " + this + " The injector class must implements ISomaInjector, the default injector provided is SomaInjector).");
 				_injector = injector as ISomaInjector;
+				// config (temporary)
+				_injector.mapToInstance(ISoma, this, "somaInstance");
+				_injector.mapToInstance(IEventDispatcher, this, "somaDispatcher");
 			}
 		}
 		

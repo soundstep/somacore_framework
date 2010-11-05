@@ -251,8 +251,12 @@ private function doSomething():void {
 			return _dispatcher;
 		}
 		
+		[Inject]
+		[Named(index=1, name="somaDispatcher")]
 		public final function set dispatcher(value:IEventDispatcher):void {
+			trace("dispatcher injected")
 			_dispatcher = value;
+			initialize();
 		}
 		
 	}

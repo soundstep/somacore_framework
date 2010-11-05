@@ -95,14 +95,15 @@ package com.soma.core.demo.di {
 			// test 13 (child injector) ----------------------> TO TEST
 //			var child:ISomaInjector = injector.createChildInjector();
 			// test 14 (mediator)
-			injector.mapSingleton(WireTest1);			injector.mapSingleton(SimpleModel);
-			mediators.mapView(MyView, MyViewMediator);
-			var view:MyView = new MyView();
-			_container.addChild(view);			_container.removeChild(view);
-			view = new MyView();
-			_container.addChild(view);
-			_container.removeChild(view);
-		}
+//			injector.mapSingleton(WireTest1);//			injector.mapSingleton(SimpleModel);
+//			mediators.mapView(MyView, MyViewMediator);
+//			var view:MyView = new MyView();
+//			_container.addChild(view);//			_container.removeChild(view);
+//			view = new MyView();
+//			_container.addChild(view);
+//			_container.removeChild(view);
+			// test 15 (model dispatcher injection)
+7		}
 
 		public function get container():Main {
 			return _container;

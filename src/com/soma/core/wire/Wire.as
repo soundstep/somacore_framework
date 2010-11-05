@@ -241,6 +241,14 @@ private function myEventHandler(event:MyEvent):void {
 			return _instance;
 		}
 		
+		[Inject]
+		[Named(index=1, name="somaInstance")]
+		public final function set instance(value:ISoma):void {
+			_instance = value;
+			trace(this, "instance injected")
+			initialize();
+		}
+		
 		/**
 		 * Get the stage that has been registered to the framework.
 		 * @return The stage instance.
