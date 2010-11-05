@@ -1,6 +1,7 @@
 package com.soma.core.demo.di.views {
 
 
+	import com.soma.core.demo.di.wires.WireTest1;
 	import com.soma.core.mediator.Mediator;
 	/**
 	 * @author Romuald Quantin
@@ -9,6 +10,9 @@ package com.soma.core.demo.di.views {
 		
 		[Inject]
 		public var view:MyView;
+		
+		[Inject]
+		public var wire:WireTest1;
 		
 		public static var count:int = 0; 
 		

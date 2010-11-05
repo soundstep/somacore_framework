@@ -1,9 +1,10 @@
 package com.soma.core.demo.di {
-
-	import com.soma.core.di.SomaInjector;
 	import com.soma.core.Soma;
+	import com.soma.core.demo.di.models.SimpleModel;
 	import com.soma.core.demo.di.views.MyView;
 	import com.soma.core.demo.di.views.MyViewMediator;
+	import com.soma.core.demo.di.wires.WireTest1;
+	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.ISoma;
 
 	/**
@@ -94,6 +95,7 @@ package com.soma.core.demo.di {
 			// test 13 (child injector) ----------------------> TO TEST
 //			var child:ISomaInjector = injector.createChildInjector();
 			// test 14 (mediator)
+			injector.mapSingleton(WireTest1);			injector.mapSingleton(SimpleModel);
 			mediators.mapView(MyView, MyViewMediator);
 			var view:MyView = new MyView();
 			_container.addChild(view);			_container.removeChild(view);

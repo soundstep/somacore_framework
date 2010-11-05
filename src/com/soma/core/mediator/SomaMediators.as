@@ -1,7 +1,6 @@
 package com.soma.core.mediator {
 	import com.soma.core.interfaces.IMediator;
 	import com.soma.core.interfaces.ISoma;
-	import com.soma.core.interfaces.ISomaInjector;
 	import com.soma.core.ns.somans;
 
 	import flash.events.Event;
@@ -14,7 +13,6 @@ package com.soma.core.mediator {
 	public class SomaMediators {
 
 		private var _instance:ISoma;
-		private var _injector:ISomaInjector;
 		private var _mediatorsByClass:Dictionary;
 		private var _mediatorsByInstance:Dictionary;
 
@@ -24,7 +22,6 @@ package com.soma.core.mediator {
 		}
 
 		private function initialize():void {
-			_injector = _instance.injector.createChildInjector();
 			_mediatorsByClass = new Dictionary();
 			_mediatorsByInstance = new Dictionary();
 			_instance.stage.addEventListener(Event.ADDED_TO_STAGE, addedhandler, true, 0);
@@ -45,15 +42,15 @@ package com.soma.core.mediator {
 		
 		private function createMediator(view:Object, viewClass:Class):void {
 			if (_mediatorsByClass[viewClass]) {
-				_injector.mapToInstance(viewClass, view);
-				var mediator:IMediator = IMediator(_injector.createInstance(_mediatorsByClass[viewClass]));
+				_instance.injector.mapToInstance(viewClass, view);
+				var mediator:IMediator = IMediator(_instance.injector.createInstance(_mediatorsByClass[viewClass]));
 				mediator.somans::registerViewComponent(view);
 				mediator.somans::registerInstance(_instance);
-				_injector.removeMapping(viewClass);
+				_instance.injector.removeMapping(viewClass);
 				_mediatorsByInstance[view] = mediator;
 			}
 		}
-		
+
 		private function disposeMediator(view:Object):void {
 			if (_mediatorsByInstance[view]) {
 				IMediator(_mediatorsByInstance[view]).somans::dispose();
