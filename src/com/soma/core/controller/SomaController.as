@@ -172,7 +172,7 @@ dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 		internal function executeCommand(event:Event):void {
 			if (hasCommand(event.type)) {
 				var CommandClass:Class = _commands[event.type];
-				var command:ICommand = new CommandClass();
+//				var command:ICommand = new CommandClass();				var command:ICommand = _instance.injector.createInstance(CommandClass) as ICommand;
 				Command(command).somans::registerInstance(_instance);
 				command.execute(event);
 			}

@@ -23,11 +23,14 @@
  */
 
 package com.soma.core {
-	import flash.events.IEventDispatcher;
+
+	import com.soma.core.mediator.SomaMediators;
 	import com.soma.core.controller.SomaController;
+	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.IModel;
 	import com.soma.core.interfaces.ISequenceCommand;
 	import com.soma.core.interfaces.ISoma;
+	import com.soma.core.interfaces.ISomaInjector;
 	import com.soma.core.interfaces.ISomaPlugin;
 	import com.soma.core.interfaces.ISomaPluginVO;
 	import com.soma.core.interfaces.IWire;
@@ -38,6 +41,7 @@ package com.soma.core {
 	import flash.display.Stage;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
+	import flash.events.IEventDispatcher;
 	import flash.utils.Dictionary;
 	import flash.utils.getDefinitionByName;
 
@@ -131,6 +135,9 @@ package  {
 		protected var _wires:SomaWires;
 		/** @private */
 		protected var _stage:Stage;
+		
+		protected var _injector:ISomaInjector;
+		protected var _mediators:SomaMediators;
 
 		//------------------------------------
 		// public properties
@@ -158,20 +165,31 @@ package  {
 		private function initializeApplication(stage:Stage):void {
 			validateStage(stage);
 			_stage = stage;
-			_models = new SomaModels(this);
-			_views = new SomaViews();
-			_controller = new SomaController(this);
-			_wires = new SomaWires(this);
+			initializeInjector();
+			initializeCore();
 			registerModels();
 			registerViews();
 			registerCommands();
 			registerWires();
 			registerPlugins();
 		}
-		
+
 		/** @private */
 		private function validateStage(stage:Stage):void {
 			if (stage == null) throw new Error("Error in " + this + " You can't instantiate Soma with a stage that has a value null. Start soma after a Event.ADDED_TO_STAGE.");
+		}
+		
+		/** @private */
+		protected function initializeCore():void {
+			_models = new SomaModels(this);
+			_views = new SomaViews();
+			_controller = new SomaController(this);
+			_wires = new SomaWires(this);
+			_mediators = new SomaMediators(this);
+		}
+		
+		protected function initializeInjector():void {
+			_injector = new SomaInjector() as ISomaInjector;
 		}
 		
 		/** 
@@ -239,6 +257,8 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 				if (_views) { _views.dispose(); _views = null; }
 				if (_controller) { _controller.dispose(); _controller = null; }
 				if (_wires) { _wires.dispose(); _wires = null; }
+				if (_mediators) { _mediators.dispose(); _mediators = null; }
+				if (_injector) _injector = null;
 				_stage = null;
 			} catch(e:Error) {
 				trace("Error in", this, "(dispose method):", e.message);
@@ -663,6 +683,14 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 		public final function getWires():Dictionary {
 			if (!wires) return null;
 			return wires.getWires();
+		}
+
+		public function get injector():ISomaInjector {
+			return _injector;
+		}
+		
+		public function get mediators():SomaMediators {
+			return _mediators;
 		}
 		
 	}

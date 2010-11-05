@@ -23,11 +23,14 @@
  */
 
 package com.soma.core.controller {
-	import com.soma.core.ns.somans;
+
 	import com.soma.core.interfaces.IModel;
 	import com.soma.core.interfaces.ISequenceCommand;
 	import com.soma.core.interfaces.ISoma;
+	import com.soma.core.interfaces.ISomaInjector;
 	import com.soma.core.interfaces.IWire;
+	import com.soma.core.mediator.SomaMediators;
+	import com.soma.core.ns.somans;
 
 	import flash.display.Stage;
 	import flash.events.Event;
@@ -550,6 +553,14 @@ package  {
 		public final function getWires():Dictionary {
 			if (!_instance.wires) return null;
 			return _instance.wires.getWires();
+		}
+		
+		public function get injector():ISomaInjector {
+			return _instance.injector;
+		}
+		
+		public function get mediators():SomaMediators {
+			return _instance.mediators;
 		}
 		
 	}

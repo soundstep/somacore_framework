@@ -23,7 +23,9 @@
  */
 
 package com.soma.core.interfaces {
+
 	import com.soma.core.controller.SomaController;
+	import com.soma.core.mediator.SomaMediators;
 	import com.soma.core.model.SomaModels;
 	import com.soma.core.view.SomaViews;
 	import com.soma.core.wire.SomaWires;
@@ -86,6 +88,10 @@ package com.soma.core.interfaces {
 		 * @return The stage instance.
 		 */
 		function get stage():Stage;
+		
+		function get injector():ISomaInjector;
+		
+		function get mediators():SomaMediators;
 		
 		/**
 		 * Gets the model manager class.
