@@ -1,0 +1,5 @@
+SomaCore 1.0.0
+
+6.84 KB (7,014 bytes) - without debugger
+20.7 KB (21,233 bytes) - with debugger (1.0.0)
+

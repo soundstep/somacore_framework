@@ -1,15 +1,13 @@
 package com.soma.core.mediator {
-
+	import com.soma.core.interfaces.IMediator;
+	import com.soma.core.interfaces.ISoma;
 	import com.soma.core.interfaces.ISomaInjector;
 	import com.soma.core.ns.somans;
-	import com.soma.core.interfaces.IMediator;
-	import flash.utils.getDefinitionByName;
-	import avmplus.getQualifiedClassName;
-
-	import com.soma.core.interfaces.ISoma;
 
 	import flash.events.Event;
 	import flash.utils.Dictionary;
+	import flash.utils.getDefinitionByName;
+	import flash.utils.getQualifiedClassName;
 	/**
 	 * @author Romuald Quantin
 	 */

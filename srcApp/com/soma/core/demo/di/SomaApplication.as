@@ -1,5 +1,6 @@
 package com.soma.core.demo.di {
 
+	import com.soma.core.di.SomaInjector;
 	import com.soma.core.Soma;
 	import com.soma.core.demo.di.views.MyView;
 	import com.soma.core.demo.di.views.MyViewMediator;
@@ -14,7 +15,7 @@ package com.soma.core.demo.di {
 
 		public function SomaApplication(container:Main) {
 			_container = container;
-			super(_container.stage);
+			super(_container.stage, SomaInjector);
 			
 //			dispatchEvent(new Event('commandTest', true));
 			
@@ -25,6 +26,9 @@ package com.soma.core.demo.di {
 		}
 		
 		override protected function registerWires():void {
+			
+			// small tests in progress before writing correct unit tests
+			
 			// test 1
 //			injector.mapSingleton(SimpleModel);//			injector.mapSingleton(GreetingWire2);
 //			injector.mapSingleton(SimpleView);

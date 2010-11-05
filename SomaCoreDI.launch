@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.powerflasher.fdt.ui.MxmlcGroup">
 <stringAttribute key="APP_ARGUMENTS" value=""/>
-<stringAttribute key="ARGUMENTS" value=""/>
+<stringAttribute key="ARGUMENTS" value="-target-player={playerVersion}&#10;-library-path+=&quot;{flexSDK}/frameworks/locale/en_US&quot;&#10;-default-size=550,400"/>
 <booleanAttribute key="KILL_PREVIUOS_VIEWER" value="false"/>
 <stringAttribute key="LAUNCHER_DEPENDENCIES" value="[Self]"/>
 <stringAttribute key="MAIN_CLASS" value="srcApp/com/soma/core/demo/di/Main.as"/>
@@ -19,7 +19,7 @@
 <booleanAttribute key="START_SWF_ENABLED" value="true"/>
 <stringAttribute key="START_SWF_LOCATION" value="bin/main.swf"/>
 <stringAttribute key="START_SWF_WITH" value="External SWF Viewer"/>
-<booleanAttribute key="USE_PROJECT_COMPILER_ARGUMENTS" value="true"/>
+<booleanAttribute key="USE_PROJECT_COMPILER_ARGUMENTS" value="false"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/somacore_framework"/>
 </listAttribute>

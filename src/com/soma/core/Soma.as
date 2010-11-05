@@ -23,10 +23,7 @@
  */
 
 package com.soma.core {
-
-	import com.soma.core.mediator.SomaMediators;
 	import com.soma.core.controller.SomaController;
-	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.IModel;
 	import com.soma.core.interfaces.ISequenceCommand;
 	import com.soma.core.interfaces.ISoma;
@@ -34,6 +31,7 @@ package com.soma.core {
 	import com.soma.core.interfaces.ISomaPlugin;
 	import com.soma.core.interfaces.ISomaPluginVO;
 	import com.soma.core.interfaces.IWire;
+	import com.soma.core.mediator.SomaMediators;
 	import com.soma.core.model.SomaModels;
 	import com.soma.core.view.SomaViews;
 	import com.soma.core.wire.SomaWires;
@@ -138,6 +136,8 @@ package  {
 		
 		protected var _injector:ISomaInjector;
 		protected var _mediators:SomaMediators;
+		
+		protected var _injectorClass:Class;
 
 		//------------------------------------
 		// public properties
@@ -153,7 +153,8 @@ package  {
 		 * Create an instance of the SomaCore class.
 		 * @param stage The stage is used as a global EventDispatcher (as well as the Soma class), and is required to instantiate the framework.
 		 */
-		public function Soma(stage:Stage) {
+		public function Soma(stage:Stage, injectorClass:Class = null) {
+			_injectorClass = injectorClass;
 			initializeApplication(stage);
 		}
 		
@@ -185,11 +186,15 @@ package  {
 			_views = new SomaViews();
 			_controller = new SomaController(this);
 			_wires = new SomaWires(this);
-			_mediators = new SomaMediators(this);
+			if (_injector) _mediators = new SomaMediators(this);
 		}
 		
 		protected function initializeInjector():void {
-			_injector = new SomaInjector() as ISomaInjector;
+			if (_injectorClass) {
+				var injector:Object = new _injectorClass();
+				if (!(injector is ISomaInjector)) throw new Error("Error in " + this + " The injector class must implements ISomaInjector, the default injector provided is SomaInjector).");
+				_injector = injector as ISomaInjector;
+			}
 		}
 		
 		/** 

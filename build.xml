@@ -59,11 +59,15 @@
 		<echo message="Create SomaCore SWC"/>
 		<exec executable="${compc}">
 			<arg line="-o"/>
-			<arg line="${dir.release}/SomaCore-${somacore.version}.swc"/>
+			<arg line="'${dir.release}/SomaCore-${somacore.version}.swc'"/>
 			<arg line="-include-sources"/>
-			<arg line="${dir.src.main}"/>
+			<arg line="'${dir.src.main}'"/>
 			<arg line="-sp"/>
-			<arg line="${dir.src.main}"/>
+			<arg line="'${dir.src.main}'"/>
+			<arg line="-include-libraries"/>
+			<arg line="'${dir.libs}/fussy-0.1-SNAPSHOT.swc'"/>
+			<arg line="-include-libraries"/>
+			<arg line="'${dir.libs}/injector-0.8.5-SNAPSHOT.swc'"/>
 		</exec>
 		<echo message="Success"/>
 		<eclipse.refreshLocal resource="${project.name}" />
