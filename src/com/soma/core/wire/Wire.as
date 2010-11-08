@@ -132,6 +132,8 @@ private function myEventHandler(event:MyEvent):void {
 		 * Name of the wire.
 		 */
 		protected var _name:String;
+		
+		protected var _initialized:Boolean = false;
 
 		//------------------------------------
 		// public final properties
@@ -170,12 +172,6 @@ private function myEventHandler(event:MyEvent):void {
 		//
 		// PUBLIC
 		//________________________________________________________________________________________________
-		
-		/** @private */
-		somans function registerInstance(instance:ISoma):void {
-			_instance = instance;
-			initialize();
-		}
 		
 		/** @private */
 		somans function dispose():void {
@@ -245,8 +241,10 @@ private function myEventHandler(event:MyEvent):void {
 		[Named(index=1, name="somaInstance")]
 		public final function set instance(value:ISoma):void {
 			_instance = value;
-			trace(this, "instance injected")
-			initialize();
+			if (!_initialized) {
+				_initialized = true;
+				initialize();
+			}
 		}
 		
 		/**

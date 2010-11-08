@@ -5,7 +5,6 @@ package com.soma.core.demo.helloworld {
 	import com.soma.core.demo.helloworld.mediators.MessageViewMediator;
 	import com.soma.core.demo.helloworld.models.MessageModel;
 	import com.soma.core.demo.helloworld.views.MessageView;
-	import com.soma.core.demo.helloworld.wires.MessageWire;
 	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.ISoma;
 
@@ -40,10 +39,6 @@ package com.soma.core.demo.helloworld {
 		override protected function registerViews():void {
 			mediators.mapView(MessageView, MessageViewMediator);
 			_container.addChild(new MessageView());
-		}
-		
-		override protected function registerWires():void {
-			injector.mapSingleton(MessageWire);
 		}
 		
 		public function get container():Main {

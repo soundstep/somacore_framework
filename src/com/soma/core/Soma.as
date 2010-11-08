@@ -168,6 +168,7 @@ package  {
 			_stage = stage;
 			initializeInjector();
 			initializeCore();
+			initialize();
 			registerModels();
 			registerViews();
 			registerCommands();
@@ -180,12 +181,16 @@ package  {
 			if (stage == null) throw new Error("Error in " + this + " You can't instantiate Soma with a stage that has a value null. Start soma after a Event.ADDED_TO_STAGE.");
 		}
 		
+		protected function initialize():void {
+			
+		}
+
 		/** @private */
 		protected function initializeCore():void {
 			_models = new SomaModels(this);
-			_views = new SomaViews();
 			_controller = new SomaController(this);
 			_wires = new SomaWires(this);
+			_views = new SomaViews();
 			if (_injector) _mediators = new SomaMediators(this);
 		}
 		

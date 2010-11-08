@@ -48,5 +48,8 @@ package com.soma.core.interfaces {
 		 */
 		function setName(name:String):void;
 		
+		function get instance():ISoma;
+		function set instance(value:ISoma):void;
+		
 	}
 }

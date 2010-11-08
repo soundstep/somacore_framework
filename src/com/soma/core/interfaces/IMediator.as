@@ -6,5 +6,9 @@ package com.soma.core.interfaces {
 	 * @author Romuald Quantin
 	 */
 	public interface IMediator extends IWire {
+		
+		function get viewComponent():Object;
+		function set viewComponent(value:Object):void;
+		
 	}
 }

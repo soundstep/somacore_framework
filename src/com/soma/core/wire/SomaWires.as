@@ -124,7 +124,7 @@ package com.soma.core.wire {
 				throw new Error("Error in " + this + " Wire \"" + wireName + "\" already registered.");
 			}
 			wires[wireName] = wire;
-			Wire(wire).somans::registerInstance(_instance);
+			wire.instance = _instance;
 			return wire;
 		}
 		

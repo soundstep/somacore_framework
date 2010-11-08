@@ -113,6 +113,8 @@ private function doSomething():void {
 		 * Name of the model.
 		 */
 		protected var _name:String;
+		
+		private var _initialized:Boolean = false;
 
 		//------------------------------------
 		// public properties
@@ -254,9 +256,11 @@ private function doSomething():void {
 		[Inject]
 		[Named(index=1, name="somaDispatcher")]
 		public final function set dispatcher(value:IEventDispatcher):void {
-			trace("dispatcher injected")
 			_dispatcher = value;
-			initialize();
+			if (!_initialized) {
+				_initialized = true;
+				initialize();
+			}
 		}
 		
 	}

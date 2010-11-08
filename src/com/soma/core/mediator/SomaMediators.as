@@ -44,8 +44,8 @@ package com.soma.core.mediator {
 			if (_mediatorsByClass[viewClass]) {
 				_instance.injector.mapToInstance(viewClass, view);
 				var mediator:IMediator = IMediator(_instance.injector.createInstance(_mediatorsByClass[viewClass]));
-				mediator.somans::registerViewComponent(view);
-				mediator.somans::registerInstance(_instance);
+				mediator.viewComponent = view;
+				mediator.instance = _instance;
 				_instance.injector.removeMapping(viewClass);
 				_mediatorsByInstance[view] = mediator;
 			}

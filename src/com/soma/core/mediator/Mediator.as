@@ -1,7 +1,5 @@
 package com.soma.core.mediator {
-
 	import com.soma.core.interfaces.IMediator;
-	import com.soma.core.ns.somans;
 	import com.soma.core.wire.Wire;
 
 	/**
@@ -9,14 +7,18 @@ package com.soma.core.mediator {
 	 */
 	public class Mediator extends Wire implements IMediator {
 		
-		public var viewComponent:Object;
+		protected var _viewComponent:Object;
 		
 		public function Mediator(name:String = null) {
 			super(name);
 		}
 		
-		somans function registerViewComponent(viewComponent:Object):void {
-			this.viewComponent = viewComponent;
+		public final function get viewComponent():Object {
+			return _viewComponent;
+		}
+		
+		public final function set viewComponent(value:Object):void {
+			_viewComponent = viewComponent;
 		}
 		
 	}

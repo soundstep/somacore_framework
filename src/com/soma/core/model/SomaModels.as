@@ -124,7 +124,7 @@ package com.soma.core.model {
 				throw new Error("Error in " + this + " Model \"" + modelName + "\" already registered.");
 			}
 			models[modelName] = model;
-			Model(model).somans::registerDispatcher(_instance as IEventDispatcher);
+			model.dispatcher = _instance as IEventDispatcher;
 			return model;
 		}
 		
