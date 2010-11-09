@@ -1,5 +1,6 @@
 package com.soma.core.di {
 
+	import uk.co.ziazoo.injector.IMapping;
 	import uk.co.ziazoo.injector.impl.Injector;
 	import uk.co.ziazoo.injector.IInjector;
 	import com.soma.core.interfaces.ISomaInjector;
@@ -15,6 +16,7 @@ package com.soma.core.di {
 		}
 		
 		internal function initialize(specifiedInjector:IInjector = null):ISomaInjector {
+			if (_injector) dispose();
 			if (!specifiedInjector) _injector = Injector.createInjector();
 			else _injector = specifiedInjector;
 			return this;
@@ -49,9 +51,26 @@ package com.soma.core.di {
 		public function hasMapping(classTarget:Class, injectionName:String = null):Boolean {
 			return _injector.hasMapping(classTarget, injectionName);
 		}
+		
+		public function getMappingName(classTarget:Class, injectionName:String = null):String {
+			var map:IMapping = _injector.getMapping(classTarget, injectionName);
+			if (!map) return null;
+			else return map.name;
+		}
+
+		public function getMappingType(classTarget:Class, injectionName:String = null):Class {
+			var map:IMapping = _injector.getMapping(classTarget, injectionName);
+			if (!map) return null;
+			else return map.type;
+		}
 
 		public function removeMapping(classTarget:Class, injectionName:String = null):void {
 			_injector.removeMapping(classTarget, injectionName);
+		}
+
+		public function dispose():void {
+			_injector.tearDown();
+			_injector = null;
 		}
 		
 	}

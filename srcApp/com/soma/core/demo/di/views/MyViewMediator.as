@@ -20,11 +20,11 @@ package com.soma.core.demo.di.views {
 			count++;
 		}
 		
-		override protected function initialize():void {
+		override public function initialize():void {
 			trace(this, "initialize", count, viewComponent, view, view.id);
 		}
 		
-		override protected function dispose():void {
+		override public function dispose():void {
 			trace(this, "dispose");
 			view.dispose();
 			view = null;

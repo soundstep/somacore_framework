@@ -1,10 +1,5 @@
 package com.soma.core.demo.di {
 	import com.soma.core.Soma;
-	import com.soma.core.demo.di.views.Car4;
-	import com.soma.core.demo.di.views.GpsFactory;
-	import com.soma.core.demo.di.views.GpsSystem;
-	import com.soma.core.demo.di.views.IEngine;
-	import com.soma.core.demo.di.views.LittleEngine;
 	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.ISoma;
 

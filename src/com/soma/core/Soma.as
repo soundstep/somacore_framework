@@ -271,7 +271,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 				if (_controller) { _controller.dispose(); _controller = null; }
 				if (_wires) { _wires.dispose(); _wires = null; }
 				if (_mediators) { _mediators.dispose(); _mediators = null; }
-				if (_injector) _injector = null;
+				if (_injector) { _injector.dispose(); _injector = null; }
 				_stage = null;
 			} catch(e:Error) {
 				trace("Error in", this, "(dispose method):", e.message);

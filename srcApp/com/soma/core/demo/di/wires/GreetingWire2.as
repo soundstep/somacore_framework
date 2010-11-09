@@ -17,7 +17,7 @@ package com.soma.core.demo.di.wires {
 			trace(count++, this);
 		}
 		
-		override protected function initialize():void {
+		override public function initialize():void {
 			trace(this, "initialize", _name);
 		}
 		

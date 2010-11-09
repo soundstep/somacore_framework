@@ -11,6 +11,8 @@ package com.soma.core.interfaces {
 		function mapToInstance(whenAskFor:Class, instanceTarget:Object, injectionName:String = null):void;
 		function mapToFactory(whenAskFor:Class, createWithFactory:Class):void;
 		function hasMapping(classTarget:Class, named:String = null):Boolean;
-		function removeMapping(classTarget:Class, injectionName:String = null):void
+		function getMappingName(classTarget:Class, injectionName:String = null):String;
+		function getMappingType(classTarget:Class, injectionName:String = null):Class;		function removeMapping(classTarget:Class, injectionName:String = null):void
+		function dispose():void;
 	}
 }
