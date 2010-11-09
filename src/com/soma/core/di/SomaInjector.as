@@ -26,13 +26,12 @@ package com.soma.core.di {
 		
 		public function createInstance(classTarget:Class, asSingleton:Boolean = false, asEagerSingleton:Boolean = false):Object {
 			if (asSingleton || asEagerSingleton) mapSingleton(classTarget, asEagerSingleton);
-			mapTo(Class, classTarget);
 			return _injector.inject(classTarget);
 		}
 		
-		public function mapSingleton(classTarget:Class, asEagerSingleton:Boolean = false):void {
-			if (!asEagerSingleton) _injector.map(classTarget).asSingleton();
-			else _injector.map(classTarget).asEagerSingleton();
+		public function mapSingleton(classTarget:Class, asEagerSingleton:Boolean = false, injectionName:String = null):void {
+			if (!asEagerSingleton) _injector.map(classTarget).named(injectionName).asSingleton();
+			else _injector.map(classTarget).named(injectionName).asEagerSingleton();
 		}
 		
 		public function mapTo(whenAskFor:Class, createClass:Class, injectionName:String = null):void {
