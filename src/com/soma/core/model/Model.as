@@ -23,7 +23,6 @@
  */
 
 package com.soma.core.model {
-	import com.soma.core.ns.somans;
 	import com.soma.core.interfaces.IModel;
 
 	import flash.events.Event;
@@ -114,8 +113,6 @@ private function doSomething():void {
 		 */
 		protected var _name:String;
 		
-		private var _initialized:Boolean = false;
-
 		//------------------------------------
 		// public properties
 		//------------------------------------
@@ -140,33 +137,22 @@ private function doSomething():void {
 		// PRIVATE, PROTECTED
 		//________________________________________________________________________________________________
 		
+		//
+		// PUBLIC
+		//________________________________________________________________________________________________
+		
 		/**
 		 * Method that can you can override, called when the model has been registered to the framework.
 		 */
-		protected function initialize():void {
+		public function initialize():void {
 			
 		}
 		
 		/**
 		 * Method that can you can override, called when the model has been removed from the framework.
 		 */
-		protected function dispose():void {
+		public function dispose():void {
 			
-		}
-		
-		//
-		// PUBLIC
-		//________________________________________________________________________________________________
-		
-		/** @private */
-		somans function registerDispatcher(dispatcher:IEventDispatcher):void {
-			if (!_dispatcher) _dispatcher = dispatcher;
-			initialize();
-		}
-		
-		/** @private */
-		somans function dispose():void {
-			dispose();
 		}
 		
 		/**
@@ -257,10 +243,6 @@ private function doSomething():void {
 		[Named(index=1, name="somaDispatcher")]
 		public final function set dispatcher(value:IEventDispatcher):void {
 			_dispatcher = value;
-			if (!_initialized) {
-				_initialized = true;
-				initialize();
-			}
 		}
 		
 	}

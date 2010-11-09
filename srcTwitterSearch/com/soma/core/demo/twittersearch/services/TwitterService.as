@@ -16,10 +16,10 @@ package com.soma.core.demo.twittersearch.services {
 		public static var count:int = 0;
 		
 		public function TwitterService() {
-			trace(count++, "COUNT", this)
+			
 		}
 		
-		override protected function initialize():void {
+		override public function initialize():void {
 			_tweetr = new Tweetr();
 			_tweetr.serviceHost = "http://labs.swfjunkie.com/tweetr/proxy";
 			_tweetr.addEventListener(TweetEvent.COMPLETE, resultHandler);
@@ -32,12 +32,10 @@ package com.soma.core.demo.twittersearch.services {
 
 		private function resultHandler(event:TweetEvent):void {
 			_lastResult = event.responseArray;
-			trace(_lastResult)
 			dispatchEvent(new TwitterEvent(TwitterEvent.SEARCH_RESULT));
 		}
 		
 		public function search(keywords:String):void {
-			trace("search")
 			_tweetr.search(keywords, null, 30, 1);
 		}
 

@@ -60,5 +60,8 @@ package com.soma.core.interfaces {
 		function get dispatcher():IEventDispatcher;
 		function set dispatcher(value:IEventDispatcher):void;
 		
+		function initialize():void;
+		function dispose():void;
+		
 	}
 }

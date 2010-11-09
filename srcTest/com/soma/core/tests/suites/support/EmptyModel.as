@@ -42,11 +42,11 @@ package com.soma.core.tests.suites.support {
 		// PRIVATE, PROTECTED
 		//________________________________________________________________________________________________
 		
-		override protected function initialize():void {
+		override public function initialize():void {
 			dispatchEvent(new Event(EVENT_INITIALIZED));
 		}
 		
-		override protected function dispose():void {
+		override public function dispose():void {
 			dispatchEvent(new Event(EVENT_DISPOSED));
 		}
 		

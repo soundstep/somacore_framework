@@ -26,6 +26,7 @@ package com.soma.core.di {
 		
 		public function createInstance(classTarget:Class, asSingleton:Boolean = false, asEagerSingleton:Boolean = false):Object {
 			if (asSingleton || asEagerSingleton) mapSingleton(classTarget, asEagerSingleton);
+			mapTo(Class, classTarget);
 			return _injector.inject(classTarget);
 		}
 		

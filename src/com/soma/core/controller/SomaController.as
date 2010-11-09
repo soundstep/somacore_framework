@@ -30,6 +30,8 @@ package com.soma.core.controller {
 
 	import flash.events.Event;
 	import flash.utils.Dictionary;
+	import flash.utils.getDefinitionByName;
+	import flash.utils.getQualifiedClassName;
 
 	/**
 	 * <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
@@ -174,7 +176,10 @@ dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 				var CommandClass:Class = _commands[event.type];
 				var command:ICommand;
 				if (_instance.injector) {
+					var EventClass:Class = Class(getDefinitionByName(getQualifiedClassName(event)));
+					_instance.injector.mapToInstance(EventClass, event);
 					command = _instance.injector.createInstance(CommandClass) as ICommand;
+					_instance.injector.removeMapping(EventClass);
 				} else {
 					command = new CommandClass();
 				}

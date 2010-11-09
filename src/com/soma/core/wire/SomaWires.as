@@ -23,7 +23,6 @@
  */
 
 package com.soma.core.wire {
-	import com.soma.core.ns.somans;
 	import com.soma.core.interfaces.ISoma;
 	import com.soma.core.interfaces.IWire;
 
@@ -124,7 +123,10 @@ package com.soma.core.wire {
 				throw new Error("Error in " + this + " Wire \"" + wireName + "\" already registered.");
 			}
 			wires[wireName] = wire;
-			wire.instance = _instance;
+			if (!wire.instance) {
+				wire.instance = _instance;
+				wire.initialize();
+			}
 			return wire;
 		}
 		
@@ -140,7 +142,7 @@ package com.soma.core.wire {
 			if (!hasWire(wireName)) {
 				throw new Error("Error in " + this + " Wire \"" + wireName + "\" not registered.");
 			}
-			Wire(wires[wireName]).somans::dispose();
+			Wire(wires[wireName]).dispose();
 			wires[wireName] = null;
 			delete wires[wireName];
 		}

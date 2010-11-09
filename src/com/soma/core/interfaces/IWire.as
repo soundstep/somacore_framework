@@ -51,5 +51,7 @@ package com.soma.core.interfaces {
 		function get instance():ISoma;
 		function set instance(value:ISoma):void;
 		
+		function initialize():void;		function dispose():void;
+		
 	}
 }

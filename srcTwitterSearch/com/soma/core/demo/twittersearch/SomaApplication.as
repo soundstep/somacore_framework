@@ -1,14 +1,14 @@
 package com.soma.core.demo.twittersearch {
-	import com.soma.core.demo.twittersearch.views.MainView;
-	import com.soma.core.di.SomaInjector;
-	import flash.display.StageScaleMode;
-	import flash.display.StageAlign;
-	import com.soma.core.demo.twittersearch.services.TwitterService;
+	import com.soma.core.Soma;
 	import com.soma.core.demo.twittersearch.controller.commands.SearchCommand;
 	import com.soma.core.demo.twittersearch.controller.events.TwitterEvent;
-	import com.soma.core.Soma;
+	import com.soma.core.demo.twittersearch.services.TwitterService;
 	import com.soma.core.demo.twittersearch.wires.SearchWire;
+	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.ISoma;
+
+	import flash.display.StageAlign;
+	import flash.display.StageScaleMode;
 
 	/**
 	 * @author romuald
@@ -29,8 +29,7 @@ package com.soma.core.demo.twittersearch {
 			// injector
 			injector.mapSingleton(TwitterService);
 			injector.mapSingleton(SearchWire);
-			injector.createInstance(SearchWire);
-		}
+			injector.createInstance(SearchWire);		}
 		
 		override protected function registerCommands():void {
 			addCommand(TwitterEvent.SEARCH, SearchCommand);

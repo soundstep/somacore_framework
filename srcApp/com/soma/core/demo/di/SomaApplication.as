@@ -1,9 +1,10 @@
 package com.soma.core.demo.di {
 	import com.soma.core.Soma;
-	import com.soma.core.demo.di.models.SimpleModel;
-	import com.soma.core.demo.di.views.MyView;
-	import com.soma.core.demo.di.views.MyViewMediator;
-	import com.soma.core.demo.di.wires.WireTest1;
+	import com.soma.core.demo.di.views.Car4;
+	import com.soma.core.demo.di.views.GpsFactory;
+	import com.soma.core.demo.di.views.GpsSystem;
+	import com.soma.core.demo.di.views.IEngine;
+	import com.soma.core.demo.di.views.LittleEngine;
 	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.ISoma;
 
@@ -64,7 +65,7 @@ package com.soma.core.demo.di {
 			// test 8 (inject named value)
 //			injector.mapToInstance(String, "http://soundstep.com", "url");
 //			injector.createInstance(TestNamedInjection);
-			// test 9 (factory) ----------------------> DOES NOT WORK
+			// test 9 (factory)
 //			injector.mapTo(IEngine, LittleEngine);
 //			injector.mapToInstance(String, "EN", "country code");
 //			injector.mapToFactory(GpsSystem, GpsFactory);
@@ -102,8 +103,7 @@ package com.soma.core.demo.di {
 //			view = new MyView();
 //			_container.addChild(view);
 //			_container.removeChild(view);
-			// test 15 (model dispatcher injection)
-7		}
+		}
 
 		public function get container():Main {
 			return _container;

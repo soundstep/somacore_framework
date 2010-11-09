@@ -1,6 +1,4 @@
 package com.soma.core.demo.twittersearch.wires {
-	import flash.display.Sprite;
-	import flash.events.Event;
 	import com.soma.core.demo.twittersearch.controller.events.TwitterEvent;
 	import com.soma.core.demo.twittersearch.services.TwitterService;
 	import com.soma.core.demo.twittersearch.views.MainView;
@@ -23,22 +21,19 @@ package com.soma.core.demo.twittersearch.wires {
 			
 		}
 		
-		override protected function initialize():void {
-			trace(view)
+		override public function initialize():void {
 			// view
-//			stage.addChild(view);
+			stage.addChild(view);
 			// listeners
 			addEventListener(TwitterEvent.SEARCH, searchHandler);
 			addEventListener(TwitterEvent.SEARCH_RESULT, resultHandler);
 		}
 
 		private function searchHandler(event:TwitterEvent):void {
-			trace("------------->", instance, view)
 			view.setText("Search for \"" + event.keywords + "\"... Please wait.");
 		}
 
 		private function resultHandler(event:TwitterEvent):void {
-			trace(service)			trace(service.lastResult)
 			view.setText("");
 			var i:Number = 0;
 			var l:Number = service.lastResult.length;

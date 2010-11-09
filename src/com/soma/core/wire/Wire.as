@@ -23,14 +23,12 @@
  */
 
 package com.soma.core.wire {
-
 	import com.soma.core.interfaces.IModel;
 	import com.soma.core.interfaces.ISequenceCommand;
 	import com.soma.core.interfaces.ISoma;
 	import com.soma.core.interfaces.ISomaInjector;
 	import com.soma.core.interfaces.IWire;
 	import com.soma.core.mediator.SomaMediators;
-	import com.soma.core.ns.somans;
 
 	import flash.display.Stage;
 	import flash.events.Event;
@@ -132,8 +130,6 @@ private function myEventHandler(event:MyEvent):void {
 		 * Name of the wire.
 		 */
 		protected var _name:String;
-		
-		protected var _initialized:Boolean = false;
 
 		//------------------------------------
 		// public final properties
@@ -155,27 +151,43 @@ private function myEventHandler(event:MyEvent):void {
 		// PRIVATE, PROTECTED
 		//________________________________________________________________________________________________
 		
+		//
+		// PUBLIC
+		//________________________________________________________________________________________________
+		
+		[PostConstruct]
+		public function postConstruct():void {
+			initialize();
+		}
+		
 		/**
 		 * Method that can you can override, called when the wire has been registered to the framework.
 		 */
-		protected function initialize():void {
+		public function initialize():void {
 			
 		}
 		
 		/**
 		 * Method that can you can override, called when the wire has been removed from the framework.
 		 */
-		protected function dispose():void {
+		public function dispose():void {
 			
 		}
 		
-		//
-		// PUBLIC
-		//________________________________________________________________________________________________
+		/**
+		 * Retrieves the instance of the framework.
+		 * @return An ISoma instance.
+		 * @example
+		 * <listing version="3.0">var myExtendedSomaClass:SomaApplication = SomaApplication(instance);</listing>
+		 */
+		public final function get instance():ISoma {
+			return _instance;
+		}
 		
-		/** @private */
-		somans function dispose():void {
-			dispose();
+		[Inject]
+		[Named(index=1, name="somaInstance")]
+		public final function set instance(value:ISoma):void {
+			_instance = value;
 		}
 		
 		/**
@@ -225,26 +237,6 @@ private function myEventHandler(event:MyEvent):void {
 		 */
 		public final function willTrigger(type:String):Boolean {
 			return _instance.willTrigger(type);
-		}
-		
-		/**
-		 * Retrieves the instance of the framework.
-		 * @return An ISoma instance.
-		 * @example
-		 * <listing version="3.0">var myExtendedSomaClass:SomaApplication = SomaApplication(instance);</listing>
-		 */
-		public final function get instance():ISoma {
-			return _instance;
-		}
-		
-		[Inject]
-		[Named(index=1, name="somaInstance")]
-		public final function set instance(value:ISoma):void {
-			_instance = value;
-			if (!_initialized) {
-				_initialized = true;
-				initialize();
-			}
 		}
 		
 		/**

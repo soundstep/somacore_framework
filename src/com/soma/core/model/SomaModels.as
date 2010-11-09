@@ -23,7 +23,6 @@
  */
 
 package com.soma.core.model {
-	import com.soma.core.ns.somans;
 	import com.soma.core.interfaces.IModel;
 	import com.soma.core.interfaces.ISoma;
 
@@ -124,7 +123,8 @@ package com.soma.core.model {
 				throw new Error("Error in " + this + " Model \"" + modelName + "\" already registered.");
 			}
 			models[modelName] = model;
-			model.dispatcher = _instance as IEventDispatcher;
+			if (!model.dispatcher) model.dispatcher = _instance as IEventDispatcher;
+			model.initialize();
 			return model;
 		}
 		
@@ -139,7 +139,7 @@ package com.soma.core.model {
 			if (!hasModel(modelName)) {
 				throw new Error("Error in " + this + " Model \"" + modelName + "\" not registered.");
 			}
-			Model(models[modelName]).somans::dispose();
+			Model(models[modelName]).dispose();
 			models[modelName] = null;
 			delete models[modelName];
 		}
