@@ -16,7 +16,7 @@ package com.soma.core.demo.helloworld.models {
 			super(NAME);
 		}
 		
-		override protected function initialize():void {
+		override public function initialize():void {
 			_message = "Hello SomaCore!";
 		}
 

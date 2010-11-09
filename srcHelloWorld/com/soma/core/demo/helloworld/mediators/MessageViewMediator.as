@@ -16,13 +16,17 @@ package com.soma.core.demo.helloworld.mediators {
 			
 		}
 		
-		override protected function initialize():void {
-			addEventListener(MessageEvent.READY, messageReady);
-		}
-
 		private function messageReady(event:MessageEvent):void {
 			view.updateMessage(event.message);
 		}
 		
+		override public function initialize():void {
+			addEventListener(MessageEvent.READY, messageReady);
+		}
+
+		override public function dispose():void {
+			removeEventListener(MessageEvent.READY, messageReady);
+		}
+
 	}
 }

@@ -21,10 +21,9 @@ package com.soma.core.demo.helloworld {
 		public function SomaApplication(container:Main) {
 			_container = container;
 			super(_container.stage, SomaInjector);
-			initialize();
 		}
 
-		private function initialize():void {
+		override protected function initialize():void {
 			stage.align = StageAlign.TOP_LEFT;			stage.scaleMode = StageScaleMode.NO_SCALE;
 		}
 

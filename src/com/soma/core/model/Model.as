@@ -141,6 +141,11 @@ private function doSomething():void {
 		// PUBLIC
 		//________________________________________________________________________________________________
 		
+		[PostConstruct]
+		public function postConstruct():void {
+			initialize();
+		}
+		
 		/**
 		 * Method that can you can override, called when the model has been registered to the framework.
 		 */
