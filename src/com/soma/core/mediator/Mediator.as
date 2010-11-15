@@ -21,5 +21,9 @@ package com.soma.core.mediator {
 			_viewComponent = viewComponent;
 		}
 		
+		public function creationComplete():void {
+			
+		}
+		
 	}
 }

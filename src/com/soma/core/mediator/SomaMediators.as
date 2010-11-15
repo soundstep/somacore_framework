@@ -23,8 +23,8 @@ package com.soma.core.mediator {
 		private function initialize():void {
 			_mediatorsByClass = new Dictionary();
 			_mediatorsByInstance = new Dictionary();
-			_instance.stage.addEventListener(Event.ADDED_TO_STAGE, addedhandler, true, 0);
-			_instance.stage.addEventListener(Event.REMOVED_FROM_STAGE, removedhandler, true, 0);
+			_instance.stage.addEventListener(Event.ADDED_TO_STAGE, addedhandler, true, 0, true);
+			_instance.stage.addEventListener(Event.REMOVED_FROM_STAGE, removedhandler, true, 0, true);
 		}
 		
 		private function getClassFromInstance(value:Object):Class {
@@ -40,24 +40,34 @@ package com.soma.core.mediator {
 		}
 		
 		private function createMediator(view:Object, viewClass:Class):void {
-			if (_mediatorsByClass[viewClass]) {
+			if (_mediatorsByClass[viewClass] && !_mediatorsByInstance[view]) {
 				_instance.injector.mapToInstance(viewClass, view);
 				var mediator:IMediator = IMediator(_instance.injector.createInstance(_mediatorsByClass[viewClass]));
 				mediator.viewComponent = view;
 				mediator.instance = _instance;
 				_instance.injector.removeMapping(viewClass);
 				_mediatorsByInstance[view] = mediator;
+				view.addEventListener("creationComplete", creationComplete, false, 0, true);
 			}
 		}
 
 		private function disposeMediator(view:Object):void {
 			if (_mediatorsByInstance[view]) {
+				view.removeEventListener("creationComplete", creationComplete, false);
 				IMediator(_mediatorsByInstance[view]).dispose();
 				_mediatorsByInstance[view] = null;
 				delete _mediatorsByInstance[view];
 			}
 		}
 		
+		private function creationComplete(event:Event):void {
+			event.target.removeEventListener("creationComplete", creationComplete);
+			var mediator:IMediator = getMediatorByView(event.target);
+			if (mediator && Object(mediator).hasOwnProperty("creationComplete")) {
+				Object(mediator).creationComplete();
+			}
+		}
+
 		public function dispose():void {
 			_instance.stage.removeEventListener(Event.ADDED_TO_STAGE, addedhandler, true);
 			_instance.stage.removeEventListener(Event.REMOVED_FROM_STAGE, removedhandler, true);
