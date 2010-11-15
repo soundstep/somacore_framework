@@ -1,7 +1,6 @@
 package com.soma.core.mediator {
 	import com.soma.core.interfaces.IMediator;
 	import com.soma.core.interfaces.ISoma;
-	import com.soma.core.ns.somans;
 
 	import flash.events.Event;
 	import flash.utils.Dictionary;
@@ -53,7 +52,7 @@ package com.soma.core.mediator {
 
 		private function disposeMediator(view:Object):void {
 			if (_mediatorsByInstance[view]) {
-				IMediator(_mediatorsByInstance[view]).somans::dispose();
+				IMediator(_mediatorsByInstance[view]).dispose();
 				_mediatorsByInstance[view] = null;
 				delete _mediatorsByInstance[view];
 			}
@@ -63,7 +62,7 @@ package com.soma.core.mediator {
 			_instance.stage.removeEventListener(Event.ADDED_TO_STAGE, addedhandler, true);
 			_instance.stage.removeEventListener(Event.REMOVED_FROM_STAGE, removedhandler, true);
 			for each (var mediator:IMediator in _mediatorsByInstance) {
-				mediator.somans::dispose();
+				mediator.dispose();
 			}
 			_mediatorsByClass = null;
 			_mediatorsByInstance = null;
