@@ -178,8 +178,14 @@ dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 				if (_instance.injector) {
 					var EventClass:Class = Class(getDefinitionByName(getQualifiedClassName(event)));
 					_instance.injector.mapToInstance(EventClass, event);
+					_instance.injector.mapTo(ISequenceCommand, SequenceCommand);
+					var sequencer:ISequenceCommand = getSequencer(event);
+					if (sequencer) {
+						_instance.injector.mapToInstance(ISequenceCommand, sequencer);
+					}
 					command = _instance.injector.createInstance(CommandClass) as ICommand;
 					_instance.injector.removeMapping(EventClass);
+					_instance.injector.removeMapping(ISequenceCommand);
 				} else {
 					command = new CommandClass();
 				}
