@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas show="currentState=''" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" initialize="init()">
+<mx:Script>
+		<![CDATA[
+		import com.cafetownsend.utils.NavigationConstants;
+		import com.cafetownsend.events.NavigationEvent;
+		import com.cafetownsend.events.EmployeeEvent;
+		import com.cafetownsend.vo.EmployeeVO;
+		import com.cafetownsend.events.LoginEvent;
+		import mx.collections.XMLListCollection;
+		import mx.events.ListEvent;
+		
+		[Bindable]
+		public var employeeListData:XMLListCollection;
+		
+		public function logout():void {
+			dispatchEvent(new LoginEvent(LoginEvent.LOGOUT));
+		}
+		
+		private function selectEmployee(event:ListEvent):void {
+			var vo:EmployeeVO = new EmployeeVO(list.selectedItem.@id, list.selectedItem.name, list.selectedItem.age);
+			dispatchEvent(new EmployeeEvent(EmployeeEvent.SELECT, vo));
+			dispatchEvent(new NavigationEvent(NavigationEvent.SELECT, NavigationConstants.EMPLOYEE_DETAILS));
+        }
+        
+        private function createEmployee():void {
+        	dispatchEvent(new EmployeeEvent(EmployeeEvent.SELECT, new EmployeeVO()));
+			dispatchEvent(new NavigationEvent(NavigationEvent.SELECT, NavigationConstants.EMPLOYEE_DETAILS));
+			}
+
+			private function init():void {
+				trace("INIT EMPLOYEE LIST")
+			}
+        
+	]]>
+</mx:Script>
+
+	<mx:Panel layout="absolute" horizontalCenter="0" verticalCenter="0" width="456" height="268" title="Employee List" id="panel1">
+		<mx:DataGrid id="list" dataProvider="{employeeListData}" itemClick="selectEmployee(event)" top="40" bottom="10" left="10" right="10">
+			<mx:columns>
+				<mx:DataGridColumn dataField="name" headerText="Name"/>
+				<mx:DataGridColumn dataField="age" headerText="Age"/>
+			</mx:columns>
+		</mx:DataGrid>
+		<mx:Button label="Create Employee" left="10" top="10" click="createEmployee()" id="button1"/>
+		<mx:Button label="Logout" click="logout()" right="10" top="10" width="65"/>
+	</mx:Panel>
+
+</mx:Canvas>

@@ -104,7 +104,7 @@ package com.soundstep.somacolor {
 			}
 		}
 		
-		private function start():void {
+		override protected function start():void {
 			dispatchEvent(new StartEvent(StartEvent.START));
 		}
 		

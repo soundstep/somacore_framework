@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+<mx:Script>
+	<![CDATA[
+		import com.cafetownsend.events.NavigationEvent;
+		import com.cafetownsend.utils.NavigationConstants;
+		import com.cafetownsend.events.EmployeeEvent;
+		import com.cafetownsend.events.LoginEvent;
+		import com.cafetownsend.vo.EmployeeVO;
+		import mx.validators.Validator;
+	
+		[Bindable]
+		public var selectedEmployee:EmployeeVO;
+		
+		public function logout():void {
+			dispatchEvent(new LoginEvent(LoginEvent.LOGOUT));
+		}
+		
+        private function deleteEmployee():void {
+       		dispatchEvent(new EmployeeEvent(EmployeeEvent.DELETE, selectedEmployee));
+       		leaveForm();
+        }
+        
+        private function submitForm():void {
+            if (Validator.validateAll(validators).length > 0) return;
+    		selectedEmployee.name = employeeName.text;
+    		selectedEmployee.age = employeeAge.text;
+        	if (selectedEmployee.id == null) {
+        		dispatchEvent(new EmployeeEvent(EmployeeEvent.CREATE, selectedEmployee));
+        	}
+        	else {
+        		dispatchEvent(new EmployeeEvent(EmployeeEvent.EDIT, selectedEmployee));
+        	}
+        	leaveForm();
+        }
+        
+        private function leaveForm():void {
+        	dispatchEvent(new NavigationEvent(NavigationEvent.SELECT, NavigationConstants.EMPLOYEE_LIST));
+        	employeeName.text = '';
+            employeeName.errorString = '';
+        	employeeAge.text = '';
+            employeeAge.errorString = '';
+        }
+        
+	]]>
+</mx:Script>
+
+	<mx:Panel layout="absolute" horizontalCenter="0" verticalCenter="0" width="456" height="268" title="Employee List" id="panel1">
+		<mx:Button x="136" y="130" label="Submit" click="submitForm()"/>
+		<mx:Button x="210" y="130" label="Cancel" click="leaveForm()"/>
+		<mx:Button label="Delete Employee" click="deleteEmployee()" x="10" y="10"/>
+		<mx:Button label="Logout" click="logout()" width="65" x="361" y="10"/>
+		<mx:Form y="40" height="82" left="10" right="10">
+			<mx:FormItem label="Employee Name" width="100%">
+				<mx:TextInput id="employeeName" width="100%" text="{selectedEmployee.name}"/>
+			</mx:FormItem>
+			<mx:FormItem label="Employee Age" width="100%">
+				<mx:TextInput id="employeeAge" width="100%" text="{selectedEmployee.age}"/>
+			</mx:FormItem>
+		</mx:Form>
+	</mx:Panel>
+
+	<mx:Array id="validators">
+	    <mx:StringValidator id="vEmployeeName" source="{employeeName}" property="text" required="true" />
+	    <mx:StringValidator id="vEmployeeAge"  source="{employeeAge}" property="text" required="true" />
+	</mx:Array>
+    
+</mx:Canvas>

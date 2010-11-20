@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application addedToStage="init()" xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:views="com.cafetownsend.views.*" viewSourceURL="srcview/index.html">
+
+<mx:Script>
+	<![CDATA[
+		import com.cafetownsend.SomaApplication;
+		
+		[Bindable]
+		public var navigationID:int = 0; 
+		
+		public var app:SomaApplication;
+		
+		private function init():void {
+			// start soma application
+			app = new SomaApplication(this);
+		}
+		
+	]]>
+</mx:Script>
+
+	<mx:ViewStack id="navigation" selectedIndex="{navigationID}" width="100%" height="100%">
+		<views:LoginView id="loginView"/>
+		<views:EmployeList id="employeList"/>
+		<views:EmployeDetails id="employeDetails"/>
+	</mx:ViewStack>
+
+</mx:Application>

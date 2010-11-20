@@ -126,7 +126,7 @@ package  {
 		/** @private */
 		protected var _models:SomaModels;
 		/** @private */
-		private var _views:SomaViews;
+		protected var _views:SomaViews;
 		/** @private */
 		protected var _controller:SomaController;
 		/** @private */
@@ -174,6 +174,7 @@ package  {
 			registerCommands();
 			registerWires();
 			registerPlugins();
+			start();
 		}
 
 		/** @private */
@@ -257,6 +258,10 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 			
 		}
 		
+		protected function start():void {
+			
+		}
+
 		//
 		// PUBLIC
 		//________________________________________________________________________________________________
