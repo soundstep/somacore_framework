@@ -23,7 +23,7 @@
         
         private function submitForm():void {
             if (Validator.validateAll(validators).length > 0) return;
-    		selectedEmployee.name = employeeName.text;
+    		selectedEmployee.firstname = employeeName.text;
     		selectedEmployee.age = employeeAge.text;
         	if (selectedEmployee.id == null) {
         		dispatchEvent(new EmployeeEvent(EmployeeEvent.CREATE, selectedEmployee));
@@ -52,7 +52,7 @@
 		<mx:Button label="Logout" click="logout()" width="65" x="361" y="10"/>
 		<mx:Form y="40" height="82" left="10" right="10">
 			<mx:FormItem label="Employee Name" width="100%">
-				<mx:TextInput id="employeeName" width="100%" text="{selectedEmployee.name}"/>
+				<mx:TextInput id="employeeName" width="100%" text="{selectedEmployee.firstname}"/>
 			</mx:FormItem>
 			<mx:FormItem label="Employee Age" width="100%">
 				<mx:TextInput id="employeeAge" width="100%" text="{selectedEmployee.age}"/>

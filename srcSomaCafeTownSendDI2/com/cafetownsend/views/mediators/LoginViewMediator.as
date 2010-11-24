@@ -12,10 +12,6 @@ package com.cafetownsend.views.mediators {
 		[Inject]
 		public var view:LoginView;
 		
-		public function LoginViewMediator() {
-			
-		}
-		
 		override public function initialize():void {
 			addEventListener(LoginEvent.MESSAGE, messageHandler, false, 0, true);
 			addEventListener(LoginEvent.ERROR, messageHandler, false, 0, true);

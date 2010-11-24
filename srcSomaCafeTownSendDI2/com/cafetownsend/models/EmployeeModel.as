@@ -12,7 +12,20 @@ package com.cafetownsend.models
 		}
 		
 		override public function initialize():void {
-			
+			data = <employees>
+				<employee id="1">
+					<firstname><![CDATA[John]]></firstname>
+					<age><![CDATA[32]]></age>
+				</employee>
+				<employee id="2">
+					<firstname><![CDATA[Dave]]></firstname>
+					<age><![CDATA[21]]></age>
+				</employee>
+				<employee id="3">
+					<firstname><![CDATA[Sue]]></firstname>
+					<age><![CDATA[46]]></age>
+				</employee>
+			</employees>;
 		}
 		
 	}

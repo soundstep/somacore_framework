@@ -1,4 +1,5 @@
 package com.cafetownsend.commands {
+
 	import com.cafetownsend.events.NavigationEvent;
 	import com.cafetownsend.views.MainView;
 	import com.soma.core.controller.Command;

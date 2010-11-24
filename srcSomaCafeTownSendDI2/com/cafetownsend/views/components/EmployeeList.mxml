@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:Canvas show="currentState=''" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" initialize="init()">
+<mx:Canvas show="currentState=''" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
 <mx:Script>
-		<![CDATA[
+	<![CDATA[
 		import com.cafetownsend.utils.NavigationConstants;
 		import com.cafetownsend.events.NavigationEvent;
 		import com.cafetownsend.events.EmployeeEvent;
@@ -18,7 +18,7 @@
 		}
 		
 		private function selectEmployee(event:ListEvent):void {
-			var vo:EmployeeVO = new EmployeeVO(list.selectedItem.@id, list.selectedItem.name, list.selectedItem.age);
+			var vo:EmployeeVO = new EmployeeVO(list.selectedItem.@id, list.selectedItem.firstname, list.selectedItem.age);
 			dispatchEvent(new EmployeeEvent(EmployeeEvent.SELECT, vo));
 			dispatchEvent(new NavigationEvent(NavigationEvent.SELECT, NavigationConstants.EMPLOYEE_DETAILS));
         }
@@ -26,19 +26,15 @@
         private function createEmployee():void {
         	dispatchEvent(new EmployeeEvent(EmployeeEvent.SELECT, new EmployeeVO()));
 			dispatchEvent(new NavigationEvent(NavigationEvent.SELECT, NavigationConstants.EMPLOYEE_DETAILS));
-			}
+		}
 
-			private function init():void {
-				trace("INIT EMPLOYEE LIST")
-			}
-        
 	]]>
 </mx:Script>
 
 	<mx:Panel layout="absolute" horizontalCenter="0" verticalCenter="0" width="456" height="268" title="Employee List" id="panel1">
 		<mx:DataGrid id="list" dataProvider="{employeeListData}" itemClick="selectEmployee(event)" top="40" bottom="10" left="10" right="10">
 			<mx:columns>
-				<mx:DataGridColumn dataField="name" headerText="Name"/>
+				<mx:DataGridColumn dataField="firstname" headerText="Name"/>
 				<mx:DataGridColumn dataField="age" headerText="Age"/>
 			</mx:columns>
 		</mx:DataGrid>
