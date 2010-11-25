@@ -1,5 +1,6 @@
 package com.cafetownsend.views.mediators {
 
+	import com.cafetownsend.models.EmployeeModel;
 	import com.cafetownsend.views.components.EmployeeDetails;
 	import com.cafetownsend.events.EmployeeEvent;
 	import com.soma.core.interfaces.IMediator;
@@ -12,6 +13,9 @@ package com.cafetownsend.views.mediators {
 		
 		[Inject]
 		public var view:EmployeeDetails;
+		
+		[Inject]
+		public var model:EmployeeModel;
 		
 		override public function initialize():void {
 			addEventListener(EmployeeEvent.SELECT, employeeSelectedhandler);

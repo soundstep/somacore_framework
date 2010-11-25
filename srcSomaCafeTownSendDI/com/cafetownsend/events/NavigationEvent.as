@@ -1,6 +1,4 @@
 package com.cafetownsend.events {
-	import com.cafetownsend.vo.LoginVO;
-	
 	import flash.events.Event;
 
 	public class NavigationEvent extends Event {

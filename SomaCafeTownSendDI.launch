@@ -4,7 +4,7 @@
 <stringAttribute key="ARGUMENTS" value=""/>
 <booleanAttribute key="KILL_PREVIUOS_VIEWER" value="false"/>
 <stringAttribute key="LAUNCHER_DEPENDENCIES" value="[Self]"/>
-<stringAttribute key="MAIN_CLASS" value="srcSomaCafeTownSendDI2/SomaCafeTownSend.mxml"/>
+<stringAttribute key="MAIN_CLASS" value="srcSomaCafeTownSendDI/SomaCafeTownSend.mxml"/>
 <stringAttribute key="OUTPUT" value="bin/SomaCafeTownSend.swf"/>
 <booleanAttribute key="PASS_CP" value="true"/>
 <booleanAttribute key="PASS_MAIN_CLASS" value="true"/>

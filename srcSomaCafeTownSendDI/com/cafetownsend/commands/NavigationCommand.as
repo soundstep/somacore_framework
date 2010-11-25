@@ -1,21 +1,20 @@
 package com.cafetownsend.commands {
-	
+
+	import com.cafetownsend.events.NavigationEvent;
+	import com.cafetownsend.views.MainView;
 	import com.soma.core.controller.Command;
 	import com.soma.core.interfaces.ICommand;
-	import com.cafetownsend.SomaApplication;
-	import com.cafetownsend.events.NavigationEvent;
-	
+
 	import flash.events.Event;
+	
 
 	public class NavigationCommand extends Command implements ICommand {
 		
-		public function NavigationCommand() {
-			
-		}
+		[Inject]
+		public var view:MainView;
 		
 		public function execute(event:Event):void {
-			var app:SomaCafeTownSend = SomaApplication(instance).app as SomaCafeTownSend;
-			app.navigationID = NavigationEvent(event).navigationID;
+			view.selectedIndex = NavigationEvent(event).navigationID;
 		}
 		
 	}

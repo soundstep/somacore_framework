@@ -1,5 +1,6 @@
 package com.cafetownsend.views.mediators {
 
+	import com.cafetownsend.events.EmployeeEvent;
 	import com.cafetownsend.models.EmployeeModel;
 	import com.cafetownsend.views.components.EmployeeList;
 	import com.soma.core.interfaces.IMediator;
@@ -19,7 +20,16 @@ package com.cafetownsend.views.mediators {
 		public var view:EmployeeList;
 
 		override public function initialize():void {
+			setDataToView();
+			addEventListener(EmployeeEvent.UPDATED, updateHandler);
+		}
+		
+		private function setDataToView():void {
 			view.employeeListData = new XMLListCollection(model.data.children());
+		}
+
+		private function updateHandler(event:EmployeeEvent):void {
+			setDataToView();
 		}
 
 	}

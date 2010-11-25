@@ -5,11 +5,11 @@ package com.cafetownsend.events {
 
 	public class EmployeeEvent extends Event {
 
-		public static const GET_ALL:String = "EmployeeEvent.GET_ALL";
 		public static const SELECT:String = "EmployeeEvent.SELECT";
 		public static const DELETE:String = "EmployeeEvent.DELETE";
 		public static const CREATE:String = "EmployeeEvent.CREATE";
 		public static const EDIT:String = "EmployeeEvent.EDIT";
+		public static const UPDATED:String = "EmployeeEvent.UPDATED";
 		
 		public var employee:EmployeeVO;
 		

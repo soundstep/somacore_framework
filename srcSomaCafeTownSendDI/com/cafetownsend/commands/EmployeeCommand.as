@@ -1,34 +1,29 @@
 package com.cafetownsend.commands {
 
+	import com.cafetownsend.events.EmployeeEvent;
+	import com.cafetownsend.models.EmployeeModel;
+	import com.cafetownsend.vo.EmployeeVO;
 	import com.soma.core.controller.Command;
 	import com.soma.core.interfaces.ICommand;
-	import com.cafetownsend.events.EmployeeEvent;
-	import com.cafetownsend.vo.EmployeeVO;
-	import com.cafetownsend.wires.EmployeeWire;
-	
+
 	import flash.events.Event;
 
 	public class EmployeeCommand extends Command implements ICommand {
 		
-		public function EmployeeCommand() {
-			
-		}
+		[Inject]
+		public var model:EmployeeModel;
 		
 		public function execute(event:Event):void {
-			var wire:EmployeeWire = getWire(EmployeeWire.NAME) as EmployeeWire;
 			var vo:EmployeeVO = EmployeeEvent(event).employee;
 			switch (event.type) {
-				case EmployeeEvent.SELECT:
-					wire.selectedEmployee = vo;
-					break;
 				case EmployeeEvent.DELETE:
-					wire.deleteEmployee(vo);
+					model.deleteEmployee(vo);
 					break;
 				case EmployeeEvent.CREATE:
-					wire.createEmployee(vo);
+					model.addEmployee(vo);
 					break;
 				case EmployeeEvent.EDIT:
-					wire.editEmployee(vo);
+					model.editEmployee(vo);
 					break;
 			}
 		}

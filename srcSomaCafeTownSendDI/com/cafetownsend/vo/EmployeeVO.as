@@ -4,17 +4,17 @@ package com.cafetownsend.vo {
 	public class EmployeeVO {
 		
 		public var id:String;
-		public var name:String;
+		public var firstname:String;
 		public var age:String;
 		
-		public function EmployeeVO(id:String = null, name:String = "", age:String = "") {
+		public function EmployeeVO(id:String = null, firstname:String = "", age:String = "") {
 			this.id = id;
-			this.name = name;
+			this.firstname = firstname;
 			this.age = age;
 		}
 		
 		public function toString():String {
-			return "[EmployeeVO] " + " id: " + id + ", name: " + name + ", age: " + age;
+			return "[EmployeeVO] " + " id: " + id + ", firstname: " + firstname + ", age: " + age;
 		}
 
 	}
