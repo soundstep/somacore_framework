@@ -21,13 +21,22 @@ package com.soma.core.demo.di.views {
 		}
 		
 		override public function initialize():void {
-			trace(this, "initialize", count, viewComponent, view, view.id);
+			trace(this, "initialize", count, viewComponent, view);
+			if (view) trace(view.id);
+			else {
+				trace(viewComponent);
+			}
 		}
 		
 		override public function dispose():void {
 			trace(this, "dispose");
-			view.dispose();
-			view = null;
+			if (view) {
+				view.dispose();
+				view = null;
+			}
+			else {
+				MyView(viewComponent).dispose();
+			}
 		}
 		
 	}

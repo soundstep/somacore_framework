@@ -83,6 +83,8 @@ package com.soma.core.interfaces {
 		 */
 		function willTrigger(type:String):Boolean;
 		
+		function setup(stage:Stage = null, injectorClass:Class = null):void;
+		
 		/**
 		 * Get the stage that has been registered to the framework.
 		 * @return The stage instance.

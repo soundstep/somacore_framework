@@ -18,7 +18,7 @@ package com.soma.core.mediator {
 		}
 		
 		public final function set viewComponent(value:Object):void {
-			_viewComponent = viewComponent;
+			_viewComponent = value;
 		}
 		
 		public function creationComplete():void {

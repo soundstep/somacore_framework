@@ -1,6 +1,6 @@
 package com.soma.core.demo.di {
+
 	import com.soma.core.Soma;
-	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.ISoma;
 
 	/**
@@ -12,7 +12,7 @@ package com.soma.core.demo.di {
 
 		public function SomaApplication(container:Main) {
 			_container = container;
-			super(_container.stage, SomaInjector);
+			super(_container.stage, null);
 			
 //			dispatchEvent(new Event('commandTest', true));
 			
@@ -97,6 +97,16 @@ package com.soma.core.demo.di {
 //			_container.addChild(view);//			_container.removeChild(view);
 //			view = new MyView();
 //			_container.addChild(view);
+//			_container.removeChild(view);
+			// create mediator manually
+//			mediators.mapView(MyView, MyViewMediator);
+//			var view:MyView = new MyView();
+//			_container.addChild(view);
+//			trace(mediators.getMediatorByView(view));
+//			_container.removeChild(view);
+//			view = new MyView();
+//			_container.addChild(view);
+//			trace(mediators.getMediatorByView(view));
 //			_container.removeChild(view);
 		}
 

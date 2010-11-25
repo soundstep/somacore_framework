@@ -41,11 +41,18 @@ package com.soma.core.mediator {
 		
 		private function createMediator(view:Object, viewClass:Class):void {
 			if (_mediatorsByClass[viewClass] && !_mediatorsByInstance[view]) {
-				_instance.injector.mapToInstance(viewClass, view);
-				var mediator:IMediator = IMediator(_instance.injector.createInstance(_mediatorsByClass[viewClass]));
+				if (_instance.injector) _instance.injector.mapToInstance(viewClass, view);
+				var mediator:IMediator;
+				if (_instance.injector) {
+					mediator = IMediator(_instance.injector.createInstance(_mediatorsByClass[viewClass]));
+				}
+				else {
+					mediator = new _mediatorsByClass[viewClass]();
+				}
 				mediator.viewComponent = view;
 				mediator.instance = _instance;
-				_instance.injector.removeMapping(viewClass);
+				if (_instance.injector) _instance.injector.removeMapping(viewClass);
+				else mediator.initialize();
 				_mediatorsByInstance[view] = mediator;
 				view.addEventListener("creationComplete", creationComplete, false, 0, true);
 			}
@@ -55,6 +62,8 @@ package com.soma.core.mediator {
 			if (_mediatorsByInstance[view]) {
 				view.removeEventListener("creationComplete", creationComplete, false);
 				IMediator(_mediatorsByInstance[view]).dispose();
+				IMediator(_mediatorsByInstance[view]).viewComponent = null;
+				IMediator(_mediatorsByInstance[view]).instance = null;
 				_mediatorsByInstance[view] = null;
 				delete _mediatorsByInstance[view];
 			}
