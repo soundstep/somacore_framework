@@ -1,14 +1,13 @@
 package com.soma.core.tests.suites.mediators {
 
-	import org.flexunit.asserts.assertEquals;
 	import com.soma.core.Soma;
 	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.ISoma;
-	import com.soma.core.model.Model;
 	import com.soma.core.tests.suites.support.EmptyView;
 	import com.soma.core.tests.suites.support.EmptyViewMediator;
 
 	import org.flexunit.assertThat;
+	import org.flexunit.asserts.assertEquals;
 	import org.flexunit.asserts.assertFalse;
 	import org.flexunit.asserts.assertTrue;
 	import org.flexunit.asserts.fail;
@@ -132,7 +131,7 @@ package com.soma.core.tests.suites.mediators {
 		public function testMediatorViewComponent():void {
 			_soma.mediators.mapView(EmptyView, EmptyViewMediator);
 			var view:EmptyView = new EmptyView();
-			_soma.addEventListener(EmptyViewMediator.EVENT_INITIALIZED, Async.asyncHandler(this, mediatorVerifyViewComponentSuccess, 100, {view:view, instance:_soma}, mediatorVerifyInitializeFailed), false, 0, true);
+			_soma.addEventListener(EmptyViewMediator.EVENT_INITIALIZED, Async.asyncHandler(this, mediatorVerifyViewComponentSuccess, 100, {view:view, instance:_soma}, mediatorVerifyViewComponentFailed), false, 0, true);
 			_stage.addChild(view);
 		}
 		
@@ -140,12 +139,40 @@ package com.soma.core.tests.suites.mediators {
 		public function testMediatorViewComponentInjection():void {
 			_somaInjection.mediators.mapView(EmptyView, EmptyViewMediator);
 			var view:EmptyView = new EmptyView();
-			_somaInjection.addEventListener(EmptyViewMediator.EVENT_INITIALIZED, Async.asyncHandler(this, mediatorVerifyViewComponentSuccess, 100, {view:view, instance:_somaInjection}, mediatorVerifyInitializeFailed), false, 0, true);
+			_somaInjection.addEventListener(EmptyViewMediator.EVENT_INITIALIZED, Async.asyncHandler(this, mediatorVerifyViewComponentSuccess, 100, {view:view, instance:_somaInjection}, mediatorVerifyViewComponentFailed), false, 0, true);
 			_stage.addChild(view);
+		}
+		
+		[Test(async)]
+		public function testMediatorDispose():void {
+			_soma.mediators.mapView(EmptyView, EmptyViewMediator);
+			var view:EmptyView = new EmptyView();
+			_soma.addEventListener(EmptyViewMediator.EVENT_DISPOSED, Async.asyncHandler(this, mediatorVerifyDisposeSuccess, 100, {view:view, instance:_soma}, mediatorVerifyDisposeFailed), false, 0, true);
+			_stage.addChild(view);
+			_stage.removeChild(view);
+		}
+		
+		[Test(async)]
+		public function testMediatorDisposeInjection():void {
+			_somaInjection.mediators.mapView(EmptyView, EmptyViewMediator);
+			var view:EmptyView = new EmptyView();
+			_somaInjection.addEventListener(EmptyViewMediator.EVENT_DISPOSED, Async.asyncHandler(this, mediatorVerifyDisposeSuccess, 100, {view:view, instance:_somaInjection}, mediatorVerifyDisposeFailed), false, 0, true);
+			_stage.addChild(view);
+			_stage.removeChild(view);
 		}
 		
 		private function mediatorVerifyInitializeFailed(data:Object):void {
 			fail("ERROR, Mediator not initialized.");
+			_stage.removeChild(data.view);
+		}
+		
+		private function mediatorVerifyViewComponentFailed(data:Object):void {
+			fail("ERROR, viewComponent not set in mediator.");
+			_stage.removeChild(data.view);
+		}
+		
+		private function mediatorVerifyDisposeFailed(data:Object):void {
+			fail("ERROR, Mediator not disposed.");
 			_stage.removeChild(data.view);
 		}
 		
@@ -157,6 +184,10 @@ package com.soma.core.tests.suites.mediators {
 			var instance:ISoma = data.instance as ISoma;
 			assertEquals(instance.mediators.getMediatorByView(data.view).viewComponent, data.view);
 			_stage.removeChild(data.view);
+		}
+
+		private function mediatorVerifyDisposeSuccess(event:Event, data:Object):void {
+			
 		}
 
 	}
