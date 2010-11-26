@@ -1,4 +1,5 @@
 package com.soma.core.mediator {
+
 	import com.soma.core.interfaces.IMediator;
 	import com.soma.core.interfaces.ISoma;
 
@@ -41,20 +42,20 @@ package com.soma.core.mediator {
 		
 		private function createMediator(view:Object, viewClass:Class):void {
 			if (_mediatorsByClass[viewClass] && !_mediatorsByInstance[view]) {
-				if (_instance.injector) _instance.injector.mapToInstance(viewClass, view);
 				var mediator:IMediator;
 				if (_instance.injector) {
+					_instance.injector.mapToInstance(viewClass, view);
 					mediator = IMediator(_instance.injector.createInstance(_mediatorsByClass[viewClass]));
+					_instance.injector.removeMapping(viewClass);
 				}
 				else {
 					mediator = new _mediatorsByClass[viewClass]();
+					mediator.instance = _instance;
 				}
-				mediator.viewComponent = view;
-				mediator.instance = _instance;
-				if (_instance.injector) _instance.injector.removeMapping(viewClass);
-				else mediator.initialize();
 				_mediatorsByInstance[view] = mediator;
 				view.addEventListener("creationComplete", creationComplete, false, 0, true);
+				mediator.viewComponent = view;
+				mediator.initialize();
 			}
 		}
 

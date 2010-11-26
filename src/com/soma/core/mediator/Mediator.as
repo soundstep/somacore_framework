@@ -21,6 +21,8 @@ package com.soma.core.mediator {
 			_viewComponent = value;
 		}
 		
+		override public function postConstruct():void { /* removes post construct from super class (the mediator is initialized manually) */}
+		
 		public function creationComplete():void {
 			
 		}
