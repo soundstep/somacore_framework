@@ -1,20 +1,25 @@
 package com.soma.core.tests.suites.models {
-	import flash.events.EventDispatcher;
-	import flash.events.IEventDispatcher;
+
+	import com.soma.core.Soma;
+	import com.soma.core.di.SomaInjector;
+	import com.soma.core.interfaces.ISoma;
 	import com.soma.core.model.Model;
 	import com.soma.core.tests.suites.support.EmptyModel;
-	import flash.events.Event;
-	import org.flexunit.asserts.fail;
-	import org.flexunit.async.Async;
+
 	import org.flexunit.asserts.assertEquals;
 	import org.flexunit.asserts.assertNull;
-	import org.hamcrest.object.instanceOf;
-	import org.hamcrest.assertThat;
-	import com.soma.core.Soma;
-	import com.soma.core.interfaces.ISoma;
 	import org.flexunit.asserts.assertTrue;
-	import flash.display.Stage;
+	import org.flexunit.asserts.fail;
+	import org.flexunit.async.Async;
+	import org.hamcrest.assertThat;
+	import org.hamcrest.object.instanceOf;
+
 	import mx.core.FlexGlobals;
+
+	import flash.display.Stage;
+	import flash.events.Event;
+	import flash.events.EventDispatcher;
+	import flash.events.IEventDispatcher;
 	
 	/**
 	 * <b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a><br />
@@ -27,7 +32,7 @@ package com.soma.core.tests.suites.models {
 	
 	public class ModelsTests {
 		
-		private var _soma:ISoma;
+		private var _soma:ISoma;		private var _somaInjection:ISoma;
 		
 		private static var _stage:Stage;
 		
@@ -44,11 +49,15 @@ package com.soma.core.tests.suites.models {
 		[Before]
 		public function runBefore():void {
 			_soma = new Soma(_stage);
+			_somaInjection = new Soma(_stage, SomaInjector);
 		}
 		
 		[After]
 		public function runAfter():void {
-			_soma.dispose();			_soma = null;
+			_soma.dispose();
+			_soma = null;
+			_somaInjection.dispose();
+			_somaInjection = null;
 		}
 		
 		[Test]
@@ -113,10 +122,26 @@ package com.soma.core.tests.suites.models {
 		}
 		
 		[Test]
+		public function testModelsDefaultDispatcherInjection():void {
+			var model:EmptyModel = _somaInjection.injector.createInstance(EmptyModel) as EmptyModel;
+			assertEquals(model.dispatcher, _somaInjection);
+		}
+		
+		[Test]
 		public function testModelsGetDispatcher():void {
 			var dispatcher:IEventDispatcher = new EventDispatcher();
 			_soma.addModel(EmptyModel.NAME, new EmptyModel(null, dispatcher));
 			assertEquals(_soma.getModel(EmptyModel.NAME).dispatcher, dispatcher);
+		}
+		
+		[Test]
+		public function testModelsGetDispatcherInjection():void {
+			// TODO
+//			var dispatcher:IEventDispatcher = new EventDispatcher();
+//			_somaInjection.injector.mapToInstance(IEventDispatcher, dispatcher);
+//			var model:EmptyModel = _somaInjection.injector.createInstance(EmptyModel, true, true) as EmptyModel;
+//			_somaInjection.injector.removeMapping(IEventDispatcher)
+//			assertEquals(model.dispatcher, dispatcher);
 		}
 		
 		[Test]
@@ -127,11 +152,22 @@ package com.soma.core.tests.suites.models {
 			assertEquals(_soma.getModel(EmptyModel.NAME).dispatcher, dispatcher);
 		}
 		
+		[Test]
+		public function testModelsSetDispatcherInjection():void {
+			// TODO
+		}
+		
 		[Test(async)]
 		public function testModelInitialize():void {
 			var model:Model = new EmptyModel();
 			_soma.addEventListener(EmptyModel.EVENT_INITIALIZED, Async.asyncHandler(this, modelVerifyInitializeSuccess, 100, model, modelVerifyInitializeFailed), false, 0, true);
 			_soma.addModel(EmptyModel.NAME, model);
+		}
+
+		[Test(async)]
+		public function testModelInitializeInjection():void {
+			_somaInjection.addEventListener(EmptyModel.EVENT_INITIALIZED, Async.asyncHandler(this, modelVerifyInitializeSuccess, 100, null, modelVerifyInitializeFailed), false, 0, true);
+			_somaInjection.injector.createInstance(EmptyModel) as EmptyModel;
 		}
 
 		private function modelVerifyInitializeFailed(model:Model):void {

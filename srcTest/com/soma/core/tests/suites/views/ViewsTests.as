@@ -25,6 +25,7 @@ package com.soma.core.tests.suites.views {
 	public class ViewsTests {
 		
 		private var _soma:ISoma;
+		private var _somaInjection:Soma;
 		
 		private static var _stage:Stage;
 		
@@ -40,12 +41,15 @@ package com.soma.core.tests.suites.views {
 		
 		[Before]
 		public function runBefore():void {
-			_soma = new Soma(_stage);
+			_soma = new Soma(_stage);			_somaInjection = new Soma(_stage);
 		}
 		
 		[After]
 		public function runAfter():void {
-			_soma.dispose();			_soma = null;
+			_soma.dispose();
+			_soma = null;
+			_somaInjection.dispose();
+			_somaInjection = null;
 		}
 		
 		[Test]

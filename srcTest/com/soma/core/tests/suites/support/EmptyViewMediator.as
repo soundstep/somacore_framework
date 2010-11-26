@@ -10,6 +10,9 @@ package com.soma.core.tests.suites.support {
 	 */
 	public class EmptyViewMediator extends Mediator implements IMediator {
 
+		[Inject]
+		public var view:EmptyView;
+
 		public static const EVENT_INITIALIZED:String = "EmptyMediator::Event.EVENT_INITIALIZED";
 		public static const EVENT_DISPOSED:String = "EmptyMediator::Event.EVENT_DISPOSED";
 		

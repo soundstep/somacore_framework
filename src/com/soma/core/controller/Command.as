@@ -202,7 +202,7 @@ package  {
 		 * @example
 		 * <listing version="3.0">var myExtendedSomaClass:SomaApplication = SomaApplication(instance);</listing>
 		 */
-		public final function get instance():ISoma {
+		public function get instance():ISoma {
 			return _instance;
 		}
 		
@@ -210,7 +210,7 @@ package  {
 		 * Get the stage that has been registered to the framework.
 		 * @return The stage instance.
 		 */
-		public final function get stage():Stage {
+		public function get stage():Stage {
 			return _instance.stage;
 		}
 		

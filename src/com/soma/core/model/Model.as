@@ -213,7 +213,7 @@ private function doSomething():void {
 		 * Retrieves the name of the model.
 		 * @return A String.
 		 */
-		public final function getName():String {
+		public function getName():String {
 			return _name;
 		}
 		
@@ -221,18 +221,18 @@ private function doSomething():void {
 		 * Sets the name of the model.
 		 * @param value A String.
 		 */
-		public final function setName(value:String):void {
+		public function setName(value:String):void {
 			_name = value;
 		}
 		
 		/**
 		 * Data of the model.
 		 */
-		public final function get data():Object {
+		public function get data():Object {
 			return _data;
 		}
 		
-		public final function set data(value:Object):void {
+		public function set data(value:Object):void {
 			_data = value;
 		}
 		
@@ -240,13 +240,13 @@ private function doSomething():void {
 		 * EventDispatcher instance of the model.
 		 * @default The framework instance.
 		 */
-		public final function get dispatcher():IEventDispatcher {
+		public function get dispatcher():IEventDispatcher {
 			return _dispatcher;
 		}
 		
 		[Inject]
 		[Named(index=1, name="somaDispatcher")]
-		public final function set dispatcher(value:IEventDispatcher):void {
+		public function set dispatcher(value:IEventDispatcher):void {
 			_dispatcher = value;
 		}
 		

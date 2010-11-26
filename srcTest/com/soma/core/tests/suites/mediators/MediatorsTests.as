@@ -144,21 +144,11 @@ package com.soma.core.tests.suites.mediators {
 		}
 		
 		[Test(async)]
-		public function testMediatorDispose():void {
-			_soma.mediators.mapView(EmptyView, EmptyViewMediator);
-			var view:EmptyView = new EmptyView();
-			_soma.addEventListener(EmptyViewMediator.EVENT_DISPOSED, Async.asyncHandler(this, mediatorVerifyDisposeSuccess, 100, {view:view, instance:_soma}, mediatorVerifyDisposeFailed), false, 0, true);
-			_stage.addChild(view);
-			_stage.removeChild(view);
-		}
-		
-		[Test(async)]
-		public function testMediatorDisposeInjection():void {
+		public function testMediatorPairViewInjection():void {
 			_somaInjection.mediators.mapView(EmptyView, EmptyViewMediator);
 			var view:EmptyView = new EmptyView();
-			_somaInjection.addEventListener(EmptyViewMediator.EVENT_DISPOSED, Async.asyncHandler(this, mediatorVerifyDisposeSuccess, 100, {view:view, instance:_somaInjection}, mediatorVerifyDisposeFailed), false, 0, true);
+			_somaInjection.addEventListener(EmptyViewMediator.EVENT_INITIALIZED, Async.asyncHandler(this, mediatorVerifyPairViewSuccess, 100, {view:view, instance:_somaInjection}, mediatorVerifyPairViewFailed), false, 0, true);
 			_stage.addChild(view);
-			_stage.removeChild(view);
 		}
 		
 		private function mediatorVerifyInitializeFailed(data:Object):void {
@@ -170,12 +160,11 @@ package com.soma.core.tests.suites.mediators {
 			fail("ERROR, viewComponent not set in mediator.");
 			_stage.removeChild(data.view);
 		}
-		
-		private function mediatorVerifyDisposeFailed(data:Object):void {
-			fail("ERROR, Mediator not disposed.");
-			_stage.removeChild(data.view);
+
+		private function mediatorVerifyPairViewFailed():void {
+			fail("ERROR, pair view not injected in mediator.");
 		}
-		
+
 		private function mediatorVerifyInitializeSuccess(event:Event, data:Object):void {
 			_stage.removeChild(data.view);
 		}
@@ -186,8 +175,11 @@ package com.soma.core.tests.suites.mediators {
 			_stage.removeChild(data.view);
 		}
 
-		private function mediatorVerifyDisposeSuccess(event:Event, data:Object):void {
-			
+		private function mediatorVerifyPairViewSuccess(event:Event, data:Object):void {
+			var instance:ISoma = data.instance as ISoma;
+			var mediator:EmptyViewMediator = instance.mediators.getMediatorByView(data.view) as EmptyViewMediator;
+			assertEquals(mediator.view, data.view);
+			_stage.removeChild(data.view);
 		}
 
 	}

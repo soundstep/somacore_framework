@@ -180,13 +180,13 @@ private function myEventHandler(event:MyEvent):void {
 		 * @example
 		 * <listing version="3.0">var myExtendedSomaClass:SomaApplication = SomaApplication(instance);</listing>
 		 */
-		public final function get instance():ISoma {
+		public function get instance():ISoma {
 			return _instance;
 		}
 		
 		[Inject]
 		[Named(index=1, name="somaInstance")]
-		public final function set instance(value:ISoma):void {
+		public function set instance(value:ISoma):void {
 			_instance = value;
 		}
 		
@@ -251,7 +251,7 @@ private function myEventHandler(event:MyEvent):void {
 		 * Retrieves the name of the wire.
 		 * @return A String.
 		 */
-		public final function getName():String {
+		public function getName():String {
 			return _name;
 		}
 		
@@ -259,7 +259,7 @@ private function myEventHandler(event:MyEvent):void {
 		 * Sets the name of the wire.
 		 * @param value A String.
 		 */
-		public final function setName(name:String):void {
+		public function setName(name:String):void {
 			_name = name;
 		}
 		
