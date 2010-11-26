@@ -26,9 +26,9 @@ package com.soma.core.di {
 			return new SomaInjector().initialize(_injector.createChildInjector());
 		}
 		
-		public function createInstance(classTarget:Class, asSingleton:Boolean = false, asEagerSingleton:Boolean = false):Object {
-			if (asSingleton || asEagerSingleton) mapSingleton(classTarget, asEagerSingleton);
-			return _injector.inject(classTarget);
+		public function createInstance(classTarget:Class, asSingleton:Boolean = false, asEagerSingleton:Boolean = false, injectionName:String = null):Object {
+			if (asSingleton || asEagerSingleton) mapSingleton(classTarget, asEagerSingleton, injectionName);
+			return _injector.inject(classTarget, injectionName);
 		}
 		
 		public function mapSingleton(classTarget:Class, asEagerSingleton:Boolean = false, injectionName:String = null):void {
@@ -70,7 +70,10 @@ package com.soma.core.di {
 
 		public function dispose():void {
 			_injector.tearDown();
-			_injector = null;
+		}
+		
+		public function get inj():IInjector {
+			return _injector;
 		}
 		
 	}
