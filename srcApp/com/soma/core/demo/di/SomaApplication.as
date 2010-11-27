@@ -1,5 +1,4 @@
 package com.soma.core.demo.di {
-
 	import com.soma.core.Soma;
 	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.ISoma;
@@ -114,6 +113,13 @@ package com.soma.core.demo.di {
 //			child.mapTo(EmptyView, EmptyViewMediator);
 //			trace(child.hasMapping(EmptyView));
 //			trace(child.createInstance(EmptyView))
+			
+//			var main:IInjector = Injector.createInjector();
+//			var child:IInjector = main.createChildInjector();
+//			child.map(EmptyView).to(EmptyViewMediator);
+//			trace(child.hasMapping(EmptyView));
+//			child.getMapping(EmptyViewMediator)
+//			trace(child.inject(EmptyView))
 			
 		}
 

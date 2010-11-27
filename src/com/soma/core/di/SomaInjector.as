@@ -69,7 +69,7 @@ package com.soma.core.di {
 		}
 
 		public function dispose():void {
-			_injector.tearDown();
+			
 		}
 		
 		public function get inj():IInjector {
