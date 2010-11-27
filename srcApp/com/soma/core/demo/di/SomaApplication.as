@@ -110,16 +110,16 @@ package com.soma.core.demo.di {
 //			_container.removeChild(view);
 			
 //			var child:ISomaInjector = injector.createChildInjector();
-//			child.mapTo(EmptyView, EmptyViewMediator);
-//			trace(child.hasMapping(EmptyView));
-//			trace(child.createInstance(EmptyView))
-			
+//			injector.mapTo(IEngine, LittleEngine);
+//			trace(child.hasMapping(IEngine));
+//			trace(child.createInstance(IEngine));
+//			
 //			var main:IInjector = Injector.createInjector();
 //			var child:IInjector = main.createChildInjector();
-//			child.map(EmptyView).to(EmptyViewMediator);
-//			trace(child.hasMapping(EmptyView));
-//			child.getMapping(EmptyViewMediator)
-//			trace(child.inject(EmptyView))
+//			main.map(IEngine).to(LittleEngine);
+//			trace(child.hasMapping(IEngine));
+////			child.getMapping(IEngine);
+//			trace(child.inject(IEngine));
 			
 		}
 

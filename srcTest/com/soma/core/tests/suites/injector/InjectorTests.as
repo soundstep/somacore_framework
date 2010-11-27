@@ -1,5 +1,4 @@
 package com.soma.core.tests.suites.injector {
-
 	import com.soma.core.Soma;
 	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.ISoma;
@@ -174,7 +173,7 @@ package com.soma.core.tests.suites.injector {
 //			_injector.dispose();
 //			trace(_injector.hasMapping(EmptyView))
 //			assertFalse(_injector.hasMapping(EmptyView));
-			// TODO check dispose
+//			// TODO check dispose
 //		}
 		
 		[Test]
