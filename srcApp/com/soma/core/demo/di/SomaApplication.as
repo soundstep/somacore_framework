@@ -116,10 +116,10 @@ package com.soma.core.demo.di {
 //			
 //			var main:IInjector = Injector.createInjector();
 //			var child:IInjector = main.createChildInjector();
-//			main.map(IEngine).to(LittleEngine);
-//			trace(child.hasMapping(IEngine));
+//			main.map(EmptyView).to(EmptyViewMediator);
+//			trace(child.hasMapping(EmptyView));
 ////			child.getMapping(IEngine);
-//			trace(child.inject(IEngine));
+//			trace(child.inject(EmptyView));
 			
 		}
 
