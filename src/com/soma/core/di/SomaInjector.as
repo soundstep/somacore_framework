@@ -1,8 +1,8 @@
 package com.soma.core.di {
-
+	import uk.co.ziazoo.injector.IInjector;
 	import uk.co.ziazoo.injector.IMapping;
 	import uk.co.ziazoo.injector.impl.Injector;
-	import uk.co.ziazoo.injector.IInjector;
+
 	import com.soma.core.interfaces.ISomaInjector;
 	/**
 	 * @author Romuald Quantin
@@ -70,10 +70,6 @@ package com.soma.core.di {
 
 		public function dispose():void {
 			
-		}
-		
-		public function get inj():IInjector {
-			return _injector;
 		}
 		
 	}

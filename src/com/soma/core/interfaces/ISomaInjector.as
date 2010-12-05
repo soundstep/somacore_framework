@@ -1,5 +1,4 @@
 package com.soma.core.interfaces {
-	import uk.co.ziazoo.injector.IInjector;
 
 	/**
 	 * @author Romuald Quantin
@@ -15,7 +14,7 @@ package com.soma.core.interfaces {
 		function getMappingName(classTarget:Class, injectionName:String = null):String;
 		function getMappingType(classTarget:Class, injectionName:String = null):Class;		function removeMapping(classTarget:Class, injectionName:String = null):void
 		function dispose():void;
-		
-		function get inj():IInjector;
+//		
+//		function get inj():IInjector;
 	}
 }
