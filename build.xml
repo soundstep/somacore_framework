@@ -65,9 +65,9 @@
 			<arg line="-sp"/>
 			<arg line="'${dir.src.main}'"/>
 			<arg line="-include-libraries"/>
-			<arg line="'${dir.libs}/fussy-0.2-SNAPSHOT.swc'"/>
+			<arg line="'${dir.libs}/fussy-0.2.swc'"/>
 			<arg line="-include-libraries"/>
-			<arg line="'${dir.libs}/injector-0.8.5-SNAPSHOT.swc'"/>
+			<arg line="'${dir.libs}/injector-0.8.5-rc1.swc'"/>
 		</exec>
 		<echo message="Success"/>
 		<eclipse.refreshLocal resource="${project.name}" />
