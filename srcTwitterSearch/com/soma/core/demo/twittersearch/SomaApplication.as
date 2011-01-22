@@ -1,4 +1,5 @@
 package com.soma.core.demo.twittersearch {
+	import com.soma.core.demo.twittersearch.views.MainView;
 	import com.soma.core.Soma;
 	import com.soma.core.demo.twittersearch.controller.commands.SearchCommand;
 	import com.soma.core.demo.twittersearch.controller.events.TwitterEvent;
@@ -27,6 +28,7 @@ package com.soma.core.demo.twittersearch {
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			// injector
+			injector.mapTo(MainView, MainView);
 			injector.mapSingleton(TwitterService);
 			injector.mapSingleton(SearchWire);
 			injector.createInstance(SearchWire);		}

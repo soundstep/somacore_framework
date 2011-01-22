@@ -12,10 +12,6 @@ package com.soma.core.demo.helloworld.mediators {
 		[Inject]
 		public var view:MessageView;
 		
-		public function MessageViewMediator() {
-			
-		}
-		
 		private function messageReady(event:MessageEvent):void {
 			view.updateMessage(event.message);
 		}

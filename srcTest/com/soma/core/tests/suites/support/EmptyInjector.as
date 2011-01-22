@@ -1,53 +1,60 @@
 package com.soma.core.tests.suites.support {
-
-	import uk.co.ziazoo.injector.IInjector;
+	import flash.system.ApplicationDomain;
 	import com.soma.core.interfaces.ISomaInjector;
 
 	/**
 	 * @author Romuald Quantin (romu@soundstep.com)
 	 */
 	public class EmptyInjector implements ISomaInjector {
-
 		public function createChildInjector():ISomaInjector {
 			return null;
 		}
 
-		public function createInstance(classTarget:Class, asSingleton:Boolean = false, asEagerSingleton:Boolean = false, injectionName:String = null):Object {
+		public function getParentInjector():ISomaInjector {
 			return null;
 		}
 
-		public function mapSingleton(classTarget:Class, asEagerSingleton:Boolean = false, injectionName:String = null):void {
+		public function createInstance(classTarget:Class):Object {
+			return null;
 		}
 
-		public function mapTo(whenAskFor:Class, createClass:Class, injectionName:String = null):void {
+		public function getInstance(classTarget:Class, name:String = ""):Object {
+			return null;
 		}
 
-		public function mapToInstance(whenAskFor:Class, instanceTarget:Object, injectionName:String = null):void {
+		public function injectInto(instance:Object):void {
 		}
 
-		public function mapToFactory(whenAskFor:Class, createWithFactory:Class):void {
+		public function mapSingleton(classTarget:Class, name:String = ""):void {
 		}
 
-		public function hasMapping(classTarget:Class, named:String = null):Boolean {
+		public function mapSingletonOf(classTarget:Class, useSingletonOf:Class, name:String = ""):void {
+		}
+
+		public function mapTo(whenAskFor:Class, createClass:Class, name:String = ""):void {
+		}
+
+		public function mapToInstance(whenAskFor:Class, instance:Object, name:String = ""):void {
+		}
+
+		public function hasMapping(classTarget:Class, name:String = ""):Boolean {
 			return false;
 		}
 
-		public function getMappingName(classTarget:Class, injectionName:String = null):String {
+		public function removeMapping(classTarget:Class, name:String = ""):void {
+		}
+
+		public function getApplicationDomain():ApplicationDomain {
 			return null;
 		}
 
-		public function getMappingType(classTarget:Class, injectionName:String = null):Class {
-			return null;
-		}
-
-		public function removeMapping(classTarget:Class, injectionName:String = null):void {
+		public function setApplicationDomain(value:ApplicationDomain):void {
 		}
 
 		public function dispose():void {
 		}
 
-		public function get inj():IInjector {
-			return null;
-		}
+		
+		
 	}
 }

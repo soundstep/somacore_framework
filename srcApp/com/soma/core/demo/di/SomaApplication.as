@@ -1,7 +1,9 @@
 package com.soma.core.demo.di {
 	import com.soma.core.Soma;
+	import com.soma.core.demo.di.views.SimpleView;
 	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.ISoma;
+	import com.soma.core.interfaces.ISomaInjector;
 
 	/**
 	 * @author Romuald Quantin
@@ -30,6 +32,44 @@ package com.soma.core.demo.di {
 //			injector.mapSingleton(SimpleModel);//			injector.mapSingleton(GreetingWire2);
 //			injector.mapSingleton(SimpleView);
 //			injector.createInstance(GreetingWire);
+			
+			
+			
+//			var i:Injector = new Injector();
+//			var s:ISoma = new Soma(stage);
+//			i.mapValue(ISoma, s, "somaInstance");
+//			i.mapValue(IEventDispatcher, s, "somaDispatcher");
+//			i.instantiate(TestISoma);
+//			
+//			i.mapClass(MessageModel, MessageModel);
+//			i.instantiate(MessageCommand)
+			
+			
+			
+			
+//			var i:ISomaInjector = new SomaInjector();
+//			var s:ISoma = new Soma(stage);
+//			i.mapToInstance(ISoma, s, "somaInstance");
+//			i.mapToInstance(IEventDispatcher, s, "somaDispatcher");
+//			i.createInstance(TestISoma);
+//			
+//			i.mapTo(MessageModel, MessageModel);
+//			i.createInstance(MessageCommand);
+			
+			var i:ISomaInjector = new SomaInjector();
+			i.mapSingleton(SimpleView);
+			trace(i.getInstance(SimpleView) == i.getInstance(SimpleView));
+			
+//			injector.mapTo(SimpleModel, SimpleModel);
+//			injector.mapSingleton(SimpleModel);
+			
+//			injector.createInstance(GreetingWire2);
+			
+//			injector.mapSingleton(GreetingWire2);
+//			injector.mapSingleton(SimpleView);
+//			injector.createInstance(GreetingWire);
+			
+			
 			// test 2
 //			injector.mapSingleton(SimpleModel);
 //			injector.mapSingleton(GreetingWire2);

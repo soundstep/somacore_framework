@@ -51,7 +51,8 @@ package com.soundstep.somacolor.controllers.commands {
 		//________________________________________________________________________________________________
 		
 		public function execute(event:Event):void {
-			injector.createInstance(ColorWire, true);
+			injector.mapSingleton(ColorWire);
+			injector.createInstance(ColorWire);
 			dispatchEvent(new ColorEvent(ColorDataEvent.LOAD));
 			dispatchEvent(new SomaDebuggerEvent(SomaDebuggerEvent.MOVE_TO_TOP));
 		}

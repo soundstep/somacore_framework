@@ -62,7 +62,7 @@ package com.cafetownsend {
 		
 		override protected function registerViews():void {
 			// add Main View (ViewStack) to the display list
-			_container.addElement(IVisualElement(injector.createInstance(MainView)));
+			_container.addElement(IVisualElement(injector.getInstance(MainView)));
 		}
 		
 		override protected function registerPlugins():void {
