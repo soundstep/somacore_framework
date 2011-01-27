@@ -12,14 +12,14 @@ package com.soma.core.demo.helloworld.mediators {
 		[Inject]
 		public var view:MessageView;
 		
-		private function messageReady(event:MessageEvent):void {
-			view.updateMessage(event.message);
-		}
-		
 		override public function initialize():void {
 			addEventListener(MessageEvent.READY, messageReady);
 		}
 
+		private function messageReady(event:MessageEvent):void {
+			view.updateMessage(event.message);
+		}
+		
 		override public function dispose():void {
 			removeEventListener(MessageEvent.READY, messageReady);
 		}
