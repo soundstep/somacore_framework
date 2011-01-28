@@ -1,9 +1,15 @@
 package com.soma.core.demo.di {
 	import com.soma.core.Soma;
-	import com.soma.core.demo.di.views.SimpleView;
+	import com.soma.core.demo.di.views.BitmapDrawableMediator;
+	import com.soma.core.demo.di.views.EventDispatcherMediator;
+	import com.soma.core.demo.di.views.IViewTest;
+	import com.soma.core.demo.di.views.ViewTest;
+	import com.soma.core.demo.di.views.ViewTestMediator;
 	import com.soma.core.di.SomaInjector;
 	import com.soma.core.interfaces.ISoma;
-	import com.soma.core.interfaces.ISomaInjector;
+
+	import flash.display.IBitmapDrawable;
+	import flash.events.IEventDispatcher;
 
 	/**
 	 * @author Romuald Quantin
@@ -27,6 +33,18 @@ package com.soma.core.demo.di {
 		override protected function registerWires():void {
 			
 			// small tests in progress before writing correct unit tests
+			//mediators.allowInterfaceMapping = true;
+//			mediators.map(Sprite, SpriteMediator);
+			
+			mediators.map(IEventDispatcher, EventDispatcherMediator);
+			mediators.map(IViewTest, ViewTestMediator);
+			mediators.map(IBitmapDrawable, BitmapDrawableMediator);
+			
+			//mediators.unmap(IViewTest);
+			//mediators.unmap(IBitmapDrawable);
+			
+			_container.addChild(new ViewTest());
+			
 			
 			// test 1
 //			injector.mapSingleton(SimpleModel);//			injector.mapSingleton(GreetingWire2);
@@ -56,9 +74,27 @@ package com.soma.core.demo.di {
 //			i.mapTo(MessageModel, MessageModel);
 //			i.createInstance(MessageCommand);
 			
-			var i:ISomaInjector = new SomaInjector();
-			i.mapSingleton(SimpleView);
-			trace(i.getInstance(SimpleView) == i.getInstance(SimpleView));
+//			var i:ISomaInjector = new SomaInjector();
+//			i.mapSingleton(SimpleView);
+//			trace(i.getInstance(SimpleView) == i.getInstance(SimpleView));
+			
+//			var i:ISomaInjector = new SomaInjector();
+//			
+//			var v1:STViewInjectee = new STViewInjectee();
+//			var v2:STViewInjectee = new STViewInjectee();
+			
+			//i.mapSingletonOf(ISTView, STView);
+			
+//			i.mapSingleton(STView)
+//			i.map(ISTView, STView)
+			
+//			i.injectInto(v1);
+//			i.injectInto(v2);
+//			
+//			var v1:STViewInjectee = i.createInstance(STViewInjectee) as STViewInjectee;
+//			var v2:STViewInjectee = i.createInstance(STViewInjectee) as STViewInjectee;
+//			trace(v1.injected, v2.injected, v1.injected == v2.injected)
+			
 			
 //			injector.mapTo(SimpleModel, SimpleModel);
 //			injector.mapSingleton(SimpleModel);

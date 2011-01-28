@@ -135,26 +135,11 @@ package com.soma.core.tests.suites.models {
 		}
 		
 		[Test]
-		public function testModelsGetDispatcherInjection():void {
-			// TODO
-//			var dispatcher:IEventDispatcher = new EventDispatcher();
-//			_somaInjection.injector.mapToInstance(IEventDispatcher, dispatcher);
-//			var model:EmptyModel = _somaInjection.injector.createInstance(EmptyModel, true, true) as EmptyModel;
-//			_somaInjection.injector.removeMapping(IEventDispatcher)
-//			assertEquals(model.dispatcher, dispatcher);
-		}
-		
-		[Test]
 		public function testModelsSetDispatcher():void {
 			var dispatcher:IEventDispatcher = new EventDispatcher();
 			_soma.addModel(EmptyModel.NAME, new EmptyModel());
 			_soma.getModel(EmptyModel.NAME).dispatcher = dispatcher;
 			assertEquals(_soma.getModel(EmptyModel.NAME).dispatcher, dispatcher);
-		}
-		
-		[Test]
-		public function testModelsSetDispatcherInjection():void {
-			// TODO
 		}
 		
 		[Test(async)]
@@ -167,7 +152,7 @@ package com.soma.core.tests.suites.models {
 		[Test(async)]
 		public function testModelInitializeInjection():void {
 			_somaInjection.addEventListener(EmptyModel.EVENT_INITIALIZED, Async.asyncHandler(this, modelVerifyInitializeSuccess, 100, null, modelVerifyInitializeFailed), false, 0, true);
-			_somaInjection.injector.createInstance(EmptyModel) as EmptyModel;
+			_somaInjection.injector.createInstance(EmptyModel);
 		}
 
 		private function modelVerifyInitializeFailed(model:Model):void {

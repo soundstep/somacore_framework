@@ -60,11 +60,11 @@ package com.soma.core.di {
 			_injector.mapSingleton(classTarget, name);
 		}
 		
-		public function mapSingletonOf(classTarget:Class, useSingletonOf:Class, name:String = ""):void {
-			_injector.mapSingletonOf(classTarget, useSingletonOf, name);
+		public function mapSingletonOf(whenAskFor:Class, useSingletonOf:Class, name:String = ""):void {
+			_injector.mapSingletonOf(whenAskFor, useSingletonOf, name);
 		}
 		
-		public function mapTo(whenAskFor:Class, createClass:Class, name:String = ""):void {
+		public function map(whenAskFor:Class, createClass:Class, name:String = ""):void {
 			_injector.mapClass(whenAskFor, createClass, name);
 		}
 		

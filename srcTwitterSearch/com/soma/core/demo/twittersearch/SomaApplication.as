@@ -28,7 +28,7 @@ package com.soma.core.demo.twittersearch {
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			// injector
-			injector.mapTo(MainView, MainView);
+			injector.map(MainView, MainView);
 			injector.mapSingleton(TwitterService);
 			injector.mapSingleton(SearchWire);
 			injector.createInstance(SearchWire);		}

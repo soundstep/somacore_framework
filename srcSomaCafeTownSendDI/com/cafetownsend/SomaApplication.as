@@ -40,8 +40,8 @@ package com.cafetownsend {
 			injector.mapSingleton(MainView);
 			injector.mapSingleton(EmployeeModel);
 			// map views to mediators
-			mediators.mapView(LoginView, LoginViewMediator);
-			mediators.mapView(EmployeeList, EmployeeListMediator);			mediators.mapView(EmployeeDetails, EmployeeDetailsMediator);
+			mediators.map(LoginView, LoginViewMediator);
+			mediators.map(EmployeeList, EmployeeListMediator);			mediators.map(EmployeeDetails, EmployeeDetailsMediator);
 		}
 		
 		override protected function registerCommands():void {

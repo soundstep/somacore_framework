@@ -24,12 +24,14 @@
 
 package com.soma.core {
 	import com.soma.core.controller.SomaController;
+	import com.soma.core.di.SomaReflector;
 	import com.soma.core.interfaces.IModel;
 	import com.soma.core.interfaces.ISequenceCommand;
 	import com.soma.core.interfaces.ISoma;
 	import com.soma.core.interfaces.ISomaInjector;
 	import com.soma.core.interfaces.ISomaPlugin;
 	import com.soma.core.interfaces.ISomaPluginVO;
+	import com.soma.core.interfaces.ISomaReflector;
 	import com.soma.core.interfaces.IWire;
 	import com.soma.core.mediator.SomaMediators;
 	import com.soma.core.model.SomaModels;
@@ -135,6 +137,7 @@ package  {
 		protected var _stage:Stage;
 		
 		protected var _injector:ISomaInjector;
+		protected var _reflector:ISomaReflector;
 		protected var _mediators:SomaMediators;
 		
 		protected var _injectorClass:Class;
@@ -200,6 +203,10 @@ package  {
 			if (_injector) { _injector.dispose(); _injector = null; }
 		}
 
+		private function disposeReflector():void {
+			if (_reflector) { _reflector.dispose(); _reflector = null; }
+		}
+		
 		protected function initialize():void {
 			
 		}
@@ -282,12 +289,13 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 			try {
 				disposeCore();
 				disposeInjector();
+				disposeReflector();
 				_stage = null;
 			} catch(e:Error) {
 				trace("Error in", this, "(dispose method):", e.message);
 			}
 		}
-		
+
 		/**
 		 * Gets the model manager class.
 		 */
@@ -715,6 +723,11 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 		public function get mediators():SomaMediators {
 			return _mediators;
 		}
+		
+		public function get reflector():ISomaReflector {
+			return _reflector ||= new SomaReflector();
+		}
+
 
 		public function get injectorClass():Class {
 			return _injectorClass;

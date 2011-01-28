@@ -93,6 +93,8 @@ package com.soma.core.interfaces {
 		
 		function get injector():ISomaInjector;
 		
+		function get reflector():ISomaReflector;
+		
 		function get mediators():SomaMediators;
 		
 		/**

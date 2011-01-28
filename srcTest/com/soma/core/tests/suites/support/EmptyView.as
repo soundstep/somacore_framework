@@ -11,7 +11,7 @@ package com.soma.core.tests.suites.support {
 	 * <listing version="3.0"></listing>
 	 */
 	
-	public class EmptyView extends Sprite {
+	public class EmptyView extends Sprite implements IEmptyView {
 
 		//------------------------------------
 		// private, protected properties
@@ -35,7 +35,7 @@ package com.soma.core.tests.suites.support {
 		public function EmptyView() {
 			
 		}
-		
+
 		//
 		// PRIVATE, PROTECTED
 		//________________________________________________________________________________________________
@@ -43,7 +43,11 @@ package com.soma.core.tests.suites.support {
 		
 		//
 		// PUBLIC
-		//________________________________________________________________________________________________
+		// ________________________________________________________________________________________________
+		
+		public function returnTrue():Boolean {
+			return true;
+		}
 		
 		public function initializeView():void {
 			dispatchEvent(new Event(EVENT_INITIALIZED));

@@ -31,7 +31,7 @@ package com.soma.core.tests.suites.support {
 		public function mapSingletonOf(classTarget:Class, useSingletonOf:Class, name:String = ""):void {
 		}
 
-		public function mapTo(whenAskFor:Class, createClass:Class, name:String = ""):void {
+		public function map(whenAskFor:Class, createClass:Class, name:String = ""):void {
 		}
 
 		public function mapToInstance(whenAskFor:Class, instance:Object, name:String = ""):void {
