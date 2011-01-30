@@ -36,9 +36,9 @@ package com.soma.core.demo.di {
 			//mediators.allowInterfaceMapping = true;
 //			mediators.map(Sprite, SpriteMediator);
 			
-			mediators.map(IEventDispatcher, EventDispatcherMediator);
-			mediators.map(IViewTest, ViewTestMediator);
-			mediators.map(IBitmapDrawable, BitmapDrawableMediator);
+			mediators.mapView(IEventDispatcher, EventDispatcherMediator);
+			mediators.mapView(IViewTest, ViewTestMediator);
+			mediators.mapView(IBitmapDrawable, BitmapDrawableMediator);
 			
 			//mediators.unmap(IViewTest);
 			//mediators.unmap(IBitmapDrawable);

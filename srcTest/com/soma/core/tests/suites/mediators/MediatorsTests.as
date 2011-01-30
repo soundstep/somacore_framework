@@ -4,7 +4,6 @@ package com.soma.core.tests.suites.mediators {
 	import com.soma.core.interfaces.ISoma;
 	import com.soma.core.tests.suites.support.EmptyView;
 	import com.soma.core.tests.suites.support.EmptyViewMediator;
-	import com.soma.core.tests.suites.support.IEmptyView;
 
 	import org.flexunit.assertThat;
 	import org.flexunit.asserts.assertEquals;
@@ -60,14 +59,8 @@ package com.soma.core.tests.suites.mediators {
 		
 		[Test]
 		public function testMediatorIsMapped():void {
-			_soma.mediators.map(EmptyView, EmptyViewMediator);
+			_soma.mediators.mapView(EmptyView, EmptyViewMediator);
 			assertTrue(_soma.mediators.isMapped(EmptyView));
-		}
-		
-		[Test]
-		public function testMediatorInterfaceIsMapped():void {
-			_soma.mediators.map(IEmptyView, EmptyViewMediator);
-			assertTrue(_soma.mediators.isMapped(IEmptyView));
 		}
 		
 		[Test]
@@ -76,21 +69,14 @@ package com.soma.core.tests.suites.mediators {
 		
 		[Test]
 		public function testMediatorIsUnMapped():void {
-			_soma.mediators.map(EmptyView, EmptyViewMediator);
-			_soma.mediators.unmap(EmptyView);
+			_soma.mediators.mapView(EmptyView, EmptyViewMediator);
+			_soma.mediators.removeMapping(EmptyView);
 			assertFalse(_soma.mediators.isMapped(EmptyView));
 		}
 		
 		[Test]
-		public function testMediatorInterfaceIsUnMapped():void {
-			_soma.mediators.map(IEmptyView, EmptyViewMediator);
-			_soma.mediators.unmap(IEmptyView);
-			assertFalse(_soma.mediators.isMapped(IEmptyView));
-		}
-		
-		[Test]
 		public function testViewHasMediator():void {
-			_soma.mediators.map(EmptyView, EmptyViewMediator);
+			_soma.mediators.mapView(EmptyView, EmptyViewMediator);
 			var view:EmptyView = new EmptyView();
 			_stage.addChild(view);
 			assertTrue(_soma.mediators.hasMediator(view));
@@ -99,7 +85,7 @@ package com.soma.core.tests.suites.mediators {
 		
 		[Test]
 		public function testViewHasMediatorInjection():void {
-			_somaInjection.mediators.map(EmptyView, EmptyViewMediator);
+			_somaInjection.mediators.mapView(EmptyView, EmptyViewMediator);
 			var view:EmptyView = new EmptyView();
 			_stage.addChild(view);
 			assertTrue(_somaInjection.mediators.hasMediator(view));
@@ -108,7 +94,7 @@ package com.soma.core.tests.suites.mediators {
 		
 		[Test]
 		public function testGetMediatorByView():void {
-			_soma.mediators.map(EmptyView, EmptyViewMediator);
+			_soma.mediators.mapView(EmptyView, EmptyViewMediator);
 			var view:EmptyView = new EmptyView();
 			_stage.addChild(view);
 			assertThat(_soma.mediators.getMediatorByView(view), instanceOf(EmptyViewMediator));
@@ -117,7 +103,7 @@ package com.soma.core.tests.suites.mediators {
 		
 		[Test]
 		public function testGetMediatorByViewInjection():void {
-			_somaInjection.mediators.map(EmptyView, EmptyViewMediator);
+			_somaInjection.mediators.mapView(EmptyView, EmptyViewMediator);
 			var view:EmptyView = new EmptyView();
 			_stage.addChild(view);
 			assertThat(_somaInjection.mediators.getMediatorByView(view), instanceOf(EmptyViewMediator));
@@ -126,7 +112,7 @@ package com.soma.core.tests.suites.mediators {
 		
 		[Test(async)]
 		public function testMediatorInitialized():void {
-			_soma.mediators.map(EmptyView, EmptyViewMediator);
+			_soma.mediators.mapView(EmptyView, EmptyViewMediator);
 			var view:EmptyView = new EmptyView();
 			_soma.addEventListener(EmptyViewMediator.EVENT_INITIALIZED, Async.asyncHandler(this, mediatorVerifyInitializeSuccess, 100, {view:view}, mediatorVerifyInitializeFailed), false, 0, true);
 			_stage.addChild(view);
@@ -134,7 +120,7 @@ package com.soma.core.tests.suites.mediators {
 		
 		[Test(async)]
 		public function testMediatorInitializedInjection():void {
-			_somaInjection.mediators.map(EmptyView, EmptyViewMediator);
+			_somaInjection.mediators.mapView(EmptyView, EmptyViewMediator);
 			var view:EmptyView = new EmptyView();
 			_somaInjection.addEventListener(EmptyViewMediator.EVENT_INITIALIZED, Async.asyncHandler(this, mediatorVerifyInitializeSuccess, 100, {view:view}, mediatorVerifyInitializeFailed), false, 0, true);
 			_stage.addChild(view);
@@ -142,7 +128,7 @@ package com.soma.core.tests.suites.mediators {
 		
 		[Test(async)]
 		public function testMediatorViewComponent():void {
-			_soma.mediators.map(EmptyView, EmptyViewMediator);
+			_soma.mediators.mapView(EmptyView, EmptyViewMediator);
 			var view:EmptyView = new EmptyView();
 			_soma.addEventListener(EmptyViewMediator.EVENT_INITIALIZED, Async.asyncHandler(this, mediatorVerifyViewComponentSuccess, 100, {view:view, instance:_soma}, mediatorVerifyViewComponentFailed), false, 0, true);
 			_stage.addChild(view);
@@ -150,7 +136,7 @@ package com.soma.core.tests.suites.mediators {
 		
 		[Test(async)]
 		public function testMediatorViewComponentInjection():void {
-			_somaInjection.mediators.map(EmptyView, EmptyViewMediator);
+			_somaInjection.mediators.mapView(EmptyView, EmptyViewMediator);
 			var view:EmptyView = new EmptyView();
 			_somaInjection.addEventListener(EmptyViewMediator.EVENT_INITIALIZED, Async.asyncHandler(this, mediatorVerifyViewComponentSuccess, 100, {view:view, instance:_somaInjection}, mediatorVerifyViewComponentFailed), false, 0, true);
 			_stage.addChild(view);
@@ -158,15 +144,7 @@ package com.soma.core.tests.suites.mediators {
 		
 		[Test(async)]
 		public function testMediatorPairViewInjection():void {
-			_somaInjection.mediators.map(EmptyView, EmptyViewMediator);
-			var view:EmptyView = new EmptyView();
-			_somaInjection.addEventListener(EmptyViewMediator.EVENT_INITIALIZED, Async.asyncHandler(this, mediatorVerifyPairViewSuccess, 100, {view:view, instance:_somaInjection}, mediatorVerifyPairViewFailed), false, 0, true);
-			_stage.addChild(view);
-		}
-		
-		[Test(async)]
-		public function testMediatorPairViewInterfaceInjection():void {
-			_somaInjection.mediators.map(IEmptyView, EmptyViewMediator);
+			_somaInjection.mediators.mapView(EmptyView, EmptyViewMediator);
 			var view:EmptyView = new EmptyView();
 			_somaInjection.addEventListener(EmptyViewMediator.EVENT_INITIALIZED, Async.asyncHandler(this, mediatorVerifyPairViewSuccess, 100, {view:view, instance:_somaInjection}, mediatorVerifyPairViewFailed), false, 0, true);
 			_stage.addChild(view);

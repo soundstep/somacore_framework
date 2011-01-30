@@ -36,7 +36,7 @@ package com.soma.core.demo.helloworld {
 		}
 		
 		override protected function registerViews():void {
-			mediators.map(MessageView, MessageViewMediator);
+			mediators.mapView(MessageView, MessageViewMediator);
 			_container.addChild(new MessageView());
 		}
 		
