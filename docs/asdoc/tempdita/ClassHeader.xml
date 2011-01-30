@@ -8,7 +8,7 @@
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -35,7 +35,7 @@
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -132,7 +132,7 @@ package  {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -159,7 +159,7 @@ package  {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -269,7 +269,7 @@ package  {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -298,7 +298,7 @@ package  {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -359,7 +359,7 @@ dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -386,7 +386,7 @@ dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -532,7 +532,7 @@ package  {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -558,7 +558,7 @@ package  {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -585,7 +585,7 @@ package  {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -612,7 +612,7 @@ package  {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -646,7 +646,7 @@ package  {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -673,7 +673,7 @@ package  {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -740,7 +740,7 @@ package  {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -767,7 +767,7 @@ package  {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -799,7 +799,7 @@ package  {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -826,7 +826,7 @@ package  {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -896,7 +896,7 @@ package  {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -924,7 +924,7 @@ package  {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -1000,7 +1000,7 @@ package  {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -1027,7 +1027,7 @@ package  {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -1058,7 +1058,7 @@ package  {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -1086,7 +1086,7 @@ package  {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -1167,7 +1167,7 @@ package {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -1195,7 +1195,7 @@ package {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -1241,7 +1241,7 @@ package {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -1268,7 +1268,7 @@ package {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -1377,7 +1377,7 @@ package {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -1405,7 +1405,7 @@ package {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -1491,7 +1491,7 @@ private function doSomething():void {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -1517,7 +1517,7 @@ private function doSomething():void {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -1553,7 +1553,7 @@ private function doSomething():void {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -1579,7 +1579,7 @@ private function doSomething():void {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -1662,7 +1662,7 @@ private function doSomething():void {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -1691,7 +1691,7 @@ private function doSomething():void {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -1799,7 +1799,7 @@ private function myEventHandler(event:MyEvent):void {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -1825,7 +1825,7 @@ private function myEventHandler(event:MyEvent):void {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>
@@ -1861,7 +1861,7 @@ private function myEventHandler(event:MyEvent):void {
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -1889,7 +1889,7 @@ private function myEventHandler(event:MyEvent):void {
                   <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
                </p>
 	              <p>
-                  <b>Class version:</b> v1.0.0</p>
+                  <b>Class version:</b> v2.0.0</p>
 	              <p>
                   <b>Actionscript version:</b> 3.0</p>
 	              <p>

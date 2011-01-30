@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><apiPackage id="com.soma.core.interfaces"><apiName>com.soma.core.interfaces</apiName><apiDetail/><apiClassifier id="com.soma.core.interfaces:ISomaPluginVO"><apiName>ISomaPluginVO</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -9,7 +9,7 @@
 	 Interface used by a class that will hold the plugin options (ex: SomaDebuggerVO).</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Class version:</b> v2.0.0</p>
 	 <p><b>Actionscript version:</b> 3.0</p>
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -18,7 +18,7 @@
 	 </apiDesc></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISoma"><apiName>ISoma</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -26,7 +26,7 @@
 	 Interface used by the class that will extend the Soma class.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Class version:</b> v2.0.0</p>
 	 <p><b>Actionscript version:</b> 3.0</p>
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -254,7 +254,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:IModel"><apiName>IModel</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -262,7 +262,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Class version:</b> v2.0.0</p>
 	 <p><b>Actionscript version:</b> 3.0</p>
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -288,7 +288,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 </apiDesc></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:createChildInjector"><apiName>createChildInjector</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:ISomaInjector</apiOperationClassifier></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:createInstance"><apiName>createInstance</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:getApplicationDomain"><apiName>getApplicationDomain</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="flash.system:ApplicationDomain"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:getInstance"><apiName>getInstance</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:getParentInjector"><apiName>getParentInjector</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:ISomaInjector</apiOperationClassifier></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:hasMapping"><apiName>hasMapping</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:injectInto"><apiName>injectInto</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:mapSingletonOf"><apiName>mapSingletonOf</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>useSingletonOf</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:mapSingleton"><apiName>mapSingleton</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:mapToInstance"><apiName>mapToInstance</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:map"><apiName>map</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>createClass</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:removeMapping"><apiName>removeMapping</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:setApplicationDomain"><apiName>setApplicationDomain</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="flash.system:ApplicationDomain"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:IResponder"><apiName>IResponder</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -296,7 +296,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 Interface used by a class that receive data from a asynchronous call.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Class version:</b> v2.0.0</p>
 	 <p><b>Actionscript version:</b> 3.0</p>
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -313,7 +313,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:IWire"><apiName>IWire</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -321,7 +321,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Class version:</b> v2.0.0</p>
 	 <p><b>Actionscript version:</b> 3.0</p>
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -340,7 +340,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 </apiDesc></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISomaReflector:com.soma.core.interfaces:ISomaReflector:classExtendsOrImplements"><apiName>classExtendsOrImplements</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>classOrClassName</apiItemName><apiType value="Object"/></apiParam><apiParam><apiItemName>superclass</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>application</apiItemName><apiType value="flash.system:ApplicationDomain"/><apiData>null</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaReflector:com.soma.core.interfaces:ISomaReflector:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaReflector:com.soma.core.interfaces:ISomaReflector:getClass"><apiName>getClass</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Class"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="any"/></apiParam><apiParam><apiItemName>applicationDomain</apiItemName><apiType value="flash.system:ApplicationDomain"/><apiData>null</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaReflector:com.soma.core.interfaces:ISomaReflector:getFQCN"><apiName>getFQCN</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="any"/></apiParam><apiParam><apiItemName>replaceColons</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISequenceCommand"><apiName>ISequenceCommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -348,7 +348,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Class version:</b> v2.0.0</p>
 	 <p><b>Actionscript version:</b> 3.0</p>
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -374,7 +374,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 </apiDesc></apiClassifierDetail><apiValue id="com.soma.core.interfaces:IMediator:com.soma.core.interfaces:IMediator:viewComponent:get"><apiName>viewComponent</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommand"><apiName>ICommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -382,7 +382,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Class version:</b> v2.0.0</p>
 	 <p><b>Actionscript version:</b> 3.0</p>
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -395,7 +395,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommandASync"><apiName>ICommandASync</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -403,7 +403,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 Interface used to create asynchronous command.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseInterface>com.soma.core.interfaces:IResponder</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Class version:</b> v2.0.0</p>
 	 <p><b>Actionscript version:</b> 3.0</p>
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -447,7 +447,7 @@ package {
 	 </example></apiClassifierDetail><related-links><link href="com.soma.core.controller.xml#Command"><linktext>com.soma.core.controller.Command</linktext></link><link href="com.soma.core.interfaces.xml#ICommand"><linktext>com.soma.core.interfaces.ICommand</linktext></link><link href="com.soma.core.interfaces.xml#IResponder"><linktext>com.soma.core.interfaces.IResponder</linktext></link></related-links></apiClassifier><apiClassifier id="com.soma.core.interfaces:IParallelCommand"><apiName>IParallelCommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -455,7 +455,7 @@ package {
 	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Class version:</b> v2.0.0</p>
 	 <p><b>Actionscript version:</b> 3.0</p>
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -469,7 +469,7 @@ package {
 		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaPlugin"><apiName>ISomaPlugin</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
+	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -477,7 +477,7 @@ package {
 	 Interface used by a class that is meant to be instantiated by the framework (ex:SomaDebugger).</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Class version:</b> v2.0.0</p>
 	 <p><b>Actionscript version:</b> 3.0</p>
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
