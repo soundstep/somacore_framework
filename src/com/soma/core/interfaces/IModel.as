@@ -59,8 +59,13 @@ package com.soma.core.interfaces {
 		 */
 		function get dispatcher():IEventDispatcher;
 		function set dispatcher(value:IEventDispatcher):void;
-		
+		/**
+		 * Method that you can overwrite, called by the framework when the model is initialized.
+		 */
 		function initialize():void;
+		/**
+		 * Method that you can overwrite, called by the framework when the model is removed.
+		 */
 		function dispose():void;
 		
 	}

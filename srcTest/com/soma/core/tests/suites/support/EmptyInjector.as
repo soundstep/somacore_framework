@@ -44,11 +44,11 @@ package com.soma.core.tests.suites.support {
 		public function removeMapping(classTarget:Class, name:String = ""):void {
 		}
 
-		public function getApplicationDomain():ApplicationDomain {
+		public function get applicationDomain():ApplicationDomain {
 			return null;
 		}
 
-		public function setApplicationDomain(value:ApplicationDomain):void {
+		public function set applicationDomain(value:ApplicationDomain):void {
 		}
 
 		public function dispose():void {

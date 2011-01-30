@@ -7,6 +7,9 @@ package com.soma.core.interfaces {
 	 */
 	public interface IMediator extends IWire {
 		
+		/**
+		 * View that has been mapped to the mediator instance.
+		 */
 		function get viewComponent():Object;
 		function set viewComponent(value:Object):void;
 		

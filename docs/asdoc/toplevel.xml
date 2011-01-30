@@ -1204,7 +1204,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 </method>
 <method name='controller' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:controller/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.controller:SomaController'>
 <description><![CDATA[
-		 Gets the commands manager class.
+		 Gets the commands manager instance.
 		 ]]></description>
 </method>
 <method name='injector' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:injector/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaInjector'>
@@ -1213,7 +1213,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 </method>
 <method name='models' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:models/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.model:SomaModels'>
 <description><![CDATA[
-		 Gets the model manager class.
+		 Gets the model manager instance.
 		 ]]></description>
 </method>
 <method name='reflector' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:reflector/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaReflector'>
@@ -1232,7 +1232,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 </method>
 <method name='wires' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:wires/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.wire:SomaWires'>
 <description><![CDATA[
-		 Gets the wires manager class.
+		 Gets the wires manager instance.
 		 ]]></description>
 </method>
 <packageRec name='com.soma.core.ns.null' fullname='com.soma.core.ns.null'>
@@ -4019,7 +4019,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 </method>
 <method name='controller' fullname='com.soma.core:Soma/controller/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.controller:SomaController'>
 <description><![CDATA[
-		 Gets the commands manager class.
+		 Gets the commands manager instance.
 		 ]]></description>
 </method>
 <method name='injectorClass' fullname='com.soma.core:Soma/injectorClass/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Class'>
@@ -4030,7 +4030,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 </method>
 <method name='models' fullname='com.soma.core:Soma/models/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.model:SomaModels'>
 <description><![CDATA[
-		 Gets the model manager class.
+		 Gets the model manager instance.
 		 ]]></description>
 </method>
 <method name='reflector' fullname='com.soma.core:Soma/reflector/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaReflector'>
@@ -4049,7 +4049,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 </method>
 <method name='wires' fullname='com.soma.core:Soma/wires/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.wire:SomaWires'>
 <description><![CDATA[
-		 Gets the wires manager class.
+		 Gets the wires manager instance.
 		 ]]></description>
 </method>
 <field name='_controller' fullname='com.soma.core:Soma/protected:_controller' type='com.soma.core.controller:SomaController' isStatic='false' isConst='false' >

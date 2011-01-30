@@ -68,6 +68,7 @@ package com.soma.core {
 	 * <listing version="3.0">
 package  {
 	import com.soma.core.interfaces.ISoma;
+	import com.soma.core.di.SomaInjector;
 	import flash.display.Sprite;
 	
 	public class Main extends Sprite {
@@ -75,7 +76,10 @@ package  {
 		private var _app:ISoma;
 		
 		public function Main() {
+			// injection disabled
 			_app = new SomaApplication(stage);
+			// injection enabled
+			_app = new SomaApplication(stage, SomaInjector);
 		}
 		
 	}
@@ -93,6 +97,10 @@ package  {
 			super(stage);
 		}
 		
+		override protected function initialize():void {
+			
+		}
+
 		override protected function registerCommands():void {
 			
 		}
@@ -113,6 +121,10 @@ package  {
 			
 		}
 		
+		override protected function start():void {
+			
+		}
+
 	}
 }
 	 * </listing>
@@ -135,11 +147,13 @@ package  {
 		protected var _wires:SomaWires;
 		/** @private */
 		protected var _stage:Stage;
-		
+		/** @private */
 		protected var _injector:ISomaInjector;
+		/** @private */
 		protected var _reflector:ISomaReflector;
+		/** @private */
 		protected var _mediators:SomaMediators;
-		
+		/** @private */
 		protected var _injectorClass:Class;
 
 		//------------------------------------
@@ -155,6 +169,7 @@ package  {
 		/**
 		 * Create an instance of the SomaCore class.
 		 * @param stage The stage is used as a global EventDispatcher (as well as the Soma class), and is required to instantiate the framework.
+		 * @param injectorClass Class that must extend ISomaInjector.
 		 */
 		public function Soma(stage:Stage = null, injectorClass:Class = null) {
 			setup(stage, injectorClass);
@@ -179,7 +194,8 @@ package  {
 			registerPlugins();
 			start();
 		}
-
+		
+		/** @private */
 		protected function initializeInjector():void {
 			disposeInjector();
 			if (_injectorClass) {
@@ -190,7 +206,8 @@ package  {
 				_injector.mapToInstance(IEventDispatcher, this, "somaDispatcher");
 			}
 		}
-
+		
+		/** @private */
 		private function disposeCore():void {
 			if (_models) { _models.dispose(); _models = null; }
 			if (_views) { _views.dispose(); _views = null; }
@@ -198,15 +215,23 @@ package  {
 			if (_wires) { _wires.dispose(); _wires = null; }
 			if (_mediators) { _mediators.dispose(); _mediators = null; }
 		}
-
+		
+		/** @private */
 		private function disposeInjector():void {
 			if (_injector) { _injector.dispose(); _injector = null; }
 		}
-
+		
+		/** @private */
 		private function disposeReflector():void {
 			if (_reflector) { _reflector.dispose(); _reflector = null; }
 		}
 		
+		/** 
+		 * Method that you can optionally overwrite to initialize elements before anything else.
+		 * @see com.soma.core.model.SomaModels
+		 * @example
+		 * <listing version="3.0">addModel(MyModel.NAME, new MyModel());</listing>
+		 */
 		protected function initialize():void {
 			
 		}
@@ -263,6 +288,12 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 			
 		}
 		
+		/** 
+		 * Method that you can optionally overwrite to start your own after that the framework has registered all the elements (models, views, commands, wires, plugins).
+		 * @see com.soma.core.wire.SomaWires
+		 * @example
+		 * <listing version="3.0">addWire(MyWire.NAME, new MyWire());</listing>
+		 */
 		protected function start():void {
 			
 		}
@@ -271,6 +302,11 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		// PUBLIC
 		//________________________________________________________________________________________________
 		
+		/**
+		 * Register elements that the frameworks needs to be ready, such as the stage and the optional injector class (default is SomaInjector).
+		 * @param stage The stage is used as a global EventDispatcher (as well as the Soma class), and is required to instantiate the framework.
+		 * @param injectorClass Class that must extend ISomaInjector.
+		 */
 		public function setup(stage:Stage = null, injectorClass:Class = null):void {
 			if (injectorClass) {
 				_injectorClass = injectorClass;
@@ -297,7 +333,7 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		}
 
 		/**
-		 * Gets the model manager class.
+		 * Gets the model manager instance.
 		 */
 		public final function get models():SomaModels {
 			return _models;
@@ -311,17 +347,24 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		}
 
 		/**
-		 * Gets the commands manager class.
+		 * Gets the commands manager instance.
 		 */
 		public final function get controller():SomaController {
 			return _controller;
 		}
 
 		/**
-		 * Gets the wires manager class.
+		 * Gets the wires manager instance.
 		 */
 		public final function get wires():SomaWires {
 			return _wires;
+		}
+		
+		/**
+		 * Gets the mediator manager instance that has been created by the framework from the injector Class registered.
+		 */
+		public final function get mediators():SomaMediators {
+			return _mediators;
 		}
 		
 		/**
@@ -375,6 +418,30 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 			return _stage;
 		}
 		
+		/**
+		 * Retrieves the injector Class registered to the framework.
+		 * @return A Class.
+		 */
+		public function get injectorClass():Class {
+			return _injectorClass;
+		}
+
+		/**
+		 * Retrieves the injector instance that has been created by the framework from the injector Class registered.
+		 * @return a ISomaInjector instance (default is SomaInjector).
+		 */
+		public function get injector():ISomaInjector {
+			return _injector;
+		}
+		
+		/**
+		 * Retrieves the refletor instance.
+		 * @return a ISomaReflector instance (default is SomaReflector).
+		 */
+		public function get reflector():ISomaReflector {
+			return _reflector ||= new SomaReflector();
+		}
+
 		/**
 		 * Indicates wether a command has been registered to the framework.
 		 * @param commandName Event type that is used as a command name.
@@ -715,23 +782,6 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 			if (!wires) return null;
 			return wires.getWires();
 		}
-
-		public function get injector():ISomaInjector {
-			return _injector;
-		}
 		
-		public function get mediators():SomaMediators {
-			return _mediators;
-		}
-		
-		public function get reflector():ISomaReflector {
-			return _reflector ||= new SomaReflector();
-		}
-
-
-		public function get injectorClass():Class {
-			return _injectorClass;
-		}
-
 	}
 }

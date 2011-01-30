@@ -73,11 +73,11 @@ package com.soma.core.di {
 			_injector.unmap(classTarget, name);
 		}
 
-		public function getApplicationDomain():ApplicationDomain {
+		public function get applicationDomain():ApplicationDomain {
 			return _injector.getApplicationDomain();
 		}
 		
-		public function setApplicationDomain(value:ApplicationDomain):void {
+		public function set applicationDomain(value:ApplicationDomain):void {
 			_injector.setApplicationDomain(value);
 		}
 		

@@ -48,10 +48,19 @@ package com.soma.core.interfaces {
 		 */
 		function setName(name:String):void;
 		
+		/**
+		 * Instance of the framework.
+		 */
 		function get instance():ISoma;
 		function set instance(value:ISoma):void;
 		
-		function initialize():void;		function dispose():void;
+		/**
+		 * Method that you can overwrite, called by the framework when the model is initialized.
+		 */
+		function initialize():void;
+		/**
+		 * Method that you can overwrite, called by the framework when the model is removed.
+		 */		function dispose():void;
 		
 	}
 }

@@ -83,6 +83,11 @@ package com.soma.core.interfaces {
 		 */
 		function willTrigger(type:String):Boolean;
 		
+		/**
+		 * Register elements that the frameworks needs to be ready, such as the stage and the optional injector class (default is SomaInjector).
+		 * @param stage The stage is used as a global EventDispatcher (as well as the Soma class), and is required to instantiate the framework.
+		 * @param injectorClass Class that must extend ISomaInjector.
+		 */
 		function setup(stage:Stage = null, injectorClass:Class = null):void;
 		
 		/**
@@ -91,14 +96,25 @@ package com.soma.core.interfaces {
 		 */
 		function get stage():Stage;
 		
+		/**
+		 * Retrieves the injector Class registered to the framework.
+		 * @return A Class.
+		 */
+		function get injectorClass():Class;
+		/**
+		 * Retrieves the injector instance that has been created by the framework from the injector Class registered.
+		 * @return a ISomaInjector instance (default is SomaInjector).
+		 */
 		function get injector():ISomaInjector;
-		
+		/**
+		 * Retrieves the refletor instance.
+		 * @return a ISomaReflector instance (default is SomaReflector).
+		 */
 		function get reflector():ISomaReflector;
 		
-		function get mediators():SomaMediators;
 		
 		/**
-		 * Gets the model manager class.
+		 * Gets the model manager instance.
 		 */
 		function get models():SomaModels;
 		/**
@@ -106,13 +122,17 @@ package com.soma.core.interfaces {
 		 */
 		function get views():SomaViews;
 		/**
-		 * Gets the commands manager class.
+		 * Gets the commands manager instance.
 		 */
 		function get controller():SomaController;
 		/**
-		 * Gets the wires manager class.
+		 * Gets the wires manager instance.
 		 */
 		function get wires():SomaWires;
+		/**
+		 * Gets the mediator manager instance that has been created by the framework from the injector Class registered.
+		 */
+		function get mediators():SomaMediators;
 		
 		/**
 		 * Creates a plugin instance.

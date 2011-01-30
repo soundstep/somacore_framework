@@ -369,8 +369,8 @@ package com.soma.core.tests.suites.injector {
 		[Test]
 		public function testApplicationDomain():void {
 			var value:ApplicationDomain = new ApplicationDomain();
-			_soma.injector.setApplicationDomain(value);
-			assertEquals(value, _soma.injector.getApplicationDomain());
+			_soma.injector.applicationDomain = value;
+			assertEquals(value, _soma.injector.applicationDomain);
 		}
 		
 		[Test]
