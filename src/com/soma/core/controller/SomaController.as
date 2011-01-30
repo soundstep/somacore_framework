@@ -178,7 +178,7 @@ dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 				if (_instance.injector) {
 					var EventClass:Class = Class(getDefinitionByName(getQualifiedClassName(event)));
 					_instance.injector.mapToInstance(EventClass, event);
-					_instance.injector.mapTo(ISequenceCommand, SequenceCommand);
+					_instance.injector.map(ISequenceCommand, SequenceCommand);
 					var sequencer:ISequenceCommand = getSequencer(event);
 					if (sequencer) {
 						_instance.injector.mapToInstance(ISequenceCommand, sequencer);

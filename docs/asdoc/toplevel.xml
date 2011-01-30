@@ -1,6 +1,6 @@
 <asdoc>
 
-<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<packageRec name='com.soma.core.view.null' fullname='com.soma.core.view.null'>
 <description><![CDATA[
  The contents of this file are subject to the Mozilla Public License
  Version 1.1 (the "License"); you may not use this file except in compliance
@@ -26,7 +26,7 @@
  
  ]]></soundstep.com>
 </packageRec>
-<interfaceRec name='IModel' fullname='com.soma.core.interfaces:IModel' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IModel.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<classRec name='SomaViews' fullname='com.soma.core.view:SomaViews' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/view/SomaViews.as' namespace='com.soma.core.view' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -35,93 +35,109 @@
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 The SomaViews class handles the views of the application (DisplayObject).
 	 ]]></description>
-<see><![CDATA[com.soma.core.model.Model
-	 ]]></see>
-</interfaceRec>
-<method name='getName' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:getName' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<example><![CDATA[Add a view.
+	 <listing version="3.0">
+addView(MySprite.NAME, new MySprite());
+	 </listing>
+	 Remove a view.
+	 <listing version="3.0">
+removeView(MySprite.NAME);
+	 </listing>
+	 Retrieve a view.
+	 <listing version="3.0">
+var sprite:MySprite = getView(MySprite.NAME) as MySprite;
+	 </listing>
+	 Create a shortcut to retrieve a view is a good practice.
+	 <listing version="3.0">
+private function get mySprite():MySprite {
+	return getView(MySprite.NAME) as MySprite;
+}
+private function doSomething():void {
+	trace(mySprite);
+}
+	 </listing>
+	 ]]></example>
+</classRec>
+<method name='SomaViews' fullname='com.soma.core.view:SomaViews/SomaViews' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
 <description><![CDATA[
-		 Retrieves the name of the model.
+		 Create an instance of the SomaViews class. Should not be directly instantiated, the framework will instantiate the class.
 		 ]]></description>
-<return><![CDATA[A String.
+</method>
+<method name='addView' fullname='com.soma.core.view:SomaViews/addView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName;view' param_types='String;Object' param_defaults='undefined;undefined' result_type='Object'>
+<description><![CDATA[
+		 Registers a view to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">addView(MySprite.NAME, new MySprite());</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<param><![CDATA[view Instance of the view.
+		 ]]></param>
+<return><![CDATA[The view instance.
 		 ]]></return>
 </method>
-<method name='setName' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:setName' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='void'>
+<method name='dispose' fullname='com.soma.core.view:SomaViews/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 <description><![CDATA[
-		 Sets the name of the model.
+		 Destroys all the views and properties. The class will call the dispose method of each view instance.
 		 ]]></description>
-<param><![CDATA[value A String.
+</method>
+<method name='getView' fullname='com.soma.core.view:SomaViews/getView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Object'>
+<description><![CDATA[
+		 Retrieves the view instance that has been registered using its name.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var mySprite:MySprite = getView(MySprite.NAME) as MySprite;</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<return><![CDATA[An Object instance.
+		 ]]></return>
+</method>
+<method name='getViews' fullname='com.soma.core.view:SomaViews/getViews' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
+<description><![CDATA[
+		 Retrieves all the view instances that have been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">var sprites:Dictionary = getViews();</listing>
+		 ]]></example>
+<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
+		 ]]></return>
+</method>
+<method name='hasView' fullname='com.soma.core.view:SomaViews/hasView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Boolean'>
+<description><![CDATA[
+		 Indicates wether a view has been registered to the framework.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">hasView(MySprite.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
+		 ]]></param>
+<return><![CDATA[A Boolean.
+		 ]]></return>
+</method>
+<method name='initialize' fullname='com.soma.core.view:SomaViews/private:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<description><![CDATA[ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='removeView' fullname='com.soma.core.view:SomaViews/removeView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Removes a view from the framework and call the (optional) dispose method of this view.
+		 ]]></description>
+<example><![CDATA[<listing version="3.0">removeView(MySprite.NAME);</listing>
+		 ]]></example>
+<param><![CDATA[viewName Name of the view.
 		 ]]></param>
 </method>
-<method name='data' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:data/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+<field name='views' fullname='com.soma.core.view:SomaViews/protected:views' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
+<description><![CDATA[ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<classRec name='ThrowErrorClass' fullname='com.soma.core.view:ThrowErrorClass' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/view/ThrowErrorClass.as' namespace='com.soma.core.view' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
-		 Data of the model.
-		 ]]></description>
-</method>
-<method name='dispatcher' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:dispatcher/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.events:IEventDispatcher'>
-<description><![CDATA[
-		 EventDispatcher instance of the model.
-		 ]]></description>
-<default><![CDATA[The framework instance.
-		 ]]></default>
-</method>
-<method name='data' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:data/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
-</method>
-<method name='dispatcher' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:dispatcher/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='flash.events:IEventDispatcher' param_defaults='undefined' result_type='void'>
-</method>
-<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
-<description><![CDATA[
- The contents of this file are subject to the Mozilla Public License
- Version 1.1 (the "License"); you may not use this file except in compliance
- with the License. You may obtain a copy of the License at
- 
- http://www.mozilla.org/MPL/
- 
- Software distributed under the License is distributed on an "AS IS" basis,
- WITHOUT WARRANTY OF ANY KIND, either express or implied.
- See the License for the specific language governing rights and
- limitations under the License.
- 
- The Original Code is SomaCore.
- 
- The Initial Developer of the Original Code is Romuald Quantin.
- romu]]></description>
-<soundstep.com><![CDATA[(www.soundstep.com).
- 
- Portions created by
- 
- Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
- All Rights Reserved.
- 
- ]]></soundstep.com>
-</packageRec>
-<interfaceRec name='ISomaPlugin' fullname='com.soma.core.interfaces:ISomaPlugin' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISomaPlugin.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
-<description><![CDATA[
-	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
-	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
-	 <p><b>Class version:</b> v1.0.0</p>
-	 <p><b>Actionscript version:</b> 3.0</p>
-	 <p><b>Copyright:</b>
-	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 Interface used by a class that is meant to be instantiated by the framework (ex:SomaDebugger).
 	 ]]></description>
-<see><![CDATA[com.soma.core.Soma
-	 ]]></see>
-<see><![CDATA[com.soma.core.interfaces.ISomaPluginVO
-	 ]]></see>
-</interfaceRec>
-<method name='dispose' fullname='com.soma.core.interfaces:ISomaPlugin/com.soma.core.interfaces:ISomaPlugin:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
-<description><![CDATA[
-		 Destroys the elements created by the plugin.
-		 ]]></description>
-</method>
-<method name='initialize' fullname='com.soma.core.interfaces:ISomaPlugin/com.soma.core.interfaces:ISomaPlugin:initialize' isStatic='false' isFinal='false' isOverride='false'  param_names='pluginVO' param_types='com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined' result_type='void'>
-<description><![CDATA[
-		 Initializes the plugin.
-		 ]]></description>
-<param><![CDATA[pluginVO
-		 ]]></param>
+<author><![CDATA[romuald
+	 ]]></author>
+</classRec>
+<method name='ThrowErrorClass' fullname='com.soma.core.view:ThrowErrorClass/ThrowErrorClass' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
 </method>
 <packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
 <description><![CDATA[
@@ -241,7 +257,7 @@
  
  ]]></soundstep.com>
 </packageRec>
-<interfaceRec name='IWire' fullname='com.soma.core.interfaces:IWire' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IWire.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<interfaceRec name='IModel' fullname='com.soma.core.interfaces:IModel' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IModel.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
 <description><![CDATA[
 	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
@@ -251,23 +267,95 @@
 	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
 	 ]]></description>
-<see><![CDATA[com.soma.core.wire.Wire
-	 ]]></see>
-<see><![CDATA[com.soma.core.wire.SomaWires
+<see><![CDATA[com.soma.core.model.Model
 	 ]]></see>
 </interfaceRec>
-<method name='getName' fullname='com.soma.core.interfaces:IWire/com.soma.core.interfaces:IWire:getName' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<method name='dispose' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getName' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:getName' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
 <description><![CDATA[
-		 Retrieves the name of the wire.
+		 Retrieves the name of the model.
 		 ]]></description>
 <return><![CDATA[A String.
 		 ]]></return>
 </method>
-<method name='setName' fullname='com.soma.core.interfaces:IWire/com.soma.core.interfaces:IWire:setName' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='void'>
+<method name='initialize' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='setName' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:setName' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='void'>
 <description><![CDATA[
-		 Sets the name of the wire.
+		 Sets the name of the model.
 		 ]]></description>
 <param><![CDATA[value A String.
+		 ]]></param>
+</method>
+<method name='data' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:data/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+<description><![CDATA[
+		 Data of the model.
+		 ]]></description>
+</method>
+<method name='dispatcher' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:dispatcher/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.events:IEventDispatcher'>
+<description><![CDATA[
+		 EventDispatcher instance of the model.
+		 ]]></description>
+<default><![CDATA[The framework instance.
+		 ]]></default>
+</method>
+<method name='data' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:data/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='dispatcher' fullname='com.soma.core.interfaces:IModel/com.soma.core.interfaces:IModel:dispatcher/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='flash.events:IEventDispatcher' param_defaults='undefined' result_type='void'>
+</method>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='ISomaPlugin' fullname='com.soma.core.interfaces:ISomaPlugin' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISomaPlugin.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 Interface used by a class that is meant to be instantiated by the framework (ex:SomaDebugger).
+	 ]]></description>
+<see><![CDATA[com.soma.core.Soma
+	 ]]></see>
+<see><![CDATA[com.soma.core.interfaces.ISomaPluginVO
+	 ]]></see>
+</interfaceRec>
+<method name='dispose' fullname='com.soma.core.interfaces:ISomaPlugin/com.soma.core.interfaces:ISomaPlugin:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<description><![CDATA[
+		 Destroys the elements created by the plugin.
+		 ]]></description>
+</method>
+<method name='initialize' fullname='com.soma.core.interfaces:ISomaPlugin/com.soma.core.interfaces:ISomaPlugin:initialize' isStatic='false' isFinal='false' isOverride='false'  param_names='pluginVO' param_types='com.soma.core.interfaces:ISomaPluginVO' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Initializes the plugin.
+		 ]]></description>
+<param><![CDATA[pluginVO
 		 ]]></param>
 </method>
 <packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
@@ -527,6 +615,129 @@ package {
 		 ]]></description>
 <return><![CDATA[An integer.
 		 ]]></return>
+</method>
+<interfaceRec name='ISomaInjector' fullname='com.soma.core.interfaces:ISomaInjector' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISomaInjector.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+
+	 ]]></description>
+<author><![CDATA[Romuald Quantin
+
+	 ]]></author>
+</interfaceRec>
+<method name='createChildInjector' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:createChildInjector' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaInjector'>
+</method>
+<method name='createInstance' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:createInstance' isStatic='false' isFinal='false' isOverride='false'  param_names='classTarget' param_types='Class' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='dispose' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getApplicationDomain' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:getApplicationDomain' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.system:ApplicationDomain'>
+</method>
+<method name='getInstance' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:getInstance' isStatic='false' isFinal='false' isOverride='false'  param_names='classTarget;name' param_types='Class;String' param_defaults='undefined;' result_type='Object'>
+</method>
+<method name='getParentInjector' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:getParentInjector' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaInjector'>
+</method>
+<method name='hasMapping' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:hasMapping' isStatic='false' isFinal='false' isOverride='false'  param_names='classTarget;name' param_types='Class;String' param_defaults='undefined;' result_type='Boolean'>
+</method>
+<method name='injectInto' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:injectInto' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='mapSingletonOf' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:mapSingletonOf' isStatic='false' isFinal='false' isOverride='false'  param_names='whenAskFor;useSingletonOf;name' param_types='Class;Class;String' param_defaults='undefined;undefined;' result_type='void'>
+</method>
+<method name='mapSingleton' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:mapSingleton' isStatic='false' isFinal='false' isOverride='false'  param_names='classTarget;name' param_types='Class;String' param_defaults='undefined;' result_type='void'>
+</method>
+<method name='mapToInstance' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:mapToInstance' isStatic='false' isFinal='false' isOverride='false'  param_names='whenAskFor;instance;name' param_types='Class;Object;String' param_defaults='undefined;undefined;' result_type='void'>
+</method>
+<method name='map' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:map' isStatic='false' isFinal='false' isOverride='false'  param_names='whenAskFor;createClass;name' param_types='Class;Class;String' param_defaults='undefined;undefined;' result_type='void'>
+</method>
+<method name='removeMapping' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:removeMapping' isStatic='false' isFinal='false' isOverride='false'  param_names='classTarget;name' param_types='Class;String' param_defaults='undefined;' result_type='void'>
+</method>
+<method name='setApplicationDomain' fullname='com.soma.core.interfaces:ISomaInjector/com.soma.core.interfaces:ISomaInjector:setApplicationDomain' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='flash.system:ApplicationDomain' param_defaults='undefined' result_type='void'>
+</method>
+<interfaceRec name='ISomaReflector' fullname='com.soma.core.interfaces:ISomaReflector' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/ISomaReflector.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 ]]></description>
+<author><![CDATA[romuald
+	 ]]></author>
+</interfaceRec>
+<method name='classExtendsOrImplements' fullname='com.soma.core.interfaces:ISomaReflector/com.soma.core.interfaces:ISomaReflector:classExtendsOrImplements' isStatic='false' isFinal='false' isOverride='false'  param_names='classOrClassName;superclass;application' param_types='Object;Class;flash.system:ApplicationDomain' param_defaults='undefined;undefined;null' result_type='Boolean'>
+</method>
+<method name='dispose' fullname='com.soma.core.interfaces:ISomaReflector/com.soma.core.interfaces:ISomaReflector:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getClass' fullname='com.soma.core.interfaces:ISomaReflector/com.soma.core.interfaces:ISomaReflector:getClass' isStatic='false' isFinal='false' isOverride='false'  param_names='value;applicationDomain' param_types='*;flash.system:ApplicationDomain' param_defaults='undefined;null' result_type='Class'>
+</method>
+<method name='getFQCN' fullname='com.soma.core.interfaces:ISomaReflector/com.soma.core.interfaces:ISomaReflector:getFQCN' isStatic='false' isFinal='false' isOverride='false'  param_names='value;replaceColons' param_types='*;Boolean' param_defaults='undefined;false' result_type='String'>
+</method>
+<packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
+<description><![CDATA[
+ The contents of this file are subject to the Mozilla Public License
+ Version 1.1 (the "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.mozilla.org/MPL/
+ 
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ See the License for the specific language governing rights and
+ limitations under the License.
+ 
+ The Original Code is SomaCore.
+ 
+ The Initial Developer of the Original Code is Romuald Quantin.
+ romu]]></description>
+<soundstep.com><![CDATA[(www.soundstep.com).
+ 
+ Portions created by
+ 
+ Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
+ All Rights Reserved.
+ 
+ ]]></soundstep.com>
+</packageRec>
+<interfaceRec name='IWire' fullname='com.soma.core.interfaces:IWire' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IWire.as' namespace='com.soma.core.interfaces' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 <p><b>Class version:</b> v1.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 ]]></description>
+<see><![CDATA[com.soma.core.wire.Wire
+	 ]]></see>
+<see><![CDATA[com.soma.core.wire.SomaWires
+	 ]]></see>
+</interfaceRec>
+<method name='dispose' fullname='com.soma.core.interfaces:IWire/com.soma.core.interfaces:IWire:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getName' fullname='com.soma.core.interfaces:IWire/com.soma.core.interfaces:IWire:getName' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<description><![CDATA[
+		 Retrieves the name of the wire.
+		 ]]></description>
+<return><![CDATA[A String.
+		 ]]></return>
+</method>
+<method name='initialize' fullname='com.soma.core.interfaces:IWire/com.soma.core.interfaces:IWire:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='setName' fullname='com.soma.core.interfaces:IWire/com.soma.core.interfaces:IWire:setName' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+		 Sets the name of the wire.
+		 ]]></description>
+<param><![CDATA[value A String.
+		 ]]></param>
+</method>
+<method name='instance' fullname='com.soma.core.interfaces:IWire/com.soma.core.interfaces:IWire:instance/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISoma'>
+</method>
+<method name='instance' fullname='com.soma.core.interfaces:IWire/com.soma.core.interfaces:IWire:instance/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='void'>
+</method>
+<interfaceRec name='IMediator' fullname='com.soma.core.interfaces:IMediator' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/interfaces/IMediator.as' namespace='com.soma.core.interfaces' access='public' baseClasses='com.soma.core.interfaces:IWire' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 ]]></description>
+<author><![CDATA[Romuald Quantin
+	 ]]></author>
+</interfaceRec>
+<method name='viewComponent' fullname='com.soma.core.interfaces:IMediator/com.soma.core.interfaces:IMediator:viewComponent/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='viewComponent' fullname='com.soma.core.interfaces:IMediator/com.soma.core.interfaces:IMediator:viewComponent/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
 </method>
 <packageRec name='com.soma.core.interfaces.null' fullname='com.soma.core.interfaces.null'>
 <description><![CDATA[
@@ -945,6 +1156,8 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 <see><![CDATA[com.soma.core.wire.SomaWires
 		 ]]></see>
 </method>
+<method name='setup' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:setup' isStatic='false' isFinal='false' isOverride='false'  param_names='stage;injectorClass' param_types='flash.display:Stage;Class' param_defaults='null;null' result_type='void'>
+</method>
 <method name='stopAllSequencers' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:stopAllSequencers' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 <description><![CDATA[
 		 Stops all the sequence command instances that are running.
@@ -994,10 +1207,16 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 Gets the commands manager class.
 		 ]]></description>
 </method>
+<method name='injector' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:injector/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaInjector'>
+</method>
+<method name='mediators' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:mediators/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.mediator:SomaMediators'>
+</method>
 <method name='models' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:models/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.model:SomaModels'>
 <description><![CDATA[
 		 Gets the model manager class.
 		 ]]></description>
+</method>
+<method name='reflector' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:reflector/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaReflector'>
 </method>
 <method name='stage' fullname='com.soma.core.interfaces:ISoma/com.soma.core.interfaces:ISoma:stage/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.display:Stage'>
 <description><![CDATA[
@@ -1016,137 +1235,6 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 Gets the wires manager class.
 		 ]]></description>
 </method>
-<packageRec name='com.soma.core.view.null' fullname='com.soma.core.view.null'>
-<description><![CDATA[
- The contents of this file are subject to the Mozilla Public License
- Version 1.1 (the "License"); you may not use this file except in compliance
- with the License. You may obtain a copy of the License at
- 
- http://www.mozilla.org/MPL/
- 
- Software distributed under the License is distributed on an "AS IS" basis,
- WITHOUT WARRANTY OF ANY KIND, either express or implied.
- See the License for the specific language governing rights and
- limitations under the License.
- 
- The Original Code is SomaCore.
- 
- The Initial Developer of the Original Code is Romuald Quantin.
- romu]]></description>
-<soundstep.com><![CDATA[(www.soundstep.com).
- 
- Portions created by
- 
- Initial Developer are Copyright (C) 2008-2010 Soundstep. All Rights Reserved.
- All Rights Reserved.
- 
- ]]></soundstep.com>
-</packageRec>
-<classRec name='SomaViews' fullname='com.soma.core.view:SomaViews' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/view/SomaViews.as' namespace='com.soma.core.view' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
-<description><![CDATA[
-	 <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
-	 <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
-	 <p><b>Class version:</b> v1.0.0</p>
-	 <p><b>Actionscript version:</b> 3.0</p>
-	 <p><b>Copyright:</b>
-	 Mozilla Public License 1.1 (MPL 1.1)<br /> 
-	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 The SomaViews class handles the views of the application (DisplayObject).
-	 ]]></description>
-<example><![CDATA[Add a view.
-	 <listing version="3.0">
-addView(MySprite.NAME, new MySprite());
-	 </listing>
-	 Remove a view.
-	 <listing version="3.0">
-removeView(MySprite.NAME);
-	 </listing>
-	 Retrieve a view.
-	 <listing version="3.0">
-var sprite:MySprite = getView(MySprite.NAME) as MySprite;
-	 </listing>
-	 Create a shortcut to retrieve a view is a good practice.
-	 <listing version="3.0">
-private function get mySprite():MySprite {
-	return getView(MySprite.NAME) as MySprite;
-}
-private function doSomething():void {
-	trace(mySprite);
-}
-	 </listing>
-	 ]]></example>
-</classRec>
-<method name='SomaViews' fullname='com.soma.core.view:SomaViews/SomaViews' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
-<description><![CDATA[
-		 Create an instance of the SomaViews class. Should not be directly instantiated, the framework will instantiate the class.
-		 ]]></description>
-</method>
-<method name='addView' fullname='com.soma.core.view:SomaViews/addView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName;view' param_types='String;Object' param_defaults='undefined;undefined' result_type='Object'>
-<description><![CDATA[
-		 Registers a view to the framework.
-		 ]]></description>
-<example><![CDATA[<listing version="3.0">addView(MySprite.NAME, new MySprite());</listing>
-		 ]]></example>
-<param><![CDATA[viewName Name of the view.
-		 ]]></param>
-<param><![CDATA[view Instance of the view.
-		 ]]></param>
-<return><![CDATA[The view instance.
-		 ]]></return>
-</method>
-<method name='dispose' fullname='com.soma.core.view:SomaViews/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
-<description><![CDATA[
-		 Destroys all the views and properties. The class will call the dispose method of each view instance.
-		 ]]></description>
-</method>
-<method name='getView' fullname='com.soma.core.view:SomaViews/getView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Object'>
-<description><![CDATA[
-		 Retrieves the view instance that has been registered using its name.
-		 ]]></description>
-<example><![CDATA[<listing version="3.0">var mySprite:MySprite = getView(MySprite.NAME) as MySprite;</listing>
-		 ]]></example>
-<param><![CDATA[viewName Name of the view.
-		 ]]></param>
-<return><![CDATA[An Object instance.
-		 ]]></return>
-</method>
-<method name='getViews' fullname='com.soma.core.view:SomaViews/getViews' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.utils:Dictionary'>
-<description><![CDATA[
-		 Retrieves all the view instances that have been registered to the framework.
-		 ]]></description>
-<example><![CDATA[<listing version="3.0">var sprites:Dictionary = getViews();</listing>
-		 ]]></example>
-<return><![CDATA[A Dictionary (the key of the Dictionary is the name used for the registration).
-		 ]]></return>
-</method>
-<method name='hasView' fullname='com.soma.core.view:SomaViews/hasView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='Boolean'>
-<description><![CDATA[
-		 Indicates wether a view has been registered to the framework.
-		 ]]></description>
-<example><![CDATA[<listing version="3.0">hasView(MySprite.NAME);</listing>
-		 ]]></example>
-<param><![CDATA[viewName Name of the view.
-		 ]]></param>
-<return><![CDATA[A Boolean.
-		 ]]></return>
-</method>
-<method name='initialize' fullname='com.soma.core.view:SomaViews/private:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
-<description><![CDATA[ ]]></description>
-<private><![CDATA[]]></private>
-</method>
-<method name='removeView' fullname='com.soma.core.view:SomaViews/removeView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewName' param_types='String' param_defaults='undefined' result_type='void'>
-<description><![CDATA[
-		 Removes a view from the framework and call the (optional) dispose method of this view.
-		 ]]></description>
-<example><![CDATA[<listing version="3.0">removeView(MySprite.NAME);</listing>
-		 ]]></example>
-<param><![CDATA[viewName Name of the view.
-		 ]]></param>
-</method>
-<field name='views' fullname='com.soma.core.view:SomaViews/protected:views' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
-<description><![CDATA[ ]]></description>
-<private><![CDATA[]]></private>
-</field>
 <packageRec name='com.soma.core.ns.null' fullname='com.soma.core.ns.null'>
 <description><![CDATA[
  The contents of this file are subject to the Mozilla Public License
@@ -1300,12 +1388,12 @@ private function doSomething():void {
 <return><![CDATA[A value of true unless preventDefault() is called on the event, in which case it returns false.
 		 ]]></return>
 </method>
-<method name='dispose' fullname='com.soma.core.model:Model/protected:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<method name='dispose' fullname='com.soma.core.model:Model/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 <description><![CDATA[
 		 Method that can you can override, called when the model has been removed from the framework.
 		 ]]></description>
 </method>
-<method name='getName' fullname='com.soma.core.model:Model/getName' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
+<method name='getName' fullname='com.soma.core.model:Model/getName' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
 <description><![CDATA[
 		 Retrieves the name of the model.
 		 ]]></description>
@@ -1321,14 +1409,12 @@ private function doSomething():void {
 <return><![CDATA[A value of true if a listener of the specified type is registered; false otherwise.
 		 ]]></return>
 </method>
-<method name='initialize' fullname='com.soma.core.model:Model/protected:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<method name='initialize' fullname='com.soma.core.model:Model/initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 <description><![CDATA[
 		 Method that can you can override, called when the model has been registered to the framework.
 		 ]]></description>
 </method>
-<method name='registerDispatcher' fullname='com.soma.core.model:Model/somans:registerDispatcher' isStatic='false' isFinal='false' isOverride='false'  param_names='dispatcher' param_types='flash.events:IEventDispatcher' param_defaults='undefined' result_type='void'>
-<description><![CDATA[ ]]></description>
-<private><![CDATA[]]></private>
+<method name='postConstruct' fullname='com.soma.core.model:Model/postConstruct' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='removeEventListener' fullname='com.soma.core.model:Model/removeEventListener' isStatic='false' isFinal='true' isOverride='false'  param_names='type;listener;useCapture' param_types='String;Function;Boolean' param_defaults='undefined;undefined;false' result_type='void'>
 <description><![CDATA[
@@ -1341,7 +1427,7 @@ private function doSomething():void {
 <param><![CDATA[useCapture Specifies whether the listener was registered for the capture phase or the target and bubbling phases.
 		 ]]></param>
 </method>
-<method name='setName' fullname='com.soma.core.model:Model/setName' isStatic='false' isFinal='true' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+<method name='setName' fullname='com.soma.core.model:Model/setName' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
 <description><![CDATA[
 		 Sets the name of the model.
 		 ]]></description>
@@ -1357,21 +1443,21 @@ private function doSomething():void {
 <return><![CDATA[A value of true if a listener of the specified type will be triggered; false otherwise. 
 		 ]]></return>
 </method>
-<method name='data' fullname='com.soma.core.model:Model/data/get' isStatic='false' isFinal='true' isOverride='false'  result_type='Object'>
+<method name='data' fullname='com.soma.core.model:Model/data/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
 <description><![CDATA[
 		 Data of the model.
 		 ]]></description>
 </method>
-<method name='dispatcher' fullname='com.soma.core.model:Model/dispatcher/get' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.events:IEventDispatcher'>
+<method name='dispatcher' fullname='com.soma.core.model:Model/dispatcher/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.events:IEventDispatcher'>
 <description><![CDATA[
 		 EventDispatcher instance of the model.
 		 ]]></description>
 <default><![CDATA[The framework instance.
 		 ]]></default>
 </method>
-<method name='data' fullname='com.soma.core.model:Model/data/set' isStatic='false' isFinal='true' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+<method name='data' fullname='com.soma.core.model:Model/data/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
 </method>
-<method name='dispatcher' fullname='com.soma.core.model:Model/dispatcher/set' isStatic='false' isFinal='true' isOverride='false'  param_names='value' param_types='flash.events:IEventDispatcher' param_defaults='undefined' result_type='void'>
+<method name='dispatcher' fullname='com.soma.core.model:Model/dispatcher/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='flash.events:IEventDispatcher' param_defaults='undefined' result_type='void'>
 </method>
 <field name='_data' fullname='com.soma.core.model:Model/protected:_data' type='Object' isStatic='false' isConst='false' >
 <description><![CDATA[
@@ -1509,6 +1595,118 @@ private function doSomething():void {
 <description><![CDATA[
 		 List of the models registered to the framework.
 		 ]]></description>
+</field>
+<classRec name='SomaReflector' fullname='com.soma.core.di:SomaReflector' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/di/SomaReflector.as' namespace='com.soma.core.di' access='public' baseclass='org.swiftsuspenders:Reflector' interfaces='com.soma.core.interfaces:ISomaReflector' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 ]]></description>
+<author><![CDATA[romuald
+	 ]]></author>
+</classRec>
+<method name='dispose' fullname='com.soma.core.di:SomaReflector/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<classRec name='SomaInjector' fullname='com.soma.core.di:SomaInjector' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/di/SomaInjector.as' namespace='com.soma.core.di' access='public' baseclass='Object' interfaces='com.soma.core.interfaces:ISomaInjector' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 ]]></description>
+<author><![CDATA[Romuald Quantin
+	 ]]></author>
+</classRec>
+<method name='SomaInjector' fullname='com.soma.core.di:SomaInjector/SomaInjector' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='createChildInjector' fullname='com.soma.core.di:SomaInjector/createChildInjector' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaInjector'>
+</method>
+<method name='createInstance' fullname='com.soma.core.di:SomaInjector/createInstance' isStatic='false' isFinal='false' isOverride='false'  param_names='classTarget' param_types='Class' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='dispose' fullname='com.soma.core.di:SomaInjector/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getApplicationDomain' fullname='com.soma.core.di:SomaInjector/getApplicationDomain' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.system:ApplicationDomain'>
+</method>
+<method name='getInstance' fullname='com.soma.core.di:SomaInjector/getInstance' isStatic='false' isFinal='false' isOverride='false'  param_names='classTarget;name' param_types='Class;String' param_defaults='undefined;' result_type='Object'>
+</method>
+<method name='getParentInjector' fullname='com.soma.core.di:SomaInjector/getParentInjector' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaInjector'>
+</method>
+<method name='hasMapping' fullname='com.soma.core.di:SomaInjector/hasMapping' isStatic='false' isFinal='false' isOverride='false'  param_names='classTarget;name' param_types='Class;String' param_defaults='undefined;' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='com.soma.core.di:SomaInjector/com.soma.core.di:initialize' isStatic='false' isFinal='false' isOverride='false'  param_names='specifiedInjector;parentInjector' param_types='org.swiftsuspenders:Injector;com.soma.core.interfaces:ISomaInjector' param_defaults='null;null' result_type='com.soma.core.interfaces:ISomaInjector'>
+</method>
+<method name='injectInto' fullname='com.soma.core.di:SomaInjector/injectInto' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='mapSingletonOf' fullname='com.soma.core.di:SomaInjector/mapSingletonOf' isStatic='false' isFinal='false' isOverride='false'  param_names='whenAskFor;useSingletonOf;name' param_types='Class;Class;String' param_defaults='undefined;undefined;' result_type='void'>
+</method>
+<method name='mapSingleton' fullname='com.soma.core.di:SomaInjector/mapSingleton' isStatic='false' isFinal='false' isOverride='false'  param_names='classTarget;name' param_types='Class;String' param_defaults='undefined;' result_type='void'>
+</method>
+<method name='mapToInstance' fullname='com.soma.core.di:SomaInjector/mapToInstance' isStatic='false' isFinal='false' isOverride='false'  param_names='whenAskFor;instance;name' param_types='Class;Object;String' param_defaults='undefined;undefined;' result_type='void'>
+</method>
+<method name='map' fullname='com.soma.core.di:SomaInjector/map' isStatic='false' isFinal='false' isOverride='false'  param_names='whenAskFor;createClass;name' param_types='Class;Class;String' param_defaults='undefined;undefined;' result_type='void'>
+</method>
+<method name='removeMapping' fullname='com.soma.core.di:SomaInjector/removeMapping' isStatic='false' isFinal='false' isOverride='false'  param_names='classTarget;name' param_types='Class;String' param_defaults='undefined;' result_type='void'>
+</method>
+<method name='setApplicationDomain' fullname='com.soma.core.di:SomaInjector/setApplicationDomain' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='flash.system:ApplicationDomain' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_injector' fullname='com.soma.core.di:SomaInjector/private:_injector' type='org.swiftsuspenders:Injector' isStatic='false' isConst='false' >
+</field>
+<field name='_parent' fullname='com.soma.core.di:SomaInjector/private:_parent' type='com.soma.core.interfaces:ISomaInjector' isStatic='false' isConst='false' >
+</field>
+<classRec name='SomaMediators' fullname='com.soma.core.mediator:SomaMediators' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/mediator/SomaMediators.as' namespace='com.soma.core.mediator' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 ]]></description>
+<author><![CDATA[Romuald Quantin
+	 ]]></author>
+</classRec>
+<method name='SomaMediators' fullname='com.soma.core.mediator:SomaMediators/SomaMediators' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='*'>
+</method>
+<method name='addedhandler' fullname='com.soma.core.mediator:SomaMediators/private:addedhandler' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+</method>
+<method name='createMediator' fullname='com.soma.core.mediator:SomaMediators/private:createMediator' isStatic='false' isFinal='false' isOverride='false'  param_names='view;viewClass;mediatorClass' param_types='Object;Class;Class' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='creationComplete' fullname='com.soma.core.mediator:SomaMediators/private:creationComplete' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+</method>
+<method name='disposeMediator' fullname='com.soma.core.mediator:SomaMediators/private:disposeMediator' isStatic='false' isFinal='false' isOverride='false'  param_names='view' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<method name='dispose' fullname='com.soma.core.mediator:SomaMediators/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getClassFromInstance' fullname='com.soma.core.mediator:SomaMediators/private:getClassFromInstance' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='Class'>
+</method>
+<method name='getClassName' fullname='com.soma.core.mediator:SomaMediators/private:getClassName' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='String'>
+</method>
+<method name='getMediatorByView' fullname='com.soma.core.mediator:SomaMediators/getMediatorByView' isStatic='false' isFinal='false' isOverride='false'  param_names='view' param_types='Object' param_defaults='undefined' result_type='com.soma.core.interfaces:IMediator'>
+</method>
+<method name='hasMediator' fullname='com.soma.core.mediator:SomaMediators/hasMediator' isStatic='false' isFinal='false' isOverride='false'  param_names='view' param_types='Object' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='initialize' fullname='com.soma.core.mediator:SomaMediators/private:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='isMapped' fullname='com.soma.core.mediator:SomaMediators/isMapped' isStatic='false' isFinal='false' isOverride='false'  param_names='viewClass' param_types='Class' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='mapView' fullname='com.soma.core.mediator:SomaMediators/mapView' isStatic='false' isFinal='false' isOverride='false'  param_names='viewClass;mediatorClass' param_types='Class;Class' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='removeMapping' fullname='com.soma.core.mediator:SomaMediators/removeMapping' isStatic='false' isFinal='false' isOverride='false'  param_names='viewOrInterface' param_types='Class' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removedhandler' fullname='com.soma.core.mediator:SomaMediators/private:removedhandler' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_classes' fullname='com.soma.core.mediator:SomaMediators/private:_classes' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
+</field>
+<field name='_injector' fullname='com.soma.core.mediator:SomaMediators/private:_injector' type='com.soma.core.interfaces:ISomaInjector' isStatic='false' isConst='false' >
+</field>
+<field name='_instance' fullname='com.soma.core.mediator:SomaMediators/private:_instance' type='com.soma.core.interfaces:ISoma' isStatic='false' isConst='false' >
+</field>
+<field name='_mediators' fullname='com.soma.core.mediator:SomaMediators/private:_mediators' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
+</field>
+<classRec name='Mediator' fullname='com.soma.core.mediator:Mediator' sourcefile='/Users/romuald/Documents/devserver/workspace/somacore_framework/src/com/soma/core/mediator/Mediator.as' namespace='com.soma.core.mediator' access='public' baseclass='com.soma.core.wire:Wire' interfaces='com.soma.core.interfaces:IMediator' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+	 ]]></description>
+<author><![CDATA[Romuald Quantin
+	 ]]></author>
+</classRec>
+<method name='Mediator' fullname='com.soma.core.mediator:Mediator/Mediator' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='null' result_type='*'>
+</method>
+<method name='creationComplete' fullname='com.soma.core.mediator:Mediator/creationComplete' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='postConstruct' fullname='com.soma.core.mediator:Mediator/postConstruct' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='viewComponent' fullname='com.soma.core.mediator:Mediator/viewComponent/get' isStatic='false' isFinal='true' isOverride='false'  result_type='Object'>
+</method>
+<method name='viewComponent' fullname='com.soma.core.mediator:Mediator/viewComponent/set' isStatic='false' isFinal='true' isOverride='false'  param_names='value' param_types='Object' param_defaults='undefined' result_type='void'>
+</method>
+<field name='_viewComponent' fullname='com.soma.core.mediator:Mediator/protected:_viewComponent' type='Object' isStatic='false' isConst='false' >
 </field>
 <packageRec name='com.soma.core.controller.null' fullname='com.soma.core.controller.null'>
 <description><![CDATA[
@@ -2260,7 +2458,9 @@ package  {
 <return><![CDATA[A value of true if a listener of the specified type will be triggered; false otherwise. 
 		 ]]></return>
 </method>
-<method name='instance' fullname='com.soma.core.controller:Command/instance/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.interfaces:ISoma'>
+<method name='injector' fullname='com.soma.core.controller:Command/injector/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaInjector'>
+</method>
+<method name='instance' fullname='com.soma.core.controller:Command/instance/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISoma'>
 <description><![CDATA[
 		 Retrieves the instance of the framework.
 		 ]]></description>
@@ -2269,7 +2469,9 @@ package  {
 <return><![CDATA[An ISoma instance.
 		 ]]></return>
 </method>
-<method name='stage' fullname='com.soma.core.controller:Command/stage/get' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.display:Stage'>
+<method name='mediators' fullname='com.soma.core.controller:Command/mediators/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.mediator:SomaMediators'>
+</method>
+<method name='stage' fullname='com.soma.core.controller:Command/stage/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.display:Stage'>
 <description><![CDATA[
 		 Get the stage that has been registered to the framework.
 		 ]]></description>
@@ -2916,7 +3118,7 @@ private function myEventHandler(event:MyEvent):void {
 <return><![CDATA[A value of true unless preventDefault() is called on the event, in which case it returns false.
 		 ]]></return>
 </method>
-<method name='dispose' fullname='com.soma.core.wire:Wire/protected:dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<method name='dispose' fullname='com.soma.core.wire:Wire/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 <description><![CDATA[
 		 Method that can you can override, called when the wire has been removed from the framework.
 		 ]]></description>
@@ -2980,7 +3182,7 @@ private function myEventHandler(event:MyEvent):void {
 <see><![CDATA[com.soma.core.model.SomaModels
 		 ]]></see>
 </method>
-<method name='getName' fullname='com.soma.core.wire:Wire/getName' isStatic='false' isFinal='true' isOverride='false'  result_type='String'>
+<method name='getName' fullname='com.soma.core.wire:Wire/getName' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
 <description><![CDATA[
 		 Retrieves the name of the wire.
 		 ]]></description>
@@ -3120,7 +3322,7 @@ private function myEventHandler(event:MyEvent):void {
 <see><![CDATA[com.soma.core.wire.SomaWires
 		 ]]></see>
 </method>
-<method name='initialize' fullname='com.soma.core.wire:Wire/protected:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<method name='initialize' fullname='com.soma.core.wire:Wire/initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 <description><![CDATA[
 		 Method that can you can override, called when the wire has been registered to the framework.
 		 ]]></description>
@@ -3136,9 +3338,7 @@ private function myEventHandler(event:MyEvent):void {
 <see><![CDATA[com.soma.core.controller.SomaController
 		 ]]></see>
 </method>
-<method name='registerInstance' fullname='com.soma.core.wire:Wire/somans:registerInstance' isStatic='false' isFinal='false' isOverride='false'  param_names='instance' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='void'>
-<description><![CDATA[ ]]></description>
-<private><![CDATA[]]></private>
+<method name='postConstruct' fullname='com.soma.core.wire:Wire/postConstruct' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='removeCommand' fullname='com.soma.core.wire:Wire/removeCommand' isStatic='false' isFinal='true' isOverride='false'  param_names='commandName' param_types='String' param_defaults='undefined' result_type='void'>
 <description><![CDATA[
@@ -3195,7 +3395,7 @@ private function myEventHandler(event:MyEvent):void {
 <see><![CDATA[com.soma.core.wire.SomaWires
 		 ]]></see>
 </method>
-<method name='setName' fullname='com.soma.core.wire:Wire/setName' isStatic='false' isFinal='true' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='void'>
+<method name='setName' fullname='com.soma.core.wire:Wire/setName' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='void'>
 <description><![CDATA[
 		 Sets the name of the wire.
 		 ]]></description>
@@ -3246,7 +3446,9 @@ private function myEventHandler(event:MyEvent):void {
 <return><![CDATA[A value of true if a listener of the specified type will be triggered; false otherwise. 
 		 ]]></return>
 </method>
-<method name='instance' fullname='com.soma.core.wire:Wire/instance/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.interfaces:ISoma'>
+<method name='injector' fullname='com.soma.core.wire:Wire/injector/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaInjector'>
+</method>
+<method name='instance' fullname='com.soma.core.wire:Wire/instance/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISoma'>
 <description><![CDATA[
 		 Retrieves the instance of the framework.
 		 ]]></description>
@@ -3255,12 +3457,16 @@ private function myEventHandler(event:MyEvent):void {
 <return><![CDATA[An ISoma instance.
 		 ]]></return>
 </method>
+<method name='mediators' fullname='com.soma.core.wire:Wire/mediators/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.mediator:SomaMediators'>
+</method>
 <method name='stage' fullname='com.soma.core.wire:Wire/stage/get' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.display:Stage'>
 <description><![CDATA[
 		 Get the stage that has been registered to the framework.
 		 ]]></description>
 <return><![CDATA[The stage instance.
 		 ]]></return>
+</method>
+<method name='instance' fullname='com.soma.core.wire:Wire/instance/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='com.soma.core.interfaces:ISoma' param_defaults='undefined' result_type='void'>
 </method>
 <field name='_instance' fullname='com.soma.core.wire:Wire/private:_instance' type='com.soma.core.interfaces:ISoma' isStatic='false' isConst='false' >
 <description><![CDATA[ ]]></description>
@@ -3372,7 +3578,7 @@ package  {
 	 
 	 ]]></example>
 </classRec>
-<method name='Soma' fullname='com.soma.core:Soma/Soma' isStatic='false' isFinal='false' isOverride='false'  param_names='stage' param_types='flash.display:Stage' param_defaults='undefined' result_type='*'>
+<method name='Soma' fullname='com.soma.core:Soma/Soma' isStatic='false' isFinal='false' isOverride='false'  param_names='stage;injectorClass' param_types='flash.display:Stage;Class' param_defaults='null;null' result_type='*'>
 <description><![CDATA[
 		 Create an instance of the SomaCore class.
 		 ]]></description>
@@ -3468,6 +3674,12 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 ]]></param>
 <return><![CDATA[An instance of the plugin.
 		 ]]></return>
+</method>
+<method name='disposeCore' fullname='com.soma.core:Soma/private:disposeCore' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='disposeInjector' fullname='com.soma.core:Soma/private:disposeInjector' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='disposeReflector' fullname='com.soma.core:Soma/private:disposeReflector' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='dispose' fullname='com.soma.core:Soma/dispose' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 <description><![CDATA[
@@ -3657,9 +3869,13 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 <see><![CDATA[com.soma.core.wire.SomaWires
 		 ]]></see>
 </method>
-<method name='initializeApplication' fullname='com.soma.core:Soma/private:initializeApplication' isStatic='false' isFinal='false' isOverride='false'  param_names='stage' param_types='flash.display:Stage' param_defaults='undefined' result_type='void'>
+<method name='initializeApplication' fullname='com.soma.core:Soma/private:initializeApplication' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 <description><![CDATA[ ]]></description>
 <private><![CDATA[]]></private>
+</method>
+<method name='initializeInjector' fullname='com.soma.core:Soma/protected:initializeInjector' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='initialize' fullname='com.soma.core:Soma/protected:initialize' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
 <method name='isPartOfASequence' fullname='com.soma.core:Soma/isPartOfASequence' isStatic='false' isFinal='true' isOverride='false'  param_names='event' param_types='flash.events:Event' param_defaults='undefined' result_type='Boolean'>
 <description><![CDATA[
@@ -3762,6 +3978,10 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 <see><![CDATA[com.soma.core.wire.SomaWires
 		 ]]></see>
 </method>
+<method name='setup' fullname='com.soma.core:Soma/setup' isStatic='false' isFinal='false' isOverride='false'  param_names='stage;injectorClass' param_types='flash.display:Stage;Class' param_defaults='null;null' result_type='void'>
+</method>
+<method name='start' fullname='com.soma.core:Soma/protected:start' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
 <method name='stopAllSequencers' fullname='com.soma.core:Soma/stopAllSequencers' isStatic='false' isFinal='true' isOverride='false'  result_type='void'>
 <description><![CDATA[
 		 Stops all the sequence command instances that are running.
@@ -3797,19 +4017,23 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 <see><![CDATA[com.soma.core.controller.SomaController
 		 ]]></see>
 </method>
-<method name='validateStage' fullname='com.soma.core:Soma/private:validateStage' isStatic='false' isFinal='false' isOverride='false'  param_names='stage' param_types='flash.display:Stage' param_defaults='undefined' result_type='void'>
-<description><![CDATA[ ]]></description>
-<private><![CDATA[]]></private>
-</method>
 <method name='controller' fullname='com.soma.core:Soma/controller/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.controller:SomaController'>
 <description><![CDATA[
 		 Gets the commands manager class.
 		 ]]></description>
 </method>
+<method name='injectorClass' fullname='com.soma.core:Soma/injectorClass/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Class'>
+</method>
+<method name='injector' fullname='com.soma.core:Soma/injector/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaInjector'>
+</method>
+<method name='mediators' fullname='com.soma.core:Soma/mediators/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.mediator:SomaMediators'>
+</method>
 <method name='models' fullname='com.soma.core:Soma/models/get' isStatic='false' isFinal='true' isOverride='false'  result_type='com.soma.core.model:SomaModels'>
 <description><![CDATA[
 		 Gets the model manager class.
 		 ]]></description>
+</method>
+<method name='reflector' fullname='com.soma.core:Soma/reflector/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.soma.core.interfaces:ISomaReflector'>
 </method>
 <method name='stage' fullname='com.soma.core:Soma/stage/get' isStatic='false' isFinal='true' isOverride='false'  result_type='flash.display:Stage'>
 <description><![CDATA[
@@ -3832,15 +4056,23 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 <description><![CDATA[ ]]></description>
 <private><![CDATA[]]></private>
 </field>
+<field name='_injectorClass' fullname='com.soma.core:Soma/protected:_injectorClass' type='Class' isStatic='false' isConst='false' >
+</field>
+<field name='_injector' fullname='com.soma.core:Soma/protected:_injector' type='com.soma.core.interfaces:ISomaInjector' isStatic='false' isConst='false' >
+</field>
+<field name='_mediators' fullname='com.soma.core:Soma/protected:_mediators' type='com.soma.core.mediator:SomaMediators' isStatic='false' isConst='false' >
+</field>
 <field name='_models' fullname='com.soma.core:Soma/protected:_models' type='com.soma.core.model:SomaModels' isStatic='false' isConst='false' >
 <description><![CDATA[ ]]></description>
 <private><![CDATA[]]></private>
+</field>
+<field name='_reflector' fullname='com.soma.core:Soma/protected:_reflector' type='com.soma.core.interfaces:ISomaReflector' isStatic='false' isConst='false' >
 </field>
 <field name='_stage' fullname='com.soma.core:Soma/protected:_stage' type='flash.display:Stage' isStatic='false' isConst='false' >
 <description><![CDATA[ ]]></description>
 <private><![CDATA[]]></private>
 </field>
-<field name='_views' fullname='com.soma.core:Soma/private:_views' type='com.soma.core.view:SomaViews' isStatic='false' isConst='false' >
+<field name='_views' fullname='com.soma.core:Soma/protected:_views' type='com.soma.core.view:SomaViews' isStatic='false' isConst='false' >
 <description><![CDATA[ ]]></description>
 <private><![CDATA[]]></private>
 </field>

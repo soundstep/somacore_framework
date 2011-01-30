@@ -165,10 +165,43 @@
 	 </apiDesc>
       </apiClassifier>
    </apiPackage>
+   <apiPackage id="com.soma.core.di">
+      <apiName>com.soma.core.di</apiName>
+      <apiClassifier id="com.soma.core.di:SomaInjector">
+         <apiName>SomaInjector</apiName>
+         <shortdesc>
+	 </shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ISomaInjector</apiBaseInterface>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.di:SomaReflector">
+         <apiName>SomaReflector</apiName>
+         <shortdesc>
+	 </shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ISomaReflector</apiBaseInterface>
+               <apiBaseClassifier>org.swiftsuspenders:Reflector</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 </apiDesc>
+      </apiClassifier>
+   </apiPackage>
    <apiPackage id="com.soma.core.interfaces">
       <apiName>com.soma.core.interfaces</apiName>
-      <apiClassifier id="com.soma.core.interfaces:ISequenceCommand">
-         <apiName>ISequenceCommand</apiName>
+      <apiClassifier id="com.soma.core.interfaces:ISomaPluginVO">
+         <apiName>ISomaPluginVO</apiName>
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
@@ -177,13 +210,12 @@
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 http://www.opensource.org/licenses/mozilla1.1.php
-	 </shortdesc>
+	 Interface used by a class that will hold the plugin options (ex: SomaDebuggerVO).</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
                <apiAccess value="public"/>
                <apiStatic/>
-               <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
                <apiBaseClassifier/>
             </apiClassifierDef>
          </apiClassifierDetail>
@@ -204,7 +236,8 @@
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
-	        </apiDesc>
+	 Interface used by a class that will hold the plugin options (ex: SomaDebuggerVO).
+	 </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ISoma">
          <apiName>ISoma</apiName>
@@ -245,83 +278,6 @@
 	 Interface used by the class that will extend the Soma class.
 	 </apiDesc>
       </apiClassifier>
-      <apiClassifier id="com.soma.core.interfaces:ISomaPluginVO">
-         <apiName>ISomaPluginVO</apiName>
-         <shortdesc>
-	 Author: Romuald Quantin - www.soundstep.com
-	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
-	 Actionscript version: 3.0
-	 Copyright:
-	 Mozilla Public License 1.1 (MPL 1.1) 
-	 http://www.opensource.org/licenses/mozilla1.1.php
-	 Interface used by a class that will hold the plugin options (ex: SomaDebuggerVO).</shortdesc>
-         <apiClassifierDetail>
-            <apiClassifierDef>
-               <apiInterface/>
-               <apiAccess value="public"/>
-               <apiStatic/>
-               <apiBaseClassifier/>
-            </apiClassifierDef>
-         </apiClassifierDetail>
-         <apiDesc>
-	           <p>
-               <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
-            </p>
-	           <p>
-               <b>Resources:</b> 
-               <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
-            </p>
-	           <p>
-               <b>Class version:</b> v1.0.0</p>
-	           <p>
-               <b>Actionscript version:</b> 3.0</p>
-	           <p>
-               <b>Copyright:</b>
-	 Mozilla Public License 1.1 (MPL 1.1) 
-	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
-            </p>
-	 Interface used by a class that will hold the plugin options (ex: SomaDebuggerVO).
-	 </apiDesc>
-      </apiClassifier>
-      <apiClassifier id="com.soma.core.interfaces:ICommand">
-         <apiName>ICommand</apiName>
-         <shortdesc>
-	 Author: Romuald Quantin - www.soundstep.com
-	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v1.0.0
-	 Actionscript version: 3.0
-	 Copyright:
-	 Mozilla Public License 1.1 (MPL 1.1) 
-	 http://www.opensource.org/licenses/mozilla1.1.php
-	 </shortdesc>
-         <apiClassifierDetail>
-            <apiClassifierDef>
-               <apiInterface/>
-               <apiAccess value="public"/>
-               <apiStatic/>
-               <apiBaseClassifier/>
-            </apiClassifierDef>
-         </apiClassifierDetail>
-         <apiDesc>
-	           <p>
-               <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
-            </p>
-	           <p>
-               <b>Resources:</b> 
-               <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
-            </p>
-	           <p>
-               <b>Class version:</b> v1.0.0</p>
-	           <p>
-               <b>Actionscript version:</b> 3.0</p>
-	           <p>
-               <b>Copyright:</b>
-	 Mozilla Public License 1.1 (MPL 1.1) 
-	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
-            </p>
-	        </apiDesc>
-      </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:IModel">
          <apiName>IModel</apiName>
          <shortdesc>
@@ -359,6 +315,21 @@
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
 	        </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ISomaInjector">
+         <apiName>ISomaInjector</apiName>
+         <shortdesc>
+	 </shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:IResponder">
          <apiName>IResponder</apiName>
@@ -399,8 +370,61 @@
 	 Interface used by a class that receive data from a asynchronous call.
 	 </apiDesc>
       </apiClassifier>
-      <apiClassifier id="com.soma.core.interfaces:IParallelCommand">
-         <apiName>IParallelCommand</apiName>
+      <apiClassifier id="com.soma.core.interfaces:IWire">
+         <apiName>IWire</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 </shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	           <p>
+               <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+            </p>
+	           <p>
+               <b>Resources:</b> 
+               <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
+            </p>
+	           <p>
+               <b>Class version:</b> v1.0.0</p>
+	           <p>
+               <b>Actionscript version:</b> 3.0</p>
+	           <p>
+               <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+            </p>
+	        </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ISomaReflector">
+         <apiName>ISomaReflector</apiName>
+         <shortdesc>
+	 </shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ISequenceCommand">
+         <apiName>ISequenceCommand</apiName>
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
@@ -416,6 +440,60 @@
                <apiAccess value="public"/>
                <apiStatic/>
                <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	           <p>
+               <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+            </p>
+	           <p>
+               <b>Resources:</b> 
+               <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
+            </p>
+	           <p>
+               <b>Class version:</b> v1.0.0</p>
+	           <p>
+               <b>Actionscript version:</b> 3.0</p>
+	           <p>
+               <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+            </p>
+	        </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:IMediator">
+         <apiName>IMediator</apiName>
+         <shortdesc>
+	 </shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:IWire</apiBaseInterface>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ICommand">
+         <apiName>ICommand</apiName>
+         <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v1.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 </shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
                <apiBaseClassifier/>
             </apiClassifierDef>
          </apiClassifierDetail>
@@ -479,8 +557,8 @@
 	 Interface used to create asynchronous command.
 	 </apiDesc>
       </apiClassifier>
-      <apiClassifier id="com.soma.core.interfaces:IWire">
-         <apiName>IWire</apiName>
+      <apiClassifier id="com.soma.core.interfaces:IParallelCommand">
+         <apiName>IParallelCommand</apiName>
          <shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
@@ -495,6 +573,7 @@
                <apiInterface/>
                <apiAccess value="public"/>
                <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
                <apiBaseClassifier/>
             </apiClassifierDef>
          </apiClassifierDetail>
@@ -554,6 +633,38 @@
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
 	 Interface used by a class that is meant to be instantiated by the framework (ex:SomaDebugger).
+	 </apiDesc>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.soma.core.mediator">
+      <apiName>com.soma.core.mediator</apiName>
+      <apiClassifier id="com.soma.core.mediator:Mediator">
+         <apiName>Mediator</apiName>
+         <shortdesc>
+	 </shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:IMediator</apiBaseInterface>
+               <apiBaseClassifier>com.soma.core.wire:Wire</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+	 </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.mediator:SomaMediators">
+         <apiName>SomaMediators</apiName>
+         <shortdesc>
+	 </shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
 	 </apiDesc>
       </apiClassifier>
    </apiPackage>
@@ -677,6 +788,20 @@
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
 	 The SomaViews class handles the views of the application (DisplayObject).
+	 </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.view:ThrowErrorClass">
+         <apiName>ThrowErrorClass</apiName>
+         <shortdesc>
+	 </shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
 	 </apiDesc>
       </apiClassifier>
    </apiPackage>

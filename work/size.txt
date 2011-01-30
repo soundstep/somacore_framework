@@ -1,9 +1,8 @@
 SomaCore 1.0.0
 
 6.84 KB (7,014 bytes) - without debugger
-20.7 KB (21,233 bytes) - with debugger (1.0.0)
 
-SomaCore 1.0.0 ALPHA (injector enabled)
+SomaCore 2.0.0
 
-8.11 KB (8,308 bytes) - injector not enabled
-24 KB (24,579 bytes) - injector enabled
+9.46 KB (9 693 bytes) - injector not enabled
+14.83 KB (15,185 bytes) - injector enabled

@@ -184,8 +184,7 @@ private function myEventHandler(event:MyEvent):void {
 			return _instance;
 		}
 		
-		[Inject]
-		[Named(index=1, name="somaInstance")]
+		[Inject(name="somaInstance")]
 		public function set instance(value:ISoma):void {
 			_instance = value;
 		}

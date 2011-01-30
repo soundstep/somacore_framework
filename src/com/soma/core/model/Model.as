@@ -244,8 +244,7 @@ private function doSomething():void {
 			return _dispatcher;
 		}
 		
-		[Inject]
-		[Named(index=1, name="somaDispatcher")]
+		[Inject(name="somaDispatcher")]
 		public function set dispatcher(value:IEventDispatcher):void {
 			_dispatcher = value;
 		}

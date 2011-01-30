@@ -22,8 +22,14 @@
 <package name="com.soma.core.controller">
 <shortDescription>Contains classes related to commands and events.</shortDescription><longDescription>Contains classes related to commands and events.</longDescription>
 </package>
+<package name="com.soma.core.di">
+<shortDescription>Contains classes related to dependency injection.</shortDescription><longDescription>Contains classes related to dependency injection.</longDescription>
+</package>
 <package name="com.soma.core.interfaces">
 <shortDescription>Contains the interfaces used in the framework.</shortDescription><longDescription>Contains the interfaces used in the framework.</longDescription>
+</package>
+<package name="com.soma.core.mediator">
+<shortDescription>Contains the mediators manager and a Mediator abstract class.</shortDescription><longDescription>Contains the mediators manager and a Mediator abstract class.</longDescription>
 </package>
 <package name="com.soma.core.model">
 <shortDescription>Contains the models manager and a Model abstract class.</shortDescription><longDescription>Contains the models manager and a Model abstract class.</longDescription>

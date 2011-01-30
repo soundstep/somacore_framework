@@ -249,11 +249,11 @@ package  {
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event. 
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the specified event type.
-		 </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.soma.core.controller:Command:instance:get"><apiName>instance</apiName><shortdesc>
+		 </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.soma.core.controller:Command:injector:get"><apiName>injector</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaInjector</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.controller:Command:instance:get"><apiName>instance</apiName><shortdesc>
 		 Retrieves the instance of the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISoma</apiValueClassifier></apiValueDef><apiDesc>
 		 Retrieves the instance of the framework.
 		 </apiDesc><example><codeblock rev="3.0">var myExtendedSomaClass:SomaApplication = SomaApplication(instance);</codeblock>
-		 </example></apiValueDetail></apiValue><apiValue id="com.soma.core.controller:Command:stage:get"><apiName>stage</apiName><shortdesc>
+		 </example></apiValueDetail></apiValue><apiValue id="com.soma.core.controller:Command:mediators:get"><apiName>mediators</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.mediator:SomaMediators</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.controller:Command:stage:get"><apiName>stage</apiName><shortdesc>
 		 Get the stage that has been registered to the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.display:Stage"/></apiValueDef><apiDesc>
 		 Get the stage that has been registered to the framework.
 		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.controller:SequenceCommand"><apiName>SequenceCommand</apiName><shortdesc>

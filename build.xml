@@ -65,9 +65,11 @@
 			<arg line="-sp"/>
 			<arg line="'${dir.src.main}'"/>
 			<arg line="-include-libraries"/>
-			<arg line="'${dir.libs}/fussy-0.2.swc'"/>
-			<arg line="-include-libraries"/>
-			<arg line="'${dir.libs}/injector-0.8.5-rc1.swc'"/>
+			<arg line="'${dir.libs}/SwiftSuspenders-v1.5.1.swc'"/>
+			<!-- not necessary with SwiftSuspenders swc
+			<arg value="-keep-as3-metadata+=Inject"/>
+			<arg value="-keep-as3-metadata+=PostConstruct" />
+			-->
 		</exec>
 		<echo message="Success"/>
 		<eclipse.refreshLocal resource="${project.name}" />
@@ -84,21 +86,24 @@
 			<format property="docgen.time" pattern="MM/dd/yyyy hh:mm aa" unit="hour"/>
 	    </tstamp>
 	    <java jar="${FLEX_HOME}/lib/asdoc.jar" dir="${FLEX_HOME}/frameworks" fork="true" failonerror="true">
-	      <arg line="-doc-sources ${dir.src.main}"/>
-	      <arg line="-source-path ${dir.src.main}"/>
-	      <arg line="-output ${dir.docs.asdoc}"/>
-	      <arg value="-keep-xml=true"/>
-	      <arg value="-lenient=true"/>
-	      <arg line="-window-title 'SomaCore ${somacore.version}'"/>
-	      <arg line="-main-title 'SomaCore ${somacore.version}'"/>
-	      <arg line="-footer 'SomaCore ${somacore.version} | Documentation generated at: ${docgen.time}'"/>
-	      <arg line="-package com.soma.core 'Contains the Soma class (entry point of the framework)'"/>
-	      <arg line="-package com.soma.core.controller 'Contains classes related to commands and events.'"/>
-	      <arg line="-package com.soma.core.interfaces 'Contains the interfaces used in the framework.'"/>
-	      <arg line="-package com.soma.core.model 'Contains the models manager and a Model abstract class.'"/>
-	      <arg line="-package com.soma.core.ns 'Contains the soma namespace (internal use).'"/>
-	      <arg line="-package com.soma.core.view 'Contains the views manager.'"/>
-	      <arg line="-package com.soma.core.wire 'Contains the wires manager and a Wire abstract class.'"/>
+	      	<arg line="-doc-sources ${dir.src.main}"/>
+	      	<arg line="-source-path ${dir.src.main}"/>
+	    	<arg line="-external-library-path ${dir.libs}"/>
+			<arg line="-output ${dir.docs.asdoc}"/>
+			<arg value="-keep-xml=true"/>
+			<arg value="-lenient=true"/>
+			<arg line="-window-title 'SomaCore ${somacore.version}'"/>
+			<arg line="-main-title 'SomaCore ${somacore.version}'"/>
+			<arg line="-footer 'SomaCore ${somacore.version} | Documentation generated at: ${docgen.time}'"/>
+			<arg line="-package com.soma.core 'Contains the Soma class (entry point of the framework)'"/>
+			<arg line="-package com.soma.core.controller 'Contains classes related to commands and events.'"/>
+			<arg line="-package com.soma.core.di 'Contains classes related to dependency injection.'"/>
+			<arg line="-package com.soma.core.interfaces 'Contains the interfaces used in the framework.'"/>
+			<arg line="-package com.soma.core.mediator 'Contains the mediators manager and a Mediator abstract class.'"/>
+			<arg line="-package com.soma.core.model 'Contains the models manager and a Model abstract class.'"/>
+			<arg line="-package com.soma.core.ns 'Contains the soma namespace (internal use).'"/>
+			<arg line="-package com.soma.core.view 'Contains the views manager.'"/>
+			<arg line="-package com.soma.core.wire 'Contains the wires manager and a Wire abstract class.'"/>
 	    </java>
 		<echo message="Success"/>
 		<eclipse.refreshLocal resource="${project.name}" />

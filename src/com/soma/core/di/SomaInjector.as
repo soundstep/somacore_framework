@@ -1,75 +1,89 @@
 package com.soma.core.di {
-	import uk.co.ziazoo.injector.IInjector;
-	import uk.co.ziazoo.injector.IMapping;
-	import uk.co.ziazoo.injector.impl.Injector;
-
 	import com.soma.core.interfaces.ISomaInjector;
+	import org.swiftsuspenders.Injector;
+
+	import flash.system.ApplicationDomain;
+	
 	/**
 	 * @author Romuald Quantin
 	 */
 	public class SomaInjector implements ISomaInjector {
 		
-		private var _injector:IInjector;
+		private var _injector:Injector;
+		private var _parent:ISomaInjector;
 		
 		public function SomaInjector() {
 			initialize();
 		}
 		
-		internal function initialize(specifiedInjector:IInjector = null):ISomaInjector {
+		internal function initialize(specifiedInjector:Injector = null, parentInjector:ISomaInjector = null):ISomaInjector {
 			if (_injector) dispose();
-			if (!specifiedInjector) _injector = Injector.createInjector();
-			else _injector = specifiedInjector;
+			if (!specifiedInjector) _injector = new Injector();
+			else {
+				_injector = specifiedInjector;
+				if (parentInjector) _parent = parentInjector;
+			}
 			return this;
 		}
-
+		
 		public function createChildInjector():ISomaInjector {
-			return new SomaInjector().initialize(_injector.createChildInjector());
+			return new SomaInjector().initialize(_injector.createChildInjector(), this);
 		}
 		
-		public function createInstance(classTarget:Class, asSingleton:Boolean = false, asEagerSingleton:Boolean = false, injectionName:String = null):Object {
-			if (asSingleton || asEagerSingleton) mapSingleton(classTarget, asEagerSingleton, injectionName);
-			return _injector.inject(classTarget, injectionName);
+		public function getParentInjector():ISomaInjector {
+			return _parent;
 		}
 		
-		public function mapSingleton(classTarget:Class, asEagerSingleton:Boolean = false, injectionName:String = null):void {
-			if (!asEagerSingleton) _injector.map(classTarget).named(injectionName).asSingleton();
-			else _injector.map(classTarget).named(injectionName).asEagerSingleton();
+		public function getInstance(classTarget:Class, name:String = ""):Object {
+			return _injector.getInstance(classTarget, name);
 		}
 		
-		public function mapTo(whenAskFor:Class, createClass:Class, injectionName:String = null):void {
-			_injector.map(whenAskFor).named(injectionName).to(createClass);
+		public function createInstance(classTarget:Class):Object {
+			return _injector.instantiate(classTarget);
 		}
 		
-		public function mapToInstance(whenAskFor:Class, instanceTarget:Object, injectionName:String = null):void {
-			_injector.map(whenAskFor).named(injectionName).toInstance(instanceTarget);
-		}
-		
-		public function mapToFactory(whenAskFor:Class, createWithFactory:Class):void {
-			_injector.map(whenAskFor).toFactory(createWithFactory);
-		}
-		
-		public function hasMapping(classTarget:Class, injectionName:String = null):Boolean {
-			return _injector.hasMapping(classTarget, injectionName);
-		}
-		
-		public function getMappingName(classTarget:Class, injectionName:String = null):String {
-			var map:IMapping = _injector.getMapping(classTarget, injectionName);
-			if (!map) return null;
-			else return map.name;
+		public function injectInto(instance:Object):void {
+			_injector.injectInto(instance);
 		}
 
-		public function getMappingType(classTarget:Class, injectionName:String = null):Class {
-			var map:IMapping = _injector.getMapping(classTarget, injectionName);
-			if (!map) return null;
-			else return map.type;
+		public function mapSingleton(classTarget:Class, name:String = ""):void {
+//			if (!hasMapping(classTarget)) {
+//				mapTo(classTarget, classTarget);
+//			}
+			_injector.mapSingleton(classTarget, name);
+		}
+		
+		public function mapSingletonOf(whenAskFor:Class, useSingletonOf:Class, name:String = ""):void {
+			_injector.mapSingletonOf(whenAskFor, useSingletonOf, name);
+		}
+		
+		public function map(whenAskFor:Class, createClass:Class, name:String = ""):void {
+			_injector.mapClass(whenAskFor, createClass, name);
+		}
+		
+		public function mapToInstance(whenAskFor:Class, instance:Object, name:String = ""):void {
+			_injector.mapValue(whenAskFor, instance, name);
+		}
+		
+		public function hasMapping(classTarget:Class, name:String = ""):Boolean {
+			return _injector.hasMapping(classTarget, name);
+		}
+		
+		public function removeMapping(classTarget:Class, name:String = ""):void {
+			_injector.unmap(classTarget, name);
 		}
 
-		public function removeMapping(classTarget:Class, injectionName:String = null):void {
-			_injector.removeMapping(classTarget, injectionName);
+		public function getApplicationDomain():ApplicationDomain {
+			return _injector.getApplicationDomain();
 		}
-
+		
+		public function setApplicationDomain(value:ApplicationDomain):void {
+			_injector.setApplicationDomain(value);
+		}
+		
 		public function dispose():void {
-			
+			_injector = null;
+			_parent = null;
 		}
 		
 	}

@@ -58,37 +58,39 @@
          </prolog>
       </apiClassifier>
    </apiPackage>
+   <apiPackage id="com.soma.core.di">
+      <apiName>com.soma.core.di</apiName>
+      <apiClassifier id="com.soma.core.di:SomaInjector">
+         <apiName>SomaInjector</apiName>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ISomaInjector</apiBaseInterface>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.di:SomaReflector">
+         <apiName>SomaReflector</apiName>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ISomaReflector</apiBaseInterface>
+               <apiBaseClassifier>org.swiftsuspenders:Reflector</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+      </apiClassifier>
+   </apiPackage>
    <apiPackage id="com.soma.core.interfaces">
       <apiName>com.soma.core.interfaces</apiName>
-      <apiClassifier id="com.soma.core.interfaces:ISequenceCommand">
-         <apiName>ISequenceCommand</apiName>
-         <apiClassifierDetail>
-            <apiClassifierDef>
-               <apiInterface/>
-               <apiAccess value="public"/>
-               <apiStatic/>
-               <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
-               <apiBaseClassifier/>
-            </apiClassifierDef>
-         </apiClassifierDetail>
-         <prolog>
-            <asMetadata/>
-         </prolog>
-      </apiClassifier>
-      <apiClassifier id="com.soma.core.interfaces:ISoma">
-         <apiName>ISoma</apiName>
-         <apiClassifierDetail>
-            <apiClassifierDef>
-               <apiInterface/>
-               <apiAccess value="public"/>
-               <apiStatic/>
-               <apiBaseClassifier/>
-            </apiClassifierDef>
-         </apiClassifierDetail>
-         <prolog>
-            <asMetadata/>
-         </prolog>
-      </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ISomaPluginVO">
          <apiName>ISomaPluginVO</apiName>
          <apiClassifierDetail>
@@ -103,8 +105,8 @@
             <asMetadata/>
          </prolog>
       </apiClassifier>
-      <apiClassifier id="com.soma.core.interfaces:ICommand">
-         <apiName>ICommand</apiName>
+      <apiClassifier id="com.soma.core.interfaces:ISoma">
+         <apiName>ISoma</apiName>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -131,6 +133,20 @@
             <asMetadata/>
          </prolog>
       </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ISomaInjector">
+         <apiName>ISomaInjector</apiName>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+      </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:IResponder">
          <apiName>IResponder</apiName>
          <apiClassifierDetail>
@@ -145,14 +161,71 @@
             <asMetadata/>
          </prolog>
       </apiClassifier>
-      <apiClassifier id="com.soma.core.interfaces:IParallelCommand">
-         <apiName>IParallelCommand</apiName>
+      <apiClassifier id="com.soma.core.interfaces:IWire">
+         <apiName>IWire</apiName>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ISomaReflector">
+         <apiName>ISomaReflector</apiName>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ISequenceCommand">
+         <apiName>ISequenceCommand</apiName>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
                <apiAccess value="public"/>
                <apiStatic/>
                <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:IMediator">
+         <apiName>IMediator</apiName>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:IWire</apiBaseInterface>
+               <apiBaseClassifier/>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.interfaces:ICommand">
+         <apiName>ICommand</apiName>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiInterface/>
+               <apiAccess value="public"/>
+               <apiStatic/>
                <apiBaseClassifier/>
             </apiClassifierDef>
          </apiClassifierDetail>
@@ -176,13 +249,14 @@
             <asMetadata/>
          </prolog>
       </apiClassifier>
-      <apiClassifier id="com.soma.core.interfaces:IWire">
-         <apiName>IWire</apiName>
+      <apiClassifier id="com.soma.core.interfaces:IParallelCommand">
+         <apiName>IParallelCommand</apiName>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
                <apiAccess value="public"/>
                <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface>
                <apiBaseClassifier/>
             </apiClassifierDef>
          </apiClassifierDetail>
@@ -198,6 +272,36 @@
                <apiAccess value="public"/>
                <apiStatic/>
                <apiBaseClassifier/>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.soma.core.mediator">
+      <apiName>com.soma.core.mediator</apiName>
+      <apiClassifier id="com.soma.core.mediator:Mediator">
+         <apiName>Mediator</apiName>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>com.soma.core.interfaces:IMediator</apiBaseInterface>
+               <apiBaseClassifier>com.soma.core.wire:Wire</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.mediator:SomaMediators">
+         <apiName>SomaMediators</apiName>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
             </apiClassifierDef>
          </apiClassifierDetail>
          <prolog>
@@ -239,6 +343,19 @@
       <apiName>com.soma.core.view</apiName>
       <apiClassifier id="com.soma.core.view:SomaViews">
          <apiName>SomaViews</apiName>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <prolog>
+            <asMetadata/>
+         </prolog>
+      </apiClassifier>
+      <apiClassifier id="com.soma.core.view:ThrowErrorClass">
+         <apiName>ThrowErrorClass</apiName>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>

@@ -1,3 +1,7 @@
+h3. SomaCore-v2.0.0
+
+SomaCore Release with Dependency Injection enabled.
+
 h3. SomaCore-v1.0.0
 
-First Release
+First Release.

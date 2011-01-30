@@ -130,8 +130,8 @@ private function myEventHandler(event:MyEvent):void {
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>The event object dispatched into the event flow.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Dispatches an event into the event flow. The event target is the EventDispatcher object upon which dispatchEvent() is called.
-		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:protected:dispose"><apiName>dispose</apiName><shortdesc>
-		 Method that can you can override, called when the wire has been removed from the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:dispose"><apiName>dispose</apiName><shortdesc>
+		 Method that can you can override, called when the wire has been removed from the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
 		 Method that can you can override, called when the wire has been removed from the framework.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:getCommand"><apiName>getCommand</apiName><shortdesc>
 		 Retrieves the command class that has been registered with a command name.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A class.
@@ -161,7 +161,7 @@ private function myEventHandler(event:MyEvent):void {
 		 Retrieves all the model instances that have been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">var models:Dictionary = getModels();</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:getName"><apiName>getName</apiName><shortdesc>
-		 Retrieves the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A String.
+		 Retrieves the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A String.
 		 </apiDesc><apiType value="String"/></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves the name of the wire.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:getRunningSequencers"><apiName>getRunningSequencers</apiName><shortdesc>
@@ -226,15 +226,15 @@ private function myEventHandler(event:MyEvent):void {
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether a wire has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasWire(MyWire.NAME);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:protected:initialize"><apiName>initialize</apiName><shortdesc>
-		 Method that can you can override, called when the wire has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:initialize"><apiName>initialize</apiName><shortdesc>
+		 Method that can you can override, called when the wire has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
 		 Method that can you can override, called when the wire has been registered to the framework.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:isPartOfASequence"><apiName>isPartOfASequence</apiName><shortdesc>
 		 Indicates wether an event has been instantiated from a ISequenceCommand class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether an event has been instantiated from a ISequenceCommand class.
 		 </apiDesc><example><codeblock rev="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:removeCommand"><apiName>removeCommand</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:postConstruct"><apiName>postConstruct</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:removeCommand"><apiName>removeCommand</apiName><shortdesc>
 		 Removes a command from the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a command from the framework.
@@ -261,7 +261,7 @@ private function myEventHandler(event:MyEvent):void {
 		 Removes a wire from the framework and call the dispose method of this wire.
 		 </apiDesc><example><codeblock rev="3.0">removeWire(MyWire.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:setName"><apiName>setName</apiName><shortdesc>
-		 Sets the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiDesc>A String.
+		 Sets the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiDesc>A String.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Sets the name of the wire.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
@@ -288,11 +288,11 @@ private function myEventHandler(event:MyEvent):void {
 		 </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.soma.core.wire:Wire:protected:_name"><apiName>_name</apiName><shortdesc>
 		 Name of the wire.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="String"/></apiValueDef><apiDesc>
 		 Name of the wire.
-		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.wire:Wire:instance:get"><apiName>instance</apiName><shortdesc>
-		 Retrieves the instance of the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISoma</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.wire:Wire:injector:get"><apiName>injector</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaInjector</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.wire:Wire:instance:get"><apiName>instance</apiName><shortdesc>
+		 Retrieves the instance of the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>com.soma.core.interfaces:ISoma</apiValueClassifier></apiValueDef><apiDesc>
 		 Retrieves the instance of the framework.
 		 </apiDesc><example><codeblock rev="3.0">var myExtendedSomaClass:SomaApplication = SomaApplication(instance);</codeblock>
-		 </example></apiValueDetail></apiValue><apiValue id="com.soma.core.wire:Wire:stage:get"><apiName>stage</apiName><shortdesc>
+		 </example></apiValueDetail></apiValue><apiValue id="com.soma.core.wire:Wire:mediators:get"><apiName>mediators</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.mediator:SomaMediators</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.wire:Wire:stage:get"><apiName>stage</apiName><shortdesc>
 		 Get the stage that has been registered to the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.display:Stage"/></apiValueDef><apiDesc>
 		 Get the stage that has been registered to the framework.
 		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.wire:SomaWires"><apiName>SomaWires</apiName><shortdesc>

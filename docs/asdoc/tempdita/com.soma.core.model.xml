@@ -86,11 +86,11 @@ private function doSomething():void {
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/><apiDesc>The event object dispatched into the event flow.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Dispatches an event into the event flow. The event target is the EventDispatcher object upon which dispatchEvent() is called.
-		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:protected:dispose"><apiName>dispose</apiName><shortdesc>
-		 Method that can you can override, called when the model has been removed from the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:dispose"><apiName>dispose</apiName><shortdesc>
+		 Method that can you can override, called when the model has been removed from the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
 		 Method that can you can override, called when the model has been removed from the framework.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:getName"><apiName>getName</apiName><shortdesc>
-		 Retrieves the name of the model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A String.
+		 Retrieves the name of the model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A String.
 		 </apiDesc><apiType value="String"/></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves the name of the model.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:hasEventListener"><apiName>hasEventListener</apiName><shortdesc>
@@ -98,17 +98,17 @@ private function doSomething():void {
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Checks whether the EventDispatcher object has any listeners registered for a specific type of event.
-		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:protected:initialize"><apiName>initialize</apiName><shortdesc>
-		 Method that can you can override, called when the model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:initialize"><apiName>initialize</apiName><shortdesc>
+		 Method that can you can override, called when the model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
 		 Method that can you can override, called when the model has been registered to the framework.
-		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:removeEventListener"><apiName>removeEventListener</apiName><shortdesc>
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:postConstruct"><apiName>postConstruct</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:removeEventListener"><apiName>removeEventListener</apiName><shortdesc>
 		 Removes a listener from the EventDispatcher object.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The type of event. 
 		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiType value="Function"/><apiDesc>The listener object to remove. 
 		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>Specifies whether the listener was registered for the capture phase or the target and bubbling phases.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a listener from the EventDispatcher object. If there is no matching listener registered with the EventDispatcher object, a call to this method has no effect.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:setName"><apiName>setName</apiName><shortdesc>
-		 Sets the name of the model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/><apiDesc>A String.
+		 Sets the name of the model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="String"/><apiDesc>A String.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Sets the name of the model.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:Model:willTrigger"><apiName>willTrigger</apiName><shortdesc>
