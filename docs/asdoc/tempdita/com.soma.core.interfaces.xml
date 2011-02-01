@@ -215,7 +215,12 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a wire from the framework and call the dispose method of this wire.
 		 </apiDesc><example><codeblock rev="3.0">removeWire(MyWire.NAME);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:setup"><apiName>setup</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>stage</apiItemName><apiType value="flash.display:Stage"/><apiData>null</apiData></apiParam><apiParam><apiItemName>injectorClass</apiItemName><apiType value="Class"/><apiData>null</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
+		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:setup"><apiName>setup</apiName><shortdesc>
+		 Register elements that the frameworks needs to be ready, such as the stage and the optional injector class (default is SomaInjector).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>stage</apiItemName><apiType value="flash.display:Stage"/><apiData>null</apiData><apiDesc>The stage is used as a global EventDispatcher (as well as the Soma class), and is required to instantiate the framework.
+		 </apiDesc></apiParam><apiParam><apiItemName>injectorClass</apiItemName><apiType value="Class"/><apiData>null</apiData><apiDesc>Class that must extend ISomaInjector.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Register elements that the frameworks needs to be ready, such as the stage and the optional injector class (default is SomaInjector).
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:stopAllSequencers"><apiName>stopAllSequencers</apiName><shortdesc>
 		 Stops all the sequence command instances that are running.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
 		 Stops all the sequence command instances that are running.
 		 </apiDesc><example><codeblock rev="3.0">stopAllSequencers();</codeblock>
@@ -239,10 +244,22 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:controller:get"><apiName>controller</apiName><shortdesc>
 		 Gets the commands manager instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.controller:SomaController</apiValueClassifier></apiValueDef><apiDesc>
 		 Gets the commands manager instance.
-		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:injector:get"><apiName>injector</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaInjector</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:mediators:get"><apiName>mediators</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.mediator:SomaMediators</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:models:get"><apiName>models</apiName><shortdesc>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:injectorClass:get"><apiName>injectorClass</apiName><shortdesc>
+		 Retrieves the injector Class registered to the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Class"/></apiValueDef><apiDesc>
+		 Retrieves the injector Class registered to the framework.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:injector:get"><apiName>injector</apiName><shortdesc>
+		 Retrieves the injector instance that has been created by the framework from the injector Class registered.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaInjector</apiValueClassifier></apiValueDef><apiDesc>
+		 Retrieves the injector instance that has been created by the framework from the injector Class registered.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:mediators:get"><apiName>mediators</apiName><shortdesc>
+		 Gets the mediator manager instance that has been created by the framework from the injector Class registered.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.mediator:SomaMediators</apiValueClassifier></apiValueDef><apiDesc>
+		 Gets the mediator manager instance that has been created by the framework from the injector Class registered.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:models:get"><apiName>models</apiName><shortdesc>
 		 Gets the model manager instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.model:SomaModels</apiValueClassifier></apiValueDef><apiDesc>
 		 Gets the model manager instance.
-		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:reflector:get"><apiName>reflector</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaReflector</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:stage:get"><apiName>stage</apiName><shortdesc>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:reflector:get"><apiName>reflector</apiName><shortdesc>
+		 Retrieves the refletor instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaReflector</apiValueClassifier></apiValueDef><apiDesc>
+		 Retrieves the refletor instance.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:stage:get"><apiName>stage</apiName><shortdesc>
 		 Get the stage that has been registered to the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.display:Stage"/></apiValueDef><apiDesc>
 		 Get the stage that has been registered to the framework.
 		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:views:get"><apiName>views</apiName><shortdesc>
@@ -267,11 +284,17 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.model.xml#Model"><linktext>com.soma.core.model.Model</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:getName"><apiName>getName</apiName><shortdesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.model.xml#Model"><linktext>com.soma.core.model.Model</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:dispose"><apiName>dispose</apiName><shortdesc>
+		 Method that you can overwrite, called by the framework when the model is removed.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Method that you can overwrite, called by the framework when the model is removed.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:getName"><apiName>getName</apiName><shortdesc>
 		 Retrieves the name of the model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A String.
 		 </apiDesc><apiType value="String"/></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves the name of the model.
-		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:initialize"><apiName>initialize</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:setName"><apiName>setName</apiName><shortdesc>
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:initialize"><apiName>initialize</apiName><shortdesc>
+		 Method that you can overwrite, called by the framework when the model is initialized.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Method that you can overwrite, called by the framework when the model is initialized.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IModel:com.soma.core.interfaces:IModel:setName"><apiName>setName</apiName><shortdesc>
 		 Sets the name of the model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiDesc>A String.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Sets the name of the model.
@@ -283,9 +306,90 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 </apiDefaultValue></apiValueDef><apiDesc>
 		 EventDispatcher instance of the model.
 		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaInjector"><apiName>ISomaInjector</apiName><shortdesc>
-	 </shortdesc><prolog><author>Romuald Quantin
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
-	 </apiDesc></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:createChildInjector"><apiName>createChildInjector</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:ISomaInjector</apiOperationClassifier></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:createInstance"><apiName>createInstance</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:getApplicationDomain"><apiName>getApplicationDomain</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="flash.system:ApplicationDomain"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:getInstance"><apiName>getInstance</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:getParentInjector"><apiName>getParentInjector</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:ISomaInjector</apiOperationClassifier></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:hasMapping"><apiName>hasMapping</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:injectInto"><apiName>injectInto</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:mapSingletonOf"><apiName>mapSingletonOf</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>useSingletonOf</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:mapSingleton"><apiName>mapSingleton</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:mapToInstance"><apiName>mapToInstance</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:map"><apiName>map</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>createClass</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:removeMapping"><apiName>removeMapping</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:setApplicationDomain"><apiName>setApplicationDomain</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="flash.system:ApplicationDomain"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:IResponder"><apiName>IResponder</apiName><shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The ISomaInjector interface exposes the injection methods used by the framework.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v2.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 The ISomaInjector interface exposes the injection methods used by the framework. 
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.di.xml#SomaInjector"><linktext>com.soma.core.di.SomaInjector</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:createChildInjector"><apiName>createChildInjector</apiName><shortdesc>
+		 Creates a child injector.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A ISomaInjector instance.
+		 </apiDesc><apiOperationClassifier>com.soma.core.interfaces:ISomaInjector</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Creates a child injector.
+		 The child injector inherits the rules of its parents.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:createInstance"><apiName>createInstance</apiName><shortdesc>
+		 Instantiates a new instance from a given class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>An instance of the Class target.
+		 </apiDesc><apiType value="Object"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Instantiates a new instance from a given class.
+		 This method will always creates a new instance, regardless of any singleton mapping.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:dispose"><apiName>dispose</apiName><shortdesc>
+		 Destroys the injector elements.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Destroys the injector elements.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:getInstance"><apiName>getInstance</apiName><shortdesc>
+		 Retrieves or instantiates an instance of the given Class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>An instance of the Class target.
+		 </apiDesc><apiType value="Object"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves or instantiates an instance of the given Class.
+		 This method needs a mapping rule, the instance can be a singleton or a new one.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:getParentInjector"><apiName>getParentInjector</apiName><shortdesc>
+		 Retrieves the injector parent if any.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A ISomaInjector instance.
+		 </apiDesc><apiOperationClassifier>com.soma.core.interfaces:ISomaInjector</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves the injector parent if any.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:hasMapping"><apiName>hasMapping</apiName><shortdesc>
+		 Indicates wether a mapping rule exists for the given Class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Indicates wether a mapping rule exists for the given Class.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:injectInto"><apiName>injectInto</apiName><shortdesc>
+		 Performs injection into the given instance.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/><apiDesc>An instance.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Performs injection into the given instance.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:mapSingletonOf"><apiName>mapSingletonOf</apiName><shortdesc>
+		 Rule that defines the "whenAskFor" (usually an interface) to be injected with the same instance "useSingletonOf".</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>useSingletonOf</apiItemName><apiType value="Class"/><apiDesc>A class.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Rule that defines the "whenAskFor" (usually an interface) to be injected with the same instance "useSingletonOf".
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:mapSingleton"><apiName>mapSingleton</apiName><shortdesc>
+		 Rule that defines the "classTarget" to be injected with always the same instance.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Rule that defines the "classTarget" to be injected with always the same instance.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:mapToInstance"><apiName>mapToInstance</apiName><shortdesc>
+		 Rule that defines the "whenAskFor" to be injected the given instance.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/><apiDesc>An instance.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Rule that defines the "whenAskFor" to be injected the given instance.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:map"><apiName>map</apiName><shortdesc>
+		 Rule that defines the "whenAskFor" to be injected with an instance of the "createClass" Class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>createClass</apiItemName><apiType value="Class"/><apiDesc>A class.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Rule that defines the "whenAskFor" to be injected with an instance of the "createClass" Class.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:removeMapping"><apiName>removeMapping</apiName><shortdesc>
+		 Removes a mapping rule exists for the given Class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
+		 </apiDesc><apiType value="void"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes a mapping rule exists for the given Class.
+		 </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:applicationDomain:get"><apiName>applicationDomain</apiName><shortdesc>
+		 ApplicationDomain in use in the injector.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="flash.system:ApplicationDomain"/></apiValueDef><apiDesc>
+		 ApplicationDomain in use in the injector.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:IResponder"><apiName>IResponder</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v2.0.0
@@ -326,18 +430,62 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.wire.xml#Wire"><linktext>com.soma.core.wire.Wire</linktext></link><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:getName"><apiName>getName</apiName><shortdesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.wire.xml#Wire"><linktext>com.soma.core.wire.Wire</linktext></link><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:dispose"><apiName>dispose</apiName><shortdesc>
+		 Method that you can overwrite, called by the framework when the model is removed.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Method that you can overwrite, called by the framework when the model is removed.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:getName"><apiName>getName</apiName><shortdesc>
 		 Retrieves the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A String.
 		 </apiDesc><apiType value="String"/></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves the name of the wire.
-		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:initialize"><apiName>initialize</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:setName"><apiName>setName</apiName><shortdesc>
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:initialize"><apiName>initialize</apiName><shortdesc>
+		 Method that you can overwrite, called by the framework when the model is initialized.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Method that you can overwrite, called by the framework when the model is initialized.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:setName"><apiName>setName</apiName><shortdesc>
 		 Sets the name of the wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiDesc>A String.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Sets the name of the wire.
-		 </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:instance:get"><apiName>instance</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>com.soma.core.interfaces:ISoma</apiValueClassifier></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaReflector"><apiName>ISomaReflector</apiName><shortdesc>
-	 </shortdesc><prolog><author>romuald
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
-	 </apiDesc></apiClassifierDetail><apiOperation id="com.soma.core.interfaces:ISomaReflector:com.soma.core.interfaces:ISomaReflector:classExtendsOrImplements"><apiName>classExtendsOrImplements</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>classOrClassName</apiItemName><apiType value="Object"/></apiParam><apiParam><apiItemName>superclass</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>application</apiItemName><apiType value="flash.system:ApplicationDomain"/><apiData>null</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaReflector:com.soma.core.interfaces:ISomaReflector:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaReflector:com.soma.core.interfaces:ISomaReflector:getClass"><apiName>getClass</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Class"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="any"/></apiParam><apiParam><apiItemName>applicationDomain</apiItemName><apiType value="flash.system:ApplicationDomain"/><apiData>null</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaReflector:com.soma.core.interfaces:ISomaReflector:getFQCN"><apiName>getFQCN</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="String"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="any"/></apiParam><apiParam><apiItemName>replaceColons</apiItemName><apiType value="Boolean"/><apiData>false</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISequenceCommand"><apiName>ISequenceCommand</apiName><shortdesc>
+		 </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:instance:get"><apiName>instance</apiName><shortdesc>
+		 Instance of the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>com.soma.core.interfaces:ISoma</apiValueClassifier></apiValueDef><apiDesc>
+		 Instance of the framework.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaReflector"><apiName>ISomaReflector</apiName><shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The ISomaReflector interface exposes the reflection methods used by the framework.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v2.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 The ISomaReflector interface exposes the reflection methods used by the framework. 
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.di.xml#SomaReflector"><linktext>com.soma.core.di.SomaReflector</linktext></link></related-links><apiOperation id="com.soma.core.interfaces:ISomaReflector:com.soma.core.interfaces:ISomaReflector:classExtendsOrImplements"><apiName>classExtendsOrImplements</apiName><shortdesc>
+		 Indicates wether a Class or Class name extends or implements a given Class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>classOrClassName</apiItemName><apiType value="Object"/><apiDesc>A Class or a Class name.
+		 </apiDesc></apiParam><apiParam><apiItemName>superclass</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>application</apiItemName><apiType value="flash.system:ApplicationDomain"/><apiData>null</apiData><apiDesc>An ApplicationDomain.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Indicates wether a Class or Class name extends or implements a given Class.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaReflector:com.soma.core.interfaces:ISomaReflector:dispose"><apiName>dispose</apiName><shortdesc>
+		 Destroys the reflector elements.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Destroys the reflector elements.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaReflector:com.soma.core.interfaces:ISomaReflector:getClass"><apiName>getClass</apiName><shortdesc>
+		 Retrieves a Class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Class.
+		 </apiDesc><apiType value="Class"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="any"/><apiDesc>Class, Class name or instance. 
+		 </apiDesc></apiParam><apiParam><apiItemName>applicationDomain</apiItemName><apiType value="flash.system:ApplicationDomain"/><apiData>null</apiData><apiDesc>An ApplicationDomain.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves a Class.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.interfaces:ISomaReflector:com.soma.core.interfaces:ISomaReflector:getFQCN"><apiName>getFQCN</apiName><shortdesc>
+		 Retrieves a fully qualified Class name.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A String.
+		 </apiDesc><apiType value="String"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="any"/><apiDesc>Class, Class name or instance. 
+		 </apiDesc></apiParam><apiParam><apiItemName>replaceColons</apiItemName><apiType value="Boolean"/><apiData>false</apiData><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves a fully qualified Class name.
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISequenceCommand"><apiName>ISequenceCommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v2.0.0
@@ -369,9 +517,26 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 Retrieves the number of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef><apiDesc>
 		 Retrieves the number of commands added as subcommands.
 		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:IMediator"><apiName>IMediator</apiName><shortdesc>
-	 </shortdesc><prolog><author>Romuald Quantin
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IWire</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
-	 </apiDesc></apiClassifierDetail><apiValue id="com.soma.core.interfaces:IMediator:com.soma.core.interfaces:IMediator:viewComponent:get"><apiName>viewComponent</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommand"><apiName>ICommand</apiName><shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The IMediator interface exposes the methods of a Mediator instance.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IWire</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v2.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 The IMediator interface exposes the methods of a Mediator instance. 
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.mediator.xml#Mediator"><linktext>com.soma.core.mediator.Mediator</linktext></link><link href="com.soma.core.mediator.xml#SomaMediators"><linktext>com.soma.core.mediator.SomaMediators</linktext></link></related-links><apiValue id="com.soma.core.interfaces:IMediator:com.soma.core.interfaces:IMediator:viewComponent:get"><apiName>viewComponent</apiName><shortdesc>
+		 View that has been mapped to the mediator instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef><apiDesc>
+		 View that has been mapped to the mediator instance.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommand"><apiName>ICommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v2.0.0

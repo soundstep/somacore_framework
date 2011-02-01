@@ -58,7 +58,7 @@ removeModel(ModelExample.NAME);
 	 <codeblock rev="3.0">
 var model:ModelExample = getModel(ModelExample.NAME) as ModelExample;
 	 </codeblock>
-	 Create a shortcut to retrieve a model is a good practice.
+	 Create a shortcut to retrieve a model is a good practice (not necessary with injection enabled).
 	 <codeblock rev="3.0">
 private function get modelExample():ModelExample {
 	return getModel(ModelExample.NAME) as ModelExample;
@@ -152,7 +152,8 @@ private function doSomething():void {
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
 	 The SomaModels class handles the models of the application. See the Model class documentation for implementation.
 	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.model.xml#Model"><linktext>com.soma.core.model.Model</linktext></link></related-links><apiConstructor id="com.soma.core.model:SomaModels:SomaModels"><apiName>SomaModels</apiName><shortdesc>
-		 Create an instance of the SomaModels class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier></apiParam></apiConstructorDef><apiDesc>
+		 Create an instance of the SomaModels class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier><apiDesc>Framework instance.
+		 </apiDesc></apiParam></apiConstructorDef><apiDesc>
 		 Create an instance of the SomaModels class. Should not be directly instantiated, the framework will instantiate the class.
 		 </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.soma.core.model:SomaModels:addModel"><apiName>addModel</apiName><shortdesc>
 		 Registers a model to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The model instance.
@@ -161,7 +162,7 @@ private function doSomething():void {
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Registers a model to the framework.
 		 </apiDesc><example><codeblock rev="3.0">addModel(MyModel.NAME, new MyModel());</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.model:SomaModels:dispose"><apiName>dispose</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:SomaModels:dispose"><apiName>dispose</apiName><shortdesc>
 		 Destroys all the models and properties.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
 		 Destroys all the models and properties. The class will call the dispose method of each model instance.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:SomaModels:getModel"><apiName>getModel</apiName><shortdesc>

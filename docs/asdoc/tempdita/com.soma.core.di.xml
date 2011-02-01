@@ -1,7 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?><apiPackage id="com.soma.core.di"><apiName>com.soma.core.di</apiName><apiDetail/><apiClassifier id="com.soma.core.di:SomaInjector"><apiName>SomaInjector</apiName><shortdesc>
-	 </shortdesc><prolog><author>Romuald Quantin
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISomaInjector</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
-	 </apiDesc></apiClassifierDetail><apiConstructor id="com.soma.core.di:SomaInjector:SomaInjector"><apiName>SomaInjector</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef></apiConstructorDetail></apiConstructor><apiOperation id="com.soma.core.di:SomaInjector:createChildInjector"><apiName>createChildInjector</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:ISomaInjector</apiOperationClassifier></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:createInstance"><apiName>createInstance</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:getApplicationDomain"><apiName>getApplicationDomain</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="flash.system:ApplicationDomain"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:getInstance"><apiName>getInstance</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Object"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:getParentInjector"><apiName>getParentInjector</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:ISomaInjector</apiOperationClassifier></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:hasMapping"><apiName>hasMapping</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:com.soma.core.di:initialize"><apiName>initialize</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>com.soma.core.interfaces:ISomaInjector</apiOperationClassifier></apiReturn><apiParam><apiItemName>specifiedInjector</apiItemName><apiType value="org.swiftsuspenders:Injector"/><apiData>null</apiData></apiParam><apiParam><apiItemName>parentInjector</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISomaInjector</apiOperationClassifier><apiData>null</apiData></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:injectInto"><apiName>injectInto</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:mapSingletonOf"><apiName>mapSingletonOf</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>useSingletonOf</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:mapSingleton"><apiName>mapSingleton</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:mapToInstance"><apiName>mapToInstance</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:map"><apiName>map</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>createClass</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:removeMapping"><apiName>removeMapping</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/></apiParam></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:setApplicationDomain"><apiName>setApplicationDomain</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>value</apiItemName><apiType value="flash.system:ApplicationDomain"/></apiParam></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.di:SomaReflector"><apiName>SomaReflector</apiName><shortdesc>
-	 </shortdesc><prolog><author>romuald
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISomaReflector</apiBaseInterface><apiBaseClassifier>org.swiftsuspenders:Reflector</apiBaseClassifier></apiClassifierDef><apiDesc>
-	 </apiDesc></apiClassifierDetail><apiOperation id="com.soma.core.di:SomaReflector:dispose"><apiName>dispose</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation></apiClassifier></apiPackage>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The SomaInjector Class is an adapter for the injection library used by the framework: Swiftsuspenders.
+	 http://github.com/tschneidereit/SwiftSuspenders
+	 
+	 Injection is not enabled by default to keep the framework lighter in its basic use.
+	 To enable injection, The Soma Class constructor or its setup public method can receive a Class that must extends ISomaInjector.
+	 The default framework injector that can be used is SomaInjector.
+	 The SomaInjector instance is accessible using the injector property from the facade (your Soma instance), the wires, the mediators and the commands.
+	 The injector instance can be used directly and/or using metadata tags such as [Inject] or [PostConstruct], see the SwiftSuspenders documentation for more information: https://github.com/tschneidereit/SwiftSuspenders
+	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISomaInjector</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v2.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 <p>The SomaInjector Class is an adapter for the injection library used by the framework: Swiftsuspenders.
+	 <xref href="http://github.com/tschneidereit/SwiftSuspenders" scope="external">http://github.com/tschneidereit/SwiftSuspenders</xref>
+	 </p>
+	 <p>Injection is not enabled by default to keep the framework lighter in its basic use.
+	 To enable injection, The Soma Class constructor or its setup public method can receive a Class that must extends ISomaInjector.
+	 The default framework injector that can be used is SomaInjector.</p>
+	 <p>The SomaInjector instance is accessible using the injector property from the facade (your Soma instance), the wires, the mediators and the commands.</p>
+	 <p>The injector instance can be used directly and/or using metadata tags such as [Inject] or [PostConstruct], see the SwiftSuspenders documentation for more information: <xref href="https://github.com/tschneidereit/SwiftSuspenders/blob/master/README.textile" scope="external">https://github.com/tschneidereit/SwiftSuspenders</xref></p>
+	 </apiDesc><example><codeblock rev="3.0">
+var application:ISoma = new Soma(stage, SomaInjector);
+	 </codeblock>
+	 <codeblock rev="3.0">
+var application:ISoma = new Soma();
+application.setup(stage, SomaInjector);
+	 </codeblock>
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.interfaces.ISoma;
+	import com.soma.core.di.SomaInjector;
+	import flash.display.Sprite;
+	
+	public class Main extends Sprite {
+		
+		private var _app:ISoma;
+		
+		public function Main() {
+			_app = new SomaApplication(stage, SomaInjector);
+		}
+		
+	}
+}
+	 </codeblock>
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.Soma;
+	import com.soma.core.interfaces.ISoma;
+	import flash.display.Stage;
+	
+	public class SomaApplication extends Soma implements ISoma {
+		public function SomaApplication(stage:Stage, injectorClass:Class) {
+			super(stage, injectorClass);
+		}
+		
+	}
+}
+	 </codeblock>
+	 <codeblock rev="3.0">
+package {
+	public class Injectee {
+		[Inject]
+		public var myClass:MyClass;
+		[PostConstruct]
+		public funtion test():void {
+			trace(myClass);
+		}
+	}
+}
+	 </codeblock>
+	 <codeblock rev="3.0">
+injector.mapSingleton(MyClass);
+injector.createInstance(Injectee);
+	 </codeblock>
+	 </example></apiClassifierDetail><related-links><link href="com.soma.core.interfaces.xml#ISomaInjector"><linktext>com.soma.core.interfaces.ISomaInjector</linktext></link></related-links><apiConstructor id="com.soma.core.di:SomaInjector:SomaInjector"><apiName>SomaInjector</apiName><shortdesc>
+		 Create an instance of the SomaInjector class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef><apiDesc>
+		 Create an instance of the SomaInjector class.
+		 Automatically created by the framework when the injection is enabled and accessible using the injector property.
+		 </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.soma.core.di:SomaInjector:createChildInjector"><apiName>createChildInjector</apiName><shortdesc>
+		 Creates a child injector.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A ISomaInjector instance.
+		 </apiDesc><apiOperationClassifier>com.soma.core.interfaces:ISomaInjector</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Creates a child injector.
+		 The child injector inherits the rules of its parents.
+		 </apiDesc><example><codeblock rev="3.0">
+var child:ISomaInjector = injector.createChildInjector();
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:createInstance"><apiName>createInstance</apiName><shortdesc>
+		 Instantiates a new instance from a given class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>An instance of the Class target.
+		 </apiDesc><apiType value="Object"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Instantiates a new instance from a given class.
+		 This method will always creates a new instance, regardless of any singleton mapping.
+		 </apiDesc><example><codeblock rev="3.0">
+injector.map(MyClass, MyClass);
+var class1:MyClass = injector.createInstance(MyClass) as MyClass;
+var class2:MyClass = injector.createInstance(MyClass) as MyClass;
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:dispose"><apiName>dispose</apiName><shortdesc>
+		 Destroys the injector elements.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Destroys the injector elements.
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:getInstance"><apiName>getInstance</apiName><shortdesc>
+		 Retrieves or instantiates an instance of the given Class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>An instance of the Class target.
+		 </apiDesc><apiType value="Object"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves or instantiates an instance of the given Class.
+		 This method needs a mapping rule, the instance can be a singleton or a new one.
+		 </apiDesc><example><codeblock rev="3.0">
+injector.map(MyClass, MyClass);
+var class1:MyClass = injector.getInstance(MyClass) as MyClass;
+var class2:MyClass = injector.getInstance(MyClass) as MyClass;
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:getParentInjector"><apiName>getParentInjector</apiName><shortdesc>
+		 Retrieves the injector parent if any.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A ISomaInjector instance.
+		 </apiDesc><apiOperationClassifier>com.soma.core.interfaces:ISomaInjector</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves the injector parent if any.
+		 </apiDesc><example><codeblock rev="3.0">
+var parent:ISomaInjector = injector.getParentInjector();
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:hasMapping"><apiName>hasMapping</apiName><shortdesc>
+		 Indicates wether a mapping rule exists for the given Class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Indicates wether a mapping rule exists for the given Class.
+		 </apiDesc><example><codeblock rev="3.0">
+injector.map(MyClass, MyClass)
+var value:Boolean = injector.hasMapping(MyClass); // return true
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:injectInto"><apiName>injectInto</apiName><shortdesc>
+		 Performs injection into the given instance.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/><apiDesc>An instance.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Performs injection into the given instance.
+		 </apiDesc><example><codeblock rev="3.0">
+package {
+	public class Injectee {
+		[Inject]
+		public var myClass:MyClass;
+	}
+}
+		 </codeblock>
+		 <codeblock rev="3.0">
+injector.map(MyClass, MyClass);
+var myClass:MyClass = injector.createInstance(MyClass) as MyClass;
+injector.injectInto(myClass);
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:mapSingletonOf"><apiName>mapSingletonOf</apiName><shortdesc>
+		 Rule that defines the "whenAskFor" (usually an interface) to be injected with the same instance "useSingletonOf".</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>useSingletonOf</apiItemName><apiType value="Class"/><apiDesc>A class.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Rule that defines the "whenAskFor" (usually an interface) to be injected with the same instance "useSingletonOf".
+		 </apiDesc><example><codeblock rev="3.0">
+injector.mapSingletonOf(IMyClass, MyClass);
+var myClass:MyClass = injector.getInstance(MyClass) as MyClass;
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:mapSingleton"><apiName>mapSingleton</apiName><shortdesc>
+		 Rule that defines the "classTarget" to be injected with always the same instance.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Rule that defines the "classTarget" to be injected with always the same instance.
+		 </apiDesc><example><codeblock rev="3.0">
+injector.mapSingleton(MyClass, MyClass);
+var myClass:MyClass = injector.getInstance(MyClass) as MyClass;
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:mapToInstance"><apiName>mapToInstance</apiName><shortdesc>
+		 Rule that defines the "whenAskFor" to be injected the given instance.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>instance</apiItemName><apiType value="Object"/><apiDesc>An instance.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Rule that defines the "whenAskFor" to be injected the given instance.
+		 </apiDesc><example><codeblock rev="3.0">
+var myClass:MyClass = new MyClass();
+injector.mapToInstance(MyClass, myClass)
+var myClassSameInstance:MyClass = injector.getInstance(MyClass) as MyClass;
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:map"><apiName>map</apiName><shortdesc>
+		 Rule that defines the "whenAskFor" to be injected with an instance of the "createClass" Class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>whenAskFor</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>createClass</apiItemName><apiType value="Class"/><apiDesc>A class.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Rule that defines the "whenAskFor" to be injected with an instance of the "createClass" Class.
+		 </apiDesc><example><codeblock rev="3.0">
+injector.map(MyClass, MyOtherClass)
+var myOtherClass:MyOtherClass = injector.getInstance(MyClass) as MyOtherClass;
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.di:SomaInjector:removeMapping"><apiName>removeMapping</apiName><shortdesc>
+		 Removes a mapping rule exists for the given Class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
+		 </apiDesc><apiType value="void"/></apiReturn><apiParam><apiItemName>classTarget</apiItemName><apiType value="Class"/><apiDesc>A Class.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiType value="String"/><apiData/><apiDesc>Injection name.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes a mapping rule exists for the given Class.
+		 </apiDesc><example><codeblock rev="3.0">
+injector.map(MyClass, MyClass)
+var value:Boolean = injector.hasMapping(MyClass); // return true
+injector.removeMapping(MyClass);
+value = injector.hasMapping(MyClass); // return false
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiValue id="com.soma.core.di:SomaInjector:applicationDomain:get"><apiName>applicationDomain</apiName><shortdesc>
+		 ApplicationDomain in use in the injector.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="flash.system:ApplicationDomain"/></apiValueDef><apiDesc>
+		 ApplicationDomain in use in the injector.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.di:SomaReflector"><apiName>SomaReflector</apiName><shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The SomaReflector Class is an adapter for the reflection library used by the framework: Swiftsuspenders.
+	 http://github.com/tschneidereit/SwiftSuspenders
+	 
+	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISomaReflector</apiBaseInterface><apiBaseClassifier>org.swiftsuspenders:Reflector</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v2.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 <p>The SomaReflector Class is an adapter for the reflection library used by the framework: Swiftsuspenders.
+	 <xref href="http://github.com/tschneidereit/SwiftSuspenders" scope="external">http://github.com/tschneidereit/SwiftSuspenders</xref>
+	 </p>
+	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.interfaces.xml#ISomaReflector"><linktext>com.soma.core.interfaces.ISomaReflector</linktext></link></related-links><apiOperation id="com.soma.core.di:SomaReflector:dispose"><apiName>dispose</apiName><shortdesc>
+		 Destroys the reflector elements.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Destroys the reflector elements.
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier></apiPackage>

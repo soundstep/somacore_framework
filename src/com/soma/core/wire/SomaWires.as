@@ -65,6 +65,7 @@ package com.soma.core.wire {
 		
 		/**
 		 * Create an instance of the SomaWires class. Should not be directly instantiated, the framework will instantiate the class.
+		 * @param instance Framework instance.
 		 */
 		public function SomaWires(instance:ISoma) {
 			_instance = instance;
@@ -99,7 +100,6 @@ package com.soma.core.wire {
 		 * Indicates wether a wire has been registered to the framework.
 		 * @param wireName Name of the wire.
 		 * @return A Boolean.
-		 * @see com.soma.core.wire.SomaWires
 		 * @example
 		 * <listing version="3.0">hasWire(MyWire.NAME);</listing>
 		 */
@@ -113,7 +113,6 @@ package com.soma.core.wire {
 		 * @param wireName Name of the wire.
 		 * @param view Instance of the wire.
 		 * @return The wire instance.
-		 * @see com.soma.core.wire.SomaWires
 		 * @example
 		 * <listing version="3.0">addWire(MyWire.NAME, new MyWire());</listing>
 		 */
@@ -133,7 +132,6 @@ package com.soma.core.wire {
 		/**
 		 * Removes a wire from the framework and call the dispose method of this wire.
 		 * @param wireName Name of the wire.
-		 * @see com.soma.core.wire.SomaWires
 		 * @example
 		 * <listing version="3.0">removeWire(MyWire.NAME);</listing>
 		 */
@@ -151,7 +149,6 @@ package com.soma.core.wire {
 		 * Retrieves the wire instance that has been registered using its name.
 		 * @param wireName Name of the wire.
 		 * @return A wire instance.
-		 * @see com.soma.core.wire.SomaWires
 		 * @example
 		 * <listing version="3.0">var myWire:MyWire = getWire(MyWire.NAME) as MyWire;</listing>
 		 */
@@ -164,7 +161,6 @@ package com.soma.core.wire {
 		/**
 		 * Retrieves all the wire instances that have been registered to the framework.
 		 * @return A Dictionary (the key of the Dictionary is the name used for the registration).
-		 * @see com.soma.core.wire.SomaWires
 		 * @example
 		 * <listing version="3.0">var wires:Dictionary = getWires();</listing>
 		 */

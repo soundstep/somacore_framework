@@ -80,7 +80,7 @@ removeModel(ModelExample.NAME);
 	 * <listing version="3.0">
 var model:ModelExample = getModel(ModelExample.NAME) as ModelExample;
 	 * </listing>
-	 * Create a shortcut to retrieve a model is a good practice.
+	 * Create a shortcut to retrieve a model is a good practice (not necessary with injection enabled).
 	 * <listing version="3.0">
 private function get modelExample():ModelExample {
 	return getModel(ModelExample.NAME) as ModelExample;

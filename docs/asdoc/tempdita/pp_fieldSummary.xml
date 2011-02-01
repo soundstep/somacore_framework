@@ -235,11 +235,116 @@ package  {
 		 Retrieves the number of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef><apiDesc>
 		 Retrieves the number of commands added as subcommands.
 		 </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage><apiPackage id="com.soma.core.di"><apiName>com.soma.core.di</apiName><apiClassifier id="com.soma.core.di:SomaInjector"><apiName>SomaInjector</apiName><shortdesc>
-	 </shortdesc><prolog><author>Romuald Quantin
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISomaInjector</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
-	 </apiDesc></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.di:SomaReflector"><apiName>SomaReflector</apiName><shortdesc>
-	 </shortdesc><prolog><author>romuald
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISomaReflector</apiBaseInterface><apiBaseClassifier>org.swiftsuspenders:Reflector</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The SomaInjector Class is an adapter for the injection library used by the framework: Swiftsuspenders.
+	 http://github.com/tschneidereit/SwiftSuspenders
+	 
+	 Injection is not enabled by default to keep the framework lighter in its basic use.
+	 To enable injection, The Soma Class constructor or its setup public method can receive a Class that must extends ISomaInjector.
+	 The default framework injector that can be used is SomaInjector.
+	 The SomaInjector instance is accessible using the injector property from the facade (your Soma instance), the wires, the mediators and the commands.
+	 The injector instance can be used directly and/or using metadata tags such as [Inject] or [PostConstruct], see the SwiftSuspenders documentation for more information: https://github.com/tschneidereit/SwiftSuspenders
+	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISomaInjector</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v2.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 <p>The SomaInjector Class is an adapter for the injection library used by the framework: Swiftsuspenders.
+	 <xref href="http://github.com/tschneidereit/SwiftSuspenders" scope="external">http://github.com/tschneidereit/SwiftSuspenders</xref>
+	 </p>
+	 <p>Injection is not enabled by default to keep the framework lighter in its basic use.
+	 To enable injection, The Soma Class constructor or its setup public method can receive a Class that must extends ISomaInjector.
+	 The default framework injector that can be used is SomaInjector.</p>
+	 <p>The SomaInjector instance is accessible using the injector property from the facade (your Soma instance), the wires, the mediators and the commands.</p>
+	 <p>The injector instance can be used directly and/or using metadata tags such as [Inject] or [PostConstruct], see the SwiftSuspenders documentation for more information: <xref href="https://github.com/tschneidereit/SwiftSuspenders/blob/master/README.textile" scope="external">https://github.com/tschneidereit/SwiftSuspenders</xref></p>
+	 </apiDesc><example><codeblock rev="3.0">
+var application:ISoma = new Soma(stage, SomaInjector);
+	 </codeblock>
+	 <codeblock rev="3.0">
+var application:ISoma = new Soma();
+application.setup(stage, SomaInjector);
+	 </codeblock>
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.interfaces.ISoma;
+	import com.soma.core.di.SomaInjector;
+	import flash.display.Sprite;
+	
+	public class Main extends Sprite {
+		
+		private var _app:ISoma;
+		
+		public function Main() {
+			_app = new SomaApplication(stage, SomaInjector);
+		}
+		
+	}
+}
+	 </codeblock>
+	 <codeblock rev="3.0">
+package  {
+	import com.soma.core.Soma;
+	import com.soma.core.interfaces.ISoma;
+	import flash.display.Stage;
+	
+	public class SomaApplication extends Soma implements ISoma {
+		public function SomaApplication(stage:Stage, injectorClass:Class) {
+			super(stage, injectorClass);
+		}
+		
+	}
+}
+	 </codeblock>
+	 <codeblock rev="3.0">
+package {
+	public class Injectee {
+		[Inject]
+		public var myClass:MyClass;
+		[PostConstruct]
+		public funtion test():void {
+			trace(myClass);
+		}
+	}
+}
+	 </codeblock>
+	 <codeblock rev="3.0">
+injector.mapSingleton(MyClass);
+injector.createInstance(Injectee);
+	 </codeblock>
+	 </example></apiClassifierDetail><apiValue id="com.soma.core.di:SomaInjector:applicationDomain:get"><apiName>applicationDomain</apiName><shortdesc>
+		 ApplicationDomain in use in the injector.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="flash.system:ApplicationDomain"/></apiValueDef><apiDesc>
+		 ApplicationDomain in use in the injector.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.di:SomaReflector"><apiName>SomaReflector</apiName><shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The SomaReflector Class is an adapter for the reflection library used by the framework: Swiftsuspenders.
+	 http://github.com/tschneidereit/SwiftSuspenders
+	 
+	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ISomaReflector</apiBaseInterface><apiBaseClassifier>org.swiftsuspenders:Reflector</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v2.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 <p>The SomaReflector Class is an adapter for the reflection library used by the framework: Swiftsuspenders.
+	 <xref href="http://github.com/tschneidereit/SwiftSuspenders" scope="external">http://github.com/tschneidereit/SwiftSuspenders</xref>
+	 </p>
 	 </apiDesc></apiClassifierDetail></apiClassifier></apiPackage><apiPackage id="com.soma.core.interfaces"><apiName>com.soma.core.interfaces</apiName><apiClassifier id="com.soma.core.interfaces:ISomaPluginVO"><apiName>ISomaPluginVO</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
@@ -277,10 +382,22 @@ package  {
 	 </apiDesc></apiClassifierDetail><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:controller:get"><apiName>controller</apiName><shortdesc>
 		 Gets the commands manager instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.controller:SomaController</apiValueClassifier></apiValueDef><apiDesc>
 		 Gets the commands manager instance.
-		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:injector:get"><apiName>injector</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaInjector</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:mediators:get"><apiName>mediators</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.mediator:SomaMediators</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:models:get"><apiName>models</apiName><shortdesc>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:injectorClass:get"><apiName>injectorClass</apiName><shortdesc>
+		 Retrieves the injector Class registered to the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Class"/></apiValueDef><apiDesc>
+		 Retrieves the injector Class registered to the framework.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:injector:get"><apiName>injector</apiName><shortdesc>
+		 Retrieves the injector instance that has been created by the framework from the injector Class registered.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaInjector</apiValueClassifier></apiValueDef><apiDesc>
+		 Retrieves the injector instance that has been created by the framework from the injector Class registered.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:mediators:get"><apiName>mediators</apiName><shortdesc>
+		 Gets the mediator manager instance that has been created by the framework from the injector Class registered.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.mediator:SomaMediators</apiValueClassifier></apiValueDef><apiDesc>
+		 Gets the mediator manager instance that has been created by the framework from the injector Class registered.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:models:get"><apiName>models</apiName><shortdesc>
 		 Gets the model manager instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.model:SomaModels</apiValueClassifier></apiValueDef><apiDesc>
 		 Gets the model manager instance.
-		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:reflector:get"><apiName>reflector</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaReflector</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:stage:get"><apiName>stage</apiName><shortdesc>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:reflector:get"><apiName>reflector</apiName><shortdesc>
+		 Retrieves the refletor instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaReflector</apiValueClassifier></apiValueDef><apiDesc>
+		 Retrieves the refletor instance.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:stage:get"><apiName>stage</apiName><shortdesc>
 		 Get the stage that has been registered to the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.display:Stage"/></apiValueDef><apiDesc>
 		 Get the stage that has been registered to the framework.
 		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:ISoma:com.soma.core.interfaces:ISoma:views:get"><apiName>views</apiName><shortdesc>
@@ -313,9 +430,26 @@ package  {
 		 </apiDefaultValue></apiValueDef><apiDesc>
 		 EventDispatcher instance of the model.
 		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaInjector"><apiName>ISomaInjector</apiName><shortdesc>
-	 </shortdesc><prolog><author>Romuald Quantin
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
-	 </apiDesc></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IResponder"><apiName>IResponder</apiName><shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The ISomaInjector interface exposes the injection methods used by the framework.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v2.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 The ISomaInjector interface exposes the injection methods used by the framework. 
+	 </apiDesc></apiClassifierDetail><apiValue id="com.soma.core.interfaces:ISomaInjector:com.soma.core.interfaces:ISomaInjector:applicationDomain:get"><apiName>applicationDomain</apiName><shortdesc>
+		 ApplicationDomain in use in the injector.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="flash.system:ApplicationDomain"/></apiValueDef><apiDesc>
+		 ApplicationDomain in use in the injector.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:IResponder"><apiName>IResponder</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v2.0.0
@@ -348,9 +482,26 @@ package  {
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 </apiDesc></apiClassifierDetail><apiValue id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:instance:get"><apiName>instance</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>com.soma.core.interfaces:ISoma</apiValueClassifier></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaReflector"><apiName>ISomaReflector</apiName><shortdesc>
-	 </shortdesc><prolog><author>romuald
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><apiValue id="com.soma.core.interfaces:IWire:com.soma.core.interfaces:IWire:instance:get"><apiName>instance</apiName><shortdesc>
+		 Instance of the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>com.soma.core.interfaces:ISoma</apiValueClassifier></apiValueDef><apiDesc>
+		 Instance of the framework.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaReflector"><apiName>ISomaReflector</apiName><shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The ISomaReflector interface exposes the reflection methods used by the framework.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v2.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 The ISomaReflector interface exposes the reflection methods used by the framework. 
 	 </apiDesc></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISequenceCommand"><apiName>ISequenceCommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
@@ -377,9 +528,26 @@ package  {
 		 Retrieves the number of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef><apiDesc>
 		 Retrieves the number of commands added as subcommands.
 		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:IMediator"><apiName>IMediator</apiName><shortdesc>
-	 </shortdesc><prolog><author>Romuald Quantin
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IWire</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
-	 </apiDesc></apiClassifierDetail><apiValue id="com.soma.core.interfaces:IMediator:com.soma.core.interfaces:IMediator:viewComponent:get"><apiName>viewComponent</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommand"><apiName>ICommand</apiName><shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The IMediator interface exposes the methods of a Mediator instance.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IWire</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v2.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 The IMediator interface exposes the methods of a Mediator instance. 
+	 </apiDesc></apiClassifierDetail><apiValue id="com.soma.core.interfaces:IMediator:com.soma.core.interfaces:IMediator:viewComponent:get"><apiName>viewComponent</apiName><shortdesc>
+		 View that has been mapped to the mediator instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef><apiDesc>
+		 View that has been mapped to the mediator instance.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommand"><apiName>ICommand</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v2.0.0
@@ -487,11 +655,90 @@ package {
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
 	 Interface used by a class that is meant to be instantiated by the framework (ex:SomaDebugger).
 	 </apiDesc></apiClassifierDetail></apiClassifier></apiPackage><apiPackage id="com.soma.core.mediator"><apiName>com.soma.core.mediator</apiName><apiClassifier id="com.soma.core.mediator:Mediator"><apiName>Mediator</apiName><shortdesc>
-	 </shortdesc><prolog><author>Romuald Quantin
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IMediator</apiBaseInterface><apiBaseClassifier>com.soma.core.wire:Wire</apiBaseClassifier></apiClassifierDef><apiDesc>
-	 </apiDesc></apiClassifierDetail><apiValue id="com.soma.core.mediator:Mediator:protected:_viewComponent"><apiName>_viewComponent</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core.mediator:Mediator:viewComponent:get"><apiName>viewComponent</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.mediator:SomaMediators"><apiName>SomaMediators</apiName><shortdesc>
-	 </shortdesc><prolog><author>Romuald Quantin
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 A Mediator is a class that extends a wire and has a relation one-to-one with a view.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IMediator</apiBaseInterface><apiBaseClassifier>com.soma.core.wire:Wire</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v2.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 <p>A Mediator is a class that extends a wire and has a relation one-to-one with a view. A mediator can be created with the injection enabled or disabled.</p>
+	 <p>The first step is to map a view class to a mediator class, and everytime a view is added to a display list, a mediator for this view is automatically instantiated by the framework.</p>
+	 <p>The mediator instance will automatically be destroyed by the framework when the view it represents will be removed from the display list.</p>
+	 </apiDesc><example>Map a view class to a mediator class
+	 <codeblock rev="3.0">
+package {
+	import com.soma.core.interfaces.IMediator;
+	import com.soma.core.mediator.Mediator;
+	public class MyViewMediator extends Mediator implements IMediator {
+		
+		[Inject]
+		public var myView:MyView;
+		
+		override public function initialize():void {
+			// called when the mediator has been created and registered to the framework
+			trace(myView == viewComponent);
+		}
+		
+		override public function dispose():void {
+			// called when the mediator has been destroyed by the framework
+		}
+		
+	}
+}
+	 </codeblock>
+	 Map a mediator class to a view class.
+	 <codeblock rev="3.0">
+mediators.mapView(MyView, MyViewMediator);
+	 </codeblock>
+	 Remove mapping.
+	 <codeblock rev="3.0">
+mediators.removeMapping(MyView);
+	 </codeblock>
+	 Retrieve a mediator.
+	 <codeblock rev="3.0">
+var mediator:MyViewMediator = mediators.getMediatorByView(view) as MyViewMediator;
+	 </codeblock>
+	 Trigger the creation of a mediator by adding a view to the display list.
+	 <codeblock rev="3.0">
+mediators.mapView(MyView, MyViewMediator);
+var view:MyView = new MyView();
+myDisplayObjectContainer.addChild(view);
+// mediator instance created
+var mediator:MyViewMediator = mediators.getMediatorByView(view) as MyViewMediator;
+trace(mediators.hasMediator(view));
+	 </codeblock>
+	 </example></apiClassifierDetail><apiValue id="com.soma.core.mediator:Mediator:protected:_viewComponent"><apiName>_viewComponent</apiName><shortdesc>
+		 View that has been mapped to the mediator instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="Object"/></apiValueDef><apiDesc>
+		 View that has been mapped to the mediator instance.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.mediator:Mediator:viewComponent:get"><apiName>viewComponent</apiName><shortdesc>
+		 View that has been mapped to the mediator instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Object"/></apiValueDef><apiDesc>
+		 View that has been mapped to the mediator instance.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.mediator:SomaMediators"><apiName>SomaMediators</apiName><shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The SomaMediators class handles the mediators of the application.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Class version:</b> v2.0.0</p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 The SomaMediators class handles the mediators of the application. See the Mediator class documentation for implementation. 
 	 </apiDesc></apiClassifierDetail></apiClassifier></apiPackage><apiPackage id="com.soma.core.model"><apiName>com.soma.core.model</apiName><apiClassifier id="com.soma.core.model:Model"><apiName>Model</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
@@ -552,7 +799,7 @@ removeModel(ModelExample.NAME);
 	 <codeblock rev="3.0">
 var model:ModelExample = getModel(ModelExample.NAME) as ModelExample;
 	 </codeblock>
-	 Create a shortcut to retrieve a model is a good practice.
+	 Create a shortcut to retrieve a model is a good practice (not necessary with injection enabled).
 	 <codeblock rev="3.0">
 private function get modelExample():ModelExample {
 	return getModel(ModelExample.NAME) as ModelExample;
@@ -628,7 +875,7 @@ removeView(MySprite.NAME);
 	 <codeblock rev="3.0">
 var sprite:MySprite = getView(MySprite.NAME) as MySprite;
 	 </codeblock>
-	 Create a shortcut to retrieve a view is a good practice.
+	 Create a shortcut to retrieve a view is a good practice (not necessary with injection enabled).
 	 <codeblock rev="3.0">
 private function get mySprite():MySprite {
 	return getView(MySprite.NAME) as MySprite;
@@ -637,10 +884,7 @@ private function doSomething():void {
 	trace(mySprite);
 }
 	 </codeblock>
-	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.view:ThrowErrorClass"><apiName>ThrowErrorClass</apiName><shortdesc>
-	 </shortdesc><prolog><author>romuald
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
-	 </apiDesc></apiClassifierDetail></apiClassifier></apiPackage><apiPackage id="com.soma.core.wire"><apiName>com.soma.core.wire</apiName><apiClassifier id="com.soma.core.wire:Wire"><apiName>Wire</apiName><shortdesc>
+	 </example></apiClassifierDetail></apiClassifier></apiPackage><apiPackage id="com.soma.core.wire"><apiName>com.soma.core.wire</apiName><apiClassifier id="com.soma.core.wire:Wire"><apiName>Wire</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Class version: v2.0.0
@@ -700,7 +944,7 @@ removeWire(WireExample.NAME);
 	 <codeblock rev="3.0">
 var wire:WireExample = getWire(WireExample.NAME) as WireExample;
 	 </codeblock>
-	 Create a shortcut to retrieve a wire is a good practice.
+	 Create a shortcut to retrieve a wire is a good practice (not necessary with injection enabled).
 	 <codeblock rev="3.0">
 private function get wireExample():WireExample {
 	return getWire(WireExample.NAME) as WireExample;
@@ -788,6 +1032,7 @@ private function myEventHandler(event:MyEvent):void {
 	 <codeblock rev="3.0">
 package  {
 	import com.soma.core.interfaces.ISoma;
+	import com.soma.core.di.SomaInjector;
 	import flash.display.Sprite;
 	
 	public class Main extends Sprite {
@@ -795,7 +1040,10 @@ package  {
 		private var _app:ISoma;
 		
 		public function Main() {
+			// injection disabled
 			_app = new SomaApplication(stage);
+			// injection enabled
+			_app = new SomaApplication(stage, SomaInjector);
 		}
 		
 	}
@@ -808,10 +1056,13 @@ package  {
 	import flash.display.Stage;
 	
 	public class SomaApplication extends Soma implements ISoma {
-		public function SomaApplication(stage:Stage) {
-			super(stage);
+		public function SomaApplication(stage:Stage, injectorClass:Class) {
+			super(stage, injector);
 		}
 		
+		override protected function initialize():void {
+			
+		}
 		override protected function registerCommands():void {
 			
 		}
@@ -828,17 +1079,32 @@ package  {
 			
 		}
 		
+		override protected function start():void {
+			
+		}
 	}
 }
 	 </codeblock>
 	 
-	 </example></apiClassifierDetail><apiValue id="com.soma.core:Soma:protected:_injectorClass"><apiName>_injectorClass</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="Class"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:protected:_injector"><apiName>_injector</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiValueClassifier>com.soma.core.interfaces:ISomaInjector</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:protected:_mediators"><apiName>_mediators</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiValueClassifier>com.soma.core.mediator:SomaMediators</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:protected:_reflector"><apiName>_reflector</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiValueClassifier>com.soma.core.interfaces:ISomaReflector</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:controller:get"><apiName>controller</apiName><shortdesc>
+	 </example></apiClassifierDetail><apiValue id="com.soma.core:Soma:controller:get"><apiName>controller</apiName><shortdesc>
 		 Gets the commands manager instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.controller:SomaController</apiValueClassifier></apiValueDef><apiDesc>
 		 Gets the commands manager instance.
-		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:injectorClass:get"><apiName>injectorClass</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Class"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:injector:get"><apiName>injector</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaInjector</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:mediators:get"><apiName>mediators</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.mediator:SomaMediators</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:models:get"><apiName>models</apiName><shortdesc>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:injectorClass:get"><apiName>injectorClass</apiName><shortdesc>
+		 Retrieves the injector Class registered to the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Class"/></apiValueDef><apiDesc>
+		 Retrieves the injector Class registered to the framework.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:injector:get"><apiName>injector</apiName><shortdesc>
+		 Retrieves the injector instance that has been created by the framework from the injector Class registered.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaInjector</apiValueClassifier></apiValueDef><apiDesc>
+		 Retrieves the injector instance that has been created by the framework from the injector Class registered.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:mediators:get"><apiName>mediators</apiName><shortdesc>
+		 Gets the mediator manager instance that has been created by the framework from the injector Class registered.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.mediator:SomaMediators</apiValueClassifier></apiValueDef><apiDesc>
+		 Gets the mediator manager instance that has been created by the framework from the injector Class registered.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:models:get"><apiName>models</apiName><shortdesc>
 		 Gets the model manager instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.model:SomaModels</apiValueClassifier></apiValueDef><apiDesc>
 		 Gets the model manager instance.
-		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:reflector:get"><apiName>reflector</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaReflector</apiValueClassifier></apiValueDef></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:stage:get"><apiName>stage</apiName><shortdesc>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:reflector:get"><apiName>reflector</apiName><shortdesc>
+		 Retrieves the refletor instance.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>com.soma.core.interfaces:ISomaReflector</apiValueClassifier></apiValueDef><apiDesc>
+		 Retrieves the refletor instance.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:stage:get"><apiName>stage</apiName><shortdesc>
 		 Get the stage that has been registered to the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="flash.display:Stage"/></apiValueDef><apiDesc>
 		 Get the stage that has been registered to the framework.
 		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core:Soma:views:get"><apiName>views</apiName><shortdesc>

@@ -27,7 +27,7 @@ removeView(MySprite.NAME);
 	 <codeblock rev="3.0">
 var sprite:MySprite = getView(MySprite.NAME) as MySprite;
 	 </codeblock>
-	 Create a shortcut to retrieve a view is a good practice.
+	 Create a shortcut to retrieve a view is a good practice (not necessary with injection enabled).
 	 <codeblock rev="3.0">
 private function get mySprite():MySprite {
 	return getView(MySprite.NAME) as MySprite;
@@ -71,7 +71,4 @@ private function doSomething():void {
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a view from the framework and call the (optional) dispose method of this view.
 		 </apiDesc><example><codeblock rev="3.0">removeView(MySprite.NAME);</codeblock>
-		 </example></apiOperationDetail></apiOperation></apiClassifier><apiClassifier id="com.soma.core.view:ThrowErrorClass"><apiName>ThrowErrorClass</apiName><shortdesc>
-	 </shortdesc><prolog><author>romuald
-	 </author><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
-	 </apiDesc></apiClassifierDetail><apiConstructor id="com.soma.core.view:ThrowErrorClass:ThrowErrorClass"><apiName>ThrowErrorClass</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef></apiConstructorDetail></apiConstructor></apiClassifier></apiPackage>
+		 </example></apiOperationDetail></apiOperation></apiClassifier></apiPackage>

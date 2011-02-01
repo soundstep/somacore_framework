@@ -87,7 +87,7 @@ removeWire(WireExample.NAME);
 	 * <listing version="3.0">
 var wire:WireExample = getWire(WireExample.NAME) as WireExample;
 	 * </listing>
-	 * Create a shortcut to retrieve a wire is a good practice.
+	 * Create a shortcut to retrieve a wire is a good practice (not necessary with injection enabled).
 	 * <listing version="3.0">
 private function get wireExample():WireExample {
 	return getWire(WireExample.NAME) as WireExample;

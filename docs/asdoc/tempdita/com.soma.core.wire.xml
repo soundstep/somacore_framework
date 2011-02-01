@@ -58,7 +58,7 @@ removeWire(WireExample.NAME);
 	 <codeblock rev="3.0">
 var wire:WireExample = getWire(WireExample.NAME) as WireExample;
 	 </codeblock>
-	 Create a shortcut to retrieve a wire is a good practice.
+	 Create a shortcut to retrieve a wire is a good practice (not necessary with injection enabled).
 	 <codeblock rev="3.0">
 private function get wireExample():WireExample {
 	return getWire(WireExample.NAME) as WireExample;
@@ -313,7 +313,8 @@ private function myEventHandler(event:MyEvent):void {
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
 	 The SomaWires class handles the wires of the application. See the Wire class documentation for implementation. 
 	 </apiDesc></apiClassifierDetail><related-links><link href="com.soma.core.wire.xml#Wire"><linktext>com.soma.core.wire.Wire</linktext></link></related-links><apiConstructor id="com.soma.core.wire:SomaWires:SomaWires"><apiName>SomaWires</apiName><shortdesc>
-		 Create an instance of the SomaWires class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier></apiParam></apiConstructorDef><apiDesc>
+		 Create an instance of the SomaWires class.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>instance</apiItemName><apiOperationClassifier>com.soma.core.interfaces:ISoma</apiOperationClassifier><apiDesc>Framework instance.
+		 </apiDesc></apiParam></apiConstructorDef><apiDesc>
 		 Create an instance of the SomaWires class. Should not be directly instantiated, the framework will instantiate the class.
 		 </apiDesc></apiConstructorDetail></apiConstructor><apiOperation id="com.soma.core.wire:SomaWires:addWire"><apiName>addWire</apiName><shortdesc>
 		 Registers a wire to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The wire instance.
@@ -322,7 +323,7 @@ private function myEventHandler(event:MyEvent):void {
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Registers a wire to the framework.
 		 </apiDesc><example><codeblock rev="3.0">addWire(MyWire.NAME, new MyWire());</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:dispose"><apiName>dispose</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:dispose"><apiName>dispose</apiName><shortdesc>
 		 Destroys all the models and properties.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
 		 Destroys all the models and properties. The class will call the dispose method of each model instance.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:getWire"><apiName>getWire</apiName><shortdesc>
@@ -331,23 +332,23 @@ private function myEventHandler(event:MyEvent):void {
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Retrieves the wire instance that has been registered using its name.
 		 </apiDesc><example><codeblock rev="3.0">var myWire:MyWire = getWire(MyWire.NAME) as MyWire;</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:getWires"><apiName>getWires</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:getWires"><apiName>getWires</apiName><shortdesc>
 		 Retrieves all the wire instances that have been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Dictionary (the key of the Dictionary is the name used for the registration).
 		 </apiDesc><apiType value="flash.utils:Dictionary"/></apiReturn></apiOperationDef><apiDesc>
 		 Retrieves all the wire instances that have been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">var wires:Dictionary = getWires();</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:hasWire"><apiName>hasWire</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:hasWire"><apiName>hasWire</apiName><shortdesc>
 		 Indicates wether a wire has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>wireName</apiItemName><apiType value="String"/><apiDesc>Name of the wire.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Indicates wether a wire has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasWire(MyWire.NAME);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:removeWire"><apiName>removeWire</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:removeWire"><apiName>removeWire</apiName><shortdesc>
 		 Removes a wire from the framework and call the dispose method of this wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>wireName</apiItemName><apiType value="String"/><apiDesc>Name of the wire.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Removes a wire from the framework and call the dispose method of this wire.
 		 </apiDesc><example><codeblock rev="3.0">removeWire(MyWire.NAME);</codeblock>
-		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiValue id="com.soma.core.wire:SomaWires:protected:wires"><apiName>wires</apiName><shortdesc>
+		 </example></apiOperationDetail></apiOperation><apiValue id="com.soma.core.wire:SomaWires:protected:wires"><apiName>wires</apiName><shortdesc>
 		 List of the wires registered to the framework.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="protected"/><apiDynamic/><apiType value="flash.utils:Dictionary"/></apiValueDef><apiDesc>
 		 List of the wires registered to the framework.
 		 </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage>

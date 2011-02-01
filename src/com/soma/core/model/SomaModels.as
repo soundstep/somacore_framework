@@ -66,6 +66,7 @@ package com.soma.core.model {
 		
 		/**
 		 * Create an instance of the SomaModels class. Should not be directly instantiated, the framework will instantiate the class.
+		 * @param instance Framework instance.
 		 */
 		public function SomaModels(instance:ISoma) {
 			_instance = instance;
@@ -113,7 +114,6 @@ package com.soma.core.model {
 		 * @param modelName Name of the model.
 		 * @param model Instance of the model.
 		 * @return The model instance.
-		 * @see com.soma.core.model.SomaModels
 		 * @example
 		 * <listing version="3.0">addModel(MyModel.NAME, new MyModel());</listing>
 		 */

@@ -47,7 +47,7 @@ removeView(MySprite.NAME);
 	 * <listing version="3.0">
 var sprite:MySprite = getView(MySprite.NAME) as MySprite;
 	 * </listing>
-	 * Create a shortcut to retrieve a view is a good practice.
+	 * Create a shortcut to retrieve a view is a good practice (not necessary with injection enabled).
 	 * <listing version="3.0">
 private function get mySprite():MySprite {
 	return getView(MySprite.NAME) as MySprite;

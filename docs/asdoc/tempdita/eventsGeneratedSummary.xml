@@ -170,6 +170,21 @@
       <apiClassifier id="com.soma.core.di:SomaInjector">
          <apiName>SomaInjector</apiName>
          <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The SomaInjector Class is an adapter for the injection library used by the framework: Swiftsuspenders.
+	 http://github.com/tschneidereit/SwiftSuspenders
+	 
+	 Injection is not enabled by default to keep the framework lighter in its basic use.
+	 To enable injection, The Soma Class constructor or its setup public method can receive a Class that must extends ISomaInjector.
+	 The default framework injector that can be used is SomaInjector.
+	 The SomaInjector instance is accessible using the injector property from the facade (your Soma instance), the wires, the mediators and the commands.
+	 The injector instance can be used directly and/or using metadata tags such as [Inject] or [PostConstruct], see the SwiftSuspenders documentation for more information: https://github.com/tschneidereit/SwiftSuspenders
 	 </shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
@@ -180,11 +195,47 @@
             </apiClassifierDef>
          </apiClassifierDetail>
          <apiDesc>
-	 </apiDesc>
+	           <p>
+               <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+            </p>
+	           <p>
+               <b>Resources:</b> 
+               <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
+            </p>
+	           <p>
+               <b>Class version:</b> v2.0.0</p>
+	           <p>
+               <b>Actionscript version:</b> 3.0</p>
+	           <p>
+               <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+            </p>
+	           <p>The SomaInjector Class is an adapter for the injection library used by the framework: Swiftsuspenders.
+	 <xref href="http://github.com/tschneidereit/SwiftSuspenders" scope="external">http://github.com/tschneidereit/SwiftSuspenders</xref>
+	           </p>
+	           <p>Injection is not enabled by default to keep the framework lighter in its basic use.
+	 To enable injection, The Soma Class constructor or its setup public method can receive a Class that must extends ISomaInjector.
+	 The default framework injector that can be used is SomaInjector.</p>
+	           <p>The SomaInjector instance is accessible using the injector property from the facade (your Soma instance), the wires, the mediators and the commands.</p>
+	           <p>The injector instance can be used directly and/or using metadata tags such as [Inject] or [PostConstruct], see the SwiftSuspenders documentation for more information: <xref href="https://github.com/tschneidereit/SwiftSuspenders/blob/master/README.textile"
+                     scope="external">https://github.com/tschneidereit/SwiftSuspenders</xref>
+            </p>
+	        </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.di:SomaReflector">
          <apiName>SomaReflector</apiName>
          <shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The SomaReflector Class is an adapter for the reflection library used by the framework: Swiftsuspenders.
+	 http://github.com/tschneidereit/SwiftSuspenders
+	 
 	 </shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
@@ -195,7 +246,26 @@
             </apiClassifierDef>
          </apiClassifierDetail>
          <apiDesc>
-	 </apiDesc>
+	           <p>
+               <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+            </p>
+	           <p>
+               <b>Resources:</b> 
+               <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
+            </p>
+	           <p>
+               <b>Class version:</b> v2.0.0</p>
+	           <p>
+               <b>Actionscript version:</b> 3.0</p>
+	           <p>
+               <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+            </p>
+	           <p>The SomaReflector Class is an adapter for the reflection library used by the framework: Swiftsuspenders.
+	 <xref href="http://github.com/tschneidereit/SwiftSuspenders" scope="external">http://github.com/tschneidereit/SwiftSuspenders</xref>
+	           </p>
+	        </apiDesc>
       </apiClassifier>
    </apiPackage>
    <apiPackage id="com.soma.core.interfaces">
@@ -319,7 +389,14 @@
       <apiClassifier id="com.soma.core.interfaces:ISomaInjector">
          <apiName>ISomaInjector</apiName>
          <shortdesc>
-	 </shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The ISomaInjector interface exposes the injection methods used by the framework.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -329,6 +406,23 @@
             </apiClassifierDef>
          </apiClassifierDetail>
          <apiDesc>
+	           <p>
+               <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+            </p>
+	           <p>
+               <b>Resources:</b> 
+               <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
+            </p>
+	           <p>
+               <b>Class version:</b> v2.0.0</p>
+	           <p>
+               <b>Actionscript version:</b> 3.0</p>
+	           <p>
+               <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+            </p>
+	 The ISomaInjector interface exposes the injection methods used by the framework. 
 	 </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:IResponder">
@@ -411,7 +505,14 @@
       <apiClassifier id="com.soma.core.interfaces:ISomaReflector">
          <apiName>ISomaReflector</apiName>
          <shortdesc>
-	 </shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The ISomaReflector interface exposes the reflection methods used by the framework.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -421,6 +522,23 @@
             </apiClassifierDef>
          </apiClassifierDetail>
          <apiDesc>
+	           <p>
+               <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+            </p>
+	           <p>
+               <b>Resources:</b> 
+               <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
+            </p>
+	           <p>
+               <b>Class version:</b> v2.0.0</p>
+	           <p>
+               <b>Actionscript version:</b> 3.0</p>
+	           <p>
+               <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+            </p>
+	 The ISomaReflector interface exposes the reflection methods used by the framework. 
 	 </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ISequenceCommand">
@@ -465,7 +583,14 @@
       <apiClassifier id="com.soma.core.interfaces:IMediator">
          <apiName>IMediator</apiName>
          <shortdesc>
-	 </shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The IMediator interface exposes the methods of a Mediator instance.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiInterface/>
@@ -476,6 +601,23 @@
             </apiClassifierDef>
          </apiClassifierDetail>
          <apiDesc>
+	           <p>
+               <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+            </p>
+	           <p>
+               <b>Resources:</b> 
+               <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
+            </p>
+	           <p>
+               <b>Class version:</b> v2.0.0</p>
+	           <p>
+               <b>Actionscript version:</b> 3.0</p>
+	           <p>
+               <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+            </p>
+	 The IMediator interface exposes the methods of a Mediator instance. 
 	 </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.interfaces:ICommand">
@@ -641,7 +783,14 @@
       <apiClassifier id="com.soma.core.mediator:Mediator">
          <apiName>Mediator</apiName>
          <shortdesc>
-	 </shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 A Mediator is a class that extends a wire and has a relation one-to-one with a view.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -651,12 +800,38 @@
             </apiClassifierDef>
          </apiClassifierDetail>
          <apiDesc>
-	 </apiDesc>
+	           <p>
+               <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+            </p>
+	           <p>
+               <b>Resources:</b> 
+               <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
+            </p>
+	           <p>
+               <b>Class version:</b> v2.0.0</p>
+	           <p>
+               <b>Actionscript version:</b> 3.0</p>
+	           <p>
+               <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+            </p>
+	           <p>A Mediator is a class that extends a wire and has a relation one-to-one with a view. A mediator can be created with the injection enabled or disabled.</p>
+	           <p>The first step is to map a view class to a mediator class, and everytime a view is added to a display list, a mediator for this view is automatically instantiated by the framework.</p>
+	           <p>The mediator instance will automatically be destroyed by the framework when the view it represents will be removed from the display list.</p>
+	        </apiDesc>
       </apiClassifier>
       <apiClassifier id="com.soma.core.mediator:SomaMediators">
          <apiName>SomaMediators</apiName>
          <shortdesc>
-	 </shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Class version: v2.0.0
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 The SomaMediators class handles the mediators of the application.</shortdesc>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -665,6 +840,23 @@
             </apiClassifierDef>
          </apiClassifierDetail>
          <apiDesc>
+	           <p>
+               <b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref>
+            </p>
+	           <p>
+               <b>Resources:</b> 
+               <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref>
+            </p>
+	           <p>
+               <b>Class version:</b> v2.0.0</p>
+	           <p>
+               <b>Actionscript version:</b> 3.0</p>
+	           <p>
+               <b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
+            </p>
+	 The SomaMediators class handles the mediators of the application. See the Mediator class documentation for implementation. 
 	 </apiDesc>
       </apiClassifier>
    </apiPackage>
@@ -788,20 +980,6 @@
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref>
             </p>
 	 The SomaViews class handles the views of the application (DisplayObject).
-	 </apiDesc>
-      </apiClassifier>
-      <apiClassifier id="com.soma.core.view:ThrowErrorClass">
-         <apiName>ThrowErrorClass</apiName>
-         <shortdesc>
-	 </shortdesc>
-         <apiClassifierDetail>
-            <apiClassifierDef>
-               <apiAccess value="public"/>
-               <apiStatic/>
-               <apiBaseClassifier>Object</apiBaseClassifier>
-            </apiClassifierDef>
-         </apiClassifierDetail>
-         <apiDesc>
 	 </apiDesc>
       </apiClassifier>
    </apiPackage>

@@ -1,8 +1,18 @@
 package com.soma.core.interfaces {
 	import flash.system.ApplicationDomain;
+	
 	/**
-	 * @author romuald
+	 * <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
+	 * <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
+	 * <p><b>Class version:</b> v2.0.0</p>
+	 * <p><b>Actionscript version:</b> 3.0</p>
+	 * <p><b>Copyright:</b>
+	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
+	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
+	 * The ISomaReflector interface exposes the reflection methods used by the framework. 
+	 * @see com.soma.core.di.SomaReflector
 	 */
+	
 	public interface ISomaReflector {
 		
 		/**

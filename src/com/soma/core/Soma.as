@@ -93,8 +93,8 @@ package  {
 	
 	public class SomaApplication extends Soma implements ISoma {
 
-		public function SomaApplication(stage:Stage) {
-			super(stage);
+		public function SomaApplication(stage:Stage, injectorClass:Class) {
+			super(stage, injector);
 		}
 		
 		override protected function initialize():void {

@@ -89,6 +89,7 @@ dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 		
 		/**
 		 * Create an instance of the SomaController class. Should not be directly instantiated, the framework will instantiate the class.
+		 * @param instance Framework instance.
 		 */
 		public function SomaController(instance:ISoma) {
 			_instance = instance;

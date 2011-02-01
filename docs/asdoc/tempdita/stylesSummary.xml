@@ -354,19 +354,6 @@
             <asMetadata/>
          </prolog>
       </apiClassifier>
-      <apiClassifier id="com.soma.core.view:ThrowErrorClass">
-         <apiName>ThrowErrorClass</apiName>
-         <apiClassifierDetail>
-            <apiClassifierDef>
-               <apiAccess value="public"/>
-               <apiStatic/>
-               <apiBaseClassifier>Object</apiBaseClassifier>
-            </apiClassifierDef>
-         </apiClassifierDetail>
-         <prolog>
-            <asMetadata/>
-         </prolog>
-      </apiClassifier>
    </apiPackage>
    <apiPackage id="com.soma.core.wire">
       <apiName>com.soma.core.wire</apiName>
