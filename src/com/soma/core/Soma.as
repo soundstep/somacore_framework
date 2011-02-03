@@ -54,14 +54,23 @@ package com.soma.core {
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
 	 * <p>SomaCore is a lightweight event-based MVC framework written in AS3 that provides a structure, models, views management and commands.
-	 * Somacore can be used for Flash, Flex and AIR projects. SomaCore does not use any external library and does not use dependency injection. SomaCore is completely event-based and use a concept of wires to code in a efficient decoupled way.
+	 * Somacore can be used for Flash, Flex and AIR projects. SomaCore is completely event-based and use a concept of wires to code in a efficient decoupled way.
+	 * SomaCore can be used with or without dependency injection, and provide an injector adapter for the included DI library: SwiftSuspenders.
 	 * You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.</p>
-	 * <p>Few things to know: SomaCore requires the stage to be instantiated. Commands are normal built-in Flash events with the bubbles property set to true. Commands can be used in the views as they are not really framework code.
-	 * Wires are the glue of the frameworks elements (models, commands, views, wires) and can be used the way you wish, as proxy/mediators or managers.
-	 * Wires can manage one class or multiple classes.
-	 * Parallel and sequence commands are built-in.
-	 * You can create and register customs plugins to the framework (such as the SomaDebugger plugin).
-	 * You can access to all the framework elements that you have registered (stage, framework instance, wires, models, views and commands) from commands and wires. 
+	 * <p>Few things to know:
+	 * <ul>
+	 * <li>SomaCore requires the stage to be instantiated.</li>
+	 * <li>SomaCore can be used as a registry framework, dependendy injection framework, or both in the same time.</li>
+	 * <li>Another Dependency Injection library can easily be used instead of the default one.</li>
+	 * <li>Commands are normal built-in Flash events with the bubbles property set to true.</li>
+	 * <li>Commands can be used in the views as they are not framework code.</li>
+	 * <li>Wires are the glue of the frameworks elements (models, commands, views, wires) and can be used the way you wish, as proxy/mediators or managers.</li>
+	 * <li>Wires can manage one class or multiple classes.</li>
+	 * <li>Mediators are automatically created and removed when a view is added or removed from a display list (with or without injection enabled).</li>
+	 * <li>Parallel and sequence commands are built-in.</li>
+	 * <li>You can create and register customs plugins to the framework (such as the SomaDebugger plugin).</li>
+	 * <li>You can access to all the framework elements that you have registered (stage, framework instance, wires, models, views, injector, reflector, mediators and commands) from commands, wires and mediators.</li>
+	 * </ul>
 	 * </p>
 	 * @example
 	 * To get started, create a instance of a class that extends the Soma class and implements the ISoma interface.

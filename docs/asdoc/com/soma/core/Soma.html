@@ -28,15 +28,24 @@
 	 <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="external">http://www.opensource.org/licenses/mozilla1.1.php</a>
                </p>
 	              <p>SomaCore is a lightweight event-based MVC framework written in AS3 that provides a structure, models, views management and commands.
-	 Somacore can be used for Flash, Flex and AIR projects. SomaCore does not use any external library and does not use dependency injection. SomaCore is completely event-based and use a concept of wires to code in a efficient decoupled way.
+	 Somacore can be used for Flash, Flex and AIR projects. SomaCore is completely event-based and use a concept of wires to code in a efficient decoupled way.
+	 SomaCore can be used with or without dependency injection, and provide an injector adapter for the included DI library: SwiftSuspenders.
 	 You can use SomaCore in anything, except to include/distribute it in another framework, application, template, component or structure that is meant to build, scaffold or generate source files.</p>
-	              <p>Few things to know: SomaCore requires the stage to be instantiated. Commands are normal built-in Flash events with the bubbles property set to true. Commands can be used in the views as they are not really framework code.
-	 Wires are the glue of the frameworks elements (models, commands, views, wires) and can be used the way you wish, as proxy/mediators or managers.
-	 Wires can manage one class or multiple classes.
-	 Parallel and sequence commands are built-in.
-	 You can create and register customs plugins to the framework (such as the SomaDebugger plugin).
-	 You can access to all the framework elements that you have registered (stage, framework instance, wires, models, views and commands) from commands and wires. 
-	 </p>
+	              <p>Few things to know:
+	 <ul>
+	                    <li>SomaCore requires the stage to be instantiated.</li>
+	                    <li>SomaCore can be used as a registry framework, dependendy injection framework, or both in the same time.</li>
+	                    <li>Another Dependency Injection library can easily be used instead of the default one.</li>
+	                    <li>Commands are normal built-in Flash events with the bubbles property set to true.</li>
+	                    <li>Commands can be used in the views as they are not framework code.</li>
+	                    <li>Wires are the glue of the frameworks elements (models, commands, views, wires) and can be used the way you wish, as proxy/mediators or managers.</li>
+	                    <li>Wires can manage one class or multiple classes.</li>
+	                    <li>Mediators are automatically created and removed when a view is added or removed from a display list (with or without injection enabled).</li>
+	                    <li>Parallel and sequence commands are built-in.</li>
+	                    <li>You can create and register customs plugins to the framework (such as the SomaDebugger plugin).</li>
+	                    <li>You can access to all the framework elements that you have registered (stage, framework instance, wires, models, views, injector, reflector, mediators and commands) from commands, wires and mediators.</li>
+	                 </ul>
+	              </p>
 	           <p></p><p><a href="#includeExamplesSummary">View the examples</a></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#controller" class="signatureLink">controller</a> : <a href="../../../com/soma/core/controller/SomaController.html">SomaController</a><div class="summaryTableDescription">[read-only] 
 		 Gets the commands manager instance.</div></td><td class="summaryTableOwnerCol">Soma</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#injector" class="signatureLink">injector</a> : <a href="../../../com/soma/core/interfaces/ISomaInjector.html">ISomaInjector</a><div class="summaryTableDescription">[read-only] 
 		 Retrieves the injector instance that has been created by the framework from the injector Class registered.</div></td><td class="summaryTableOwnerCol">Soma</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#injectorClass" class="signatureLink">injectorClass</a> : Class<div class="summaryTableDescription">[read-only] 
@@ -340,4 +349,4 @@ package  {
 }
      </pre></div>
 	 
-	 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>SomaCore v2.0.0 | Documentation generated at: 02/01/2011 02:14 AM</footer><br/>Tue Feb 1 2011, 02:14 AM Z  </center></div></body></html><!--SomaCore v2.0.0 | Documentation generated at: 02/01/2011 02:14 AM<br/>Tue Feb 1 2011, 02:14 AM Z  -->
+	 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>SomaCore v2.0.0 | Documentation generated at: 02/03/2011 01:00 AM</footer><br/>Thu Feb 3 2011, 01:00 AM Z  </center></div></body></html><!--SomaCore v2.0.0 | Documentation generated at: 02/03/2011 01:00 AM<br/>Thu Feb 3 2011, 01:00 AM Z  -->
