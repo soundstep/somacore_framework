@@ -1504,14 +1504,14 @@ package  {
 			super(NAME);
 		}
 		
-		override protected function initialize():void {
+		override public function initialize():void {
 			// called when the model has been registered to the framework
 			data = new XML('&lt;myXML/&gt;');
 			// you can use the model as a dispatcher (default dispatcher is the framework instance) to dispatch commands, example:
 			dispatchEvent(new MyEvent(MyEvent.DATA_READY));
 		}
 		
-		override protected function dispose():void {
+		override public function dispose():void {
 			// called when the model has been removed from the framework
 			data = null;
 		}
@@ -3582,11 +3582,11 @@ package  {
 			super(NAME);
 		}
 		
-		override protected function initialize():void {
+		override public function initialize():void {
 			// called when the wire has been registered to the framework
 		}
 		
-		override protected function dispose():void {
+		override public function dispose():void {
 			// called when the wire has been removed from the framework
 		}
 		
@@ -3616,7 +3616,7 @@ private function doSomething():void {
 	 </listing>
 	 Listening to a command in a wire.
 	 <listing version="3.0">
-override protected function initialize():void {
+override public function initialize():void {
 	// called when the wire has been registered to the framework
 	 addEventListener(MyEvent.DO_SOMETHING, handler);
 }
@@ -3625,7 +3625,7 @@ override protected function initialize():void {
 	 You need to set the cancelable property of the event to true when you dispatch it.
 	 Any command can be stopped using the flash event built-in method: preventDefault.
 	 <listing version="3.0">
-override protected function initialize():void {
+override public function initialize():void {
 	// called when the wire has been registered to the framework
 	 addEventListener(MyEvent.DO_SOMETHING, myEventHandler);
 }

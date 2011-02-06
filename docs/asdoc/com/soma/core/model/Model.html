@@ -109,14 +109,14 @@ package  {
             super(NAME);
         }
         
-        override protected function initialize():void {
+        override public function initialize():void {
             // called when the model has been registered to the framework
             data = new XML('&lt;myXML/&gt;');
             // you can use the model as a dispatcher (default dispatcher is the framework instance) to dispatch commands, example:
             dispatchEvent(new MyEvent(MyEvent.DATA_READY));
         }
         
-        override protected function dispose():void {
+        override public function dispose():void {
             // called when the model has been removed from the framework
             data = null;
         }
@@ -145,4 +145,4 @@ private function doSomething():void {
     trace(modelExample.data);
 }
      </pre></div>
-	 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>SomaCore v2.0.0 | Documentation generated at: 02/03/2011 01:00 AM</footer><br/>Thu Feb 3 2011, 01:00 AM Z  </center></div></body></html><!--SomaCore v2.0.0 | Documentation generated at: 02/03/2011 01:00 AM<br/>Thu Feb 3 2011, 01:00 AM Z  -->
+	 </div><br/><br/><hr><br/><p></p><center class="copyright"><footer>SomaCore v2.0.0 | Documentation generated at: 02/06/2011 09:11 PM</footer><br/>Sun Feb 6 2011, 09:12 PM Z  </center></div></body></html><!--SomaCore v2.0.0 | Documentation generated at: 02/06/2011 09:11 PM<br/>Sun Feb 6 2011, 09:12 PM Z  -->

@@ -31,14 +31,14 @@ package  {
 			super(NAME);
 		}
 		
-		override protected function initialize():void {
+		override public function initialize():void {
 			// called when the model has been registered to the framework
 			data = new XML('&lt;myXML/&gt;');
 			// you can use the model as a dispatcher (default dispatcher is the framework instance) to dispatch commands, example:
 			dispatchEvent(new MyEvent(MyEvent.DATA_READY));
 		}
 		
-		override protected function dispose():void {
+		override public function dispose():void {
 			// called when the model has been removed from the framework
 			data = null;
 		}
