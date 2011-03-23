@@ -27,12 +27,12 @@ package com.soma.core.interfaces {
 	/**
 	 * <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 * <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
-	 * <p><b>Class version:</b> v2.0.0</p>
 	 * <p><b>Actionscript version:</b> 3.0</p>
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
 	 * <a href="http://www.opensource.org/licenses/mozilla1.1.php" target="_blank">http://www.opensource.org/licenses/mozilla1.1.php</a></p>
-	 * @see com.soma.core.wire.Wire	 * @see com.soma.core.wire.SomaWires
+	 * @see com.soma.core.wire.Wire
+	 * @see com.soma.core.wire.SomaWires
 	 */
 	
 	public interface IWire {
@@ -60,7 +60,8 @@ package com.soma.core.interfaces {
 		function initialize():void;
 		/**
 		 * Method that you can overwrite, called by the framework when the model is removed.
-		 */		function dispose():void;
+		 */
+		function dispose():void;
 		
 	}
 }

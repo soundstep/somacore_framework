@@ -40,7 +40,6 @@ package com.soma.core.controller {
 	/**
 	 * <p><b>Author:</b> Romuald Quantin - <a href="http://www.soundstep.com/" target="_blank">www.soundstep.com</a></p>
 	 * <p><b>Resources:</b> <a href="http://www.soundstep.com/downloads/somacore" target="_blank">http://www.soundstep.com/downloads/somacore</a></p>
-	 * <p><b>Class version:</b> v2.0.0</p>
 	 * <p><b>Actionscript version:</b> 3.0</p>
 	 * <p><b>Copyright:</b>
 	 * Mozilla Public License 1.1 (MPL 1.1)<br /> 
@@ -97,7 +96,11 @@ package  {
 }
 	 * </listing>
 	 * @see com.soma.core.controller.SomaController
-	 * @see com.soma.core.controller.ParallelCommand	 * @see com.soma.core.controller.SequenceCommand	 * @see com.soma.core.interfaces.ICommand	 * @see com.soma.core.interfaces.ICommandASync	 */
+	 * @see com.soma.core.controller.ParallelCommand
+	 * @see com.soma.core.controller.SequenceCommand
+	 * @see com.soma.core.interfaces.ICommand
+	 * @see com.soma.core.interfaces.ICommandASync
+	 */
 	
 	public class Command implements IEventDispatcher {
 

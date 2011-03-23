@@ -44,6 +44,8 @@
 			<arg value="0xFCFCFC"/>
 			<arg value="-library-path"/>
 			<arg value="${FLEX_HOME}/frameworks/locale/en_US"/>
+			<arg value="-library-path"/>
+			<arg value="${FLEX_HOME}/frameworks/libs"/>
 			<arg value="-target-player"/>
 			<arg value="10.0.0"/>
 			<arg value="-debug=true"/>
@@ -65,7 +67,7 @@
 			<arg line="-sp"/>
 			<arg line="'${dir.src.main}'"/>
 			<arg line="-include-libraries"/>
-			<arg line="'${dir.libs}/SwiftSuspenders-v1.5.1.swc'"/>
+			<arg line="'${dir.libs}/SwiftSuspenders-v1.6.0.swc'"/>
 			<!-- not necessary with SwiftSuspenders swc
 			<arg value="-keep-as3-metadata+=Inject"/>
 			<arg value="-keep-as3-metadata+=PostConstruct" />

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><apiPackage id="com.soma.core.model"><apiName>com.soma.core.model</apiName><apiDetail/><apiClassifier id="com.soma.core.model:Model"><apiName>Model</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -10,7 +9,6 @@
 	 The data can be XML, local data, data retrieved from a server or anything.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:IModel</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v2.0.0</p>
 	 <p><b>Actionscript version:</b> 3.0</p>
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -137,7 +135,6 @@ private function doSomething():void {
 		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.model:SomaModels"><apiName>SomaModels</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
-	 Class version: v2.0.0
 	 Actionscript version: 3.0
 	 Copyright:
 	 Mozilla Public License 1.1 (MPL 1.1) 
@@ -145,7 +142,6 @@ private function doSomething():void {
 	 The SomaModels class handles the models of the application.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
 	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
 	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Class version:</b> v2.0.0</p>
 	 <p><b>Actionscript version:</b> 3.0</p>
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
