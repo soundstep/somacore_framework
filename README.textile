@@ -80,6 +80,11 @@ h4. SomaCoreGC (flash player debugger needed)
 * "Garbage Collection monitor demo with the SomaCoreDebugger":http://www.soundstep.com/blog/source/somacore/demos/SomaCoreGC/
 * "View Source":http://www.soundstep.com/blog/source/somacore/demos/SomaCoreGC/srcview
 
+h4. SomaAssets Demo
+
+* "Load your assets with the SomaAssets plugin":http://www.soundstep.com/blog/source/somacore/demos/SomaAssetsDemo/
+* "View Source":http://www.soundstep.com/blog/source/somacore/demos/SomaAssetsDemo/srcview
+
 h2. License
 
 The contents of this file are subject to the Mozilla Public License
