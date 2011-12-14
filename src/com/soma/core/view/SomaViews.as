@@ -108,7 +108,7 @@ private function doSomething():void {
 		}
 		
 		/**
-		 * Indicates wether a view has been registered to the framework.
+		 * Indicates whether a view has been registered to the framework.
 		 * @param viewName Name of the view.
 		 * @return A Boolean.
 		 * @example

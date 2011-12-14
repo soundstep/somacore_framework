@@ -73,7 +73,7 @@ package com.soma.core.interfaces {
 		 */
 		function mapToInstance(whenAskFor:Class, instance:Object, name:String = ""):void;
 		/**
-		 * Indicates wether a mapping rule exists for the given Class.
+		 * Indicates whether a mapping rule exists for the given Class.
 		 * @param classTarget A Class.
 		 * @param name Injection name.
 		 * @return A Boolean.

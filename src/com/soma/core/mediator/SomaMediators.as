@@ -126,7 +126,7 @@ package com.soma.core.mediator {
 		}
 		
 		/**
-		 * Indicates wether a mediator has been created by the framework for a specific view.
+		 * Indicates whether a mediator has been created by the framework for a specific view.
 		 * @param view View that the mediator represents.
 		 * @return A Boolean.
 		 * @example
@@ -148,7 +148,7 @@ package com.soma.core.mediator {
 		}
 		
 		/**
-		 * Indicates wether a view Class has a mapping rule.
+		 * Indicates whether a view Class has a mapping rule.
 		 * @param viewClass A Class.
 		 * @return A Boolean.
 		 * @example

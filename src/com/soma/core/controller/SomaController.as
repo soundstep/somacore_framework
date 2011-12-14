@@ -245,7 +245,7 @@ dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 		//________________________________________________________________________________________________
 		
 		/**
-		 * Indicates wether a command has been registered to the framework.
+		 * Indicates whether a command has been registered to the framework.
 		 * @param commandName Event type that is used as a command name.
 		 * @return A Boolean.
 		 * @example
@@ -404,7 +404,7 @@ dispatchEvent(new MyEvent(MyEvent.DOSOMETHING));
 		}
 		
 		/**
-		 * Indicates wether an event has been instantiated from a ISequenceCommand class.
+		 * Indicates whether an event has been instantiated from a ISequenceCommand class.
 		 * @return A Boolean.
 		 * @example
 		 * <listing version="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</listing>

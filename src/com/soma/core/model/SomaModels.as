@@ -97,7 +97,7 @@ package com.soma.core.model {
 		}
 		
 		/**
-		 * Indicates wether a model has been registered to the framework.
+		 * Indicates whether a model has been registered to the framework.
 		 * @param modelName Name of the model.
 		 * @return A Boolean.
 		 * @example

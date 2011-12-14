@@ -100,16 +100,16 @@ trace(mediators.hasMediator(view));
 		 Retrieves a mediator instance using its view.
 		 </apiDesc><example><codeblock rev="3.0">var mediator:MyViewMediator = mediators.getMediatorByView(myView) as MyViewMediator;</codeblock>
 		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.mediator:SomaMediators:hasMediator"><apiName>hasMediator</apiName><shortdesc>
-		 Indicates wether a mediator has been created by the framework for a specific view.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a mediator has been created by the framework for a specific view.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>view</apiItemName><apiType value="Object"/><apiDesc>View that the mediator represents.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a mediator has been created by the framework for a specific view.
+		 Indicates whether a mediator has been created by the framework for a specific view.
 		 </apiDesc><example><codeblock rev="3.0">mediators.hasMediator(myView);</codeblock>
 		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.mediator:SomaMediators:isMapped"><apiName>isMapped</apiName><shortdesc>
-		 Indicates wether a view Class has a mapping rule.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a view Class has a mapping rule.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>viewClass</apiItemName><apiType value="Class"/><apiDesc>A Class.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a view Class has a mapping rule.
+		 Indicates whether a view Class has a mapping rule.
 		 </apiDesc><example><codeblock rev="3.0">mediators.isMapped(MyView);</codeblock>
 		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.mediator:SomaMediators:mapView"><apiName>mapView</apiName><shortdesc>
 		 Map a mediator Class to a view Class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.

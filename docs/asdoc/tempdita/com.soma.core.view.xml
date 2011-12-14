@@ -59,10 +59,10 @@ private function doSomething():void {
 		 Retrieves all the view instances that have been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">var sprites:Dictionary = getViews();</codeblock>
 		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.view:SomaViews:hasView"><apiName>hasView</apiName><shortdesc>
-		 Indicates wether a view has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a view has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>viewName</apiItemName><apiType value="String"/><apiDesc>Name of the view.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a view has been registered to the framework.
+		 Indicates whether a view has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasView(MySprite.NAME);</codeblock>
 		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.view:SomaViews:removeView"><apiName>removeView</apiName><shortdesc>
 		 Removes a view from the framework and call the (optional) dispose method of this view.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>viewName</apiItemName><apiType value="String"/><apiDesc>Name of the view.

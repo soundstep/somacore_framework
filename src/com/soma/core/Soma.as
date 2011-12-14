@@ -452,7 +452,7 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 		}
 
 		/**
-		 * Indicates wether a command has been registered to the framework.
+		 * Indicates whether a command has been registered to the framework.
 		 * @param commandName Event type that is used as a command name.
 		 * @return A Boolean.
 		 * @see com.soma.core.controller.SomaController
@@ -577,7 +577,7 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 		}
 		
 		/**
-		 * Indicates wether an event has been instantiated from a ISequenceCommand class.
+		 * Indicates whether an event has been instantiated from a ISequenceCommand class.
 		 * @return A Boolean.
 		 * @see com.soma.core.controller.SomaController
 		 * @example
@@ -601,7 +601,7 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 		}
 		
 		/**
-		 * Indicates wether a model has been registered to the framework.
+		 * Indicates whether a model has been registered to the framework.
 		 * @param modelName Name of the model.
 		 * @return A Boolean.
 		 * @see com.soma.core.model.SomaModels
@@ -665,7 +665,7 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 		}
 		
 		/**
-		 * Indicates wether a view has been registered to the framework.
+		 * Indicates whether a view has been registered to the framework.
 		 * @param viewName Name of the view.
 		 * @return A Boolean.
 		 * @see com.soma.core.view.SomaViews
@@ -729,7 +729,7 @@ var debugger:SomaDebugger = createPluginFromClassName("com.soma.core.debugger.So
 		}
 		
 		/**
-		 * Indicates wether a wire has been registered to the framework.
+		 * Indicates whether a wire has been registered to the framework.
 		 * @param wireName Name of the wire.
 		 * @return A Boolean.
 		 * @see com.soma.core.wire.SomaWires

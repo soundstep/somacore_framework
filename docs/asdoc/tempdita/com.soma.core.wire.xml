@@ -196,10 +196,10 @@ private function myEventHandler(event:MyEvent):void {
 		 Retrieves all the wire instances that have been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">var wires:Dictionary = getWires();</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:hasCommand"><apiName>hasCommand</apiName><shortdesc>
-		 Indicates wether a command has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a command has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a command has been registered to the framework.
+		 Indicates whether a command has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasCommand(MyEvent.DOSOMETHING);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:hasEventListener"><apiName>hasEventListener</apiName><shortdesc>
 		 Checks whether the EventDispatcher object has any listeners registered for a specific type of event.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A value of true if a listener of the specified type is registered; false otherwise.
@@ -207,30 +207,30 @@ private function myEventHandler(event:MyEvent):void {
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
 		 Checks whether the EventDispatcher object has any listeners registered for a specific type of event.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:hasModel"><apiName>hasModel</apiName><shortdesc>
-		 Indicates wether a model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a model has been registered to the framework.
+		 Indicates whether a model has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasModel(MyModel.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:hasView"><apiName>hasView</apiName><shortdesc>
-		 Indicates wether a view has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a view has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>viewName</apiItemName><apiType value="String"/><apiDesc>Name of the view.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a view has been registered to the framework.
+		 Indicates whether a view has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasView(MySprite.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.view.xml#SomaViews"><linktext>com.soma.core.view.SomaViews</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:hasWire"><apiName>hasWire</apiName><shortdesc>
-		 Indicates wether a wire has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a wire has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>wireName</apiItemName><apiType value="String"/><apiDesc>Name of the wire.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a wire has been registered to the framework.
+		 Indicates whether a wire has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasWire(MyWire.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:initialize"><apiName>initialize</apiName><shortdesc>
 		 Method that can you can override, called when the wire has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
 		 Method that can you can override, called when the wire has been registered to the framework.
 		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:isPartOfASequence"><apiName>isPartOfASequence</apiName><shortdesc>
-		 Indicates wether an event has been instantiated from a ISequenceCommand class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether an event has been instantiated from a ISequenceCommand class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether an event has been instantiated from a ISequenceCommand class.
+		 Indicates whether an event has been instantiated from a ISequenceCommand class.
 		 </apiDesc><example><codeblock rev="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core.wire:Wire:postConstruct"><apiName>postConstruct</apiName><shortdesc/><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:Wire:removeCommand"><apiName>removeCommand</apiName><shortdesc>
 		 Removes a command from the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
@@ -334,10 +334,10 @@ private function myEventHandler(event:MyEvent):void {
 		 Retrieves all the wire instances that have been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">var wires:Dictionary = getWires();</codeblock>
 		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:hasWire"><apiName>hasWire</apiName><shortdesc>
-		 Indicates wether a wire has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a wire has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>wireName</apiItemName><apiType value="String"/><apiDesc>Name of the wire.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a wire has been registered to the framework.
+		 Indicates whether a wire has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasWire(MyWire.NAME);</codeblock>
 		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.wire:SomaWires:removeWire"><apiName>removeWire</apiName><shortdesc>
 		 Removes a wire from the framework and call the dispose method of this wire.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>wireName</apiItemName><apiType value="String"/><apiDesc>Name of the wire.

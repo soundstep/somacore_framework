@@ -531,7 +531,27 @@ injector.createInstance(Injectee);
 	 <p><b>Copyright:</b>
 	 Mozilla Public License 1.1 (MPL 1.1) 
 	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 </apiDesc></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommandASync"><apiName>ICommandASync</apiName><shortdesc>
+	 </apiDesc></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IParallelCommand"><apiName>IParallelCommand</apiName><shortdesc>
+	 Author: Romuald Quantin - www.soundstep.com
+	 Resources: http://www.soundstep.com/downloads/somacore
+	 Actionscript version: 3.0
+	 Copyright:
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 http://www.opensource.org/licenses/mozilla1.1.php
+	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
+	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
+	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
+	 <p><b>Actionscript version:</b> 3.0</p>
+	 <p><b>Copyright:</b>
+	 Mozilla Public License 1.1 (MPL 1.1) 
+	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
+	 </apiDesc></apiClassifierDetail><apiValue id="com.soma.core.interfaces:IParallelCommand:com.soma.core.interfaces:IParallelCommand:commands:get"><apiName>commands</apiName><shortdesc>
+		 Retrieves the list of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef><apiDesc>
+		 Retrieves the list of commands added as subcommands.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:IParallelCommand:com.soma.core.interfaces:IParallelCommand:length:get"><apiName>length</apiName><shortdesc>
+		 Retrieves the number of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef><apiDesc>
+		 Retrieves the number of commands added as subcommands.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ICommandASync"><apiName>ICommandASync</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Actionscript version: 3.0
@@ -581,27 +601,7 @@ package {
 	}
 }
 	 </codeblock>
-	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:IParallelCommand"><apiName>IParallelCommand</apiName><shortdesc>
-	 Author: Romuald Quantin - www.soundstep.com
-	 Resources: http://www.soundstep.com/downloads/somacore
-	 Actionscript version: 3.0
-	 Copyright:
-	 Mozilla Public License 1.1 (MPL 1.1) 
-	 http://www.opensource.org/licenses/mozilla1.1.php
-	 </shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>com.soma.core.interfaces:ICommand</apiBaseInterface><apiBaseClassifier/></apiClassifierDef><apiDesc>
-	 <p><b>Author:</b> Romuald Quantin - <xref href="http://www.soundstep.com/" scope="external">www.soundstep.com</xref></p>
-	 <p><b>Resources:</b> <xref href="http://www.soundstep.com/downloads/somacore" scope="external">http://www.soundstep.com/downloads/somacore</xref></p>
-	 <p><b>Actionscript version:</b> 3.0</p>
-	 <p><b>Copyright:</b>
-	 Mozilla Public License 1.1 (MPL 1.1) 
-	 <xref href="http://www.opensource.org/licenses/mozilla1.1.php" scope="external">http://www.opensource.org/licenses/mozilla1.1.php</xref></p>
-	 </apiDesc></apiClassifierDetail><apiValue id="com.soma.core.interfaces:IParallelCommand:com.soma.core.interfaces:IParallelCommand:commands:get"><apiName>commands</apiName><shortdesc>
-		 Retrieves the list of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef><apiDesc>
-		 Retrieves the list of commands added as subcommands.
-		 </apiDesc></apiValueDetail></apiValue><apiValue id="com.soma.core.interfaces:IParallelCommand:com.soma.core.interfaces:IParallelCommand:length:get"><apiName>length</apiName><shortdesc>
-		 Retrieves the number of commands added as subcommands.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef><apiDesc>
-		 Retrieves the number of commands added as subcommands.
-		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaPlugin"><apiName>ISomaPlugin</apiName><shortdesc>
+	 </example></apiClassifierDetail></apiClassifier><apiClassifier id="com.soma.core.interfaces:ISomaPlugin"><apiName>ISomaPlugin</apiName><shortdesc>
 	 Author: Romuald Quantin - www.soundstep.com
 	 Resources: http://www.soundstep.com/downloads/somacore
 	 Actionscript version: 3.0

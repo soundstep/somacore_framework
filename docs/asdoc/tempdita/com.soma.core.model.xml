@@ -173,10 +173,10 @@ private function doSomething():void {
 		 Retrieves all the model instances that have been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">var models:Dictionary = getModels();</codeblock>
 		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:SomaModels:hasModel"><apiName>hasModel</apiName><shortdesc>
-		 Indicates wether a model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a model has been registered to the framework.
+		 Indicates whether a model has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasModel(MyModel.NAME);</codeblock>
 		 </example></apiOperationDetail></apiOperation><apiOperation id="com.soma.core.model:SomaModels:removeModel"><apiName>removeModel</apiName><shortdesc>
 		 Removes a model from the framework and call the dispose method of this model.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.

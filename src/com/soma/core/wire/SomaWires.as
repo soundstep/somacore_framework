@@ -96,7 +96,7 @@ package com.soma.core.wire {
 		}
 		
 		/**
-		 * Indicates wether a wire has been registered to the framework.
+		 * Indicates whether a wire has been registered to the framework.
 		 * @param wireName Name of the wire.
 		 * @return A Boolean.
 		 * @example

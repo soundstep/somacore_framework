@@ -205,37 +205,37 @@ var debugger:SomaDebugger = createPlugin(SomaDebugger, pluginVO) as SomaDebugger
 		 Retrieves all the wire instances that have been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">var wires:Dictionary = getWires();</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core:Soma:hasCommand"><apiName>hasCommand</apiName><shortdesc>
-		 Indicates wether a command has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a command has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiType value="String"/><apiDesc>Event type that is used as a command name.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a command has been registered to the framework.
+		 Indicates whether a command has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasCommand(MyEvent.DOSOMETHING);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core:Soma:hasModel"><apiName>hasModel</apiName><shortdesc>
-		 Indicates wether a model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a model has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>modelName</apiItemName><apiType value="String"/><apiDesc>Name of the model.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a model has been registered to the framework.
+		 Indicates whether a model has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasModel(MyModel.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core:Soma:hasView"><apiName>hasView</apiName><shortdesc>
-		 Indicates wether a view has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a view has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>viewName</apiItemName><apiType value="String"/><apiDesc>Name of the view.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a view has been registered to the framework.
+		 Indicates whether a view has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasView(MySprite.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.view.xml#SomaViews"><linktext>com.soma.core.view.SomaViews</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core:Soma:hasWire"><apiName>hasWire</apiName><shortdesc>
-		 Indicates wether a wire has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether a wire has been registered to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>wireName</apiItemName><apiType value="String"/><apiDesc>Name of the wire.
 		 </apiDesc></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether a wire has been registered to the framework.
+		 Indicates whether a wire has been registered to the framework.
 		 </apiDesc><example><codeblock rev="3.0">hasWire(MyWire.NAME);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.wire.xml#SomaWires"><linktext>com.soma.core.wire.SomaWires</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core:Soma:protected:initialize"><apiName>initialize</apiName><shortdesc> 
 		 Method that you can optionally overwrite to initialize elements before anything else.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc> 
 		 Method that you can optionally overwrite to initialize elements before anything else.
 		 </apiDesc><example><codeblock rev="3.0">addModel(MyModel.NAME, new MyModel());</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.model.xml#SomaModels"><linktext>com.soma.core.model.SomaModels</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core:Soma:isPartOfASequence"><apiName>isPartOfASequence</apiName><shortdesc>
-		 Indicates wether an event has been instantiated from a ISequenceCommand class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
+		 Indicates whether an event has been instantiated from a ISequenceCommand class.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiFinal/><apiReturn><apiDesc>A Boolean.
 		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiType value="flash.events:Event"/></apiParam></apiOperationDef><apiDesc>
-		 Indicates wether an event has been instantiated from a ISequenceCommand class.
+		 Indicates whether an event has been instantiated from a ISequenceCommand class.
 		 </apiDesc><example><codeblock rev="3.0">var inSequence:Boolean = isPartOfASequence(myEvent);</codeblock>
 		 </example></apiOperationDetail><related-links><link href="com.soma.core.controller.xml#SomaController"><linktext>com.soma.core.controller.SomaController</linktext></link></related-links></apiOperation><apiOperation id="com.soma.core:Soma:protected:registerCommands"><apiName>registerCommands</apiName><shortdesc> 
 		 Method that you can optionally overwrite to register commands (mapping events to command classes) to the framework.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="protected"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc> 

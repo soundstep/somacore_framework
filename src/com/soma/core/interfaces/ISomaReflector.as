@@ -15,7 +15,7 @@ package com.soma.core.interfaces {
 	public interface ISomaReflector {
 		
 		/**
-		 * Indicates wether a Class or Class name extends or implements a given Class.
+		 * Indicates whether a Class or Class name extends or implements a given Class.
 		 * @param classOrClassName A Class or a Class name.
 		 * @param superclass A Class.
 		 * @param application An ApplicationDomain.
